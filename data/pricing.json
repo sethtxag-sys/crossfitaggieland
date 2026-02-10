@@ -1,0 +1,38 @@
+{
+  "tiers": [
+    { "name": "General", "description": "" },
+    { "name": "Student / Veteran", "description": "" },
+    { "name": "Teacher / LEO / Active Military", "description": "" }
+  ],
+  "terms": [
+    { "label": "12 Month", "months": 12 },
+    { "label": "6 Month", "months": 6 },
+    { "label": "3 Month", "months": 3 },
+    { "label": "1 Month", "months": 1 }
+  ],
+  "prices": {
+    "General": {
+      "12": 129,
+      "6": 149,
+      "3": 169,
+      "1": 189
+    },
+    "Student / Veteran": {
+      "12": 119,
+      "6": 129,
+      "3": 149,
+      "1": 169
+    },
+    "Teacher / LEO / Active Military": {
+      "12": 109,
+      "6": 119,
+      "3": 139,
+      "1": 159
+    }
+  },
+  "includes": [
+    "Unlimited classes",
+    "SugarWOD tracking",
+    "Saturday Free-for-All"
+  ]
+}

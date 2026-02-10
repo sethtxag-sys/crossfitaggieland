@@ -1,0 +1,118 @@
+import { site, schedule } from '@/lib/data'
+
+export default function Contact() {
+  const weekdayHours = schedule.days.find((d) => d.name === 'Mon')?.hours || '5a – 6:30p'
+  const satHours = schedule.days.find((d) => d.name === 'Sat')?.hours || '9a – 10a'
+
+  return (
+    <section id="contact" className="py-24 lg:py-28 bg-gray-50">
+      <div className="max-w-[1200px] mx-auto px-6">
+        <div className="font-display text-sm tracking-[4px] uppercase text-maroon mb-3">Contact</div>
+        <h2 className="font-display text-[clamp(2.2rem,5vw,3.5rem)] leading-[1.05] uppercase tracking-wide mb-12">
+          We&rsquo;re Here to Help.
+        </h2>
+
+        <div className="grid lg:grid-cols-2 gap-12">
+          {/* Map */}
+          <div className="rounded-lg overflow-hidden h-[350px] lg:h-full min-h-[350px] bg-gray-200">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3434.5!2d-96.308!3d30.608!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x86468396bfb1d8e1%3A0x7e0cfdb53e1a7b0b!2sCrossFit%20Aggieland!5e0!3m2!1sen!2sus!4v1707000000000!5m2!1sen!2sus"
+              className="w-full h-full border-0"
+              allowFullScreen
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+            />
+          </div>
+
+          {/* Info */}
+          <div className="space-y-8">
+            <ContactItem
+              icon={<LocationIcon />}
+              label="Address"
+              value={`${site.address.street}, ${site.address.city}, ${site.address.state} ${site.address.zip}`}
+            />
+            <ContactItem
+              icon={<PhoneIcon />}
+              label="Phone"
+              value={site.phone}
+              href={`tel:${site.phone.replace(/-/g, '')}`}
+            />
+            <ContactItem
+              icon={<EmailIcon />}
+              label="Email"
+              value={site.email}
+              href={`mailto:${site.email}`}
+            />
+            <ContactItem
+              icon={<ClockIcon />}
+              label="Class Hours"
+              value={`Mon–Fri: ${weekdayHours} | Sat: ${satHours}`}
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+  )
+}
+
+function ContactItem({
+  icon,
+  label,
+  value,
+  href,
+}: {
+  icon: React.ReactNode
+  label: string
+  value: string
+  href?: string
+}) {
+  return (
+    <div className="flex gap-4 items-start">
+      <div className="w-10 h-10 rounded-full bg-maroon/10 flex items-center justify-center shrink-0">
+        {icon}
+      </div>
+      <div>
+        <div className="text-[0.7rem] font-semibold tracking-[2px] uppercase text-mid-gray mb-0.5">{label}</div>
+        {href ? (
+          <a href={href} className="text-maroon hover:opacity-70 transition-opacity font-medium">
+            {value}
+          </a>
+        ) : (
+          <div className="text-charcoal font-medium">{value}</div>
+        )}
+      </div>
+    </div>
+  )
+}
+
+function LocationIcon() {
+  return (
+    <svg className="w-[18px] h-[18px] fill-maroon" viewBox="0 0 24 24">
+      <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z" />
+    </svg>
+  )
+}
+
+function PhoneIcon() {
+  return (
+    <svg className="w-[18px] h-[18px] fill-maroon" viewBox="0 0 24 24">
+      <path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z" />
+    </svg>
+  )
+}
+
+function EmailIcon() {
+  return (
+    <svg className="w-[18px] h-[18px] fill-maroon" viewBox="0 0 24 24">
+      <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z" />
+    </svg>
+  )
+}
+
+function ClockIcon() {
+  return (
+    <svg className="w-[18px] h-[18px] fill-maroon" viewBox="0 0 24 24">
+      <path d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8zm.5-13H11v6l5.25 3.15.75-1.23-4.5-2.67z" />
+    </svg>
+  )
+}

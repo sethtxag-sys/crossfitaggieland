@@ -1,0 +1,25 @@
+{
+  "name": "CrossFit Aggieland",
+  "tagline": "The Standard for Fitness in College Station.",
+  "description": "CrossFit Aggieland — Voted #1 since 2013. 13x Best of the Brazos. Elite coaching, real community, proven results in College Station, TX. Your first week is free.",
+  "established": 2013,
+  "awardsCount": 13,
+  "awardName": "Best of the Brazos",
+  "address": {
+    "street": "3815 General Parkway",
+    "city": "College Station",
+    "state": "TX",
+    "zip": "77845"
+  },
+  "phone": "979-703-6665",
+  "email": "seth@crossfitaggieland.com",
+  "social": {
+    "facebook": "https://www.facebook.com/CrossFitAggieland",
+    "instagram": "https://www.instagram.com/crossfitaggieland/",
+    "twitter": "https://twitter.com/CFAggieland",
+    "youtube": "https://www.youtube.com/@CrossFitAggieland"
+  },
+  "pikeUrl": "https://sms.pike13.com/welcome",
+  "programming": "Mayhem",
+  "tracking": "SugarWOD"
+}

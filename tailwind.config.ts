@@ -1,0 +1,31 @@
+import type { Config } from 'tailwindcss'
+
+const config: Config = {
+  content: [
+    './app/**/*.{ts,tsx}',
+    './components/**/*.{ts,tsx}',
+    './lib/**/*.{ts,tsx}',
+  ],
+  theme: {
+    extend: {
+      colors: {
+        maroon: {
+          DEFAULT: '#500000',
+          dark: '#3a0000',
+          light: '#6b1515',
+        },
+        charcoal: '#1a1a1a',
+        'dark-gray': '#313338',
+        'mid-gray': '#6b6b6b',
+        'text-gray': '#49515b',
+      },
+      fontFamily: {
+        display: ['"Bebas Neue"', 'sans-serif'],
+        body: ['"Montserrat"', 'sans-serif'],
+      },
+    },
+  },
+  plugins: [],
+}
+
+export default config

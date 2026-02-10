@@ -1,0 +1,50 @@
+[
+  {
+    "name": "Seth & Paige McKinney",
+    "role": "Owners",
+    "initials": "SM",
+    "isOwner": true
+  },
+  {
+    "name": "Kori Banks",
+    "role": "Gym Manager / Coach",
+    "initials": "KB",
+    "isOwner": false
+  },
+  {
+    "name": "Lauren Snider",
+    "role": "Coach",
+    "initials": "LS",
+    "isOwner": false
+  },
+  {
+    "name": "Connor Altes",
+    "role": "Coach",
+    "initials": "CA",
+    "isOwner": false
+  },
+  {
+    "name": "Hanna Vanacour",
+    "role": "Coach",
+    "initials": "HV",
+    "isOwner": false
+  },
+  {
+    "name": "Denim Fields",
+    "role": "Coach",
+    "initials": "DF",
+    "isOwner": false
+  },
+  {
+    "name": "Claire McMullin",
+    "role": "Coach",
+    "initials": "CM",
+    "isOwner": false
+  },
+  {
+    "name": "Jared Lilly",
+    "role": "Coach",
+    "initials": "JL",
+    "isOwner": false
+  }
+]
