@@ -95,13 +95,13 @@ export default function Navigation() {
 
         {/* Mobile menu */}
         {menuOpen && (
-          <div className="fixed inset-0 bg-charcoal/[0.98] z-[999] flex flex-col items-center justify-center gap-7 lg:hidden">
+          <div className="fixed inset-0 bg-charcoal z-[999] flex flex-col items-center justify-center gap-8 lg:hidden">
             {navLinks.map((link) => (
               <a
                 key={link.href}
                 href={link.href}
                 onClick={(e) => handleClick(e, link.href)}
-                className="font-body text-lg text-white tracking-wider uppercase"
+                className="font-display text-2xl text-white tracking-[3px] uppercase"
               >
                 {link.label}
               </a>
@@ -110,7 +110,7 @@ export default function Navigation() {
               href={site.pikeUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="font-display text-sm tracking-widest uppercase text-white border border-white/40 px-8 py-3 hover:bg-white hover:text-charcoal transition-all mt-4"
+              className="font-display text-base tracking-widest uppercase text-charcoal bg-white px-10 py-4 hover:bg-white/90 transition-all mt-6"
             >
               Start Your Free Week
             </a>
