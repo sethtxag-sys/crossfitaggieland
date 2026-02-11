@@ -24,14 +24,14 @@ export default function Footer() {
           </div>
         </div>
         <div className="flex flex-wrap items-center justify-between gap-4">
-          <div className="text-xs text-white/30">
+          <div className="text-xs text-white/50">
             &copy; {year} {site.name}. {site.address.street}, {site.address.city}, {site.address.state} {site.address.zip}.
           </div>
           <div className="flex gap-6">
-            <a href={`tel:${site.phone.replace(/-/g, '')}`} className="text-xs text-white/30 hover:text-white/60 transition-colors">
+            <a href={`tel:${site.phone.replace(/-/g, '')}`} className="text-xs text-white/50 hover:text-white/80 transition-colors">
               {site.phone}
             </a>
-            <a href="#contact" className="text-xs text-white/30 hover:text-white/60 transition-colors">
+            <a href="#contact" className="text-xs text-white/50 hover:text-white/80 transition-colors">
               Contact Us
             </a>
           </div>

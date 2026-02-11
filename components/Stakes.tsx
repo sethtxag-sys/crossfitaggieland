@@ -23,7 +23,7 @@ export default function Stakes() {
     <section className="py-24 lg:py-28 bg-charcoal text-white">
       <div className="max-w-[1200px] mx-auto px-6">
         <div className="text-center mb-16">
-          <div className="font-display text-sm tracking-[4px] uppercase text-maroon-light mb-3">
+          <div className="font-display text-sm tracking-[4px] uppercase text-maroon-accent mb-3">
             The Cost of Waiting
           </div>
           <h2 className="font-display text-[clamp(2.2rem,5vw,3.5rem)] leading-[1.05] uppercase tracking-wide mb-5">
@@ -40,9 +40,9 @@ export default function Stakes() {
               key={s.number}
               className="bg-white/[0.04] border border-white/[0.08] rounded-lg p-8 hover:bg-white/[0.07] transition-colors"
             >
-              <div className="font-display text-4xl text-maroon-light/30 mb-3">{s.number}</div>
+              <div className="font-display text-4xl text-white/15 mb-3" aria-hidden="true">{s.number}</div>
               <h3 className="font-display text-xl tracking-wider uppercase text-white mb-3">{s.title}</h3>
-              <p className="text-white/50 text-sm leading-relaxed">{s.text}</p>
+              <p className="text-white/60 text-sm leading-relaxed">{s.text}</p>
             </div>
           ))}
         </div>

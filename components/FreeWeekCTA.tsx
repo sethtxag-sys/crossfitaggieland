@@ -18,7 +18,7 @@ export default function FreeWeekCTA() {
             { num: '03', text: 'Get Coached' },
           ].map((step) => (
             <div key={step.num} className="text-center">
-              <div className="font-display text-4xl text-white/20">{step.num}</div>
+              <div className="font-display text-4xl text-white/20" aria-hidden="true">{step.num}</div>
               <div className="font-display text-lg tracking-wider mt-1">{step.text}</div>
             </div>
           ))}
@@ -33,7 +33,7 @@ export default function FreeWeekCTA() {
           Claim Your Free Week
         </a>
 
-        <p className="text-white/30 text-xs tracking-wider mt-6 max-w-[400px] mx-auto">
+        <p className="text-white/60 text-xs tracking-wider mt-6 max-w-[400px] mx-auto">
           No credit card. No contract. Just walk in and see what happens.
         </p>
       </div>

@@ -5,7 +5,7 @@ export default function Schedule() {
     <section id="schedule" className="py-24 lg:py-28 bg-charcoal text-white">
       <div className="max-w-[1200px] mx-auto px-6">
         <div className="mb-12">
-          <div className="font-display text-sm tracking-[4px] uppercase text-maroon-light mb-3">Schedule</div>
+          <div className="font-display text-sm tracking-[4px] uppercase text-maroon-accent mb-3">Schedule</div>
           <h2 className="font-display text-[clamp(2.2rem,5vw,3.5rem)] leading-[1.05] uppercase tracking-wide mb-4">
             Come Train With Us.
           </h2>
@@ -22,7 +22,7 @@ export default function Schedule() {
               className="bg-white/[0.05] border border-white/[0.08] rounded-lg p-5 text-center hover:bg-white/[0.08] transition-colors"
             >
               <div className="font-display text-2xl tracking-wider text-white">{ct.time}</div>
-              <div className="text-[0.7rem] tracking-[2px] uppercase text-white/40 mt-1">{ct.label}</div>
+              <div className="text-[0.7rem] tracking-[2px] uppercase text-white/55 mt-1">{ct.label}</div>
             </div>
           ))}
         </div>
@@ -37,7 +37,7 @@ export default function Schedule() {
                   ? 'bg-maroon border border-maroon-light'
                   : day.open
                   ? 'bg-white/[0.05] border border-white/[0.08]'
-                  : 'bg-white/[0.02] border border-white/[0.04] opacity-40'
+                  : 'bg-white/[0.02] border border-white/[0.04] opacity-50'
               }`}
             >
               <div className="font-display text-lg tracking-wider">{day.name}</div>
@@ -49,8 +49,8 @@ export default function Schedule() {
           ))}
         </div>
 
-        <p className="text-white/40 text-sm">
-          <strong className="text-white/60">{site.programming} Programming, Coach-Led.</strong> Track your progress with {site.tracking}.
+        <p className="text-white/55 text-sm">
+          <strong className="text-white/70">{site.programming} Programming, Coach-Led.</strong> Track your progress with {site.tracking}.
         </p>
       </div>
     </section>

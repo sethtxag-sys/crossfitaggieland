@@ -13,10 +13,11 @@ const config: Config = {
           DEFAULT: '#500000',
           dark: '#3a0000',
           light: '#6b1515',
+          accent: '#cc6a5e',
         },
         charcoal: '#1a1a1a',
         'dark-gray': '#313338',
-        'mid-gray': '#6b6b6b',
+        'mid-gray': '#595959',
         'text-gray': '#49515b',
       },
       fontFamily: {
