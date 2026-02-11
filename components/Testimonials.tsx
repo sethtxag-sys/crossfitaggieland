@@ -1,6 +1,9 @@
 import { testimonials } from '@/lib/data'
 
 export default function Testimonials() {
+  const featured = testimonials[0]
+  const rest = testimonials.slice(1)
+
   return (
     <section id="testimonials" className="py-24 lg:py-28">
       <div className="max-w-[1200px] mx-auto px-6">
@@ -11,8 +14,20 @@ export default function Testimonials() {
           </h2>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {testimonials.map((t) => (
+        {/* Featured testimonial — Chinwe's transformation story */}
+        <div className="bg-maroon rounded-lg p-10 lg:p-14 mb-6 text-center">
+          <div className="font-display text-6xl text-white/20 leading-none mb-4">&ldquo;</div>
+          <p className="text-white/90 text-lg lg:text-xl leading-relaxed max-w-[700px] mx-auto mb-6">
+            {featured.text}
+          </p>
+          <div className="font-display text-sm tracking-[3px] uppercase text-white/70">
+            &mdash; {featured.author}
+          </div>
+        </div>
+
+        {/* Remaining testimonials — clean 2x2 grid */}
+        <div className="grid md:grid-cols-2 gap-6">
+          {rest.map((t) => (
             <div
               key={t.author}
               className="bg-gray-50 border border-gray-100 rounded-lg p-8 hover:shadow-lg hover:-translate-y-1 transition-all"

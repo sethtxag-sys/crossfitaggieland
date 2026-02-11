@@ -55,7 +55,7 @@ export default function Hero() {
             { number: `${site.awardsCount}x`, label: site.awardName },
             { number: String(site.established), label: 'Established' },
             { number: String(coaches.length), label: 'Coaches' },
-            { number: '5am', label: 'First Class' },
+            { number: '5 AM', label: 'First Class' },
           ].map((stat) => (
             <div key={stat.label} className="text-center">
               <div className="font-display text-3xl text-white tracking-wider">{stat.number}</div>

@@ -1,4 +1,4 @@
-import { pricing } from '@/lib/data'
+import { pricing, site } from '@/lib/data'
 
 export default function Pricing() {
   return (
@@ -63,7 +63,9 @@ export default function Pricing() {
 
         <div className="text-center mt-8">
           <a
-            href="#free"
+            href={site.pikeUrl}
+            target="_blank"
+            rel="noopener noreferrer"
             className="inline-block font-display text-lg tracking-widest uppercase bg-maroon text-white border-2 border-maroon px-10 py-4 hover:bg-maroon-dark hover:border-maroon-dark hover:-translate-y-0.5 transition-all"
           >
             Start Your Free Week
