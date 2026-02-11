@@ -17,7 +17,7 @@ export default function Hero() {
       {/* Content — Customer is the hero, not the brand */}
       <div className="relative z-[2] pt-20 max-w-[900px] px-6">
         <h1 className="font-display text-[clamp(3.2rem,9vw,7.5rem)] leading-[0.95] uppercase text-white mb-6 tracking-wide">
-          Get Stronger.<br />Feel Better.<br />Find Your People.
+          The Hour That<br />Changes Everything.
         </h1>
         <p className="text-lg text-white/70 max-w-[520px] mx-auto mb-4 leading-relaxed font-light">
           Elite coaching and a real community in College Station. Your first week is free. No commitment. No strings.

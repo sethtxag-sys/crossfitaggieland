@@ -27,10 +27,10 @@ export default function Stakes() {
             The Cost of Waiting
           </div>
           <h2 className="font-display text-[clamp(2.2rem,5vw,3.5rem)] leading-[1.05] uppercase tracking-wide mb-5">
-            Nothing Changes If Nothing Changes.
+            You Already Know What Doing Nothing Looks Like.
           </h2>
           <p className="text-white/50 max-w-[550px] mx-auto leading-relaxed">
-            You already know what doing nothing looks like. You&rsquo;ve been living it.
+            You&rsquo;ve been living it. Another year of &ldquo;I&rsquo;ll start Monday.&rdquo;
           </p>
         </div>
 

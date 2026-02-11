@@ -88,7 +88,7 @@ export default function Navigation() {
           rel="noopener noreferrer"
           className="hidden lg:inline-block font-display text-sm tracking-widest uppercase text-white border border-white/40 px-6 py-2.5 hover:bg-white hover:text-charcoal hover:border-white transition-all"
         >
-          Start Your Free Week!
+          Start Your Free Week
         </a>
 
         {/* Mobile toggle */}
@@ -121,7 +121,7 @@ export default function Navigation() {
               rel="noopener noreferrer"
               className="font-display text-sm tracking-widest uppercase text-white border border-white/40 px-8 py-3 hover:bg-white hover:text-charcoal transition-all mt-4"
             >
-              Start Your Free Week!
+              Start Your Free Week
             </a>
           </div>
         )}

@@ -11,10 +11,10 @@ export default function TransitionalCTA() {
 
     const form = e.currentTarget
     const data = {
-      name: (form.elements.namedItem('guide-name') as HTMLInputElement).value.trim(),
-      email: (form.elements.namedItem('guide-email') as HTMLInputElement).value.trim(),
+      name: (form.elements.namedItem('cta-name') as HTMLInputElement).value.trim(),
+      email: (form.elements.namedItem('cta-email') as HTMLInputElement).value.trim(),
       phone: '',
-      message: '[Transitional CTA] Requested the free beginner guide.',
+      message: '[Email Signup] Wants class tips and reminders.',
     }
 
     try {
@@ -39,10 +39,10 @@ export default function TransitionalCTA() {
           Not Ready Yet?
         </div>
         <h2 className="font-display text-[clamp(2rem,4vw,3rem)] leading-[1.05] uppercase tracking-wide mb-5">
-          No Problem. Start Here Instead.
+          No Problem. Stay in the Loop.
         </h2>
         <p className="text-text-gray leading-relaxed mb-10 max-w-[500px] mx-auto">
-          Get our free beginner guide. What to expect your first week, what to wear, and how we scale every workout to your level.
+          Drop your name and email. We will send you class tips, gym updates, and a heads-up when we run deals on memberships.
         </p>
 
         {status === 'sent' ? (
@@ -52,23 +52,23 @@ export default function TransitionalCTA() {
                 <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
               </svg>
             </div>
-            <h3 className="font-display text-xl tracking-wider uppercase text-charcoal mb-1">Check Your Inbox</h3>
-            <p className="text-text-gray text-sm">Your guide is on its way.</p>
+            <h3 className="font-display text-xl tracking-wider uppercase text-charcoal mb-1">You are In</h3>
+            <p className="text-text-gray text-sm">We will be in touch. No spam.</p>
           </div>
         ) : (
           <form onSubmit={handleSubmit} className="flex flex-col sm:flex-row gap-3 max-w-[550px] mx-auto">
             <input
               type="text"
-              id="guide-name"
-              name="guide-name"
+              id="cta-name"
+              name="cta-name"
               required
               placeholder="First name"
               className="flex-1 px-4 py-3.5 border border-gray-200 rounded-lg text-charcoal text-sm focus:outline-none focus:border-maroon focus:ring-1 focus:ring-maroon/20 transition-colors"
             />
             <input
               type="email"
-              id="guide-email"
-              name="guide-email"
+              id="cta-email"
+              name="cta-email"
               required
               placeholder="Email address"
               className="flex-1 px-4 py-3.5 border border-gray-200 rounded-lg text-charcoal text-sm focus:outline-none focus:border-maroon focus:ring-1 focus:ring-maroon/20 transition-colors"
@@ -78,12 +78,12 @@ export default function TransitionalCTA() {
               disabled={status === 'sending'}
               className="font-display text-sm tracking-widest uppercase bg-maroon text-white border-2 border-maroon px-6 py-3.5 hover:bg-maroon-dark hover:border-maroon-dark transition-all disabled:opacity-50 whitespace-nowrap"
             >
-              {status === 'sending' ? 'Sending...' : 'Send Me the Guide'}
+              {status === 'sending' ? 'Sending...' : 'Count Me In'}
             </button>
           </form>
         )}
 
-        <p className="text-mid-gray text-xs mt-4 tracking-wide">No spam. Just the guide.</p>
+        <p className="text-mid-gray text-xs mt-4 tracking-wide">No spam. Just gym stuff that matters.</p>
 
         {status === 'error' && (
           <p className="text-red-600 text-sm mt-3">Something went wrong. Please try again.</p>
