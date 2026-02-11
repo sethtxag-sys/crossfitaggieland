@@ -1,4 +1,5 @@
 import { site } from '@/lib/data'
+import Image from 'next/image'
 
 export default function StartHere() {
   return (
@@ -36,12 +37,15 @@ export default function StartHere() {
             </span>
           </div>
 
-          {/* Visual placeholder for gym photo */}
-          <div className="bg-gradient-to-br from-maroon/10 to-gray-100 rounded-lg h-[400px] lg:h-[500px] flex items-center justify-center">
-            <div className="text-center text-mid-gray">
-              <div className="font-display text-5xl tracking-wider uppercase opacity-20">CFA</div>
-              <p className="text-sm mt-2 opacity-40">Add your gym photo here</p>
-            </div>
+          {/* Gym photo */}
+          <div className="relative rounded-lg overflow-hidden h-[400px] lg:h-[500px]">
+            <Image
+              src="/images/wallball-pair.jpg"
+              alt="Two athletes doing wall balls at CrossFit Aggieland"
+              fill
+              className="object-cover"
+              sizes="(max-width: 1024px) 100vw, 50vw"
+            />
           </div>
         </div>
       </div>

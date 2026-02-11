@@ -3,31 +3,36 @@
     "name": "Seth & Paige McKinney",
     "role": "Owners",
     "initials": "SM",
-    "isOwner": true
+    "isOwner": true,
+    "image": "/images/owners-seth-paige.jpg"
   },
   {
     "name": "Kori Banks",
     "role": "Gym Manager / Coach",
     "initials": "KB",
-    "isOwner": false
+    "isOwner": false,
+    "image": "/images/coach-kori.jpg"
   },
   {
     "name": "Lauren Snider",
     "role": "Coach",
     "initials": "LS",
-    "isOwner": false
+    "isOwner": false,
+    "image": "/images/coach-lauren.jpg"
   },
   {
     "name": "Connor Altes",
     "role": "Coach",
     "initials": "CA",
-    "isOwner": false
+    "isOwner": false,
+    "image": "/images/coach-connor.jpg"
   },
   {
     "name": "Hanna Vanacour",
     "role": "Coach",
     "initials": "HV",
-    "isOwner": false
+    "isOwner": false,
+    "image": "/images/coach-hanna.jpg"
   },
   {
     "name": "Denim Fields",
@@ -39,12 +44,14 @@
     "name": "Claire McMullin",
     "role": "Coach",
     "initials": "CM",
-    "isOwner": false
+    "isOwner": false,
+    "image": "/images/coach-claire.jpg"
   },
   {
     "name": "Jared Lilly",
     "role": "Coach",
     "initials": "JL",
-    "isOwner": false
+    "isOwner": false,
+    "image": "/images/coach-jared.jpg"
   }
 ]

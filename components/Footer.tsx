@@ -1,4 +1,5 @@
 import { site } from '@/lib/data'
+import Image from 'next/image'
 
 export default function Footer() {
   const year = new Date().getFullYear()
@@ -7,7 +8,16 @@ export default function Footer() {
     <footer className="bg-charcoal text-white py-12 pb-6">
       <div className="max-w-[1200px] mx-auto px-6">
         <div className="flex flex-wrap items-center justify-between gap-6 pb-8 border-b border-white/[0.08] mb-6">
-          <div className="font-display text-lg tracking-widest uppercase">{site.name}</div>
+          <div className="flex items-center gap-3">
+            <Image
+              src="/images/logo.png"
+              alt="CrossFit Aggieland"
+              width={32}
+              height={32}
+              className="w-8 h-8 object-contain"
+            />
+            <span className="font-display text-lg tracking-widest uppercase">{site.name}</span>
+          </div>
           <div className="flex gap-4">
             <SocialLink href={site.social.facebook} label="Facebook">
               <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z" />

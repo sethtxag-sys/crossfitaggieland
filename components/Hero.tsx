@@ -1,20 +1,23 @@
 import { site } from '@/lib/data'
 import { coaches } from '@/lib/data'
+import Image from 'next/image'
 
 export default function Hero() {
   return (
     <section id="hero" className="relative min-h-screen flex items-center justify-center text-center bg-charcoal overflow-hidden">
-      {/* Background layers */}
-      <div className="absolute inset-0 bg-gradient-to-br from-maroon/30 to-black/60" />
-      <div
-        className="absolute inset-0 opacity-[0.06]"
-        style={{
-          backgroundImage: `url("data:image/svg+xml,%3Csvg width='40' height='40' viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23ffffff' fill-opacity='1' fill-rule='evenodd'%3E%3Cpath d='M0 40L40 0H20L0 20M40 40V20L20 40'/%3E%3C/g%3E%3C/svg%3E")`,
-        }}
+      {/* Background photo */}
+      <Image
+        src="/images/hero-group.jpg"
+        alt="CrossFit Aggieland community workout"
+        fill
+        className="object-cover"
+        priority
+        sizes="100vw"
       />
-      <div className="absolute inset-0 bg-black/[0.52] z-[1]" />
+      {/* Overlay */}
+      <div className="absolute inset-0 bg-gradient-to-b from-charcoal/70 via-charcoal/50 to-charcoal/80 z-[1]" />
 
-      {/* Content — Customer is the hero, not the brand */}
+      {/* Content */}
       <div className="relative z-[2] pt-20 max-w-[900px] px-6">
         <h1 className="font-display text-[clamp(3.2rem,9vw,7.5rem)] leading-[0.95] uppercase text-white mb-6 tracking-wide">
           The Hour That<br />Changes Everything.
@@ -46,7 +49,7 @@ export default function Hero() {
           </a>
         </div>
 
-        {/* Proof stats — guide authority in support position */}
+        {/* Proof stats */}
         <div className="flex justify-center gap-12 mt-16 flex-wrap">
           {[
             { number: `${site.awardsCount}x`, label: site.awardName },

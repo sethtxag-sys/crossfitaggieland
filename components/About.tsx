@@ -1,4 +1,5 @@
 import { site } from '@/lib/data'
+import Image from 'next/image'
 
 const values = [
   {
@@ -20,18 +21,22 @@ export default function About() {
     <section id="about" className="py-24 lg:py-28 bg-gray-50">
       <div className="max-w-[1200px] mx-auto px-6">
         <div className="grid lg:grid-cols-2 gap-16 items-start">
-          {/* Visual */}
-          <div className="relative bg-charcoal rounded-lg h-[400px] lg:h-[500px] flex flex-col items-center justify-center overflow-hidden">
-            <div className="font-display text-7xl text-white/10 uppercase tracking-wider leading-none text-center">
-              More<br />Than<br />A Gym
-            </div>
-            <div className="absolute bottom-6 left-6">
+          {/* Community photo */}
+          <div className="relative rounded-lg overflow-hidden h-[400px] lg:h-[500px]">
+            <Image
+              src="/images/women-group.jpg"
+              alt="CrossFit Aggieland women's group at the gym"
+              fill
+              className="object-cover"
+              sizes="(max-width: 1024px) 100vw, 50vw"
+            />
+            <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-charcoal/80 to-transparent p-6">
               <div className="font-display text-white text-lg tracking-wider">Since {site.established}</div>
-              <div className="text-white/50 text-sm">{site.address.city}, {site.address.state}</div>
+              <div className="text-white/60 text-sm">{site.address.city}, {site.address.state}</div>
             </div>
           </div>
 
-          {/* Content — Guide: Empathy first, then authority */}
+          {/* Content */}
           <div>
             <div className="font-display text-sm tracking-[4px] uppercase text-maroon mb-3">Your Guide</div>
             <h2 className="font-display text-[clamp(2.2rem,5vw,3.5rem)] leading-[1.05] uppercase tracking-wide mb-5">

@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from 'react'
 import { site } from '@/lib/data'
+import Image from 'next/image'
 
 const navLinks = [
   { label: 'Start Here', href: '#start' },
@@ -42,24 +43,14 @@ export default function Navigation() {
       <div className="max-w-[1200px] mx-auto px-6 flex items-center justify-between">
         {/* Logo */}
         <a href="#" className="flex items-center gap-3" onClick={(e) => handleClick(e, '#hero')}>
-          <svg viewBox="0 0 40 44" fill="none" className="w-10 h-11">
-            <path
-              d="M20 0L40 8V28C40 36 30 42 20 44C10 42 0 36 0 28V8L20 0Z"
-              fill="#500000"
-              stroke="#fff"
-              strokeWidth="1"
-              strokeOpacity="0.3"
-            />
-            <polygon
-              points="20,9 21.2,12.7 25,12.7 21.9,14.8 23.1,18.5 20,16.4 16.9,18.5 18.1,14.8 15,12.7 18.8,12.7"
-              fill="#fff"
-              fillOpacity="0.5"
-            />
-            <line x1="4" y1="22" x2="36" y2="22" stroke="#fff" strokeWidth="0.5" strokeOpacity="0.3" />
-            <text x="20" y="30" textAnchor="middle" fontFamily="Bebas Neue, sans-serif" fontSize="7" fill="#fff" letterSpacing="1">
-              CFA
-            </text>
-          </svg>
+          <Image
+            src="/images/logo.png"
+            alt="CrossFit Aggieland"
+            width={44}
+            height={44}
+            className="w-11 h-11 object-contain"
+            priority
+          />
           <div className="font-display text-white text-xl tracking-widest uppercase leading-tight">
             CrossFit
             <span className="block text-[0.65rem] tracking-[5px] opacity-70">Aggieland</span>

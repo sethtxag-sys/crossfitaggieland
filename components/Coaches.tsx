@@ -1,4 +1,5 @@
 import { coaches } from '@/lib/data'
+import Image from 'next/image'
 
 export default function Coaches() {
   return (
@@ -24,16 +25,34 @@ export default function Coaches() {
                   : 'bg-gray-50 hover:bg-white border border-gray-100'
               }`}
             >
-              {/* Avatar */}
-              <div
-                className={`w-16 h-16 rounded-full mx-auto mb-4 flex items-center justify-center text-lg font-display tracking-wider ${
-                  coach.isOwner
-                    ? 'bg-white/20 text-white'
-                    : 'bg-maroon/10 text-maroon'
-                }`}
-              >
-                {coach.initials}
-              </div>
+              {/* Photo or Initials Fallback */}
+              {coach.image ? (
+                <div
+                  className={`w-20 h-20 rounded-full mx-auto mb-4 overflow-hidden ring-2 ring-offset-2 ${
+                    coach.isOwner
+                      ? 'ring-white/30 ring-offset-maroon'
+                      : 'ring-maroon/20 ring-offset-gray-50 group-hover:ring-offset-white'
+                  }`}
+                >
+                  <Image
+                    src={coach.image}
+                    alt={coach.name}
+                    width={300}
+                    height={300}
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+              ) : (
+                <div
+                  className={`w-20 h-20 rounded-full mx-auto mb-4 flex items-center justify-center text-xl font-display tracking-wider ${
+                    coach.isOwner
+                      ? 'bg-white/20 text-white'
+                      : 'bg-maroon/10 text-maroon'
+                  }`}
+                >
+                  {coach.initials}
+                </div>
+              )}
               <h3 className={`font-display text-lg tracking-wider uppercase ${coach.isOwner ? 'text-white' : 'text-charcoal'}`}>
                 {coach.name}
               </h3>

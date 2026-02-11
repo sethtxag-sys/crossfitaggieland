@@ -1,13 +1,20 @@
 import { site } from '@/lib/data'
+import Image from 'next/image'
 
 export default function DailyWorkouts() {
   return (
     <section id="wods" className="py-24 lg:py-28 bg-gray-50">
       <div className="max-w-[1200px] mx-auto px-6">
         <div className="grid lg:grid-cols-2 gap-16 items-center">
-          {/* Visual */}
-          <div className="relative bg-charcoal rounded-lg h-[350px] lg:h-[450px] flex items-center justify-center overflow-hidden">
-            <div className="font-display text-[8rem] text-white/[0.06] uppercase tracking-wider">WOD</div>
+          {/* Training photo */}
+          <div className="relative rounded-lg overflow-hidden h-[350px] lg:h-[450px]">
+            <Image
+              src="/images/front-squat.jpg"
+              alt="Athlete performing a front squat at CrossFit Aggieland"
+              fill
+              className="object-cover"
+              sizes="(max-width: 1024px) 100vw, 50vw"
+            />
           </div>
 
           {/* Content */}
