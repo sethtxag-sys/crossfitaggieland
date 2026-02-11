@@ -1,4 +1,5 @@
 import { site, schedule } from '@/lib/data'
+import ContactForm from './ContactForm'
 
 export default function Contact() {
   const weekdayHours = schedule.days.find((d) => d.name === 'Mon')?.hours || '5a – 6:30p'
@@ -9,11 +10,35 @@ export default function Contact() {
       <div className="max-w-[1200px] mx-auto px-6">
         <div className="font-display text-sm tracking-[4px] uppercase text-maroon mb-3">Contact</div>
         <h2 className="font-display text-[clamp(2.2rem,5vw,3.5rem)] leading-[1.05] uppercase tracking-wide mb-12">
-          We&rsquo;re Here to Help.
+          Questions? We&rsquo;re Here.
         </h2>
 
         <div className="grid lg:grid-cols-2 gap-12">
-          {/* Map */}
+          {/* Left: Contact form + info */}
+          <div>
+            <ContactForm />
+
+            <div className="mt-10 space-y-6">
+              <ContactItem
+                icon={<LocationIcon />}
+                label="Address"
+                value={`${site.address.street}, ${site.address.city}, ${site.address.state} ${site.address.zip}`}
+              />
+              <ContactItem
+                icon={<PhoneIcon />}
+                label="Phone"
+                value={site.phone}
+                href={`tel:${site.phone.replace(/-/g, '')}`}
+              />
+              <ContactItem
+                icon={<ClockIcon />}
+                label="Class Hours"
+                value={`Mon–Fri: ${weekdayHours} | Sat: ${satHours}`}
+              />
+            </div>
+          </div>
+
+          {/* Right: Map */}
           <div className="rounded-lg overflow-hidden h-[350px] lg:h-full min-h-[350px] bg-gray-200">
             <iframe
               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3434.5!2d-96.308!3d30.608!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x86468396bfb1d8e1%3A0x7e0cfdb53e1a7b0b!2sCrossFit%20Aggieland!5e0!3m2!1sen!2sus!4v1707000000000!5m2!1sen!2sus"
@@ -21,32 +46,6 @@ export default function Contact() {
               allowFullScreen
               loading="lazy"
               referrerPolicy="no-referrer-when-downgrade"
-            />
-          </div>
-
-          {/* Info */}
-          <div className="space-y-8">
-            <ContactItem
-              icon={<LocationIcon />}
-              label="Address"
-              value={`${site.address.street}, ${site.address.city}, ${site.address.state} ${site.address.zip}`}
-            />
-            <ContactItem
-              icon={<PhoneIcon />}
-              label="Phone"
-              value={site.phone}
-              href={`tel:${site.phone.replace(/-/g, '')}`}
-            />
-            <ContactItem
-              icon={<EmailIcon />}
-              label="Email"
-              value={site.email}
-              href={`mailto:${site.email}`}
-            />
-            <ContactItem
-              icon={<ClockIcon />}
-              label="Class Hours"
-              value={`Mon–Fri: ${weekdayHours} | Sat: ${satHours}`}
             />
           </div>
         </div>
@@ -97,14 +96,6 @@ function PhoneIcon() {
   return (
     <svg className="w-[18px] h-[18px] fill-maroon" viewBox="0 0 24 24">
       <path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z" />
-    </svg>
-  )
-}
-
-function EmailIcon() {
-  return (
-    <svg className="w-[18px] h-[18px] fill-maroon" viewBox="0 0 24 24">
-      <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z" />
     </svg>
   )
 }

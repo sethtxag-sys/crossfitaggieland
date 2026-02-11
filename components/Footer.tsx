@@ -31,8 +31,8 @@ export default function Footer() {
             <a href={`tel:${site.phone.replace(/-/g, '')}`} className="text-xs text-white/30 hover:text-white/60 transition-colors">
               {site.phone}
             </a>
-            <a href={`mailto:${site.email}`} className="text-xs text-white/30 hover:text-white/60 transition-colors">
-              {site.email}
+            <a href="#contact" className="text-xs text-white/30 hover:text-white/60 transition-colors">
+              Contact Us
             </a>
           </div>
         </div>

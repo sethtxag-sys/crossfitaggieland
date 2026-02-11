@@ -14,37 +14,39 @@ export default function Hero() {
       />
       <div className="absolute inset-0 bg-black/[0.52] z-[1]" />
 
-      {/* Content */}
+      {/* Content — Customer is the hero, not the brand */}
       <div className="relative z-[2] pt-20 max-w-[900px] px-6">
-        <h1 className="font-display text-[clamp(3.5rem,10vw,8rem)] leading-[0.95] uppercase text-white mb-6 tracking-wide">
-          Voted #1<br />Since 2013.
+        <h1 className="font-display text-[clamp(3.2rem,9vw,7.5rem)] leading-[0.95] uppercase text-white mb-6 tracking-wide">
+          Get Stronger.<br />Feel Better.<br />Find Your People.
         </h1>
-        <p className="text-lg text-white/70 max-w-[500px] mx-auto mb-4 leading-relaxed font-light">
-          {site.tagline} Elite coaching. Real community. Proven results.
+        <p className="text-lg text-white/70 max-w-[520px] mx-auto mb-4 leading-relaxed font-light">
+          Elite coaching and a real community in College Station. Your first week is free. No commitment. No strings.
         </p>
 
         <div className="w-[60px] h-px bg-white/30 mx-auto my-6" />
 
         <div className="font-display text-2xl text-white tracking-[4px] uppercase mb-8">
-          7 Days. Unlimited Access. Zero Fee.
+          7 Days. Unlimited Classes. Zero Cost.
         </div>
 
         <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
           <a
-            href="#free"
+            href={site.pikeUrl}
+            target="_blank"
+            rel="noopener noreferrer"
             className="font-display text-lg tracking-widest uppercase bg-white text-charcoal border-2 border-white px-10 py-4 hover:bg-transparent hover:text-white transition-all w-[280px] sm:w-auto text-center"
           >
-            Claim My Pass
+            Claim My Free Week
           </a>
           <a
             href="#start"
             className="font-display text-lg tracking-widest uppercase border-2 border-white text-white px-10 py-4 hover:bg-white hover:text-charcoal transition-all w-[280px] sm:w-auto text-center"
           >
-            Start Here
+            See How It Works
           </a>
         </div>
 
-        {/* Proof stats */}
+        {/* Proof stats — guide authority in support position */}
         <div className="flex justify-center gap-12 mt-16 flex-wrap">
           {[
             { number: `${site.awardsCount}x`, label: site.awardName },

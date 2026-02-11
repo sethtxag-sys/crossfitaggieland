@@ -7,10 +7,10 @@ export default function Coaches() {
         <div className="text-center mb-16">
           <div className="font-display text-sm tracking-[4px] uppercase text-maroon mb-3">Your Coaches</div>
           <h2 className="font-display text-[clamp(2.2rem,5vw,3.5rem)] leading-[1.05] uppercase tracking-wide mb-5">
-            Built on Experience. Proven by Results.
+            The People in Your Corner.
           </h2>
           <p className="text-text-gray max-w-[600px] mx-auto leading-relaxed">
-            We don&rsquo;t just count reps. We correct movement and coach you forward. Career coaches, competitive athletes, and mentors.
+            You won&rsquo;t be left guessing. Our coaches learn your name, correct your movement, and push you to be better than yesterday.
           </p>
         </div>
 

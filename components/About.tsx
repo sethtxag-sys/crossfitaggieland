@@ -2,15 +2,15 @@ import { site } from '@/lib/data'
 
 const values = [
   {
-    title: 'Coaching That Feels Personal',
-    text: 'We correct form, scale workouts, and keep you progressing.',
+    title: 'Coaching That Meets You Where You Are',
+    text: 'We learn your name, correct your form, and scale your workouts so you are always progressing.',
   },
   {
-    title: 'Fitness for Life',
-    text: 'Built for the next 40 years, not just the next 40 minutes.',
+    title: 'Built for the Long Game',
+    text: "This isn't a 30-day challenge. It's the hour of your day that makes the rest of your day better.",
   },
   {
-    title: 'Your People',
+    title: 'Your People Are Here',
     text: 'Students, parents, professionals, and grandparents. Everyone is welcome, and everyone is coached.',
   },
 ]
@@ -31,17 +31,17 @@ export default function About() {
             </div>
           </div>
 
-          {/* Content */}
+          {/* Content — Guide: Empathy first, then authority */}
           <div>
-            <div className="font-display text-sm tracking-[4px] uppercase text-maroon mb-3">About Us</div>
+            <div className="font-display text-sm tracking-[4px] uppercase text-maroon mb-3">Your Guide</div>
             <h2 className="font-display text-[clamp(2.2rem,5vw,3.5rem)] leading-[1.05] uppercase tracking-wide mb-5">
-              The Hour That Changes Your Day
+              We&rsquo;ve Been Where You Are.
             </h2>
             <p className="text-text-gray leading-relaxed mb-4">
-              Since {site.established}, {site.name} has been where people come to get stronger, healthier, and more confident. It&rsquo;s the hour of your day that makes the rest of your day better. No fluff. Just great coaching and real progress.
+              We know what it feels like to walk into a gym and wonder if you belong. To look around and think everyone else is ahead of you. That&rsquo;s exactly why we built {site.name} the way we did.
             </p>
             <p className="text-text-gray leading-relaxed mb-4">
-              We&rsquo;ve been voted &ldquo;Best CrossFit&rdquo; for {site.awardsCount} consecutive years. We didn&rsquo;t earn that by cutting corners. We earned it by coaching people into results.
+              Every class is coached. Every workout is scaled to you. Every person in the room was once the new person. We didn&rsquo;t earn <strong>{site.awardsCount}x {site.awardName}</strong> by being the hardest gym in town. We earned it by being the gym that keeps people coming back.
             </p>
             <p className="text-text-gray leading-relaxed mb-8">
               Whether you&rsquo;re a D1 athlete or brand new, the standard is the same: show up, be coachable, and do the work. We&rsquo;ll handle the rest.

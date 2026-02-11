@@ -6,7 +6,7 @@ export const metadata: Metadata = {
   title: `${site.name} | ${site.awardsCount}x ${site.awardName} | ${site.address.city}, ${site.address.state}`,
   description: site.description,
   openGraph: {
-    title: `${site.name} | ${site.awardsCount}x ${site.awardName}`,
+    title: `${site.name} | ${site.tagline}`,
     description: site.description,
     type: 'website',
   },
