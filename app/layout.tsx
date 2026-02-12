@@ -1,4 +1,5 @@
 import type { Metadata } from 'next'
+import { Analytics } from '@vercel/analytics/react'
 import { site } from '@/lib/data'
 import './globals.css'
 
@@ -136,10 +137,10 @@ const jsonLd = {
   },
   aggregateRating: {
     '@type': 'AggregateRating',
-    ratingValue: '4.8',
+    ratingValue: '5',
     bestRating: '5',
-    ratingCount: '61',
-    reviewCount: '61',
+    ratingCount: '150',
+    reviewCount: '150',
   },
   award: Array.from({ length: site.awardsCount }, (_, i) => `${site.awardName} ${site.established + i}`),
 }
@@ -165,6 +166,7 @@ export default function RootLayout({
       </head>
       <body className="font-body text-charcoal bg-white leading-relaxed overflow-x-hidden">
         {children}
+        <Analytics />
       </body>
     </html>
   )
