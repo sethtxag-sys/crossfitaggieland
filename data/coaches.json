@@ -4,54 +4,62 @@
     "role": "Owners",
     "initials": "SM",
     "isOwner": true,
-    "image": "/images/owners-seth-paige.jpg"
+    "image": "/images/owners-seth-paige.jpg",
+    "bio": "Seth and Paige founded CrossFit Aggieland in 2013 with a simple belief: great coaching changes lives. Thirteen years and 13 Best of the Brazos awards later, they still coach classes, know every member by name, and treat the gym like family. Seth holds his CrossFit Level 2 certification and Paige manages operations and community outreach."
   },
   {
     "name": "Kori Banks",
     "role": "Gym Manager / Coach",
     "initials": "KB",
     "isOwner": false,
-    "image": "/images/coach-kori.jpg"
+    "image": "/images/coach-kori.jpg",
+    "bio": "Kori keeps CrossFit Aggieland running. As gym manager and coach, she handles everything from programming logistics to coaching the afternoon classes. Her attention to detail and genuine care for every athlete make her the backbone of daily operations."
   },
   {
     "name": "Lauren Snider",
     "role": "Coach",
     "initials": "LS",
     "isOwner": false,
-    "image": "/images/coach-lauren.jpg"
+    "image": "/images/coach-lauren.jpg",
+    "bio": "Lauren brings energy and precision to every class she coaches. She has a knack for breaking down complex movements into simple cues that click, making her a favorite among newer athletes and experienced members alike."
   },
   {
     "name": "Connor Altes",
     "role": "Coach",
     "initials": "CA",
     "isOwner": false,
-    "image": "/images/coach-connor.jpg"
+    "image": "/images/coach-connor.jpg",
+    "bio": "Connor is known for pushing athletes past what they think they can do while keeping the atmosphere fun and competitive. His programming knowledge and hands-on coaching style help members build strength and confidence fast."
   },
   {
     "name": "Hanna Vanacour",
     "role": "Coach",
     "initials": "HV",
     "isOwner": false,
-    "image": "/images/coach-hanna.jpg"
+    "image": "/images/coach-hanna.jpg",
+    "bio": "Hanna coaches with patience and intensity in equal measure. She meets every athlete where they are, scales workouts intelligently, and makes sure no one feels lost in class. Her warm coaching style puts first-timers at ease immediately."
   },
   {
     "name": "Denim Fields",
     "role": "Coach",
     "initials": "DF",
-    "isOwner": false
+    "isOwner": false,
+    "bio": "Denim brings a calm, steady presence to the coaching floor. He focuses on movement quality and long-term progress, helping athletes build habits that last well beyond the gym."
   },
   {
     "name": "Claire McMullin",
     "role": "Coach",
     "initials": "CM",
     "isOwner": false,
-    "image": "/images/coach-claire.jpg"
+    "image": "/images/coach-claire.jpg",
+    "bio": "Claire combines technical coaching with genuine encouragement. She pays close attention to every rep, catches form issues early, and celebrates wins big and small. Members consistently credit her with helping them hit PRs."
   },
   {
     "name": "Jared Lilly",
     "role": "Coach",
     "initials": "JL",
     "isOwner": false,
-    "image": "/images/coach-jared.jpg"
+    "image": "/images/coach-jared.jpg",
+    "bio": "Jared brings competitive fire and deep knowledge to every session. Whether you are chasing a new back squat max or learning your first pull-up, he coaches with the same focus and intensity."
   }
 ]
