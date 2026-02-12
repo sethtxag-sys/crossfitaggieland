@@ -1,5 +1,0 @@
-# CrossFit Aggieland
-User-agent: *
-Allow: /
-
-Sitemap: https://www.crossfitaggieland.com/sitemap.xml
