@@ -1,126 +1,176 @@
 # CrossFit Aggieland Website
 
-Next.js 15 + Tailwind CSS + TypeScript. Deployed on Vercel.
+**Live site:** https://www.crossfitaggieland.com
+
+Next.js 15 + React 19 + Tailwind CSS 3.4 + TypeScript. Hosted on Vercel. Deploys automatically when you push to `main`.
 
 ---
 
-## Deploy to Vercel (One-Time Setup)
+## How Deployment Works
 
-### Step 1: Push to GitHub
-1. Go to [github.com/new](https://github.com/new) and create a new repo called `crossfit-aggieland-site`
-2. Make it **Private**
-3. Run these commands in your terminal:
+1. Edit a file in GitHub (or push from your computer)
+2. Vercel detects the change and builds automatically
+3. Live in ~60 seconds
 
-```bash
-cd crossfit-aggieland-site
-git init
-git add .
-git commit -m "Initial commit"
-git branch -M main
-git remote add origin https://github.com/YOUR_USERNAME/crossfit-aggieland-site.git
-git push -u origin main
+You do not need to run any commands. Just commit to `main` and Vercel handles the rest.
+
+---
+
+## File Map
+
+```
+app/
+  layout.tsx        ← SEO metadata, JSON-LD structured data, Analytics
+  page.tsx          ← Section ordering (StoryBrand framework)
+  globals.css       ← Global styles, scrollbar, animations
+  sitemap.ts        ← Auto-generated sitemap.xml
+
+components/
+  Navigation.tsx    ← Nav bar + mobile menu
+  Hero.tsx          ← Hero section with background image
+  StartHere.tsx     ← "You Don't Need to Be Fit" section
+  Stakes.tsx        ← "Cost of Waiting" section
+  About.tsx         ← Guide section with group photo
+  Coaches.tsx       ← Coach grid with click-to-open bio modals
+  DailyWorkouts.tsx ← Mayhem programming section
+  Schedule.tsx      ← Class times + weekly schedule
+  Testimonials.tsx  ← Member testimonials
+  Transformation.tsx ← "6 Months From Now" outcomes
+  Pricing.tsx       ← Pricing table
+  FreeWeekCTA.tsx   ← Final CTA section
+  Contact.tsx       ← Contact form + Google Maps
+  Footer.tsx        ← Footer with social links
+
+data/
+  site.json         ← Gym info (name, phone, address, social links, Pike13 URL)
+  coaches.json      ← Coach names, roles, photos, bios
+  pricing.json      ← Membership pricing
+  schedule.json     ← Class times and days
+  testimonials.json ← Member testimonials
+
+lib/
+  data.ts           ← Imports and exports all data files
+  types.ts          ← TypeScript interfaces
+
+public/
+  images/           ← All photos (hero, coaches, about, workouts)
+  robots.txt        ← Search engine crawl rules
+  favicon.ico       ← Browser tab icon
+  icon.png          ← App icon
+  apple-icon.png    ← iOS icon
 ```
 
-### Step 2: Connect Vercel
-1. Go to [vercel.com](https://vercel.com) and sign in with GitHub
-2. Click **Add New Project**
-3. Import your `crossfit-aggieland-site` repo
-4. Click **Deploy** (all settings are pre-configured)
-5. Done. Your site is live.
-
-### Step 3: Custom Domain (Optional)
-1. In Vercel dashboard, go to your project > **Settings** > **Domains**
-2. Add `crossfitaggieland.com`
-3. Update your DNS records as Vercel instructs
-
 ---
 
-## How to Update Content
+## Common Updates
 
-All your content lives in the `data/` folder. Edit these JSON files, push to GitHub, and Vercel auto-deploys in ~30 seconds.
+### Change gym info (phone, address, email, social links)
 
-### Update Coaches → `data/coaches.json`
+Edit `data/site.json`. Everything that references gym info pulls from this file.
 
-**Add a new coach:**
+### Update pricing
+
+Edit `data/pricing.json`. The pricing table rebuilds automatically.
+
+### Add or remove a coach
+
+Edit `data/coaches.json`. Each coach needs:
+
 ```json
 {
-  "name": "New Coach Name",
+  "name": "First Last",
   "role": "Coach",
-  "initials": "NC",
-  "isOwner": false
+  "initials": "FL",
+  "isOwner": false,
+  "image": "/images/coach-firstname.jpg",
+  "bio": "Short paragraph about this coach."
 }
 ```
 
-**Remove a coach:** Delete their entry from the array.
+Upload their headshot to `public/images/` with the matching filename. Square crop works best. If no photo, remove the `"image"` line and the initials fallback will display.
 
-**Change a role:** Edit the `"role"` field.
+The grid auto-balances. 8 coaches = 2 rows of 4. 9 coaches = the last one sits alone on row 3.
 
-### Update Pricing → `data/pricing.json`
+### Update coach bios
 
-Change any dollar amount in the `"prices"` object:
-```json
-"General": {
-  "12": 129,
-  "6": 149,
-  "3": 169,
-  "1": 189
-}
-```
+Edit `data/coaches.json`. Change the `"bio"` field for any coach. The modal will display the new text after deploy.
 
-The numbers are: `"term_in_months": price_per_month`
+### Add or change a testimonial
 
-### Update Schedule → `data/schedule.json`
+Edit `data/testimonials.json`. First testimonial gets the featured (maroon) card. The rest show in pairs below it.
 
-**Change class times:** Edit the `"classTimes"` array.
-**Change daily hours:** Edit the `"days"` array.
+### Change class schedule
 
-### Update Testimonials → `data/testimonials.json`
+Edit `data/schedule.json`. Both the time blocks and weekly hours update from this file.
 
-**Add a testimonial:**
-```json
-{
-  "text": "Their quote goes here.",
-  "author": "First Name L."
-}
-```
+### Update SEO metadata
 
-### Update Contact Info / Social Links → `data/site.json`
+Edit `app/layout.tsx`. Key sections:
 
-Change phone, email, address, social media URLs, and general site info here.
+- **Title and description** — lines 10-11
+- **Keywords** — lines 12-22
+- **Open Graph** (social sharing) — lines 30-44
+- **Twitter/X cards** — lines 46-52
+- **JSON-LD structured data** — lines 78-145
+
+### Update Google review rating
+
+Edit `app/layout.tsx`. Find `aggregateRating` around line 138. Change `ratingValue` and `ratingCount` / `reviewCount` to match your actual Google Business Profile numbers.
+
+### Replace a photo
+
+Upload the new image to `public/images/` with the same filename as the old one. Vercel will serve the new version on next deploy.
+
+If adding a new image with a different filename, update the reference in the corresponding component or data file.
+
+### Change section order
+
+Edit `app/page.tsx`. Sections render in the order they appear. Move the component import up or down to reorder.
 
 ---
 
-## Run Locally
+## Important Accounts
 
-```bash
-npm install
-npm run dev
-```
-
-Open [http://localhost:3000](http://localhost:3000)
+| Service | URL | What it does |
+|---------|-----|-------------|
+| GitHub | github.com | Code repository. Push here to deploy. |
+| Vercel | vercel.com | Hosting. Auto-deploys from GitHub. |
+| GoDaddy | sso.secureserver.net | Domain DNS + domain registration. |
+| Google Search Console | search.google.com/search-console | SEO monitoring + sitemap. |
+| Google Business Profile | business.google.com | Local search listing. |
+| Resend | resend.com | Contact form email delivery. |
+| Pike13 | sms.pike13.com | Membership signup (all CTAs link here). |
 
 ---
 
-## Add Coach Photos
+## DNS Records (GoDaddy)
 
-1. Put photo files in `public/images/coaches/` (e.g., `seth-mckinney.jpg`)
-2. In `data/coaches.json`, add an `"image"` field:
-```json
-{
-  "name": "Seth & Paige McKinney",
-  "role": "Owners",
-  "initials": "SM",
-  "isOwner": true,
-  "image": "/images/coaches/seth-paige.jpg"
-}
-```
-3. The Coaches component already supports the `image` field.
+Only two records point to Vercel. Do not change anything else.
+
+| Type | Host | Value | Purpose |
+|------|------|-------|---------|
+| A | @ | 76.76.21.21 | Root domain → Vercel |
+| CNAME | www | cname.vercel-dns.com | www subdomain → Vercel |
+
+MX records (Google Workspace email), TXT records (SPF, DKIM, verification), and SRV records are for email. Never touch them.
+
+---
+
+## Environment / API Keys
+
+The Resend API key is stored in Vercel as an environment variable (`RESEND_API_KEY`). It is not in the code. If you need to rotate it, go to Vercel project settings → Environment Variables.
 
 ---
 
 ## Tech Stack
-- **Next.js 15** (React 19, App Router)
-- **Tailwind CSS 3.4**
-- **TypeScript 5**
-- **Vercel** (hosting, auto-deploy on push)
-- **Google Fonts** (Bebas Neue + Montserrat, loaded via next/font)
+
+- **Framework:** Next.js 15 (App Router)
+- **UI:** React 19
+- **Styling:** Tailwind CSS 3.4
+- **Fonts:** Bebas Neue (headings) + Montserrat (body) via Google Fonts
+- **Language:** TypeScript (strict mode)
+- **Hosting:** Vercel
+- **Email:** Resend API
+- **Analytics:** Vercel Analytics
+- **Domain:** GoDaddy (DNS only)
+- **Email hosting:** Google Workspace (via MX records)
