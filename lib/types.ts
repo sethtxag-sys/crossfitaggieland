@@ -30,6 +30,7 @@ export interface Coach {
   initials: string
   isOwner: boolean
   image?: string
+  bio?: string
 }
 
 export interface PricingData {
