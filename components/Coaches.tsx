@@ -1,7 +1,29 @@
+'use client'
+
+import { useState, useEffect } from 'react'
 import { coaches } from '@/lib/data'
+import type { Coach } from '@/lib/types'
 import Image from 'next/image'
 
 export default function Coaches() {
+  const [selected, setSelected] = useState<Coach | null>(null)
+
+  useEffect(() => {
+    if (!selected) return
+
+    document.body.style.overflow = 'hidden'
+
+    const handleEscape = (e: KeyboardEvent) => {
+      if (e.key === 'Escape') setSelected(null)
+    }
+    document.addEventListener('keydown', handleEscape)
+
+    return () => {
+      document.body.style.overflow = ''
+      document.removeEventListener('keydown', handleEscape)
+    }
+  }, [selected])
+
   return (
     <section id="coaches" className="py-24 lg:py-28">
       <div className="max-w-[1200px] mx-auto px-6">
@@ -19,7 +41,8 @@ export default function Coaches() {
           {coaches.map((coach) => (
             <div
               key={coach.name}
-              className={`group relative rounded-lg overflow-hidden text-center p-8 transition-all hover:-translate-y-1 hover:shadow-xl ${
+              onClick={() => setSelected(coach)}
+              className={`group relative rounded-lg overflow-hidden text-center p-8 transition-all hover:-translate-y-1 hover:shadow-xl cursor-pointer ${
                 coach.isOwner
                   ? 'bg-maroon text-white'
                   : 'bg-gray-50 hover:bg-white border border-gray-100'
@@ -63,6 +86,68 @@ export default function Coaches() {
           ))}
         </div>
       </div>
+
+      {/* Bio Modal */}
+      {selected && (
+        <div
+          className="fixed inset-0 z-50 flex items-center justify-center px-4"
+          onClick={() => setSelected(null)}
+        >
+          {/* Backdrop */}
+          <div className="absolute inset-0 bg-black/70 backdrop-blur-sm" />
+
+          {/* Modal */}
+          <div
+            className="relative bg-white rounded-xl max-w-md w-full shadow-2xl overflow-hidden animate-[fadeIn_0.2s_ease-out]"
+            onClick={(e) => e.stopPropagation()}
+          >
+            {/* Header */}
+            <div className={`px-8 pt-8 pb-6 text-center ${selected.isOwner ? 'bg-maroon' : 'bg-charcoal'}`}>
+              {/* Close Button */}
+              <button
+                onClick={() => setSelected(null)}
+                className="absolute top-4 right-4 text-white/60 hover:text-white transition-colors"
+                aria-label="Close"
+              >
+                <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
+                </svg>
+              </button>
+
+              {/* Photo */}
+              {selected.image ? (
+                <div className="w-28 h-28 rounded-full mx-auto mb-4 overflow-hidden ring-4 ring-white/20 ring-offset-4 ring-offset-transparent">
+                  <Image
+                    src={selected.image}
+                    alt={selected.name}
+                    width={400}
+                    height={400}
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+              ) : (
+                <div className="w-28 h-28 rounded-full mx-auto mb-4 flex items-center justify-center text-3xl font-display tracking-wider bg-white/20 text-white">
+                  {selected.initials}
+                </div>
+              )}
+
+              <h3 className="font-display text-2xl tracking-wider uppercase text-white">
+                {selected.name}
+              </h3>
+              <div className="text-xs tracking-[3px] uppercase mt-1 text-white/60">
+                {selected.role}
+              </div>
+            </div>
+
+            {/* Bio */}
+            <div className="px-8 py-6">
+              <p className="text-text-gray leading-relaxed">
+                {selected.bio || 'Bio coming soon.'}
+              </p>
+            </div>
+          </div>
+        </div>
+      )}
     </section>
   )
 }
