@@ -136,10 +136,10 @@ const jsonLd = {
   },
   aggregateRating: {
     '@type': 'AggregateRating',
-    ratingValue: '5',
+    ratingValue: '4.8',
     bestRating: '5',
-    ratingCount: '150',
-    reviewCount: '150',
+    ratingCount: '61',
+    reviewCount: '61',
   },
   award: Array.from({ length: site.awardsCount }, (_, i) => `${site.awardName} ${site.established + i}`),
 }
