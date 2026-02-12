@@ -42,6 +42,7 @@ export default function Contact() {
           <div className="rounded-lg overflow-hidden h-[350px] lg:h-full min-h-[350px] bg-gray-200">
             <iframe
               src={`https://www.google.com/maps?q=${encodeURIComponent('CrossFit Aggieland, 3815 General Pkwy, College Station, TX 77845')}&output=embed`}
+              title="CrossFit Aggieland location on Google Maps - 3815 General Parkway, College Station, TX"
               className="w-full h-full border-0"
               allowFullScreen
               loading="lazy"
