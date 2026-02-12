@@ -149,8 +149,8 @@ Only two records point to Vercel. Do not change anything else.
 
 | Type | Host | Value | Purpose |
 |------|------|-------|---------|
-| A | @ | 76.76.21.21 | Root domain → Vercel |
-| CNAME | www | cname.vercel-dns.com | www subdomain → Vercel |
+| A | @ | 216.198.79.1 | Root domain → Vercel |
+| CNAME | www | 94d675ff57d7d77d.vercel-dns-017.com | www subdomain → Vercel |
 
 MX records (Google Workspace email), TXT records (SPF, DKIM, verification), and SRV records are for email. Never touch them.
 
