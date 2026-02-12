@@ -21,7 +21,7 @@ export default function Coaches() {
               key={coach.name}
               className={`group relative rounded-lg overflow-hidden text-center p-8 transition-all hover:-translate-y-1 hover:shadow-xl ${
                 coach.isOwner
-                  ? 'bg-maroon text-white col-span-2 md:col-span-1 lg:col-span-2'
+                  ? 'bg-maroon text-white'
                   : 'bg-gray-50 hover:bg-white border border-gray-100'
               }`}
             >
