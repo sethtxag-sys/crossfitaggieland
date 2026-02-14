@@ -16,21 +16,21 @@ export default function Hero() {
         priority
         sizes="100vw"
       />
-      {/* Overlay */}
-      <div className="absolute inset-0 bg-gradient-to-b from-charcoal/70 via-charcoal/50 to-charcoal/80 z-[1]" />
+      {/* Overlay — lighter at bottom so photo stays visible behind stats */}
+      <div className="absolute inset-0 bg-gradient-to-b from-charcoal/70 via-charcoal/50 to-charcoal/60 z-[1]" />
 
-      {/* Content */}
-      <div className="relative z-[2] pt-20 pb-10 max-w-[900px] px-6">
-        <h1 className="font-display text-[clamp(3.2rem,9vw,7.5rem)] leading-[0.95] uppercase text-white mb-6 tracking-wide">
+      {/* Content — tighter spacing on mobile, full spacing on desktop */}
+      <div className="relative z-[2] pt-16 sm:pt-20 pb-8 sm:pb-10 max-w-[900px] px-6">
+        <h1 className="font-display text-[clamp(2.8rem,9vw,7.5rem)] leading-[0.95] uppercase text-white mb-4 sm:mb-6 tracking-wide">
           The Hour That<br />Changes Everything.
         </h1>
-        <p className="text-lg text-white/70 max-w-[520px] mx-auto mb-4 leading-relaxed font-light">
+        <p className="text-base sm:text-lg text-white/70 max-w-[520px] mx-auto mb-3 sm:mb-4 leading-relaxed font-light">
           Elite coaching and a real community in College Station. Your first week is free. No commitment. No strings.
         </p>
 
-        <div className="w-[60px] h-px bg-white/30 mx-auto mb-6" />
+        <div className="w-[60px] h-px bg-white/30 mx-auto mb-4 sm:mb-6" />
 
-        <div className="font-display text-2xl text-white tracking-[4px] uppercase mb-4">
+        <div className="font-display text-xl sm:text-2xl text-white tracking-[4px] uppercase mb-3 sm:mb-4">
           7 Days. Unlimited Classes. Zero Cost.
         </div>
 
@@ -39,7 +39,7 @@ export default function Hero() {
           href={googleMapsUrl}
           target="_blank"
           rel="noopener noreferrer"
-          className="inline-flex items-center gap-3 mb-6 px-6 py-3 bg-white/[0.07] backdrop-blur-sm border border-white/15 rounded-full hover:bg-white/15 transition-all group"
+          className="inline-flex items-center gap-3 mb-4 sm:mb-6 px-6 py-2.5 sm:py-3 bg-white/[0.07] backdrop-blur-sm border border-white/15 rounded-full hover:bg-white/15 transition-all group"
         >
           {/* Google "G" */}
           <svg className="w-5 h-5 shrink-0" viewBox="0 0 24 24">
@@ -62,8 +62,26 @@ export default function Hero() {
           <span className="text-sm text-white/50 group-hover:text-white/80 transition-colors">61 reviews</span>
         </a>
 
-        {/* Proof stats — above CTAs so they stay inside the hero photo zone */}
-        <div className="grid grid-cols-2 sm:flex sm:justify-center gap-x-12 gap-y-4 sm:gap-12 mt-2 mb-8">
+        {/* CTA buttons */}
+        <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center items-center">
+          <a
+            href={site.pikeUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="font-display text-base sm:text-lg tracking-widest uppercase bg-white text-charcoal border-2 border-white px-8 sm:px-10 py-3 sm:py-4 hover:bg-transparent hover:text-white transition-all w-[260px] sm:w-auto text-center"
+          >
+            Claim My Free Week
+          </a>
+          <a
+            href="#start"
+            className="font-display text-base sm:text-lg tracking-widest uppercase border-2 border-white text-white px-8 sm:px-10 py-3 sm:py-4 hover:bg-white hover:text-charcoal transition-all w-[260px] sm:w-auto text-center"
+          >
+            See How It Works
+          </a>
+        </div>
+
+        {/* Proof stats — below CTAs, inside the hero photo */}
+        <div className="grid grid-cols-2 sm:flex sm:justify-center gap-x-12 gap-y-4 sm:gap-12 mt-8 sm:mt-12">
           {[
             { number: `${site.awardsCount}x`, label: site.awardName },
             { number: String(site.established), label: 'Established' },
@@ -75,23 +93,6 @@ export default function Hero() {
               <div className="text-[0.7rem] text-white/60 tracking-[2px] uppercase mt-1">{stat.label}</div>
             </div>
           ))}
-        </div>
-
-        <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-          <a
-            href={site.pikeUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="font-display text-lg tracking-widest uppercase bg-white text-charcoal border-2 border-white px-10 py-4 hover:bg-transparent hover:text-white transition-all w-[280px] sm:w-auto text-center"
-          >
-            Claim My Free Week
-          </a>
-          <a
-            href="#start"
-            className="font-display text-lg tracking-widest uppercase border-2 border-white text-white px-10 py-4 hover:bg-white hover:text-charcoal transition-all w-[280px] sm:w-auto text-center"
-          >
-            See How It Works
-          </a>
         </div>
       </div>
     </section>
