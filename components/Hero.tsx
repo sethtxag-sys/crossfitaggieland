@@ -62,6 +62,21 @@ export default function Hero() {
           <span className="text-sm text-white/50 group-hover:text-white/80 transition-colors">61 reviews</span>
         </a>
 
+        {/* Proof stats — above CTAs so they stay inside the hero photo zone */}
+        <div className="grid grid-cols-2 sm:flex sm:justify-center gap-x-12 gap-y-4 sm:gap-12 mt-2 mb-8">
+          {[
+            { number: `${site.awardsCount}x`, label: site.awardName },
+            { number: String(site.established), label: 'Established' },
+            { number: String(coaches.length), label: 'Coaches' },
+            { number: '5 AM', label: 'First Class' },
+          ].map((stat) => (
+            <div key={stat.label} className="text-center">
+              <div className="font-display text-3xl text-white tracking-wider">{stat.number}</div>
+              <div className="text-[0.7rem] text-white/60 tracking-[2px] uppercase mt-1">{stat.label}</div>
+            </div>
+          ))}
+        </div>
+
         <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
           <a
             href={site.pikeUrl}
@@ -77,21 +92,6 @@ export default function Hero() {
           >
             See How It Works
           </a>
-        </div>
-
-        {/* Proof stats — 2x2 grid on mobile, single row on desktop */}
-        <div className="grid grid-cols-2 sm:flex sm:justify-center gap-x-12 gap-y-6 sm:gap-12 mt-12 sm:mt-16">
-          {[
-            { number: `${site.awardsCount}x`, label: site.awardName },
-            { number: String(site.established), label: 'Established' },
-            { number: String(coaches.length), label: 'Coaches' },
-            { number: '5 AM', label: 'First Class' },
-          ].map((stat) => (
-            <div key={stat.label} className="text-center">
-              <div className="font-display text-3xl text-white tracking-wider">{stat.number}</div>
-              <div className="text-[0.7rem] text-white/60 tracking-[2px] uppercase mt-1">{stat.label}</div>
-            </div>
-          ))}
         </div>
       </div>
     </section>
