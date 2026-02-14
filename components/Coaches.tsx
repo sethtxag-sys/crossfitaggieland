@@ -25,9 +25,9 @@ export default function Coaches() {
   }, [selected])
 
   return (
-    <section id="coaches" className="py-24 lg:py-28">
+    <section id="coaches" className="py-16 lg:py-28">
       <div className="max-w-[1200px] mx-auto px-6">
-        <div className="text-center mb-16">
+        <div className="text-center mb-12 lg:mb-16">
           <div className="font-display text-sm tracking-[4px] uppercase text-maroon mb-3">Your Coaches</div>
           <h2 className="font-display text-[clamp(2.2rem,5vw,3.5rem)] leading-[1.05] uppercase tracking-wide mb-5">
             The People in Your Corner.
@@ -48,7 +48,6 @@ export default function Coaches() {
                   : 'bg-gray-50 hover:bg-white border border-gray-100'
               }`}
             >
-              {/* Photo or Initials Fallback */}
               {coach.image ? (
                 <div
                   className={`w-20 h-20 rounded-full mx-auto mb-4 overflow-hidden ring-2 ring-offset-2 ${
@@ -87,23 +86,17 @@ export default function Coaches() {
         </div>
       </div>
 
-      {/* Bio Modal */}
       {selected && (
         <div
           className="fixed inset-0 z-50 flex items-center justify-center px-4"
           onClick={() => setSelected(null)}
         >
-          {/* Backdrop */}
           <div className="absolute inset-0 bg-black/70 backdrop-blur-sm" />
-
-          {/* Modal */}
           <div
             className="relative bg-white rounded-xl max-w-md w-full shadow-2xl overflow-hidden animate-[fadeIn_0.2s_ease-out]"
             onClick={(e) => e.stopPropagation()}
           >
-            {/* Header */}
             <div className={`px-8 pt-8 pb-6 text-center ${selected.isOwner ? 'bg-maroon' : 'bg-charcoal'}`}>
-              {/* Close Button */}
               <button
                 onClick={() => setSelected(null)}
                 className="absolute top-4 right-4 text-white/60 hover:text-white transition-colors"
@@ -113,8 +106,6 @@ export default function Coaches() {
                   <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
                 </svg>
               </button>
-
-              {/* Photo */}
               {selected.image ? (
                 <div className="w-28 h-28 rounded-full mx-auto mb-4 overflow-hidden ring-4 ring-white/20 ring-offset-4 ring-offset-transparent">
                   <Image
@@ -130,7 +121,6 @@ export default function Coaches() {
                   {selected.initials}
                 </div>
               )}
-
               <h3 className="font-display text-2xl tracking-wider uppercase text-white">
                 {selected.name}
               </h3>
@@ -138,8 +128,6 @@ export default function Coaches() {
                 {selected.role}
               </div>
             </div>
-
-            {/* Bio */}
             <div className="px-8 py-6">
               <p className="text-text-gray leading-relaxed">
                 {selected.bio || 'Bio coming soon.'}

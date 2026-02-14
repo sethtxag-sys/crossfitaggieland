@@ -33,9 +33,9 @@ const outcomes = [
 
 export default function Transformation() {
   return (
-    <section className="py-24 lg:py-28 bg-gray-50">
+    <section className="py-16 lg:py-28 bg-gray-50">
       <div className="max-w-[1200px] mx-auto px-6">
-        <div className="text-center mb-16">
+        <div className="text-center mb-12 lg:mb-16">
           <div className="font-display text-sm tracking-[4px] uppercase text-maroon mb-3">
             Your Life, 6 Months From Now
           </div>

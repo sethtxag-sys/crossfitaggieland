@@ -18,7 +18,7 @@ const values = [
 
 export default function About() {
   return (
-    <section id="about" className="py-24 lg:py-28 bg-gray-50">
+    <section id="about" className="py-16 lg:py-28 bg-gray-50">
       <div className="max-w-[1200px] mx-auto px-6">
         <div className="grid lg:grid-cols-2 gap-16 items-start">
           {/* Community photo */}

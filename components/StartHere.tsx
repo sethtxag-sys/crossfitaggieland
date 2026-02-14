@@ -3,7 +3,7 @@ import Image from 'next/image'
 
 export default function StartHere() {
   return (
-    <section id="start" className="py-24 lg:py-28">
+    <section id="start" className="py-16 lg:py-28">
       <div className="max-w-[1200px] mx-auto px-6">
         <div className="grid lg:grid-cols-2 gap-16 items-center">
           <div>

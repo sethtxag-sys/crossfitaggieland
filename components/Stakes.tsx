@@ -20,9 +20,9 @@ const stakes = [
 
 export default function Stakes() {
   return (
-    <section className="py-24 lg:py-28 bg-charcoal text-white">
+    <section className="py-16 lg:py-28 bg-charcoal text-white">
       <div className="max-w-[1200px] mx-auto px-6">
-        <div className="text-center mb-16">
+        <div className="text-center mb-12 lg:mb-16">
           <div className="font-display text-sm tracking-[4px] uppercase text-maroon-accent mb-3">
             The Cost of Waiting
           </div>

@@ -79,8 +79,8 @@ export default function Hero() {
           </a>
         </div>
 
-        {/* Proof stats */}
-        <div className="flex justify-center gap-12 mt-16 flex-wrap">
+        {/* Proof stats — 2x2 grid on mobile, single row on desktop */}
+        <div className="grid grid-cols-2 sm:flex sm:justify-center gap-x-12 gap-y-6 sm:gap-12 mt-12 sm:mt-16">
           {[
             { number: `${site.awardsCount}x`, label: site.awardName },
             { number: String(site.established), label: 'Established' },

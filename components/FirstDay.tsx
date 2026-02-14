@@ -2,9 +2,9 @@ import { site } from '@/lib/data'
 
 export default function FirstDay() {
   return (
-    <section className="py-24 lg:py-28 bg-charcoal text-white">
+    <section className="py-16 lg:py-28 bg-charcoal text-white">
       <div className="max-w-[900px] mx-auto px-6">
-        <div className="text-center mb-16">
+        <div className="text-center mb-12 lg:mb-16">
           <div className="font-display text-sm tracking-[4px] uppercase text-maroon-accent mb-3">Your First Day</div>
           <h2 className="font-display text-[clamp(2.2rem,5vw,3.5rem)] leading-[1.05] uppercase tracking-wide mb-5">
             Here&rsquo;s Exactly What Happens.
