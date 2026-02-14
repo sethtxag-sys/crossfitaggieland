@@ -63,6 +63,27 @@ export default function Hero() {
             </div>
           ))}
         </div>
+
+        {/* Google Review Badge */}
+        <a
+          href="https://www.google.com/maps/place/CrossFit+Aggieland/"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="inline-flex items-center gap-2 mt-8 px-5 py-2.5 bg-white/10 backdrop-blur-sm border border-white/20 rounded-full hover:bg-white/20 transition-all group"
+        >
+          <svg className="w-5 h-5" viewBox="0 0 24 24" fill="none">
+            <path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z" fill="#FBBF24" />
+          </svg>
+          <span className="font-display text-sm tracking-wider text-white/90">4.8</span>
+          <div className="flex gap-0.5">
+            {[...Array(5)].map((_, i) => (
+              <svg key={i} className={`w-3.5 h-3.5 ${i < 5 ? 'fill-yellow-400' : 'fill-white/30'}`} viewBox="0 0 24 24">
+                <path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z" />
+              </svg>
+            ))}
+          </div>
+          <span className="text-xs text-white/60 group-hover:text-white/80 transition-colors">61 Google Reviews</span>
+        </a>
       </div>
     </section>
   )
