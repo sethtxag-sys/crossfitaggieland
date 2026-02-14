@@ -9,6 +9,8 @@ import DailyWorkouts from '@/components/DailyWorkouts'
 import Testimonials from '@/components/Testimonials'
 import Transformation from '@/components/Transformation'
 import Pricing from '@/components/Pricing'
+import FAQ from '@/components/FAQ'
+import FirstDay from '@/components/FirstDay'
 import FreeWeekCTA from '@/components/FreeWeekCTA'
 import Contact from '@/components/Contact'
 import Footer from '@/components/Footer'
@@ -16,19 +18,21 @@ import Footer from '@/components/Footer'
 /**
  * StoryBrand page flow:
  *
- * 1. Hero — Customer desire + direct CTA
+ * 1. Hero — Customer desire + direct CTA + Google review badge
  * 2. StartHere — Name the problem (external + internal)
  * 3. Stakes — What you lose by doing nothing (failure)
  * 4. About — The guide (empathy + authority)
  * 5. Coaches — Guide credentials
  * 6. DailyWorkouts — What you will do (programming + scaling)
- * 7. Schedule — When you can do it (the plan)
+ * 7. Schedule — When you can do it (clickable time slots)
  * 8. Testimonials — Social proof
  * 9. Transformation — Success (the "after" picture)
- * 10. Pricing — Investment (after value is established)
- * 11. FreeWeekCTA — Direct CTA (plan + call to action)
- * 12. Contact — Contact form (email protected)
- * 13. Footer
+ * 10. Pricing — Investment (with price anchoring)
+ * 11. FAQ — Handle objections before they leave
+ * 12. FirstDay — Remove fear of the unknown
+ * 13. FreeWeekCTA — Direct CTA (plan + call to action)
+ * 14. Contact — Contact form (email protected)
+ * 15. Footer — Quick links, social, member login
  */
 export default function Home() {
   return (
@@ -44,6 +48,8 @@ export default function Home() {
       <Testimonials />
       <Transformation />
       <Pricing />
+      <FAQ />
+      <FirstDay />
       <FreeWeekCTA />
       <Contact />
       <Footer />
