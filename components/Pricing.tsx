@@ -61,6 +61,12 @@ export default function Pricing() {
           ))}
         </p>
 
+        {/* Price anchoring */}
+        <p className="text-center text-mid-gray text-sm mt-3">
+          That&rsquo;s less than <strong className="text-charcoal">$5 per class</strong> with unlimited access.
+          Personal training in College Station runs $60-80 per session.
+        </p>
+
         <div className="text-center mt-8">
           <a
             href={site.pikeUrl}
