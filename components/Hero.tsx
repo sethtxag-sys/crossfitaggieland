@@ -20,7 +20,7 @@ export default function Hero() {
       <div className="absolute inset-0 bg-gradient-to-b from-charcoal/70 via-charcoal/50 to-charcoal/80 z-[1]" />
 
       {/* Content */}
-      <div className="relative z-[2] pt-20 max-w-[900px] px-6">
+      <div className="relative z-[2] pt-20 pb-16 sm:pb-20 max-w-[900px] px-6">
         <h1 className="font-display text-[clamp(3.2rem,9vw,7.5rem)] leading-[0.95] uppercase text-white mb-6 tracking-wide">
           The Hour That<br />Changes Everything.
         </h1>
@@ -80,7 +80,7 @@ export default function Hero() {
         </div>
 
         {/* Proof stats */}
-        <div className="flex justify-center gap-8 sm:gap-12 mt-10 sm:mt-16 flex-wrap">
+        <div className="flex justify-center gap-10 sm:gap-12 mt-14 sm:mt-16 flex-wrap">
           {[
             { number: `${site.awardsCount}x`, label: site.awardName },
             { number: String(site.established), label: 'Established' },
