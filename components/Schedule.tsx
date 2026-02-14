@@ -14,16 +14,20 @@ export default function Schedule() {
           </p>
         </div>
 
-        {/* Class times grid */}
+        {/* Class times grid — each slot links to Pike13 */}
         <div className="grid grid-cols-2 md:grid-cols-4 gap-3 mb-12">
           {schedule.classTimes.map((ct) => (
-            <div
+            <a
               key={ct.time}
-              className="bg-white/[0.05] border border-white/[0.08] rounded-lg p-5 text-center hover:bg-white/[0.08] transition-colors"
+              href={site.pikeUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="bg-white/[0.05] border border-white/[0.08] rounded-lg p-5 text-center hover:bg-maroon hover:border-maroon transition-all cursor-pointer group"
             >
               <div className="font-display text-2xl tracking-wider text-white">{ct.time}</div>
-              <div className="text-[0.7rem] tracking-[2px] uppercase text-white/55 mt-1">{ct.label}</div>
-            </div>
+              <div className="text-[0.7rem] tracking-[2px] uppercase text-white/55 mt-1 group-hover:text-white/80 transition-colors">{ct.label}</div>
+              <div className="text-[0.6rem] tracking-[2px] uppercase text-white/0 group-hover:text-white/70 mt-2 transition-all font-display">Book Now</div>
+            </a>
           ))}
         </div>
 
