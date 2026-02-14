@@ -36,7 +36,7 @@ export default function Footer() {
                 { label: 'Coaches', href: '#coaches' },
                 { label: 'Contact', href: '#contact' },
                 { label: 'FAQ', href: '#faq' },
-                { label: 'Google Reviews', href: 'https://www.google.com/maps/place/CrossFit+Aggieland/' },
+                { label: 'Google Reviews', href: 'https://www.google.com/maps/search/?api=1&query=CrossFit+Aggieland+3815+General+Pkwy+College+Station+TX+77845' },
               ].map((link) => (
                 <a
                   key={link.label}
