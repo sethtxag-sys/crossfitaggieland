@@ -80,11 +80,11 @@ export default function Footer() {
         </div>
 
         {/* Bottom row */}
-        <div className="flex flex-wrap items-center justify-between gap-4">
-          <div className="text-xs text-white/50">
+        <div className="flex flex-col items-center gap-3 md:flex-row md:justify-between md:gap-4">
+          <div className="text-xs text-white/50 text-center md:text-left">
             &copy; {year} {site.name}. {site.address.street}, {site.address.city}, {site.address.state} {site.address.zip}.
           </div>
-          <div className="flex gap-6">
+          <div className="flex flex-wrap justify-center gap-4 md:gap-6">
             <a href={`mailto:${site.email}`} className="text-xs text-white/50 hover:text-white/80 transition-colors">
               {site.email}
             </a>
