@@ -55,7 +55,7 @@ export default function RootLayout({
                 <body className="antialiased">
                   {children}
                         <Analytics />
-                </body>body>
-          </html>html>
+                </body>
+          </html>
         )
-}</html>
+}
