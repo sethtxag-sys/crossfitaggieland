@@ -28,12 +28,18 @@ export default function Hero() {
           Elite coaching and a real community in College Station. Your first week is free. No commitment. No strings.
         </p>
 
+        <div className="w-[60px] h-px bg-white/30 mx-auto mb-6" />
+
+        <div className="font-display text-2xl text-white tracking-[4px] uppercase mb-4">
+          7 Days. Unlimited Classes. Zero Cost.
+        </div>
+
         {/* Google Review Badge — social proof before the ask */}
         <a
           href={googleMapsUrl}
           target="_blank"
           rel="noopener noreferrer"
-          className="inline-flex items-center gap-3 mt-4 mb-6 px-6 py-3 bg-white/[0.07] backdrop-blur-sm border border-white/15 rounded-full hover:bg-white/15 transition-all group"
+          className="inline-flex items-center gap-3 mb-6 px-6 py-3 bg-white/[0.07] backdrop-blur-sm border border-white/15 rounded-full hover:bg-white/15 transition-all group"
         >
           {/* Google "G" */}
           <svg className="w-5 h-5 shrink-0" viewBox="0 0 24 24">
@@ -56,12 +62,6 @@ export default function Hero() {
           <span className="text-sm text-white/50 group-hover:text-white/80 transition-colors">61 reviews</span>
         </a>
 
-        <div className="w-[60px] h-px bg-white/30 mx-auto mb-6" />
-
-        <div className="font-display text-2xl text-white tracking-[4px] uppercase mb-8">
-          7 Days. Unlimited Classes. Zero Cost.
-        </div>
-
         <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
           <a
             href={site.pikeUrl}
@@ -80,7 +80,7 @@ export default function Hero() {
         </div>
 
         {/* Proof stats */}
-        <div className="flex justify-center gap-12 mt-16 flex-wrap">
+        <div className="flex justify-center gap-8 sm:gap-12 mt-10 sm:mt-16 flex-wrap">
           {[
             { number: `${site.awardsCount}x`, label: site.awardName },
             { number: String(site.established), label: 'Established' },
