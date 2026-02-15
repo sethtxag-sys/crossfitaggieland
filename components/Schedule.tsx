@@ -38,11 +38,11 @@ export default function Schedule() {
 
         {/* Days row */}
         <FadeIn delay={200}>
-        <div className="grid grid-cols-4 sm:grid-cols-4 md:grid-cols-7 gap-2 mb-8">
+        <div className="flex flex-wrap justify-center gap-2 mb-8">
           {schedule.days.map((day) => (
             <div
               key={day.name}
-              className={`rounded-xl p-3 sm:p-4 text-center ${
+              className={`rounded-xl p-3 sm:p-4 text-center w-[calc(25%-6px)] md:w-[calc(14.285%-7px)] min-w-0 ${
                 day.special
                   ? 'bg-maroon border border-maroon-light'
                   : day.open
