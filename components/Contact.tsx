@@ -21,24 +21,24 @@ export default function Contact() {
           <div>
             {/* Contact info shown first for quick scanning */}
             <FadeIn>
-            <div className="mb-8 space-y-5">
-              <ContactItem
-                icon={<LocationIcon />}
-                label="Address"
-                value={`${site.address.street}, ${site.address.city}, ${site.address.state} ${site.address.zip}`}
-              />
-              <ContactItem
-                icon={<PhoneIcon />}
-                label="Phone"
-                value={site.phone}
-                href={`tel:${site.phone.replace(/-/g, '')}`}
-              />
-              <ContactItem
-                icon={<ClockIcon />}
-                label="Class Hours"
-                value={`Mon–Fri: ${weekdayHours} | Sat: ${satHours}`}
-              />
-            </div>
+              <div className="mb-8 space-y-5">
+                <ContactItem
+                  icon={<LocationIcon />}
+                  label="Address"
+                  value={`${site.address.street}, ${site.address.city}, ${site.address.state} ${site.address.zip}`}
+                />
+                <ContactItem
+                  icon={<PhoneIcon />}
+                  label="Phone"
+                  value={site.phone}
+                  href={`tel:${site.phone.replace(/-/g, '')}`}
+                />
+                <ContactItem
+                  icon={<ClockIcon />}
+                  label="Class Hours"
+                  value={`Mon–Fri: ${weekdayHours} | Sat: ${satHours}`}
+                />
+              </div>
             </FadeIn>
 
             <FadeIn delay={100}>
@@ -46,18 +46,18 @@ export default function Contact() {
             </FadeIn>
           </div>
 
-          {/* Right: Map */}
+          {/* Right: Map — tighter zoom so the pin is prominent on mobile */}
           <FadeIn delay={200}>
-          <div className="rounded-xl overflow-hidden h-[250px] sm:h-[300px] lg:h-full min-h-[300px] bg-gray-200">
-            <iframe
-              src={`https://www.google.com/maps?q=${encodeURIComponent('CrossFit Aggieland, 3815 General Pkwy, College Station, TX 77845')}&output=embed`}
-              title="CrossFit Aggieland location on Google Maps - 3815 General Parkway, College Station, TX"
-              className="w-full h-full border-0"
-              allowFullScreen
-              loading="lazy"
-              referrerPolicy="no-referrer-when-downgrade"
-            />
-          </div>
+            <div className="rounded-xl overflow-hidden h-[250px] sm:h-[300px] lg:h-full min-h-[300px] bg-gray-200">
+              <iframe
+                src={`https://www.google.com/maps?q=${encodeURIComponent('CrossFit Aggieland, 3815 General Pkwy, College Station, TX 77845')}&z=15&output=embed`}
+                title="CrossFit Aggieland location on Google Maps - 3815 General Parkway, College Station, TX"
+                className="w-full h-full border-0"
+                allowFullScreen
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+              />
+            </div>
           </FadeIn>
         </div>
       </div>
