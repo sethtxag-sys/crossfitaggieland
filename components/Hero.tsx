@@ -6,7 +6,7 @@ const googleMapsUrl = 'https://www.google.com/maps/search/?api=1&query=CrossFit+
 
 export default function Hero() {
   return (
-    <section id="hero" className="relative min-h-screen flex items-center justify-center text-center bg-charcoal overflow-hidden">
+    <section id="hero" className="relative min-h-screen flex items-end justify-center text-center bg-charcoal overflow-hidden">
       {/* Background photo */}
       <Image
         src="/images/hero-group.jpg"
@@ -17,10 +17,10 @@ export default function Hero() {
         sizes="100vw"
       />
       {/* Overlay — stronger at bottom to separate stats zone */}
-      <div className="absolute inset-0 bg-gradient-to-b from-charcoal/70 via-charcoal/50 to-charcoal/80 z-[1]" />
+      <div className="absolute inset-0 bg-gradient-to-b from-charcoal/70 via-charcoal/50 to-charcoal/90 z-[1]" />
 
       {/* Content — generous spacing, clear visual zones */}
-      <div className="relative z-[2] pt-28 sm:pt-24 pb-10 sm:pb-14 max-w-[900px] px-5 sm:px-6">
+      <div className="relative z-[2] pt-28 sm:pt-24 pb-12 sm:pb-16 max-w-[900px] px-5 sm:px-6">
         {/* ZONE 1: Headline */}
         <h1 className="font-display text-[clamp(2.6rem,8.5vw,7.5rem)] leading-[0.93] uppercase text-white mb-5 sm:mb-6 tracking-wide">
           The Hour That{' '}<br />Changes Everything.
