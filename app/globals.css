@@ -49,3 +49,20 @@ section[id] {
     transform: scale(1) translateY(0);
   }
 }
+
+/* Section divider — subtle line between adjacent light sections */
+@layer utilities {
+  .section-divider {
+    position: relative;
+  }
+  .section-divider::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: min(80%, 1100px);
+    height: 1px;
+    background: linear-gradient(90deg, transparent, #e5e7eb 30%, #e5e7eb 70%, transparent);
+  }
+}

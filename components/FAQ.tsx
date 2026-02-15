@@ -2,6 +2,7 @@
 
 import { useState } from 'react'
 import { site } from '@/lib/data'
+import FadeIn from './FadeIn'
 
 const faqs = [
   {
@@ -40,26 +41,28 @@ export default function FAQ() {
   const [openIndex, setOpenIndex] = useState<number | null>(null)
 
   return (
-    <section id="faq" className="py-20 lg:py-28 bg-gray-50">
+    <section id="faq" className="py-20 lg:py-28 bg-gray-50 section-divider">
       <div className="max-w-[800px] mx-auto px-6">
-        <div className="text-center mb-16">
-          <div className="font-display text-sm tracking-[4px] uppercase text-maroon mb-3">FAQ</div>
-          <h2 className="font-display text-[clamp(2.2rem,5vw,3.5rem)] leading-[1.05] uppercase tracking-wide mb-5">
-            Questions? We Have Answers.
-          </h2>
-        </div>
+        <FadeIn>
+          <div className="text-center mb-12 sm:mb-16">
+            <div className="font-display text-sm tracking-[4px] uppercase text-maroon mb-3">FAQ</div>
+            <h2 className="font-display text-[clamp(2.2rem,5vw,3.5rem)] leading-[1.05] uppercase tracking-wide mb-5">
+              Questions? We Have Answers.
+            </h2>
+          </div>
+        </FadeIn>
 
         <div className="space-y-3">
           {faqs.map((faq, i) => (
+            <FadeIn key={i} delay={i * 60}>
             <div
-              key={i}
-              className="bg-white rounded-lg border border-gray-200 overflow-hidden"
+              className="bg-white rounded-xl border border-gray-200 overflow-hidden"
             >
               <button
                 onClick={() => setOpenIndex(openIndex === i ? null : i)}
-                className="w-full flex items-center justify-between p-5 text-left hover:bg-gray-50 transition-colors"
+                className="w-full flex items-center justify-between p-4 sm:p-5 text-left hover:bg-gray-50 transition-colors"
               >
-                <span className="font-display text-base tracking-wider uppercase text-charcoal pr-4">
+                <span className="font-semibold text-[0.95rem] sm:text-base text-charcoal pr-4 leading-snug">
                   {faq.question}
                 </span>
                 <svg
@@ -79,23 +82,26 @@ export default function FAQ() {
                   openIndex === i ? 'max-h-[300px] opacity-100' : 'max-h-0 opacity-0'
                 }`}
               >
-                <div className="px-5 pb-5 text-text-gray leading-relaxed">
+                <div className="px-4 sm:px-5 pb-4 sm:pb-5 text-text-gray leading-relaxed text-[0.9rem] sm:text-base">
                   {faq.answer}
                 </div>
               </div>
             </div>
+            </FadeIn>
           ))}
         </div>
 
-        <div className="text-center mt-12">
-          <p className="text-text-gray text-sm mb-4">Still have questions?</p>
-          <a
-            href="#contact"
-            className="inline-block font-display text-sm tracking-widest uppercase text-maroon border-2 border-maroon px-8 py-3 hover:bg-maroon hover:text-white transition-all"
-          >
-            Contact Us
-          </a>
-        </div>
+        <FadeIn>
+          <div className="text-center mt-12">
+            <p className="text-text-gray text-sm mb-4">Still have questions?</p>
+            <a
+              href="#contact"
+              className="inline-block font-display text-sm tracking-widest uppercase text-maroon border-2 border-maroon px-8 py-3 hover:bg-maroon hover:text-white transition-all"
+            >
+              Contact Us
+            </a>
+          </div>
+        </FadeIn>
       </div>
     </section>
   )

@@ -1,24 +1,27 @@
 import { site, schedule } from '@/lib/data'
 import ContactForm from './ContactForm'
+import FadeIn from './FadeIn'
 
 export default function Contact() {
   const weekdayHours = schedule.days.find((d) => d.name === 'Mon')?.hours || '5a – 6:30p'
   const satHours = schedule.days.find((d) => d.name === 'Sat')?.hours || '9a – 10a'
 
   return (
-    <section id="contact" className="py-20 lg:py-28 bg-gray-50">
+    <section id="contact" className="py-20 lg:py-28 bg-gray-50 section-divider">
       <div className="max-w-[1200px] mx-auto px-6">
-        <div className="font-display text-sm tracking-[4px] uppercase text-maroon mb-3">Contact</div>
-        <h2 className="font-display text-[clamp(2.2rem,5vw,3.5rem)] leading-[1.05] uppercase tracking-wide mb-12">
-          Questions? We&rsquo;re Here.
-        </h2>
+        <FadeIn>
+          <div className="font-display text-sm tracking-[4px] uppercase text-maroon mb-3">Contact</div>
+          <h2 className="font-display text-[clamp(2.2rem,5vw,3.5rem)] leading-[1.05] uppercase tracking-wide mb-10 sm:mb-12">
+            Questions? We&rsquo;re Here.
+          </h2>
+        </FadeIn>
 
-        <div className="grid lg:grid-cols-2 gap-12">
-          {/* Left: Contact form + info */}
+        <div className="grid lg:grid-cols-2 gap-10 lg:gap-12">
+          {/* Left: Contact info + form */}
           <div>
-            <ContactForm />
-
-            <div className="mt-10 space-y-6">
+            {/* Contact info shown first for quick scanning */}
+            <FadeIn>
+            <div className="mb-8 space-y-5">
               <ContactItem
                 icon={<LocationIcon />}
                 label="Address"
@@ -36,10 +39,16 @@ export default function Contact() {
                 value={`Mon–Fri: ${weekdayHours} | Sat: ${satHours}`}
               />
             </div>
+            </FadeIn>
+
+            <FadeIn delay={100}>
+              <ContactForm />
+            </FadeIn>
           </div>
 
           {/* Right: Map */}
-          <div className="rounded-lg overflow-hidden h-[350px] lg:h-full min-h-[350px] bg-gray-200">
+          <FadeIn delay={200}>
+          <div className="rounded-xl overflow-hidden h-[250px] sm:h-[300px] lg:h-full min-h-[300px] bg-gray-200">
             <iframe
               src={`https://www.google.com/maps?q=${encodeURIComponent('CrossFit Aggieland, 3815 General Pkwy, College Station, TX 77845')}&output=embed`}
               title="CrossFit Aggieland location on Google Maps - 3815 General Parkway, College Station, TX"
@@ -49,6 +58,7 @@ export default function Contact() {
               referrerPolicy="no-referrer-when-downgrade"
             />
           </div>
+          </FadeIn>
         </div>
       </div>
     </section>

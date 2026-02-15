@@ -1,13 +1,15 @@
 import { site } from '@/lib/data'
 import Image from 'next/image'
+import FadeIn from './FadeIn'
 
 export default function DailyWorkouts() {
   return (
-    <section id="wods" className="py-20 lg:py-28 bg-gray-50">
+    <section id="wods" className="py-20 lg:py-28 bg-gray-50 section-divider">
       <div className="max-w-[1200px] mx-auto px-6">
-        <div className="grid lg:grid-cols-2 gap-16 items-center">
+        <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
           {/* Training photo */}
-          <div className="relative rounded-lg overflow-hidden h-[350px] lg:h-[450px]">
+          <FadeIn>
+          <div className="relative rounded-xl overflow-hidden h-[300px] sm:h-[350px] lg:h-[450px]">
             <Image
               src="/images/front-squat.jpg"
               alt="Athlete performing a front squat at CrossFit Aggieland"
@@ -16,14 +18,16 @@ export default function DailyWorkouts() {
               sizes="(max-width: 1024px) 100vw, 50vw"
             />
           </div>
+          </FadeIn>
 
           {/* Content */}
+          <FadeIn delay={150}>
           <div>
             <div className="font-display text-sm tracking-[4px] uppercase text-maroon mb-3">Daily Workouts</div>
             <h2 className="font-display text-[clamp(2.2rem,5vw,3.5rem)] leading-[1.05] uppercase tracking-wide mb-5">
               {site.programming} Programming, Coach-Led.
             </h2>
-            <p className="text-text-gray leading-relaxed mb-8">
+            <p className="text-text-gray leading-relaxed mb-8 max-w-prose">
               We follow {site.programming} programming for consistent, effective training, then we scale and coach it to fit every athlete in the room.
             </p>
 
@@ -55,6 +59,7 @@ export default function DailyWorkouts() {
               ))}
             </div>
           </div>
+          </FadeIn>
         </div>
       </div>
     </section>

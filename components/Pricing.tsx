@@ -1,20 +1,24 @@
 import { pricing, site } from '@/lib/data'
+import FadeIn from './FadeIn'
 
 export default function Pricing() {
   return (
-    <section id="pricing" className="py-20 lg:py-28">
+    <section id="pricing" className="py-20 lg:py-28 bg-gray-50 section-divider">
       <div className="max-w-[1200px] mx-auto px-6">
-        <div className="text-center mb-12 lg:mb-16">
-          <div className="font-display text-sm tracking-[4px] uppercase text-maroon mb-3">Pricing</div>
-          <h2 className="font-display text-[clamp(2.2rem,5vw,3.5rem)] leading-[1.05] uppercase tracking-wide mb-5">
-            Simple Pricing. No Hidden Fees.
-          </h2>
-          <p className="text-text-gray max-w-[600px] mx-auto leading-relaxed">
-            We believe great coaching should be accessible. Preferred rates for those who serve our community.
-          </p>
-        </div>
+        <FadeIn>
+          <div className="text-center mb-12 lg:mb-16">
+            <div className="font-display text-sm tracking-[4px] uppercase text-maroon mb-3">Pricing</div>
+            <h2 className="font-display text-[clamp(2.2rem,5vw,3.5rem)] leading-[1.05] uppercase tracking-wide mb-5">
+              Simple Pricing. No Hidden Fees.
+            </h2>
+            <p className="text-text-gray max-w-[600px] mx-auto leading-relaxed">
+              We believe great coaching should be accessible. Preferred rates for those who serve our community.
+            </p>
+          </div>
+        </FadeIn>
 
         {/* Pricing table — scrollable on small screens with fade hint */}
+        <FadeIn delay={100}>
         <div className="relative">
           <div className="overflow-x-auto pb-2 -mx-6 px-6 sm:mx-0 sm:px-0">
           <table className="w-full border-collapse min-w-[500px]">
@@ -52,7 +56,7 @@ export default function Pricing() {
           </table>
           </div>
           {/* Fade hint for horizontal scroll on mobile */}
-          <div className="absolute right-0 top-0 bottom-2 w-8 bg-gradient-to-l from-white to-transparent pointer-events-none sm:hidden" />
+          <div className="absolute right-0 top-0 bottom-2 w-8 bg-gradient-to-l from-gray-50 to-transparent pointer-events-none sm:hidden" />
         </div>
 
         <p className="text-center text-text-gray text-sm mt-6 sm:mt-8">
@@ -76,11 +80,12 @@ export default function Pricing() {
             href={site.pikeUrl}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-block font-display text-lg tracking-widest uppercase bg-maroon text-white border-2 border-maroon px-10 py-4 hover:bg-maroon-dark hover:border-maroon-dark hover:-translate-y-0.5 transition-all"
+            className="inline-block font-display text-lg tracking-widest uppercase text-maroon border-2 border-maroon px-10 py-4 hover:bg-maroon hover:text-white hover:-translate-y-0.5 transition-all"
           >
             Start Your Free Week
           </a>
         </div>
+        </FadeIn>
       </div>
     </section>
   )

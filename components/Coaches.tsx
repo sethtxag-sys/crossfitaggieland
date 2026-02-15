@@ -4,6 +4,7 @@ import { useState, useEffect } from 'react'
 import { coaches } from '@/lib/data'
 import type { Coach } from '@/lib/types'
 import Image from 'next/image'
+import FadeIn from './FadeIn'
 
 export default function Coaches() {
   const [selected, setSelected] = useState<Coach | null>(null)
@@ -25,26 +26,28 @@ export default function Coaches() {
   }, [selected])
 
   return (
-    <section id="coaches" className="py-20 lg:py-28">
+    <section id="coaches" className="py-20 lg:py-28 section-divider">
       <div className="max-w-[1200px] mx-auto px-6">
-        <div className="text-center mb-12 lg:mb-16">
-          <div className="font-display text-sm tracking-[4px] uppercase text-maroon mb-3">Your Coaches</div>
-          <h2 className="font-display text-[clamp(2.2rem,5vw,3.5rem)] leading-[1.05] uppercase tracking-wide mb-5">
-            The People in Your Corner.
-          </h2>
-          <p className="text-text-gray max-w-[600px] mx-auto leading-relaxed">
-            You won&rsquo;t be left guessing. Our coaches learn your name, correct your movement, and push you to be better than yesterday.
-          </p>
-        </div>
+        <FadeIn>
+          <div className="text-center mb-12 lg:mb-16">
+            <div className="font-display text-sm tracking-[4px] uppercase text-maroon mb-3">Your Coaches</div>
+            <h2 className="font-display text-[clamp(2.2rem,5vw,3.5rem)] leading-[1.05] uppercase tracking-wide mb-5">
+              The People in Your Corner.
+            </h2>
+            <p className="text-text-gray max-w-[600px] mx-auto leading-relaxed">
+              You won&rsquo;t be left guessing. Our coaches learn your name, correct your movement, and push you to be better than yesterday.
+            </p>
+          </div>
+        </FadeIn>
 
         <div className="grid grid-cols-1 min-[420px]:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 lg:gap-6">
-          {coaches.map((coach) => (
+          {coaches.map((coach, i) => (
+            <FadeIn key={coach.name} delay={i * 80}>
             <div
-              key={coach.name}
               onClick={() => setSelected(coach)}
-              className={`group relative rounded-lg overflow-hidden text-center p-8 transition-all hover:-translate-y-1 hover:shadow-xl cursor-pointer ${
+              className={`group relative rounded-xl overflow-hidden text-center p-6 sm:p-8 transition-all hover:-translate-y-1 hover:shadow-xl cursor-pointer h-full ${
                 coach.isOwner
-                  ? 'bg-maroon text-white'
+                  ? 'bg-maroon text-white min-[420px]:col-span-2 md:col-span-1'
                   : 'bg-gray-50 hover:bg-white border border-gray-100'
               }`}
             >
@@ -82,6 +85,7 @@ export default function Coaches() {
                 {coach.role}
               </div>
             </div>
+            </FadeIn>
           ))}
         </div>
       </div>
@@ -93,7 +97,7 @@ export default function Coaches() {
         >
           <div className="absolute inset-0 bg-black/70 backdrop-blur-sm" />
           <div
-            className="relative bg-white rounded-xl max-w-md w-full shadow-2xl overflow-hidden animate-[fadeIn_0.2s_ease-out]"
+            className="relative bg-white rounded-2xl max-w-md w-full shadow-2xl overflow-hidden animate-[fadeIn_0.2s_ease-out]"
             onClick={(e) => e.stopPropagation()}
           >
             <div className={`px-8 pt-8 pb-6 text-center ${selected.isOwner ? 'bg-maroon' : 'bg-charcoal'}`}>

@@ -1,20 +1,23 @@
 import { site } from '@/lib/data'
+import FadeIn from './FadeIn'
 
 export default function FirstDay() {
   return (
     <section className="py-20 lg:py-28 bg-charcoal text-white">
       <div className="max-w-[900px] mx-auto px-6">
-        <div className="text-center mb-12 lg:mb-16">
-          <div className="font-display text-sm tracking-[4px] uppercase text-maroon-accent mb-3">Your First Day</div>
-          <h2 className="font-display text-[clamp(2.2rem,5vw,3.5rem)] leading-[1.05] uppercase tracking-wide mb-5">
-            Here&rsquo;s Exactly What Happens.
-          </h2>
-          <p className="text-white/50 max-w-[550px] mx-auto leading-relaxed">
-            No surprises. No awkward moments. Just show up and we take care of the rest.
-          </p>
-        </div>
+        <FadeIn>
+          <div className="text-center mb-12 lg:mb-16">
+            <div className="font-display text-sm tracking-[4px] uppercase text-maroon-accent mb-3">Your First Day</div>
+            <h2 className="font-display text-[clamp(2.2rem,5vw,3.5rem)] leading-[1.05] uppercase tracking-wide mb-5">
+              Here&rsquo;s Exactly What Happens.
+            </h2>
+            <p className="text-white/50 max-w-[550px] mx-auto leading-relaxed">
+              No surprises. No awkward moments. Just show up and we take care of the rest.
+            </p>
+          </div>
+        </FadeIn>
 
-        <div className="space-y-8">
+        <div className="space-y-6 sm:space-y-8">
           {[
             {
               step: '01',
@@ -36,32 +39,36 @@ export default function FirstDay() {
               title: 'You Leave Feeling It',
               text: 'Tired but accomplished. You did something most people talk about but never do. Your coach checks in, and you already know when your next class is.',
             },
-          ].map((item) => (
-            <div key={item.step} className="flex gap-6 items-start">
-              <div className="font-display text-4xl text-maroon-accent/30 leading-none shrink-0 w-12">
+          ].map((item, i) => (
+            <FadeIn key={item.step} delay={i * 100}>
+            <div className="flex gap-5 sm:gap-6 items-start">
+              <div className="font-display text-3xl sm:text-4xl text-maroon-accent/30 leading-none shrink-0 w-10 sm:w-12">
                 {item.step}
               </div>
               <div>
                 <div className="font-display text-xl tracking-wider uppercase text-white mb-2">
                   {item.title}
                 </div>
-                <p className="text-white/60 leading-relaxed">{item.text}</p>
+                <p className="text-white/60 leading-relaxed text-[0.9rem] sm:text-base">{item.text}</p>
               </div>
             </div>
+            </FadeIn>
           ))}
         </div>
 
-        <div className="text-center mt-16">
-          <a
-            href={site.pikeUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-block font-display text-lg tracking-widest uppercase bg-white text-charcoal border-2 border-white px-10 py-4 hover:bg-transparent hover:text-white transition-all"
-          >
-            Start Your Free Week
-          </a>
-          <p className="text-white/40 text-sm mt-4">Free. No credit card. No commitment.</p>
-        </div>
+        <FadeIn>
+          <div className="text-center mt-12 sm:mt-16">
+            <a
+              href={site.pikeUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-block font-display text-lg tracking-widest uppercase text-white border-2 border-white/40 px-10 py-4 hover:bg-white hover:text-charcoal hover:border-white transition-all"
+            >
+              Start Your Free Week
+            </a>
+            <p className="text-white/40 text-sm mt-4">Free. No credit card. No commitment.</p>
+          </div>
+        </FadeIn>
       </div>
     </section>
   )

@@ -8,7 +8,7 @@ export default function Footer() {
     <footer className="bg-charcoal text-white py-12 pb-6">
       <div className="max-w-[1200px] mx-auto px-6">
         {/* Top row: Logo, quick links, social */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-10 pb-10 border-b border-white/[0.08] mb-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-10 pb-10 border-b border-white/[0.08] mb-6">
           {/* Brand */}
           <div>
             <div className="flex items-center gap-3 mb-4">
@@ -29,7 +29,7 @@ export default function Footer() {
           {/* Quick links */}
           <div>
             <div className="font-display text-xs tracking-[3px] uppercase text-white/60 mb-4">Quick Links</div>
-            <div className="grid grid-cols-2 gap-x-8 gap-y-2">
+            <div className="grid grid-cols-2 gap-x-8 gap-y-3">
               {[
                 { label: 'Schedule', href: '#schedule' },
                 { label: 'Pricing', href: '#pricing' },
@@ -80,8 +80,8 @@ export default function Footer() {
         </div>
 
         {/* Bottom row */}
-        <div className="flex flex-col items-center gap-3 md:flex-row md:justify-between md:gap-4">
-          <div className="text-xs text-white/50 text-center md:text-left">
+        <div className="flex flex-col items-center gap-4 md:flex-row md:justify-between md:gap-4">
+          <div className="text-xs text-white/50 text-center md:text-left leading-relaxed">
             &copy; {year} {site.name}. {site.address.street}, {site.address.city}, {site.address.state} {site.address.zip}.
           </div>
           <div className="flex flex-wrap justify-center gap-4 md:gap-6">
