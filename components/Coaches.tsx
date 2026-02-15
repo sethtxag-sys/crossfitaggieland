@@ -25,7 +25,7 @@ export default function Coaches() {
   }, [selected])
 
   return (
-    <section id="coaches" className="py-16 lg:py-28">
+    <section id="coaches" className="py-20 lg:py-28">
       <div className="max-w-[1200px] mx-auto px-6">
         <div className="text-center mb-12 lg:mb-16">
           <div className="font-display text-sm tracking-[4px] uppercase text-maroon mb-3">Your Coaches</div>
@@ -37,7 +37,7 @@ export default function Coaches() {
           </p>
         </div>
 
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 lg:gap-6">
+        <div className="grid grid-cols-1 min-[420px]:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 lg:gap-6">
           {coaches.map((coach) => (
             <div
               key={coach.name}

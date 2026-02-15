@@ -20,7 +20,7 @@ const stakes = [
 
 export default function Stakes() {
   return (
-    <section className="py-16 lg:py-28 bg-charcoal text-white">
+    <section className="py-20 lg:py-28 bg-charcoal text-white">
       <div className="max-w-[1200px] mx-auto px-6">
         <div className="text-center mb-12 lg:mb-16">
           <div className="font-display text-sm tracking-[4px] uppercase text-maroon-accent mb-3">
@@ -54,7 +54,7 @@ export default function Stakes() {
             rel="noopener noreferrer"
             className="inline-block font-display text-lg tracking-widest uppercase bg-maroon text-white border-2 border-maroon px-10 py-4 hover:bg-maroon-dark hover:border-maroon-dark transition-all"
           >
-            Stop Waiting. Start Today.
+            Start Your Free Week
           </a>
         </div>
       </div>

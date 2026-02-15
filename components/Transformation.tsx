@@ -33,7 +33,7 @@ const outcomes = [
 
 export default function Transformation() {
   return (
-    <section className="py-16 lg:py-28 bg-gray-50">
+    <section className="py-20 lg:py-28 bg-gray-50">
       <div className="max-w-[1200px] mx-auto px-6">
         <div className="text-center mb-12 lg:mb-16">
           <div className="font-display text-sm tracking-[4px] uppercase text-maroon mb-3">
@@ -71,7 +71,7 @@ export default function Transformation() {
             rel="noopener noreferrer"
             className="inline-block font-display text-lg tracking-widest uppercase bg-maroon text-white border-2 border-maroon px-10 py-4 hover:bg-maroon-dark hover:border-maroon-dark hover:-translate-y-0.5 transition-all shadow-md hover:shadow-lg"
           >
-            Start Your Transformation
+            Start Your Free Week
           </a>
         </div>
       </div>

@@ -2,7 +2,7 @@ import { site } from '@/lib/data'
 
 export default function FreeWeekCTA() {
   return (
-    <section id="free" className="py-16 lg:py-28 bg-maroon text-white text-center">
+    <section id="free" className="py-20 lg:py-28 bg-maroon text-white text-center">
       <div className="max-w-[800px] mx-auto px-6">
         <h2 className="font-display text-[clamp(2.2rem,5vw,3.5rem)] leading-[1.05] uppercase tracking-wide mb-5">
           Your Future Self Will Thank You.
@@ -30,7 +30,7 @@ export default function FreeWeekCTA() {
           rel="noopener noreferrer"
           className="inline-block font-display text-lg tracking-widest uppercase bg-white text-charcoal border-2 border-white px-10 py-4 hover:bg-transparent hover:text-white transition-all"
         >
-          Claim Your Free Week
+          Start Your Free Week
         </a>
 
         <p className="text-white/60 text-xs tracking-wider mt-6 max-w-[400px] mx-auto">

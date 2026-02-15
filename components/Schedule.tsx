@@ -2,7 +2,7 @@ import { schedule, site } from '@/lib/data'
 
 export default function Schedule() {
   return (
-    <section id="schedule" className="py-24 lg:py-28 bg-charcoal text-white">
+    <section id="schedule" className="py-20 lg:py-28 bg-charcoal text-white">
       <div className="max-w-[1200px] mx-auto px-6">
         <div className="mb-12">
           <div className="font-display text-sm tracking-[4px] uppercase text-maroon-accent mb-3">Schedule</div>

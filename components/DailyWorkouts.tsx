@@ -3,7 +3,7 @@ import Image from 'next/image'
 
 export default function DailyWorkouts() {
   return (
-    <section id="wods" className="py-16 lg:py-28 bg-gray-50">
+    <section id="wods" className="py-20 lg:py-28 bg-gray-50">
       <div className="max-w-[1200px] mx-auto px-6">
         <div className="grid lg:grid-cols-2 gap-16 items-center">
           {/* Training photo */}

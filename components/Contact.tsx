@@ -6,7 +6,7 @@ export default function Contact() {
   const satHours = schedule.days.find((d) => d.name === 'Sat')?.hours || '9a – 10a'
 
   return (
-    <section id="contact" className="py-24 lg:py-28 bg-gray-50">
+    <section id="contact" className="py-20 lg:py-28 bg-gray-50">
       <div className="max-w-[1200px] mx-auto px-6">
         <div className="font-display text-sm tracking-[4px] uppercase text-maroon mb-3">Contact</div>
         <h2 className="font-display text-[clamp(2.2rem,5vw,3.5rem)] leading-[1.05] uppercase tracking-wide mb-12">

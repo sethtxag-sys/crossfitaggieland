@@ -5,7 +5,7 @@ export default function Testimonials() {
   const rest = testimonials.slice(1)
 
   return (
-    <section id="testimonials" className="py-24 lg:py-28">
+    <section id="testimonials" className="py-20 lg:py-28">
       <div className="max-w-[1200px] mx-auto px-6">
         <div className="text-center mb-16">
           <div className="font-display text-sm tracking-[4px] uppercase text-maroon mb-3">Testimonials</div>

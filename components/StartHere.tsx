@@ -3,7 +3,7 @@ import Image from 'next/image'
 
 export default function StartHere() {
   return (
-    <section id="start" className="py-16 lg:py-28">
+    <section id="start" className="py-20 lg:py-28">
       <div className="max-w-[1200px] mx-auto px-6">
         <div className="grid lg:grid-cols-2 gap-16 items-center">
           <div>
@@ -29,7 +29,7 @@ export default function StartHere() {
               rel="noopener noreferrer"
               className="inline-block font-display text-lg tracking-widest uppercase bg-maroon text-white border-2 border-maroon px-10 py-4 hover:bg-maroon-dark hover:border-maroon-dark hover:-translate-y-0.5 transition-all shadow-md hover:shadow-lg"
             >
-              Start My Free Week
+              Start Your Free Week
             </a>
             <br />
             <span className="inline-block mt-4 text-xs tracking-[2px] uppercase text-mid-gray bg-gray-100 px-4 py-2">

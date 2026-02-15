@@ -2,7 +2,7 @@ import { site } from '@/lib/data'
 
 export default function FirstDay() {
   return (
-    <section className="py-16 lg:py-28 bg-charcoal text-white">
+    <section className="py-20 lg:py-28 bg-charcoal text-white">
       <div className="max-w-[900px] mx-auto px-6">
         <div className="text-center mb-12 lg:mb-16">
           <div className="font-display text-sm tracking-[4px] uppercase text-maroon-accent mb-3">Your First Day</div>
@@ -58,7 +58,7 @@ export default function FirstDay() {
             rel="noopener noreferrer"
             className="inline-block font-display text-lg tracking-widest uppercase bg-white text-charcoal border-2 border-white px-10 py-4 hover:bg-transparent hover:text-white transition-all"
           >
-            Book Your First Class
+            Start Your Free Week
           </a>
           <p className="text-white/40 text-sm mt-4">Free. No credit card. No commitment.</p>
         </div>
