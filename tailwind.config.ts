@@ -21,8 +21,8 @@ const config: Config = {
         'text-gray': '#49515b',
       },
       fontFamily: {
-        display: ['"Bebas Neue"', 'sans-serif'],
-        body: ['"Montserrat"', 'sans-serif'],
+        display: ['var(--font-display)', '"Bebas Neue"', 'sans-serif'],
+        body: ['var(--font-body)', '"Montserrat"', 'sans-serif'],
       },
     },
   },

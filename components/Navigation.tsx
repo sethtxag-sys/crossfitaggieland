@@ -33,13 +33,30 @@ export default function Navigation() {
     return () => { document.body.style.overflow = '' }
   }, [menuOpen])
 
+  // Close menu on route/hash changes and escape key
+  useEffect(() => {
+    const onHashChange = () => setMenuOpen(false)
+    const onKeyDown = (e: KeyboardEvent) => {
+      if (e.key === 'Escape') setMenuOpen(false)
+    }
+    window.addEventListener('hashchange', onHashChange)
+    document.addEventListener('keydown', onKeyDown)
+    return () => {
+      window.removeEventListener('hashchange', onHashChange)
+      document.removeEventListener('keydown', onKeyDown)
+    }
+  }, [])
+
   const handleClick = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
     e.preventDefault()
-    const el = document.querySelector(href)
-    if (el) {
-      el.scrollIntoView({ behavior: 'smooth', block: 'start' })
-      setMenuOpen(false)
-    }
+    setMenuOpen(false)
+    // Delay scroll until menu is closed and body overflow is restored
+    requestAnimationFrame(() => {
+      const el = document.querySelector(href)
+      if (el) {
+        el.scrollIntoView({ behavior: 'smooth', block: 'start' })
+      }
+    })
   }
 
   return (

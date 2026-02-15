@@ -20,9 +20,9 @@ export default function Hero() {
       <div className="absolute inset-0 bg-gradient-to-b from-charcoal/70 via-charcoal/50 to-charcoal/60 z-[1]" />
 
       {/* Content — tighter spacing on mobile, full spacing on desktop */}
-      <div className="relative z-[2] pt-16 sm:pt-20 pb-8 sm:pb-10 max-w-[900px] px-6">
+      <div className="relative z-[2] pt-24 sm:pt-20 pb-8 sm:pb-10 max-w-[900px] px-6">
         <h1 className="font-display text-[clamp(2.8rem,9vw,7.5rem)] leading-[0.95] uppercase text-white mb-4 sm:mb-6 tracking-wide">
-          The Hour That<br />Changes Everything.
+          The Hour That{' '}<br />Changes Everything.
         </h1>
         <p className="text-base sm:text-lg text-white/70 max-w-[520px] mx-auto mb-3 sm:mb-4 leading-relaxed font-light">
           Elite coaching and a real community in College Station. Your first week is free. No commitment. No strings.

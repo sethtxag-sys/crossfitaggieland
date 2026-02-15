@@ -14,9 +14,9 @@ export default function Pricing() {
           </p>
         </div>
 
-        {/* Pricing table — tighter on mobile, scrollable if needed */}
-        <div className="overflow-x-auto -mx-6 px-6 pb-2">
-          <table className="w-full border-collapse min-w-[480px]">
+        {/* Pricing table — scrollable on small screens */}
+        <div className="overflow-x-auto pb-2 -mx-6 px-6 sm:mx-0 sm:px-0">
+          <table className="w-full border-collapse min-w-[500px]">
             <thead>
               <tr className="bg-charcoal text-white">
                 <th className="font-display text-xs sm:text-sm tracking-[2px] uppercase p-3 sm:p-4 text-left">Plan</th>

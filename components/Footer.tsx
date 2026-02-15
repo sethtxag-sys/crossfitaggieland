@@ -69,7 +69,7 @@ export default function Footer() {
               </SocialLink>
             </div>
             <a
-              href={site.pikeUrl}
+              href="https://sms.pike13.com/account/sign_in"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-block text-xs font-display tracking-[2px] uppercase text-white/50 border border-white/20 px-4 py-2 rounded hover:bg-white/10 hover:text-white/80 transition-all"
