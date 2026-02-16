@@ -27,10 +27,10 @@ export default function Hero() {
             The Hour That{' '}<br />Changes Everything.
           </h1>
 
-          {/* ZONE 2: Subtitle */}
+          {/* ZONE 2: Subtitle — contains primary geo keywords for SEO */}
           <p className="text-sm sm:text-lg text-white/60 max-w-[440px] sm:max-w-[520px] mx-auto mb-6 sm:mb-8 leading-relaxed font-light">
-            Elite coaching and a real community in College Station. Your first
-            week is free. No commitment. No strings.
+            College Station&rsquo;s #1 CrossFit gym — elite coaching, a real community,
+            and your first week is free. No commitment. No strings.
           </p>
 
           {/* ZONE 3: Value prop + social proof */}

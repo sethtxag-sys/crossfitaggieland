@@ -30,7 +30,7 @@ export default function Coaches() {
       <div className="max-w-[1200px] mx-auto px-6">
         <FadeIn>
           <div className="text-center mb-12 lg:mb-16">
-            <div className="font-display text-sm tracking-[4px] uppercase text-maroon mb-3">Your Coaches</div>
+            <div className="font-display text-sm tracking-[4px] uppercase text-maroon mb-3">Certified CrossFit Coaches</div>
             <h2 className="font-display text-[clamp(2.2rem,5vw,3.5rem)] leading-[1.05] uppercase tracking-wide mb-5">
               The People in Your Corner.
             </h2>

@@ -7,9 +7,9 @@ export default function Schedule() {
       <div className="max-w-[1200px] mx-auto px-6">
         <FadeIn>
           <div className="mb-12">
-            <div className="font-display text-sm tracking-[4px] uppercase text-maroon-accent mb-3">Schedule</div>
+            <div className="font-display text-sm tracking-[4px] uppercase text-maroon-accent mb-3">Class Schedule</div>
             <h2 className="font-display text-[clamp(2.2rem,5vw,3.5rem)] leading-[1.05] uppercase tracking-wide mb-4">
-              Come Train With Us.
+              CrossFit Class Times in College Station
             </h2>
             <p className="text-white/50 max-w-[500px] leading-relaxed">
               Classes from 5 AM to 6:30 PM. Life isn&rsquo;t 9-to-5. Neither are we.

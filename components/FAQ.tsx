@@ -35,6 +35,26 @@ const faqs = [
     answer:
       'You get a coach every single class. Not a personal trainer you pay extra for. Not a group fitness instructor reading off a card. A real coach who knows your name, watches your movement, and pushes you to be better than yesterday.',
   },
+  {
+    question: 'How much does CrossFit Aggieland cost?',
+    answer:
+      'Memberships start at $109/month for military, LEO, and teachers. Student and veteran rates start at $119/month. General memberships range from $129 to $189/month depending on term length. All memberships include unlimited classes, open gym, and a free first week.',
+  },
+  {
+    question: 'What are the class times?',
+    answer:
+      'We offer classes from 5:00 AM to 6:30 PM Monday through Friday, and Saturday mornings at 9:00 AM. Multiple time slots throughout the day fit any schedule.',
+  },
+  {
+    question: 'Where is CrossFit Aggieland located?',
+    answer:
+      'CrossFit Aggieland is located at 3815 General Parkway, College Station, TX 77845 \u2014 just minutes from Texas A&M University.',
+  },
+  {
+    question: 'Do you offer student discounts?',
+    answer:
+      'Yes. We offer discounted student and veteran rates starting at $119/month on a 12-month plan. We also have discounts for active military, law enforcement, and teachers.',
+  },
 ]
 
 export default function FAQ() {
@@ -45,9 +65,9 @@ export default function FAQ() {
       <div className="max-w-[800px] mx-auto px-6">
         <FadeIn>
           <div className="text-center mb-12 sm:mb-16">
-            <div className="font-display text-sm tracking-[4px] uppercase text-maroon mb-3">FAQ</div>
+            <div className="font-display text-sm tracking-[4px] uppercase text-maroon mb-3">Frequently Asked Questions</div>
             <h2 className="font-display text-[clamp(2.2rem,5vw,3.5rem)] leading-[1.05] uppercase tracking-wide mb-5">
-              Questions? We Have Answers.
+              CrossFit Aggieland FAQ
             </h2>
           </div>
         </FadeIn>

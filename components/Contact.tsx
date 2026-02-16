@@ -10,9 +10,9 @@ export default function Contact() {
     <section id="contact" className="py-20 lg:py-28 bg-gray-50 section-divider">
       <div className="max-w-[1200px] mx-auto px-6">
         <FadeIn>
-          <div className="font-display text-sm tracking-[4px] uppercase text-maroon mb-3">Contact</div>
+          <div className="font-display text-sm tracking-[4px] uppercase text-maroon mb-3">Contact CrossFit Aggieland</div>
           <h2 className="font-display text-[clamp(2.2rem,5vw,3.5rem)] leading-[1.05] uppercase tracking-wide mb-10 sm:mb-12">
-            Questions? We&rsquo;re Here.
+            Get in Touch — College Station, TX
           </h2>
         </FadeIn>
 
