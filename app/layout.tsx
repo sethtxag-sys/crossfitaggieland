@@ -77,19 +77,35 @@ const localBusinessSchema = {
       },
       {
         '@type': 'Offer',
-        itemOffered: { '@type': 'Service', name: 'Personal Training', description: 'One-on-one personal training sessions with certified CrossFit coaches in College Station, TX.' },
+        itemOffered: { '@type': 'Service', name: 'HIIT & Functional Fitness Classes', description: 'High-intensity interval training and functional fitness classes in College Station, TX. All levels welcome.' },
       },
       {
         '@type': 'Offer',
-        itemOffered: { '@type': 'Service', name: 'CrossFit Kids & Teens', description: 'Age-appropriate CrossFit classes for kids and teenagers in College Station.' },
+        itemOffered: { '@type': 'Service', name: 'Strength Training Program', description: 'Structured strength training and weightlifting programming coached every session. Barbells, dumbbells, and bodyweight.' },
       },
       {
         '@type': 'Offer',
-        itemOffered: { '@type': 'Service', name: 'Ladies-Only Classes', description: 'Women-only CrossFit classes in a supportive, coach-led environment.' },
+        itemOffered: { '@type': 'Service', name: 'Personal Training', description: 'One-on-one personal training sessions with certified coaches in College Station and Bryan, TX.' },
       },
       {
         '@type': 'Offer',
-        itemOffered: { '@type': 'Service', name: 'Yoga for Athletes', description: 'Yoga classes designed for CrossFit athletes to improve mobility and recovery.' },
+        itemOffered: { '@type': 'Service', name: 'Beginner Fitness Program', description: 'Beginner-friendly group fitness program in College Station. No experience required — every workout is scaled to your level.' },
+      },
+      {
+        '@type': 'Offer',
+        itemOffered: { '@type': 'Service', name: 'CrossFit Kids & Teens', description: 'Age-appropriate CrossFit and fitness classes for kids and teenagers in College Station.' },
+      },
+      {
+        '@type': 'Offer',
+        itemOffered: { '@type': 'Service', name: 'Ladies-Only Fitness Classes', description: 'Women-only group fitness classes in a supportive, coach-led environment.' },
+      },
+      {
+        '@type': 'Offer',
+        itemOffered: { '@type': 'Service', name: 'Yoga for Athletes', description: 'Yoga classes designed for athletes to improve mobility and recovery.' },
+      },
+      {
+        '@type': 'Offer',
+        itemOffered: { '@type': 'Service', name: 'Free Trial Week', description: 'Free week of unlimited fitness classes — no credit card, no commitment. Try CrossFit Aggieland risk-free.' },
       },
       {
         '@type': 'Offer',
@@ -160,6 +176,26 @@ const faqSchema = {
       name: 'Do you offer student discounts for Texas A&M students?',
       acceptedAnswer: { '@type': 'Answer', text: 'Yes. We offer discounted student and veteran rates starting at $119/month on a 12-month plan. We also have discounts for active military, law enforcement, and teachers.' },
     },
+    {
+      '@type': 'Question',
+      name: 'Do you offer HIIT or group fitness classes?',
+      acceptedAnswer: { '@type': 'Answer', text: 'Yes. Every CrossFit class is a coach-led group fitness session that includes high-intensity interval training (HIIT), strength training, and functional movements. All fitness levels welcome.' },
+    },
+    {
+      '@type': 'Question',
+      name: 'Can I use CrossFit Aggieland as a regular gym?',
+      acceptedAnswer: { '@type': 'Answer', text: 'Yes. Every membership includes open gym access in addition to unlimited coached classes. You can come in and train on your own anytime during open hours.' },
+    },
+    {
+      '@type': 'Question',
+      name: 'Is CrossFit Aggieland good for weight loss?',
+      acceptedAnswer: { '@type': 'Answer', text: 'Absolutely. Our combination of HIIT, strength training, and coached nutrition guidance has helped hundreds of members lose weight and build muscle. Every workout burns serious calories while building lean muscle mass.' },
+    },
+    {
+      '@type': 'Question',
+      name: 'Do you offer personal training in College Station?',
+      acceptedAnswer: { '@type': 'Answer', text: 'Yes. We offer one-on-one personal training with certified coaches. Plus, every group class includes hands-on coaching — so you get personal-trainer-level attention in every session.' },
+    },
   ],
 }
 
@@ -193,8 +229,8 @@ const organizationSchema = {
 
 export const metadata: Metadata = {
     metadataBase: new URL(siteUrl),
-    title: `CrossFit Aggieland | #1 CrossFit Gym in College Station, TX | ${site.awardsCount}x Best of the Brazos`,
-    description: `CrossFit Aggieland is College Station's top-rated CrossFit gym — ${site.awardsCount}x ${site.awardName} winner. Coach-led classes from 5 AM–6:30 PM, beginner-friendly, near Texas A&M. Your first week is free.`,
+    title: `CrossFit Aggieland | #1 CrossFit Gym & Fitness Classes in College Station, TX | ${site.awardsCount}x Best of the Brazos`,
+    description: `CrossFit Aggieland is College Station's top-rated CrossFit gym — ${site.awardsCount}x ${site.awardName} winner. Group fitness classes, HIIT, strength training & personal training from 5 AM–6:30 PM. Beginner-friendly, near Texas A&M. Free trial week, no contract.`,
     keywords: [
           'CrossFit College Station',
           'CrossFit Aggieland',
@@ -211,6 +247,16 @@ export const metadata: Metadata = {
           'CrossFit gym Bryan TX',
           'CrossFit cost College Station',
           'CrossFit free trial College Station',
+          'HIIT classes College Station',
+          'strength training College Station TX',
+          'group fitness classes College Station',
+          'fitness classes near Texas A&M',
+          'weight loss gym College Station',
+          'beginner gym College Station TX',
+          'gym membership College Station',
+          'workout classes Bryan TX',
+          'personal trainer College Station',
+          'free trial gym College Station',
         ],
     authors: [{ name: site.name }],
     creator: site.name,
@@ -233,8 +279,8 @@ export const metadata: Metadata = {
           canonical: '/',
     },
     openGraph: {
-          title: `${site.name} | #1 CrossFit Gym in College Station, TX`,
-          description: `${site.awardsCount}x ${site.awardName} winner. Coach-led CrossFit classes from 5 AM–6:30 PM. First week free. No contract. Near Texas A&M.`,
+          title: `${site.name} | #1 CrossFit Gym & Fitness Classes in College Station, TX`,
+          description: `${site.awardsCount}x ${site.awardName} winner. CrossFit, HIIT, strength training & group fitness classes from 5 AM–6:30 PM. Free trial week, no contract. Near Texas A&M.`,
           url: siteUrl,
           siteName: site.name,
           locale: 'en_US',
@@ -252,8 +298,8 @@ export const metadata: Metadata = {
           card: 'summary_large_image',
           site: '@CFAggieland',
           creator: '@CFAggieland',
-          title: `${site.name} | #1 CrossFit Gym in College Station, TX`,
-          description: `${site.awardsCount}x ${site.awardName} winner. Coach-led CrossFit, beginner-friendly, near Texas A&M. First week free.`,
+          title: `${site.name} | #1 CrossFit Gym & Fitness Classes in College Station, TX`,
+          description: `${site.awardsCount}x ${site.awardName} winner. CrossFit, HIIT, strength training & group fitness. Beginner-friendly, near Texas A&M. Free trial week.`,
           images: [`${siteUrl}/images/hero-group.jpg`],
     },
     other: {
