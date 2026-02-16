@@ -22,7 +22,7 @@ export default function Footer() {
               <span className="font-display text-lg tracking-widest uppercase">{site.name}</span>
             </div>
             <p className="text-sm text-white/40 leading-relaxed max-w-[280px]">
-              The best gym in College Station &amp; Bryan — group fitness classes, HIIT, strength training, and personal training since {site.established}.
+              Elite coaching and a real community in College Station since {site.established}.
             </p>
           </div>
 

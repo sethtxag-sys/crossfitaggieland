@@ -9,7 +9,7 @@ export default function StartHere() {
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
           <FadeIn>
             <div className="max-w-prose">
-              <div className="font-display text-sm tracking-[4px] uppercase text-maroon mb-3">Beginner-Friendly Gym</div>
+              <div className="font-display text-sm tracking-[4px] uppercase text-maroon mb-3">You Belong Here</div>
               <h2 className="font-display text-[clamp(2.2rem,5vw,3.5rem)] leading-[1.05] uppercase tracking-wide mb-5">
                 You Don&rsquo;t Need to Be Fit to Start.
               </h2>
@@ -17,10 +17,10 @@ export default function StartHere() {
                 Maybe you&rsquo;ve thought about it. Maybe you&rsquo;ve driven past the gym and kept going. Maybe you tried a gym before and it didn&rsquo;t stick.
               </p>
               <p className="text-text-gray leading-relaxed mb-4">
-                We hear this every single week from beginners across Bryan and College Station. Here&rsquo;s the truth: <strong>nobody walks in &ldquo;ready.&rdquo;</strong> You walk in willing. We handle the rest.
+                We hear this every single week. Here&rsquo;s the truth: <strong>nobody walks in &ldquo;ready.&rdquo;</strong> You walk in willing. We handle the rest.
               </p>
               <p className="text-text-gray leading-relaxed mb-6">
-                For <strong>{site.awardsCount} straight years</strong>, we&rsquo;ve taken people who were nervous, out of shape, or completely new to fitness and coached them into athletes who don&rsquo;t want to miss a day.
+                For <strong>{site.awardsCount} straight years</strong>, we&rsquo;ve taken people who were nervous, out of shape, or completely new and coached them into athletes who don&rsquo;t want to miss a day.
               </p>
               <div className="font-display text-xl tracking-[2px] uppercase text-charcoal border-l-4 border-maroon pl-4 mb-8">
                 You bring the effort. We coach the plan.
@@ -35,7 +35,7 @@ export default function StartHere() {
                   Start Your Free Week
                 </a>
                 <span className="text-xs tracking-[2px] uppercase text-mid-gray py-2 sm:py-4">
-                  New to fitness? Perfect. We scale everything.
+                  New to CrossFit? Perfect. We scale everything.
                 </span>
               </div>
             </div>

@@ -7,12 +7,12 @@ export default function FirstDay() {
       <div className="max-w-[900px] mx-auto px-6">
         <FadeIn>
           <div className="text-center mb-12 lg:mb-16">
-            <div className="font-display text-sm tracking-[4px] uppercase text-maroon-accent mb-3">Your First Gym Class</div>
+            <div className="font-display text-sm tracking-[4px] uppercase text-maroon-accent mb-3">Your First Day</div>
             <h2 className="font-display text-[clamp(2.2rem,5vw,3.5rem)] leading-[1.05] uppercase tracking-wide mb-5">
               Here&rsquo;s Exactly What Happens.
             </h2>
             <p className="text-white/50 max-w-[550px] mx-auto leading-relaxed">
-              No surprises. No awkward moments. Just show up to your first workout class and we take care of the rest.
+              No surprises. No awkward moments. Just show up and we take care of the rest.
             </p>
           </div>
         </FadeIn>
