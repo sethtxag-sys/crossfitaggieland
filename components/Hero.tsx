@@ -27,10 +27,11 @@ export default function Hero() {
             The Hour That{' '}<br />Changes Everything.
           </h1>
 
-          {/* ZONE 2: Subtitle — contains primary geo keywords for SEO */}
+          {/* ZONE 2: Subtitle — contains primary geo + broad fitness keywords for SEO */}
           <p className="text-sm sm:text-lg text-white/60 max-w-[440px] sm:max-w-[520px] mx-auto mb-6 sm:mb-8 leading-relaxed font-light">
-            College Station&rsquo;s #1 CrossFit gym — elite coaching, a real community,
-            and your first week is free. No commitment. No strings.
+            The best gym in College Station &amp; Bryan — group fitness classes,
+            HIIT, strength training, and personal training near Texas A&amp;M. Your
+            free trial week starts now.
           </p>
 
           {/* ZONE 3: Value prop + social proof */}

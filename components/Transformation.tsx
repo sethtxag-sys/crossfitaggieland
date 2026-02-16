@@ -4,7 +4,7 @@ import FadeIn from './FadeIn'
 const outcomes = [
   {
     title: "You're Stronger",
-    text: "Not just in the gym. You carry groceries without thinking twice. You play with your kids without getting winded. You trust your body again.",
+    text: "Members lose weight, build muscle, and get stronger — not just in the gym. You carry groceries without thinking twice. You play with your kids without getting winded.",
     icon: (
       <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z" />
     ),
@@ -39,13 +39,13 @@ export default function Transformation() {
         <FadeIn>
           <div className="text-center mb-12 lg:mb-16">
             <div className="font-display text-sm tracking-[4px] uppercase text-maroon mb-3">
-              Your Life, 6 Months From Now
+              Real Results — Weight Loss, Strength &amp; Confidence
             </div>
             <h2 className="font-display text-[clamp(2.2rem,5vw,3.5rem)] leading-[1.05] uppercase tracking-wide mb-5">
               This Is What Happens When You Show Up.
             </h2>
             <p className="text-text-gray max-w-[550px] mx-auto leading-relaxed">
-              You don&rsquo;t have to imagine it. Hundreds of people in College Station are living it right now.
+              You don&rsquo;t have to imagine it. Hundreds of people across Bryan and College Station are living it right now.
             </p>
           </div>
         </FadeIn>

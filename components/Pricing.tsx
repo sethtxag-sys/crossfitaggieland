@@ -7,13 +7,12 @@ export default function Pricing() {
       <div className="max-w-[1200px] mx-auto px-6">
         <FadeIn>
           <div className="text-center mb-12 lg:mb-16">
-            <div className="font-display text-sm tracking-[4px] uppercase text-maroon mb-3">Membership Pricing</div>
+            <div className="font-display text-sm tracking-[4px] uppercase text-maroon mb-3">Gym Membership Pricing</div>
             <h2 className="font-display text-[clamp(2.2rem,5vw,3.5rem)] leading-[1.05] uppercase tracking-wide mb-5">
-              CrossFit Membership Rates — No Hidden Fees
+              Gym Membership Rates — No Hidden Fees
             </h2>
             <p className="text-text-gray max-w-[600px] mx-auto leading-relaxed">
-              We believe great coaching should be accessible. Preferred rates for those who
-              serve our community.
+              Every gym membership includes unlimited fitness classes, open gym, and a free trial week. Preferred rates for those who serve our community.
             </p>
           </div>
         </FadeIn>
@@ -85,7 +84,7 @@ export default function Pricing() {
 
           {/* Price anchoring */}
           <p className="text-center text-mid-gray text-sm mt-3">
-            That&rsquo;s less than <strong className="text-charcoal">$5 per class</strong> with unlimited access. Personal training in College Station runs $60-80 per session.
+            That&rsquo;s less than <strong className="text-charcoal">$5 per class</strong> with unlimited gym membership access. Personal training in College Station runs $60–80 per session — here, your personal trainer is built into every class.
           </p>
 
           <div className="text-center mt-8">

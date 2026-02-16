@@ -42,7 +42,7 @@ export default function About() {
           {/* Content */}
           <FadeIn delay={150}>
             <div className="max-w-prose">
-              <div className="font-display text-sm tracking-[4px] uppercase text-maroon mb-3">Your Guide</div>
+              <div className="font-display text-sm tracking-[4px] uppercase text-maroon mb-3">Your Coaches &amp; Community</div>
               <h2 className="font-display text-[clamp(2.2rem,5vw,3.5rem)] leading-[1.05] uppercase tracking-wide mb-5">
                 We&rsquo;ve Been Where You Are.
               </h2>
@@ -53,7 +53,7 @@ export default function About() {
                 Every class is coached. Every workout is scaled to you. Every person in the room was once the new person. We didn&rsquo;t earn <strong>{site.awardsCount}x {site.awardName}</strong> by being the hardest gym in town. We earned it by being the gym that keeps people coming back.
               </p>
               <p className="text-text-gray leading-relaxed mb-8">
-                Whether you&rsquo;re a D1 athlete or brand new, the standard is the same: show up, be coachable, and do the work. We&rsquo;ll handle the rest.
+                Whether you&rsquo;re a Texas A&amp;M athlete, a parent in Bryan, or brand new to fitness, the standard is the same: show up, be coachable, and do the work. Your personal trainer is built into every class.
               </p>
 
               <div className="space-y-5">

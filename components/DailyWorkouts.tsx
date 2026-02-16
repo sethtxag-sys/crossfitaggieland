@@ -23,12 +23,12 @@ export default function DailyWorkouts() {
           {/* Content */}
           <FadeIn delay={150}>
           <div>
-            <div className="font-display text-sm tracking-[4px] uppercase text-maroon mb-3">Daily Workouts</div>
+            <div className="font-display text-sm tracking-[4px] uppercase text-maroon mb-3">HIIT &amp; Strength Training</div>
             <h2 className="font-display text-[clamp(2.2rem,5vw,3.5rem)] leading-[1.05] uppercase tracking-wide mb-5">
               {site.programming} Programming, Coach-Led.
             </h2>
             <p className="text-text-gray leading-relaxed mb-8 max-w-prose">
-              We follow {site.programming} programming for consistent, effective training, then we scale and coach it to fit every athlete in the room.
+              Every workout blends high-intensity interval training, strength training, and functional fitness — all coach-led and scaled to your level. We follow {site.programming} programming for consistent, effective results.
             </p>
 
             <div className="space-y-6">
