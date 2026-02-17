@@ -1,4 +1,5 @@
 import type { Metadata } from 'next'
+import Script from 'next/script'
 import { Analytics } from '@vercel/analytics/react'
 import { Bebas_Neue, Montserrat } from 'next/font/google'
 import { site } from '@/lib/data'
@@ -318,6 +319,20 @@ export default function RootLayout({
 }>) {
     return (
           <html lang="en">
+                <head>
+                  <Script
+                    src="https://www.googletagmanager.com/gtag/js?id=AW-988809947"
+                    strategy="afterInteractive"
+                  />
+                  <Script id="google-ads-gtag" strategy="afterInteractive">
+                    {`
+                      window.dataLayer = window.dataLayer || [];
+                      function gtag(){dataLayer.push(arguments);}
+                      gtag('js', new Date());
+                      gtag('config', 'AW-988809947');
+                    `}
+                  </Script>
+                </head>
                 <body className={`${bebasNeue.variable} ${montserrat.variable} antialiased`}>
                   {/* JSON-LD — rendered inline so Googlebot sees it on first crawl */}
                   <script
