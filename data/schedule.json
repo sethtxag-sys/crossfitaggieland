@@ -10,10 +10,10 @@
     { "time": "6:30 PM", "label": "Last Call" }
   ],
   "days": [
-    { "name": "Mon", "hours": "5a – 6:30p", "open": true },
-    { "name": "Tue", "hours": "5a – 6:30p", "open": true },
-    { "name": "Wed", "hours": "5a – 6:30p", "open": true },
-    { "name": "Thu", "hours": "5a – 6:30p", "open": true },
+    { "name": "Mon", "hours": "5a – 7:30p", "open": true },
+    { "name": "Tue", "hours": "5a – 7:30p", "open": true },
+    { "name": "Wed", "hours": "5a – 7:30p", "open": true },
+    { "name": "Thu", "hours": "5a – 7:30p", "open": true },
     { "name": "Fri", "hours": "5a – 6:30p", "open": true },
     { "name": "Sat", "hours": "9a – 10a", "open": true, "special": "Free-for-All" },
     { "name": "Sun", "hours": "Closed", "open": false }

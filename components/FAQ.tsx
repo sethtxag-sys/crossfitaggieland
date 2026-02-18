@@ -43,7 +43,7 @@ const faqs = [
   {
     question: 'What are the class times?',
     answer:
-      'We offer classes from 5:00 AM to 6:30 PM Monday through Friday, and Saturday mornings at 9:00 AM. Multiple time slots throughout the day fit any schedule.',
+      'We offer classes from 5:00 AM to 7:30 PM Monday through Thursday, 5:00 AM to 6:30 PM on Friday, and Saturday mornings at 9:00 AM. Multiple time slots throughout the day fit any schedule.',
   },
   {
     question: 'Where is CrossFit Aggieland located?',

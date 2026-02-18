@@ -12,7 +12,7 @@ export default function Schedule() {
               CrossFit Class Times in College Station
             </h2>
             <p className="text-white/50 max-w-[500px] leading-relaxed">
-              Classes from 5 AM to 6:30 PM. Life isn&rsquo;t 9-to-5. Neither are we.
+              Classes from 5 AM to 7:30 PM. Life isn&rsquo;t 9-to-5. Neither are we.
             </p>
           </div>
         </FadeIn>

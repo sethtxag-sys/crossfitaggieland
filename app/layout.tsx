@@ -56,8 +56,9 @@ const localBusinessSchema = {
     { '@type': 'City', name: 'Bryan', sameAs: 'https://en.wikipedia.org/wiki/Bryan,_Texas' },
   ],
   openingHoursSpecification: [
-    { '@type': 'OpeningHoursSpecification', dayOfWeek: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday'], opens: '05:00', closes: '19:30' },
-    { '@type': 'OpeningHoursSpecification', dayOfWeek: 'Saturday', opens: '08:30', closes: '11:00' },
+    { '@type': 'OpeningHoursSpecification', dayOfWeek: ['Monday', 'Tuesday', 'Wednesday', 'Thursday'], opens: '05:00', closes: '19:30' },
+    { '@type': 'OpeningHoursSpecification', dayOfWeek: 'Friday', opens: '05:00', closes: '18:30' },
+    { '@type': 'OpeningHoursSpecification', dayOfWeek: 'Saturday', opens: '09:00', closes: '10:00' },
   ],
   priceRange: '$$',
   currenciesAccepted: 'USD',
@@ -165,7 +166,7 @@ const faqSchema = {
     {
       '@type': 'Question',
       name: 'What are the class times at CrossFit Aggieland?',
-      acceptedAnswer: { '@type': 'Answer', text: 'We offer classes from 5:00 AM to 6:30 PM Monday through Friday, and Saturday mornings at 9:00 AM. Multiple time slots throughout the day fit any schedule.' },
+      acceptedAnswer: { '@type': 'Answer', text: 'We offer classes from 5:00 AM to 7:30 PM Monday through Thursday, 5:00 AM to 6:30 PM on Friday, and Saturday mornings at 9:00 AM. Multiple time slots throughout the day fit any schedule.' },
     },
     {
       '@type': 'Question',
@@ -256,6 +257,7 @@ const eventScheduleSchema = {
     },
   },
   eventSchedule: [
+    // Mon–Fri: 5:00 AM, 6:00 AM, 8:30 AM, 12:00 PM, 3:30 PM, 4:30 PM, 5:30 PM
     {
       '@type': 'Schedule',
       byDay: ['https://schema.org/Monday', 'https://schema.org/Tuesday', 'https://schema.org/Wednesday', 'https://schema.org/Thursday', 'https://schema.org/Friday'],
@@ -312,14 +314,16 @@ const eventScheduleSchema = {
       scheduleTimezone: 'America/Chicago',
       repeatFrequency: 'P1W',
     },
+    // Mon–Thu only: 6:30 PM (Friday closes at 6:30 PM, no 6:30 class)
     {
       '@type': 'Schedule',
-      byDay: ['https://schema.org/Monday', 'https://schema.org/Tuesday', 'https://schema.org/Wednesday', 'https://schema.org/Thursday', 'https://schema.org/Friday'],
+      byDay: ['https://schema.org/Monday', 'https://schema.org/Tuesday', 'https://schema.org/Wednesday', 'https://schema.org/Thursday'],
       startTime: '18:30',
       endTime: '19:30',
       scheduleTimezone: 'America/Chicago',
       repeatFrequency: 'P1W',
     },
+    // Saturday: 9:00 AM
     {
       '@type': 'Schedule',
       byDay: 'https://schema.org/Saturday',
@@ -348,7 +352,7 @@ const eventScheduleSchema = {
 export const metadata: Metadata = {
     metadataBase: new URL(siteUrl),
     title: `CrossFit Aggieland | #1 CrossFit Gym & Fitness Classes in College Station, TX | ${site.awardsCount}x Best of the Brazos`,
-    description: `CrossFit Aggieland is College Station's top-rated CrossFit gym — ${site.awardsCount}x ${site.awardName} winner. Group fitness classes, HIIT, strength training & personal training from 5 AM–6:30 PM. Beginner-friendly, near Texas A&M. Free trial week, no contract.`,
+    description: `CrossFit Aggieland is College Station's top-rated CrossFit gym — ${site.awardsCount}x ${site.awardName} winner. Group fitness classes, HIIT, strength training & personal training from 5 AM–7:30 PM. Beginner-friendly, near Texas A&M. Free trial week, no contract.`,
     keywords: [
           // Brand + location
           'CrossFit College Station',
@@ -415,7 +419,7 @@ export const metadata: Metadata = {
     },
     openGraph: {
           title: `${site.name} | #1 CrossFit Gym & Fitness Classes in College Station, TX`,
-          description: `${site.awardsCount}x ${site.awardName} winner. CrossFit, HIIT, strength training & group fitness classes from 5 AM–6:30 PM. Free trial week, no contract. Near Texas A&M.`,
+          description: `${site.awardsCount}x ${site.awardName} winner. CrossFit, HIIT, strength training & group fitness classes from 5 AM–7:30 PM. Free trial week, no contract. Near Texas A&M.`,
           url: siteUrl,
           siteName: site.name,
           locale: 'en_US',

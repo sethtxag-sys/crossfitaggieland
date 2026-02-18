@@ -3,7 +3,8 @@ import ContactForm from './ContactForm'
 import FadeIn from './FadeIn'
 
 export default function Contact() {
-  const weekdayHours = schedule.days.find((d) => d.name === 'Mon')?.hours || '5a – 6:30p'
+  const mthHours = schedule.days.find((d) => d.name === 'Mon')?.hours || '5a – 7:30p'
+  const friHours = schedule.days.find((d) => d.name === 'Fri')?.hours || '5a – 6:30p'
   const satHours = schedule.days.find((d) => d.name === 'Sat')?.hours || '9a – 10a'
 
   return (
@@ -36,7 +37,7 @@ export default function Contact() {
                 <ContactItem
                   icon={<ClockIcon />}
                   label="Class Hours"
-                  value={`Mon–Fri: ${weekdayHours} | Sat: ${satHours}`}
+                  value={`Mon–Thu: ${mthHours} | Fri: ${friHours} | Sat: ${satHours}`}
                 />
               </div>
             </FadeIn>
