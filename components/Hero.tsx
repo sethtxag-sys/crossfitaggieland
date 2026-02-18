@@ -1,6 +1,5 @@
 import { site } from '@/lib/data'
 import { coaches } from '@/lib/data'
-import Image from 'next/image'
 
 const googleMapsUrl = 'https://www.google.com/maps/search/?api=1&query=CrossFit+Aggieland+3815+General+Pkwy+College+Station+TX+77845'
 
@@ -8,20 +7,35 @@ export default function Hero() {
   return (
     <>
       <section id="hero" className="relative min-h-screen flex items-center justify-center text-center bg-charcoal overflow-hidden">
-        {/* Background photo */}
-        <Image
-          src="/images/hero-group.jpg"
-          alt="CrossFit Aggieland community workout"
-          fill
-          className="object-cover"
-          priority
-          sizes="100vw"
-        />
-        {/* Overlay — lightened at bottom so the group photo stays visible through the base */}
-        <div className="absolute inset-0 bg-gradient-to-b from-charcoal/70 via-charcoal/50 to-charcoal/55 z-[1]" />
+        {/* Background video — desktop (landscape) */}
+        <video
+          autoPlay
+          muted
+          loop
+          playsInline
+          poster="/images/hero-group.jpg"
+          className="absolute inset-0 w-full h-full object-cover hidden md:block"
+        >
+          <source src="/crossfit-aggieland-highlight.mp4" type="video/mp4" />
+        </video>
 
-        {/* Content — tighter top padding on mobile for better centering */}
-        <div className="relative z-[2] pt-20 sm:pt-24 pb-10 sm:pb-14 max-w-[900px] px-5 sm:px-6">
+        {/* Background video — mobile (portrait) */}
+        <video
+          autoPlay
+          muted
+          loop
+          playsInline
+          poster="/images/hero-group.jpg"
+          className="absolute inset-0 w-full h-full object-cover block md:hidden"
+        >
+          <source src="/crossfit-aggieland-highlight-portrait.mp4" type="video/mp4" />
+        </video>
+
+        {/* Overlay — lighter top so video bleeds through nav, stronger bottom for stats legibility */}
+        <div className="absolute inset-0 bg-gradient-to-b from-charcoal/50 via-charcoal/40 to-charcoal/70 z-[1]" />
+
+        {/* Content — extra bottom padding clears the stats overlay */}
+        <div className="relative z-[2] pt-20 sm:pt-24 pb-32 sm:pb-36 max-w-[900px] px-5 sm:px-6">
           {/* ZONE 1: Headline */}
           <h1 className="font-display text-[clamp(2.6rem,8.5vw,7.5rem)] leading-[0.93] uppercase text-white mb-5 sm:mb-6 tracking-wide">
             The Hour That{' '}<br />Changes Everything.
@@ -88,26 +102,26 @@ export default function Hero() {
             </a>
           </div>
         </div>
-      </section>
 
-      {/* Stats bar — separate from hero so it always has a solid dark background */}
-      <div className="bg-charcoal py-8 sm:py-10">
-        <div className="max-w-[900px] mx-auto px-5 sm:px-6">
-          <div className="grid grid-cols-2 gap-x-10 gap-y-5 sm:flex sm:justify-center sm:gap-14">
-            {[
-              { number: `${site.awardsCount}x`, label: site.awardName },
-              { number: String(site.established), label: 'Established' },
-              { number: String(coaches.length), label: 'Coaches' },
-              { number: '5 AM', label: 'First Class' },
-            ].map((stat) => (
-              <div key={stat.label} className="text-center">
-                <div className="font-display text-3xl text-white tracking-wider">{stat.number}</div>
-                <div className="text-[0.65rem] sm:text-[0.7rem] text-white/50 tracking-[1.5px] sm:tracking-[2px] uppercase mt-1">{stat.label}</div>
-              </div>
-            ))}
+        {/* Stats bar — inside hero, anchored to bottom over the video */}
+        <div className="absolute bottom-0 inset-x-0 z-[2] bg-charcoal/60 backdrop-blur-md border-t border-white/[0.06] py-6 sm:py-8">
+          <div className="max-w-[900px] mx-auto px-5 sm:px-6">
+            <div className="grid grid-cols-2 gap-x-10 gap-y-4 sm:flex sm:justify-center sm:gap-14">
+              {[
+                { number: `${site.awardsCount}x`, label: site.awardName },
+                { number: String(site.established), label: 'Established' },
+                { number: String(coaches.length), label: 'Coaches' },
+                { number: '5 AM', label: 'First Class' },
+              ].map((stat) => (
+                <div key={stat.label} className="text-center">
+                  <div className="font-display text-3xl text-white tracking-wider">{stat.number}</div>
+                  <div className="text-[0.65rem] sm:text-[0.7rem] text-white/50 tracking-[1.5px] sm:tracking-[2px] uppercase mt-1">{stat.label}</div>
+                </div>
+              ))}
+            </div>
           </div>
         </div>
-      </div>
+      </section>
     </>
   )
 }
