@@ -223,6 +223,123 @@ const organizationSchema = {
   ],
 }
 
+const webSiteSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'WebSite',
+  '@id': `${siteUrl}/#website`,
+  name: site.name,
+  url: siteUrl,
+  publisher: { '@id': `${siteUrl}/#org` },
+}
+
+const eventScheduleSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'Event',
+  '@id': `${siteUrl}/#crossfit-classes`,
+  name: 'CrossFit Group Classes at CrossFit Aggieland',
+  description: 'Coach-led CrossFit group fitness classes with Mayhem programming. Strength, conditioning, and skill work — scaled to every fitness level. Drop in or join as a member.',
+  image: `${siteUrl}/images/hero-group.jpg`,
+  url: `${siteUrl}/#schedule`,
+  eventAttendanceMode: 'https://schema.org/OfflineEventAttendanceMode',
+  eventStatus: 'https://schema.org/EventScheduled',
+  organizer: { '@id': `${siteUrl}/#org` },
+  location: {
+    '@type': 'Place',
+    name: site.name,
+    address: {
+      '@type': 'PostalAddress',
+      streetAddress: site.address.street,
+      addressLocality: site.address.city,
+      addressRegion: site.address.state,
+      postalCode: site.address.zip,
+      addressCountry: 'US',
+    },
+  },
+  eventSchedule: [
+    {
+      '@type': 'Schedule',
+      byDay: ['https://schema.org/Monday', 'https://schema.org/Tuesday', 'https://schema.org/Wednesday', 'https://schema.org/Thursday', 'https://schema.org/Friday'],
+      startTime: '05:00',
+      endTime: '06:00',
+      scheduleTimezone: 'America/Chicago',
+      repeatFrequency: 'P1W',
+    },
+    {
+      '@type': 'Schedule',
+      byDay: ['https://schema.org/Monday', 'https://schema.org/Tuesday', 'https://schema.org/Wednesday', 'https://schema.org/Thursday', 'https://schema.org/Friday'],
+      startTime: '06:00',
+      endTime: '07:00',
+      scheduleTimezone: 'America/Chicago',
+      repeatFrequency: 'P1W',
+    },
+    {
+      '@type': 'Schedule',
+      byDay: ['https://schema.org/Monday', 'https://schema.org/Tuesday', 'https://schema.org/Wednesday', 'https://schema.org/Thursday', 'https://schema.org/Friday'],
+      startTime: '08:30',
+      endTime: '09:30',
+      scheduleTimezone: 'America/Chicago',
+      repeatFrequency: 'P1W',
+    },
+    {
+      '@type': 'Schedule',
+      byDay: ['https://schema.org/Monday', 'https://schema.org/Tuesday', 'https://schema.org/Wednesday', 'https://schema.org/Thursday', 'https://schema.org/Friday'],
+      startTime: '12:00',
+      endTime: '13:00',
+      scheduleTimezone: 'America/Chicago',
+      repeatFrequency: 'P1W',
+    },
+    {
+      '@type': 'Schedule',
+      byDay: ['https://schema.org/Monday', 'https://schema.org/Tuesday', 'https://schema.org/Wednesday', 'https://schema.org/Thursday', 'https://schema.org/Friday'],
+      startTime: '15:30',
+      endTime: '16:30',
+      scheduleTimezone: 'America/Chicago',
+      repeatFrequency: 'P1W',
+    },
+    {
+      '@type': 'Schedule',
+      byDay: ['https://schema.org/Monday', 'https://schema.org/Tuesday', 'https://schema.org/Wednesday', 'https://schema.org/Thursday', 'https://schema.org/Friday'],
+      startTime: '16:30',
+      endTime: '17:30',
+      scheduleTimezone: 'America/Chicago',
+      repeatFrequency: 'P1W',
+    },
+    {
+      '@type': 'Schedule',
+      byDay: ['https://schema.org/Monday', 'https://schema.org/Tuesday', 'https://schema.org/Wednesday', 'https://schema.org/Thursday', 'https://schema.org/Friday'],
+      startTime: '17:30',
+      endTime: '18:30',
+      scheduleTimezone: 'America/Chicago',
+      repeatFrequency: 'P1W',
+    },
+    {
+      '@type': 'Schedule',
+      byDay: ['https://schema.org/Monday', 'https://schema.org/Tuesday', 'https://schema.org/Wednesday', 'https://schema.org/Thursday', 'https://schema.org/Friday'],
+      startTime: '18:30',
+      endTime: '19:30',
+      scheduleTimezone: 'America/Chicago',
+      repeatFrequency: 'P1W',
+    },
+    {
+      '@type': 'Schedule',
+      byDay: 'https://schema.org/Saturday',
+      startTime: '09:00',
+      endTime: '10:00',
+      scheduleTimezone: 'America/Chicago',
+      repeatFrequency: 'P1W',
+    },
+  ],
+  offers: {
+    '@type': 'Offer',
+    price: '0',
+    priceCurrency: 'USD',
+    availability: 'https://schema.org/InStock',
+    validFrom: '2013-01-01',
+    description: 'First week free — no credit card, no commitment.',
+    url: `${siteUrl}/#free`,
+  },
+}
+
 
 /* ─────────────────────────────────────────────
    NEXT.JS METADATA — title, description, OG, Twitter, robots
@@ -233,6 +350,7 @@ export const metadata: Metadata = {
     title: `CrossFit Aggieland | #1 CrossFit Gym & Fitness Classes in College Station, TX | ${site.awardsCount}x Best of the Brazos`,
     description: `CrossFit Aggieland is College Station's top-rated CrossFit gym — ${site.awardsCount}x ${site.awardName} winner. Group fitness classes, HIIT, strength training & personal training from 5 AM–6:30 PM. Beginner-friendly, near Texas A&M. Free trial week, no contract.`,
     keywords: [
+          // Brand + location
           'CrossFit College Station',
           'CrossFit Aggieland',
           'gym College Station TX',
@@ -240,24 +358,40 @@ export const metadata: Metadata = {
           'College Station gym',
           'CrossFit Bryan College Station',
           'best gym College Station',
+          // Services + location
           'CrossFit classes College Station TX',
           'personal training College Station TX',
           'fitness College Station',
-          'CrossFit near me College Station',
-          'beginner CrossFit College Station',
-          'CrossFit gym Bryan TX',
-          'CrossFit cost College Station',
-          'CrossFit free trial College Station',
           'HIIT classes College Station',
           'strength training College Station TX',
           'group fitness classes College Station',
           'fitness classes near Texas A&M',
-          'weight loss gym College Station',
-          'beginner gym College Station TX',
-          'gym membership College Station',
           'workout classes Bryan TX',
           'personal trainer College Station',
+          // High-intent "near me" / "ready to buy" keywords
+          'CrossFit near me College Station',
+          'gym near me College Station TX',
+          'best CrossFit gym near me',
+          'CrossFit classes near me',
+          'fitness classes near me College Station',
+          'gym open now College Station',
+          'CrossFit free trial near me',
+          // Beginner / conversion intent
+          'beginner CrossFit College Station',
+          'beginner gym College Station TX',
+          'CrossFit cost College Station',
+          'CrossFit free trial College Station',
           'free trial gym College Station',
+          'gym membership College Station',
+          'weight loss gym College Station',
+          // Niche / long-tail
+          'CrossFit gym Bryan TX',
+          'early morning gym College Station',
+          'Saturday workout College Station TX',
+          'gym with coaches College Station',
+          'student gym discount College Station',
+          'military discount gym College Station TX',
+          'CrossFit affiliate College Station TX',
         ],
     authors: [{ name: site.name }],
     creator: site.name,
@@ -346,6 +480,14 @@ export default function RootLayout({
                   <script
                     type="application/ld+json"
                     dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }}
+                  />
+                  <script
+                    type="application/ld+json"
+                    dangerouslySetInnerHTML={{ __html: JSON.stringify(webSiteSchema) }}
+                  />
+                  <script
+                    type="application/ld+json"
+                    dangerouslySetInnerHTML={{ __html: JSON.stringify(eventScheduleSchema) }}
                   />
                   {children}
                   <Analytics />
