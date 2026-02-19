@@ -1,48 +1,69 @@
+'use client'
+
+import { useState, useEffect } from 'react'
 import { site } from '@/lib/data'
 import { coaches } from '@/lib/data'
 
 const googleMapsUrl = 'https://www.google.com/maps/search/?api=1&query=CrossFit+Aggieland+3815+General+Pkwy+College+Station+TX+77845'
 
+function useVideoSrc() {
+  const [src, setSrc] = useState<string | null>(null)
+
+  useEffect(() => {
+    const mql = window.matchMedia('(min-width: 768px)')
+
+    const pick = (e: { matches: boolean }) =>
+      setSrc(
+        e.matches
+          ? '/crossfit-aggieland-highlight.mp4'
+          : '/crossfit-aggieland-highlight-portrait.mp4'
+      )
+
+    pick(mql)
+    mql.addEventListener('change', pick)
+    return () => mql.removeEventListener('change', pick)
+  }, [])
+
+  return src
+}
+
 export default function Hero() {
+  const videoSrc = useVideoSrc()
+
   return (
     <>
-      <section id="hero" className="relative min-h-screen flex items-center justify-center text-center bg-charcoal overflow-hidden">
-        {/* Background video — desktop (landscape) */}
-        <video
-          autoPlay
-          muted
-          loop
-          playsInline
-          poster="/images/hero-group.jpg"
-          className="absolute inset-0 w-full h-full object-cover hidden md:block"
-        >
-          <source src="/crossfit-aggieland-highlight.mp4" type="video/mp4" />
-        </video>
+      <section id="hero" className="relative min-h-screen flex flex-col items-center justify-center text-center bg-charcoal overflow-hidden">
+        {/* Background video — only the viewport-appropriate file loads */}
+        {videoSrc && (
+          <video
+            key={videoSrc}
+            autoPlay
+            muted
+            loop
+            playsInline
+            poster="/images/hero-group.jpg"
+            className="absolute inset-0 w-full h-full object-cover md:scale-110 md:object-[center_65%]"
+          >
+            <source src={videoSrc} type="video/mp4" />
+          </video>
+        )}
 
-        {/* Background video — mobile (portrait) */}
-        <video
-          autoPlay
-          muted
-          loop
-          playsInline
-          poster="/images/hero-group.jpg"
-          className="absolute inset-0 w-full h-full object-cover block md:hidden"
-        >
-          <source src="/crossfit-aggieland-highlight-portrait.mp4" type="video/mp4" />
-        </video>
+        {/* Overlay — transparent top lets video bleed behind nav, builds to strong bottom for stats/CTA legibility */}
+        <div className="absolute inset-0 z-[1]" style={{
+          background: 'linear-gradient(to bottom, rgba(26,26,26,0.15) 0%, rgba(26,26,26,0.25) 25%, rgba(26,26,26,0.45) 60%, rgba(26,26,26,0.75) 100%)'
+        }} />
 
-        {/* Overlay — lighter top so video bleeds through nav, stronger bottom for stats legibility */}
-        <div className="absolute inset-0 bg-gradient-to-b from-charcoal/50 via-charcoal/40 to-charcoal/70 z-[1]" />
-
-        {/* Content — extra bottom padding clears the stats overlay */}
-        <div className="relative z-[2] pt-20 sm:pt-24 pb-32 sm:pb-36 max-w-[900px] px-5 sm:px-6">
+        {/* Content — flex-1 fills space between overlay top and stats bar, flex centers content vertically within */}
+        <div className="relative z-[2] flex flex-col items-center pt-[100px] sm:pt-[120px] pb-[120px] sm:pb-[130px] max-w-[900px] px-5 sm:px-6">
           {/* ZONE 1: Headline */}
           <h1 className="font-display text-[clamp(2.6rem,8.5vw,7.5rem)] leading-[0.93] uppercase text-white mb-5 sm:mb-6 tracking-wide">
             The Hour That{' '}<br />Changes Everything.
           </h1>
 
           {/* ZONE 2: Subtitle — contains primary geo keywords for SEO */}
-          <p className="text-sm sm:text-lg text-white/60 max-w-[440px] sm:max-w-[520px] mx-auto mb-6 sm:mb-8 leading-relaxed font-light">
+          <p
+            className="text-sm sm:text-lg text-white max-w-[440px] sm:max-w-[520px] mx-auto mb-6 sm:mb-8 leading-relaxed font-medium drop-shadow-md"
+          >
             College Station&rsquo;s #1 CrossFit gym — elite coaching, a real community,
             and your first week is free. No commitment. No strings.
           </p>

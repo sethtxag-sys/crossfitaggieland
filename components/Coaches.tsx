@@ -45,20 +45,10 @@ export default function Coaches() {
             <FadeIn key={coach.name} delay={i * 80}>
             <div
               onClick={() => setSelected(coach)}
-              className={`group relative rounded-xl overflow-hidden text-center p-6 sm:p-8 transition-all hover:-translate-y-1 hover:shadow-xl cursor-pointer h-full ${
-                coach.isOwner
-                  ? 'bg-maroon text-white min-[420px]:col-span-2 md:col-span-1'
-                  : 'bg-gray-50 hover:bg-white border border-gray-100'
-              }`}
+              className="group relative rounded-xl overflow-hidden text-center p-6 sm:p-8 transition-all hover:-translate-y-1 hover:shadow-xl cursor-pointer h-full bg-gray-100 hover:bg-gray-50 border border-gray-200"
             >
               {coach.image ? (
-                <div
-                  className={`w-20 h-20 rounded-full mx-auto mb-4 overflow-hidden ring-2 ring-offset-2 ${
-                    coach.isOwner
-                      ? 'ring-white/30 ring-offset-maroon'
-                      : 'ring-maroon/20 ring-offset-gray-50 group-hover:ring-offset-white'
-                  }`}
-                >
+                <div className="w-20 h-20 rounded-full mx-auto mb-4 overflow-hidden ring-2 ring-offset-2 ring-maroon/20 ring-offset-gray-100 group-hover:ring-offset-gray-50">
                   <Image
                     src={coach.image}
                     alt={coach.name}
@@ -68,20 +58,14 @@ export default function Coaches() {
                   />
                 </div>
               ) : (
-                <div
-                  className={`w-20 h-20 rounded-full mx-auto mb-4 flex items-center justify-center text-xl font-display tracking-wider ${
-                    coach.isOwner
-                      ? 'bg-white/20 text-white'
-                      : 'bg-maroon/10 text-maroon'
-                  }`}
-                >
+                <div className="w-20 h-20 rounded-full mx-auto mb-4 flex items-center justify-center text-xl font-display tracking-wider bg-maroon/10 text-maroon">
                   {coach.initials}
                 </div>
               )}
-              <h3 className={`font-display text-lg tracking-wider uppercase ${coach.isOwner ? 'text-white' : 'text-charcoal'}`}>
+              <h3 className="font-display text-lg tracking-wider uppercase text-charcoal">
                 {coach.name}
               </h3>
-              <div className={`text-xs tracking-[2px] uppercase mt-1 ${coach.isOwner ? 'text-white/60' : 'text-mid-gray'}`}>
+              <div className="text-xs tracking-[2px] uppercase mt-1 text-mid-gray">
                 {coach.role}
               </div>
             </div>

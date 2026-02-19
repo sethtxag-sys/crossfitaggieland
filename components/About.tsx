@@ -21,7 +21,7 @@ export default function About() {
   return (
     <section id="about" className="py-20 lg:py-28 bg-gray-50 section-divider">
       <div className="max-w-[1200px] mx-auto px-6">
-        <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-start">
+        <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
           {/* Community photo */}
           <FadeIn>
             <div className="relative rounded-xl overflow-hidden h-[400px] lg:h-[500px]">

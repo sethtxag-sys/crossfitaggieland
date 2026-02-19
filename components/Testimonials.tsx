@@ -35,9 +35,9 @@ export default function Testimonials() {
           {rest.map((t, i) => (
             <FadeIn key={t.author} delay={i * 80}>
               <div className="bg-gray-50 border border-gray-100 rounded-xl p-6 sm:p-8 hover:shadow-lg hover:-translate-y-1 transition-all h-full">
-                <div className="font-display text-4xl sm:text-5xl text-maroon/20 leading-none mb-2 select-none">&ldquo;</div>
-                <p className="text-text-gray text-sm leading-relaxed mb-6">{t.text}</p>
-                <div className="font-display text-sm tracking-wider uppercase text-charcoal">
+                <div className="font-display text-3xl sm:text-4xl text-maroon/15 leading-none mb-2 select-none">&ldquo;</div>
+                <p className="text-charcoal/80 text-sm leading-relaxed mb-6">{t.text}</p>
+                <div className="font-display text-sm tracking-wider uppercase text-charcoal font-medium">
                   &mdash; {t.author}
                 </div>
               </div>

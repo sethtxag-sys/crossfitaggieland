@@ -98,7 +98,7 @@ export default function ContactForm() {
           id="phone"
           name="phone"
           className="w-full px-4 py-3 border border-gray-200 rounded-lg text-charcoal text-sm focus:outline-none focus:border-maroon focus:ring-1 focus:ring-maroon/20 transition-colors"
-          placeholder="(979) 555-0000"
+          placeholder="(979) 703-6665"
         />
       </div>
       <div>

@@ -67,7 +67,7 @@ export default function Navigation() {
             ? 'py-4 bg-[#0d0d0d]'
             : scrolled
               ? 'py-2.5 shadow-lg bg-charcoal/95 backdrop-blur-xl'
-              : 'py-4 bg-gradient-to-b from-charcoal/80 to-transparent'
+              : 'py-4'
         }`}
       >
         <div className="max-w-[1200px] mx-auto px-6 flex items-center justify-between">

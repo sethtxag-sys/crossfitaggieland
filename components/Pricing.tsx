@@ -18,59 +18,72 @@ export default function Pricing() {
           </div>
         </FadeIn>
 
-        {/* Pricing table — scrollable on small screens with fade hint */}
         <FadeIn delay={100}>
-          <div className="relative">
-            <div className="overflow-x-auto pb-2 -mx-6 px-6 sm:mx-0 sm:px-0">
-              <table className="w-full border-collapse min-w-[460px]">
-                <thead>
-                  <tr className="bg-charcoal text-white">
-                    <th className="font-display text-[0.65rem] sm:text-sm tracking-[1.5px] sm:tracking-[2px] uppercase p-2.5 sm:p-4 text-left">Plan</th>
-                    {pricing.terms.map((term) => (
-                      <th
-                        key={term.label}
-                        className="font-display text-[0.65rem] sm:text-sm tracking-[1.5px] sm:tracking-[2px] uppercase p-2.5 sm:p-4 text-center whitespace-nowrap"
-                      >
-                        {term.label}
-                      </th>
-                    ))}
-                  </tr>
-                </thead>
-                <tbody>
-                  {pricing.tiers.map((tier, i) => (
-                    <tr
-                      key={tier.name}
-                      className={`border-b border-gray-100 ${i % 2 === 0 ? 'bg-gray-50/50' : 'bg-white'} hover:bg-maroon/[0.03] transition-colors`}
+          {/* Desktop: table layout */}
+          <div className="hidden md:block">
+            <table className="w-full border-collapse">
+              <thead>
+                <tr className="bg-charcoal text-white">
+                  <th className="font-display text-sm tracking-[2px] uppercase p-4 text-left">Plan</th>
+                  {pricing.terms.map((term) => (
+                    <th
+                      key={term.label}
+                      className="font-display text-sm tracking-[2px] uppercase p-4 text-center whitespace-nowrap"
                     >
-                      <td className="p-2.5 sm:p-4">
-                        <div className="font-display text-xs sm:text-base tracking-wider uppercase text-charcoal">
-                          {/* Full name on sm+, abbreviated on mobile for fit */}
-                          <span className="hidden sm:inline">{tier.name}</span>
-                          <span className="sm:hidden">
-                            {tier.name === 'Teacher / LEO / Active Military'
-                              ? 'LEO / Military'
-                              : tier.name === 'Student / Veteran'
-                              ? 'Student / Vet'
-                              : tier.name}
-                          </span>
-                        </div>
-                      </td>
-                      {pricing.terms.map((term) => {
-                        const price = pricing.prices[tier.name]?.[String(term.months)]
-                        return (
-                          <td key={term.label} className="p-2.5 sm:p-4 text-center whitespace-nowrap">
-                            <span className="font-display text-lg sm:text-2xl text-maroon">${price}</span>
-                            <span className="text-[0.6rem] sm:text-xs text-mid-gray">/mo</span>
-                          </td>
-                        )
-                      })}
-                    </tr>
+                      {term.label}
+                    </th>
                   ))}
-                </tbody>
-              </table>
-            </div>
-            {/* Fade hint for horizontal scroll on mobile — wider for visibility */}
-            <div className="absolute right-0 top-0 bottom-2 w-12 bg-gradient-to-l from-gray-50 to-transparent pointer-events-none sm:hidden" />
+                </tr>
+              </thead>
+              <tbody>
+                {pricing.tiers.map((tier, i) => (
+                  <tr
+                    key={tier.name}
+                    className={`border-b border-gray-100 ${i % 2 === 0 ? 'bg-gray-50/50' : 'bg-white'} hover:bg-maroon/[0.03] transition-colors`}
+                  >
+                    <td className="p-4">
+                      <div className="font-display text-base tracking-wider uppercase text-charcoal">
+                        {tier.name}
+                      </div>
+                    </td>
+                    {pricing.terms.map((term) => {
+                      const price = pricing.prices[tier.name]?.[String(term.months)]
+                      return (
+                        <td key={term.label} className="p-4 text-center whitespace-nowrap">
+                          <span className="font-display text-2xl text-maroon">${price}</span>
+                          <span className="text-xs text-mid-gray">/mo</span>
+                        </td>
+                      )
+                    })}
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+
+          {/* Mobile: stacked card layout */}
+          <div className="md:hidden space-y-4">
+            {pricing.tiers.map((tier) => (
+              <div key={tier.name} className="bg-white rounded-xl border border-gray-100 overflow-hidden">
+                <div className="bg-charcoal px-5 py-3">
+                  <h3 className="font-display text-sm tracking-[2px] uppercase text-white">{tier.name}</h3>
+                </div>
+                <div className="divide-y divide-gray-100">
+                  {pricing.terms.map((term) => {
+                    const price = pricing.prices[tier.name]?.[String(term.months)]
+                    return (
+                      <div key={term.label} className="flex items-center justify-between px-5 py-3">
+                        <span className="text-sm text-text-gray">{term.label}</span>
+                        <div>
+                          <span className="font-display text-xl text-maroon">${price}</span>
+                          <span className="text-xs text-mid-gray">/mo</span>
+                        </div>
+                      </div>
+                    )
+                  })}
+                </div>
+              </div>
+            ))}
           </div>
 
           <p className="text-center text-text-gray text-sm mt-6 sm:mt-8">
