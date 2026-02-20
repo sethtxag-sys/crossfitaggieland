@@ -37,10 +37,20 @@ export default function Hero() {
     const v = videoRef.current
     if (!v || !videoSrc) return
 
-    v.muted = true // Must be muted before play() for autoplay policy
-    v.play().catch(() => {
-      // Autoplay blocked — silently degrade (video stays as poster/frame)
-    })
+    const tryPlay = () => {
+      v.muted = true // Must be muted before play() for autoplay policy
+      v.play().catch(() => {
+        // Autoplay blocked — silently degrade (video stays as poster/frame)
+      })
+    }
+
+    // If already loaded enough to play, play immediately; otherwise wait
+    if (v.readyState >= 3) {
+      tryPlay()
+    } else {
+      v.addEventListener('canplay', tryPlay, { once: true })
+      return () => v.removeEventListener('canplay', tryPlay)
+    }
   }, [videoSrc])
 
   return (
