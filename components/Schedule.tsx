@@ -18,7 +18,7 @@ const filterButtons: { key: TimeFilter; label: string; icon: React.ReactNode }[]
     key: 'all',
     label: 'All Times',
     icon: (
-      <svg className="w-4 h-4 fill-current" viewBox="0 0 24 24">
+      <svg className="w-4 h-4 fill-current" viewBox="0 0 24 24" aria-hidden="true">
         <path d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8zm.5-13H11v6l5.25 3.15.75-1.23-4.5-2.67z" />
       </svg>
     ),
@@ -27,7 +27,7 @@ const filterButtons: { key: TimeFilter; label: string; icon: React.ReactNode }[]
     key: 'morning',
     label: 'Morning',
     icon: (
-      <svg className="w-4 h-4 fill-current" viewBox="0 0 24 24">
+      <svg className="w-4 h-4 fill-current" viewBox="0 0 24 24" aria-hidden="true">
         <path d="M6.76 4.84l-1.8-1.79-1.41 1.41 1.79 1.79 1.42-1.41zM4 10.5H1v2h3v-2zm9-9.95h-2V3.5h2V.55zm7.45 3.91l-1.41-1.41-1.79 1.79 1.41 1.41 1.79-1.79zm-3.21 13.7l1.79 1.8 1.41-1.41-1.8-1.79-1.4 1.4zM20 10.5v2h3v-2h-3zm-8-5c-3.31 0-6 2.69-6 6s2.69 6 6 6 6-2.69 6-6-2.69-6-6-6zm-1 16.95h2V19.5h-2v2.95zm-7.45-3.91l1.41 1.41 1.79-1.8-1.41-1.41-1.79 1.8z" />
       </svg>
     ),
@@ -36,7 +36,7 @@ const filterButtons: { key: TimeFilter; label: string; icon: React.ReactNode }[]
     key: 'lunch',
     label: 'Lunch',
     icon: (
-      <svg className="w-4 h-4 fill-current" viewBox="0 0 24 24">
+      <svg className="w-4 h-4 fill-current" viewBox="0 0 24 24" aria-hidden="true">
         <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8zm0-14c-3.31 0-6 2.69-6 6s2.69 6 6 6 6-2.69 6-6-2.69-6-6-6zm.5 9H11V8h1.5v3.5H16V13h-3.5z" />
       </svg>
     ),
@@ -45,7 +45,7 @@ const filterButtons: { key: TimeFilter; label: string; icon: React.ReactNode }[]
     key: 'evening',
     label: 'After Work',
     icon: (
-      <svg className="w-4 h-4 fill-current" viewBox="0 0 24 24">
+      <svg className="w-4 h-4 fill-current" viewBox="0 0 24 24" aria-hidden="true">
         <path d="M9 2c-1.05 0-2.05.16-3 .46 4.06 1.27 7 5.06 7 9.54 0 4.48-2.94 8.27-7 9.54.95.3 1.95.46 3 .46 5.52 0 10-4.48 10-10S14.52 2 9 2z" />
       </svg>
     ),
@@ -118,7 +118,8 @@ export default function Schedule() {
                 {visible && <ClassCapacityBadge classTime={ct.time} />}
                 <div className={`text-[0.6rem] tracking-[2px] uppercase mt-2 transition-all font-display ${
                   visible ? 'text-white/0 group-hover:text-white/70' : 'text-white/0'
-                }`}>Book Now</div>
+                }`} aria-hidden="true">Book Now</div>
+                <span className="sr-only">Book {ct.time} class</span>
               </a>
             )
           })}

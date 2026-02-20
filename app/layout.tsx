@@ -48,8 +48,8 @@ const localBusinessSchema = {
   },
   geo: {
     '@type': 'GeoCoordinates',
-    latitude: 30.5963,
-    longitude: -96.2881,
+    latitude: 30.5759,
+    longitude: -96.3209,
   },
   areaServed: [
     { '@type': 'City', name: 'College Station', sameAs: 'https://en.wikipedia.org/wiki/College_Station,_Texas' },
@@ -65,8 +65,8 @@ const localBusinessSchema = {
   paymentAccepted: 'Cash, Credit Card',
   aggregateRating: {
     '@type': 'AggregateRating',
-    ratingValue: '4.8',
-    reviewCount: '61',
+    ratingValue: String(site.googleRating),
+    reviewCount: String(site.googleReviewCount),
     bestRating: '5',
   },
   hasOfferCatalog: {
@@ -444,8 +444,8 @@ export const metadata: Metadata = {
     other: {
       'geo.region': 'US-TX',
       'geo.placename': 'College Station',
-      'geo.position': '30.5963;-96.2881',
-      'ICBM': '30.5963, -96.2881',
+      'geo.position': '30.5759;-96.3209',
+      'ICBM': '30.5759, -96.3209',
     },
 }
 

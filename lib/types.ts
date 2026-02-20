@@ -22,6 +22,8 @@ export interface SiteData {
   pikeUrl: string
   programming: string
   tracking: string
+  googleRating: number
+  googleReviewCount: number
 }
 
 export interface Coach {

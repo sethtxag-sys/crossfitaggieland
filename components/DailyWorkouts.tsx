@@ -46,7 +46,7 @@ export default function DailyWorkouts() {
               ].map((feature) => (
                 <div key={feature.title} className="flex gap-4 items-start">
                   <div className="w-5 h-5 rounded-full bg-maroon/10 flex items-center justify-center mt-0.5 shrink-0">
-                    <svg className="w-3 h-3 fill-maroon" viewBox="0 0 24 24">
+                    <svg className="w-3 h-3 fill-maroon" viewBox="0 0 24 24" aria-hidden="true">
                       <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z" />
                     </svg>
                   </div>

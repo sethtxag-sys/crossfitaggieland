@@ -80,6 +80,7 @@ export default function FAQ() {
             >
               <button
                 onClick={() => setOpenIndex(openIndex === i ? null : i)}
+                aria-expanded={openIndex === i}
                 className="w-full flex items-center justify-between p-4 sm:p-5 text-left hover:bg-gray-50 transition-colors"
               >
                 <span className="font-semibold text-[0.95rem] sm:text-base text-charcoal pr-4 leading-snug">
@@ -93,13 +94,14 @@ export default function FAQ() {
                   viewBox="0 0 24 24"
                   stroke="currentColor"
                   strokeWidth={2}
+                  aria-hidden="true"
                 >
                   <path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7" />
                 </svg>
               </button>
               <div
                 className={`overflow-hidden transition-all duration-200 ${
-                  openIndex === i ? 'max-h-[300px] opacity-100' : 'max-h-0 opacity-0'
+                  openIndex === i ? 'max-h-[500px] opacity-100' : 'max-h-0 opacity-0'
                 }`}
               >
                 <div className="px-4 sm:px-5 pb-4 sm:pb-5 text-text-gray leading-relaxed text-[0.9rem] sm:text-base">
