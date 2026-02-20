@@ -1,6 +1,6 @@
 'use client'
 
-import { useState, useEffect, useRef, useCallback } from 'react'
+import { useState, useEffect, useRef } from 'react'
 import { site } from '@/lib/data'
 import { coaches } from '@/lib/data'
 import FreeWeekDate from './FreeWeekDate'
