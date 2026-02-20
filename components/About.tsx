@@ -21,9 +21,9 @@ export default function About() {
   return (
     <section id="about" className="py-20 lg:py-28 bg-gray-50 section-divider">
       <div className="max-w-[1200px] mx-auto px-6">
+        <FadeIn>
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
           {/* Community photo */}
-          <FadeIn>
             <div className="relative rounded-xl overflow-hidden h-[400px] lg:h-[500px]">
               <Image
                 src="/images/women-group.jpg"
@@ -37,10 +37,8 @@ export default function About() {
                 <div className="text-white/60 text-sm">{site.address.city}, {site.address.state}</div>
               </div>
             </div>
-          </FadeIn>
 
           {/* Content */}
-          <FadeIn delay={150}>
             <div className="max-w-prose">
               <div className="font-display text-sm tracking-[4px] uppercase text-maroon mb-3">Your Guide</div>
               <h2 className="font-display text-[clamp(2.2rem,5vw,3.5rem)] leading-[1.05] uppercase tracking-wide mb-5">
@@ -67,8 +65,8 @@ export default function About() {
                 ))}
               </div>
             </div>
-          </FadeIn>
         </div>
+        </FadeIn>
       </div>
     </section>
   )

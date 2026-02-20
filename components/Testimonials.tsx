@@ -15,10 +15,8 @@ export default function Testimonials() {
               What Our Members Say
             </h2>
           </div>
-        </FadeIn>
 
         {/* Featured testimonial — open-quote mark instead of accent line for stronger visual punch */}
-        <FadeIn>
           <div className="bg-maroon rounded-xl p-6 sm:p-10 lg:p-14 mb-6 text-center">
             <div className="font-display text-5xl sm:text-6xl text-white/20 leading-none mb-4 select-none">&ldquo;</div>
             <p className="text-white/90 text-base sm:text-lg lg:text-xl leading-relaxed max-w-[700px] mx-auto mb-6">
@@ -28,22 +26,20 @@ export default function Testimonials() {
               &mdash; {featured.author}
             </div>
           </div>
-        </FadeIn>
 
         {/* Remaining testimonials — open-quote marks for visual consistency */}
         <div className="grid md:grid-cols-2 gap-6">
           {rest.map((t, i) => (
-            <FadeIn key={t.author} delay={i * 80}>
-              <div className="bg-gray-50 border border-gray-100 rounded-xl p-6 sm:p-8 hover:shadow-lg hover:-translate-y-1 transition-all h-full">
+              <div key={t.author} className="bg-gray-50 border border-gray-100 rounded-xl p-6 sm:p-8 hover:shadow-lg hover:-translate-y-1 transition-all h-full">
                 <div className="font-display text-3xl sm:text-4xl text-maroon/15 leading-none mb-2 select-none">&ldquo;</div>
                 <p className="text-charcoal/80 text-sm leading-relaxed mb-6">{t.text}</p>
                 <div className="font-display text-sm tracking-wider uppercase text-charcoal font-medium">
                   &mdash; {t.author}
                 </div>
               </div>
-            </FadeIn>
           ))}
         </div>
+        </FadeIn>
       </div>
     </section>
   )

@@ -75,10 +75,8 @@ export default function Schedule() {
               Classes from 5 AM to 7:30 PM. Life isn&rsquo;t 9-to-5. Neither are we.
             </p>
           </div>
-        </FadeIn>
 
         {/* Time-of-day quick picks */}
-        <FadeIn delay={50}>
           <div className="mb-6">
             <div className="text-[0.7rem] tracking-[2px] uppercase text-white/40 mb-3 font-display">When works for you?</div>
             <div className="flex flex-wrap gap-2">
@@ -98,10 +96,8 @@ export default function Schedule() {
               ))}
             </div>
           </div>
-        </FadeIn>
 
         {/* Class times grid — each slot links to Pike13 */}
-        <FadeIn delay={100}>
         <div className="grid grid-cols-2 md:grid-cols-4 gap-3 mb-12">
           {schedule.classTimes.map((ct) => {
             const visible = isVisible(ct.time)
@@ -127,10 +123,8 @@ export default function Schedule() {
             )
           })}
         </div>
-        </FadeIn>
 
         {/* Days row */}
-        <FadeIn delay={200}>
         <div className="flex flex-wrap justify-center gap-2 mb-8">
           {schedule.days.map((day) => (
             <div
