@@ -1,6 +1,6 @@
 'use client'
 
-import { useState, useEffect, useRef } from 'react'
+import { useState, useEffect, useCallback } from 'react'
 import { site } from '@/lib/data'
 import { coaches } from '@/lib/data'
 import FreeWeekDate from './FreeWeekDate'
@@ -30,28 +30,13 @@ function useVideoSrc() {
 
 export default function Hero() {
   const videoSrc = useVideoSrc()
-  const videoRef = useRef<HTMLVideoElement>(null)
 
-  // Force-play after mount/src change — Chrome ignores autoPlay on dynamically inserted <video>
-  useEffect(() => {
-    const v = videoRef.current
-    if (!v || !videoSrc) return
-
-    const tryPlay = () => {
-      v.muted = true // Must be muted before play() for autoplay policy
-      v.play().catch(() => {
-        // Autoplay blocked — silently degrade (video stays as poster/frame)
-      })
-    }
-
-    // If already loaded enough to play, play immediately; otherwise wait
-    if (v.readyState >= 3) {
-      tryPlay()
-    } else {
-      v.addEventListener('canplay', tryPlay, { once: true })
-      return () => v.removeEventListener('canplay', tryPlay)
-    }
-  }, [videoSrc])
+  // Callback ref — fires the instant React attaches the <video> to the DOM
+  const videoRefCallback = useCallback((el: HTMLVideoElement | null) => {
+    if (!el) return
+    el.muted = true
+    el.play().catch(() => {})
+  }, [])
 
   return (
     <section
@@ -61,13 +46,19 @@ export default function Hero() {
       {/* ── Background video — scaled up + shifted down to crop black bars off the top on desktop ── */}
       {videoSrc && (
         <video
-          ref={videoRef}
+          ref={videoRefCallback}
           key={videoSrc}
           autoPlay
           muted
           loop
           playsInline
+          preload="auto"
           className="absolute inset-0 w-full h-full object-cover scale-[1.3] -translate-y-[5%] object-bottom"
+          onLoadedData={(e) => {
+            const v = e.currentTarget
+            v.muted = true
+            v.play().catch(() => {})
+          }}
         >
           <source src={videoSrc} type="video/mp4" />
         </video>
