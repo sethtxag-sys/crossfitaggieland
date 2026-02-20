@@ -49,9 +49,21 @@ function getTodayRange(): { from: string; to: string } {
   })
   const todayStr = chicagoFormatter.format(now) // YYYY-MM-DD format
 
+  // Determine current UTC offset for America/Chicago (handles CST/CDT automatically)
+  const offsetParts = new Intl.DateTimeFormat('en-US', {
+    timeZone: 'America/Chicago',
+    timeZoneName: 'shortOffset',
+  }).formatToParts(now)
+  const gmtPart = offsetParts.find((p) => p.type === 'timeZoneName')?.value || 'GMT-6'
+  // gmtPart is like "GMT-6" or "GMT-5" — convert to "-06:00" or "-05:00"
+  const offsetMatch = gmtPart.match(/GMT([+-]?)(\d+)/)
+  const sign = offsetMatch?.[1] === '+' ? '+' : '-'
+  const hours = String(offsetMatch?.[2] || '6').padStart(2, '0')
+  const offset = `${sign}${hours}:00`
+
   // Start and end of day in Chicago time, expressed as ISO strings
-  const from = `${todayStr}T00:00:00-06:00`
-  const to = `${todayStr}T23:59:59-06:00`
+  const from = `${todayStr}T00:00:00${offset}`
+  const to = `${todayStr}T23:59:59${offset}`
 
   return { from, to }
 }

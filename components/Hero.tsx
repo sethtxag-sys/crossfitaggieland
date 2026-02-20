@@ -1,6 +1,6 @@
 'use client'
 
-import { useState, useEffect } from 'react'
+import { useState, useEffect, useRef, useCallback } from 'react'
 import { site } from '@/lib/data'
 import { coaches } from '@/lib/data'
 import FreeWeekDate from './FreeWeekDate'
@@ -30,6 +30,18 @@ function useVideoSrc() {
 
 export default function Hero() {
   const videoSrc = useVideoSrc()
+  const videoRef = useRef<HTMLVideoElement>(null)
+
+  // Force-play after mount/src change — Chrome ignores autoPlay on dynamically inserted <video>
+  useEffect(() => {
+    const v = videoRef.current
+    if (!v || !videoSrc) return
+
+    v.muted = true // Must be muted before play() for autoplay policy
+    v.play().catch(() => {
+      // Autoplay blocked — silently degrade (video stays as poster/frame)
+    })
+  }, [videoSrc])
 
   return (
     <section
@@ -39,6 +51,7 @@ export default function Hero() {
       {/* ── Background video — scaled up + shifted down to crop black bars off the top on desktop ── */}
       {videoSrc && (
         <video
+          ref={videoRef}
           key={videoSrc}
           autoPlay
           muted

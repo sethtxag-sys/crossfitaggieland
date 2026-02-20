@@ -77,11 +77,13 @@ export default function ClassCapacityBadge({ classTime }: CapacityBadgeProps) {
       if (!match) return // No data = show nothing (graceful degradation)
 
       if (match.full || match.capacity_remaining === 0) {
-        setBadge({ text: 'Full', color: 'text-red-400' })
+        setBadge({ text: 'Full', color: 'text-red-400 font-bold' })
       } else if (match.capacity_remaining <= 5) {
-        setBadge({ text: `${match.capacity_remaining} spots left`, color: 'text-yellow-400' })
+        setBadge({ text: `Only ${match.capacity_remaining} spots left`, color: 'text-yellow-400 font-semibold' })
+      } else if (match.capacity_remaining <= 15) {
+        setBadge({ text: `${match.capacity_remaining} spots open`, color: 'text-emerald-400' })
       } else {
-        setBadge({ text: `${match.capacity_remaining} spots open`, color: 'text-white/40' })
+        setBadge({ text: `${match.capacity_remaining} spots open`, color: 'text-emerald-400/70' })
       }
     })
   }, [classTime])
