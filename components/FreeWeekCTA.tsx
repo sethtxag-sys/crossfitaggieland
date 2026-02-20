@@ -1,5 +1,6 @@
 import { site } from '@/lib/data'
 import FadeIn from './FadeIn'
+import FreeWeekDate from './FreeWeekDate'
 
 export default function FreeWeekCTA() {
   return (
@@ -40,6 +41,9 @@ export default function FreeWeekCTA() {
         <p className="text-white/60 text-xs tracking-wider mt-6 max-w-[400px] mx-auto">
           No credit card. No contract. Just walk in and see what happens.
         </p>
+        <div className="mt-4">
+          <FreeWeekDate variant="cta" />
+        </div>
         </FadeIn>
       </div>
     </section>

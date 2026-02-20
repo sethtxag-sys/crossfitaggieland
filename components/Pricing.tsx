@@ -33,6 +33,7 @@ export default function Pricing() {
                       {term.label}
                     </th>
                   ))}
+                  <th className="p-4 w-[1%]"></th>
                 </tr>
               </thead>
               <tbody>
@@ -55,6 +56,14 @@ export default function Pricing() {
                         </td>
                       )
                     })}
+                    <td className="p-4 text-center whitespace-nowrap">
+                      <a
+                        href={site.pikeUrl}
+                        className="inline-block font-display text-xs tracking-[2px] uppercase text-maroon border border-maroon px-5 py-2.5 hover:bg-maroon hover:text-white transition-all"
+                      >
+                        Start Free Week
+                      </a>
+                    </td>
                   </tr>
                 ))}
               </tbody>
@@ -81,6 +90,14 @@ export default function Pricing() {
                       </div>
                     )
                   })}
+                </div>
+                <div className="px-5 py-4 border-t border-gray-100">
+                  <a
+                    href={site.pikeUrl}
+                    className="block text-center font-display text-xs tracking-[2px] uppercase text-maroon border border-maroon px-5 py-2.5 hover:bg-maroon hover:text-white transition-all"
+                  >
+                    Start Your Free Week
+                  </a>
                 </div>
               </div>
             ))}

@@ -7,6 +7,7 @@ import Coaches from '@/components/Coaches'
 import Schedule from '@/components/Schedule'
 import DailyWorkouts from '@/components/DailyWorkouts'
 import Testimonials from '@/components/Testimonials'
+import InstagramGrid from '@/components/InstagramGrid'
 import Transformation from '@/components/Transformation'
 import Pricing from '@/components/Pricing'
 import FAQ from '@/components/FAQ'
@@ -46,6 +47,7 @@ export default function Home() {
       <DailyWorkouts />
       <Schedule />
       <Testimonials />
+      <InstagramGrid />
       <Transformation />
       <Pricing />
       <FAQ />

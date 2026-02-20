@@ -3,6 +3,7 @@
 import { useState } from 'react'
 import { schedule, site } from '@/lib/data'
 import FadeIn from './FadeIn'
+import ClassCapacityBadge from './ClassCapacity'
 
 type TimeFilter = 'all' | 'morning' | 'lunch' | 'evening'
 
@@ -118,6 +119,7 @@ export default function Schedule() {
               >
                 <div className="font-display text-2xl tracking-wider text-white">{ct.time}</div>
                 <div className="text-[0.7rem] tracking-[2px] uppercase text-white/55 mt-1 group-hover:text-white/80 transition-colors">{ct.label}</div>
+                {visible && <ClassCapacityBadge classTime={ct.time} />}
                 <div className={`text-[0.6rem] tracking-[2px] uppercase mt-2 transition-all font-display ${
                   visible ? 'text-white/0 group-hover:text-white/70' : 'text-white/0'
                 }`}>Book Now</div>

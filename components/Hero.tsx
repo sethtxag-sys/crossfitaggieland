@@ -3,8 +3,9 @@
 import { useState, useEffect } from 'react'
 import { site } from '@/lib/data'
 import { coaches } from '@/lib/data'
+import FreeWeekDate from './FreeWeekDate'
 
-const googleMapsUrl = 'https://www.google.com/maps/search/?api=1&query=CrossFit+Aggieland+3815+General+Pkwy+College+Station+TX+77845'
+const googleReviewsUrl = 'https://www.google.com/maps/place/CrossFit+Aggieland/@30.5758699,-96.3209333,17z/data=!4m8!3m7!1s0x864684a0fb34e9c7:0x56cf6177a9bba493!8m2!3d30.5758699!4d-96.3209333!9m1!1b1!16s%2Fg%2F1hm2xb58p'
 
 function useVideoSrc() {
   const [src, setSrc] = useState<string | null>(null)
@@ -75,13 +76,18 @@ export default function Hero() {
           </p>
 
           {/* Urgency */}
-          <div className="font-display text-[clamp(0.8rem,1.8vw,1.1rem)] text-white tracking-[3px] sm:tracking-[5px] uppercase mb-5 sm:mb-6">
+          <div className="font-display text-[clamp(0.8rem,1.8vw,1.1rem)] text-white tracking-[3px] sm:tracking-[5px] uppercase mb-2 sm:mb-3">
             7 Days. Unlimited Classes. Zero Cost.
+          </div>
+
+          {/* Rolling start date */}
+          <div className="mb-5 sm:mb-6">
+            <FreeWeekDate variant="hero" />
           </div>
 
           {/* Google reviews */}
           <a
-            href={googleMapsUrl}
+            href={googleReviewsUrl}
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center gap-2 sm:gap-3 mb-5 sm:mb-7 px-5 sm:px-6 py-2 sm:py-2.5 bg-white/[0.06] backdrop-blur-sm border border-white/10 rounded-full hover:bg-white/15 transition-all group"
