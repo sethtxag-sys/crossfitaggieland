@@ -40,6 +40,17 @@ export default function Contact() {
                   value={`Mon–Thu: ${mthHours} | Fri: ${friHours} | Sat: ${satHours}`}
                 />
               </div>
+
+              {/* Quick-action CTA — on-site backup conversion for mobile */}
+              <div className="flex flex-wrap gap-3 mb-8">
+                <a
+                  href={`tel:${site.phone.replace(/-/g, '')}`}
+                  className="inline-flex items-center gap-2 font-display text-sm tracking-widest uppercase bg-maroon text-white px-6 py-3 hover:bg-maroon-dark transition-all"
+                >
+                  <svg className="w-4 h-4 fill-current" viewBox="0 0 24 24"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z" /></svg>
+                  Call Now
+                </a>
+              </div>
             </FadeIn>
 
             <FadeIn delay={100}>
@@ -51,8 +62,8 @@ export default function Contact() {
           <FadeIn delay={200}>
             <div className="rounded-xl overflow-hidden h-[250px] sm:h-[300px] lg:h-full min-h-[300px] bg-gray-200">
               <iframe
-                src={`https://www.google.com/maps?q=${encodeURIComponent('CrossFit Aggieland, 3815 General Pkwy, College Station, TX 77845')}&z=15&output=embed`}
-                title="CrossFit Aggieland location on Google Maps - 3815 General Parkway, College Station, TX"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4074.66!2d-96.3209333!3d30.5758699!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x864684a0fb34e9c7%3A0x56cf6177a9bba493!2sCrossFit%20Aggieland!5e0!3m2!1sen!2sus!4v1"
+                title="CrossFit Aggieland on Google Maps - 3815 General Parkway, College Station, TX 77845"
                 className="w-full h-full border-0"
                 allowFullScreen
                 loading="lazy"

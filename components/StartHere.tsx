@@ -22,6 +22,23 @@ export default function StartHere() {
               <p className="text-text-gray leading-relaxed mb-6">
                 For <strong>{site.awardsCount} straight years</strong>, we&rsquo;ve taken people who were nervous, out of shape, or completely new and coached them into athletes who don&rsquo;t want to miss a day.
               </p>
+
+              {/* Specificity details — reduces "what will it be like?" anxiety */}
+              <div className="bg-gray-50 border border-gray-100 rounded-lg p-5 mb-6 space-y-2.5">
+                <div className="flex items-center gap-3 text-sm text-text-gray">
+                  <span className="w-1.5 h-1.5 rounded-full bg-maroon shrink-0" />
+                  <span><strong className="text-charcoal">Capped classes</strong> — so your coach sees you every session</span>
+                </div>
+                <div className="flex items-center gap-3 text-sm text-text-gray">
+                  <span className="w-1.5 h-1.5 rounded-full bg-maroon shrink-0" />
+                  <span><strong className="text-charcoal">Every workout scaled</strong> — your coach adjusts weight, reps, and movements to your level</span>
+                </div>
+                <div className="flex items-center gap-3 text-sm text-text-gray">
+                  <span className="w-1.5 h-1.5 rounded-full bg-maroon shrink-0" />
+                  <span><strong className="text-charcoal">After your free week</strong> — pick a membership that fits. No pressure, no auto-billing surprises</span>
+                </div>
+              </div>
+
               <div className="font-display text-xl tracking-[2px] uppercase text-charcoal border-l-4 border-maroon pl-4 mb-8">
                 You bring the effort. We coach the plan.
               </div>

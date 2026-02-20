@@ -96,9 +96,15 @@ export default function Pricing() {
             ))}
           </p>
 
+          {/* Term clarification — eliminates contract confusion */}
+          <p className="text-center text-text-gray text-sm mt-4 max-w-[600px] mx-auto leading-relaxed">
+            <strong className="text-charcoal">No long-term contracts.</strong> Term options lock in a discounted rate — month-to-month
+            is always available. Cancel anytime with 30 days&rsquo; notice.
+          </p>
+
           {/* Price anchoring */}
           <p className="text-center text-mid-gray text-sm mt-3">
-            That&rsquo;s less than <strong className="text-charcoal">$5 per class</strong> with unlimited access. Personal training in College Station runs $60-80 per session.
+            That&rsquo;s less than <strong className="text-charcoal">$5 per class</strong> with unlimited access. Personal training in College Station runs $60–80 per session.
           </p>
 
           <div className="text-center mt-8">

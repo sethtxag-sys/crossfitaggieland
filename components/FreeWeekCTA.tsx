@@ -10,7 +10,7 @@ export default function FreeWeekCTA() {
             Your Future Self Will Thank You.
           </h2>
           <p className="text-white/70 leading-relaxed max-w-[550px] mx-auto mb-10 lg:mb-12">
-            One week. Unlimited classes. Zero risk. Show up, see what happens, and decide for yourself why we&rsquo;ve been voted #1 for {site.awardsCount} straight years.
+            One week. Unlimited classes. Zero risk. Show up, see what happens, and decide for yourself why we&rsquo;ve been voted Best of the Brazos {site.awardsCount} years running.
           </p>
         </FadeIn>
 

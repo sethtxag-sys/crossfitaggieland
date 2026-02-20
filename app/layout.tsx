@@ -351,7 +351,7 @@ const eventScheduleSchema = {
 
 export const metadata: Metadata = {
     metadataBase: new URL(siteUrl),
-    title: `CrossFit Aggieland | #1 CrossFit Gym & Fitness Classes in College Station, TX | ${site.awardsCount}x Best of the Brazos`,
+    title: `CrossFit Aggieland | CrossFit Gym & Fitness Classes in College Station, TX | ${site.awardsCount}x Best of the Brazos`,
     description: `CrossFit Aggieland is College Station's top-rated CrossFit gym — ${site.awardsCount}x ${site.awardName} winner. Group fitness classes, HIIT, strength training & personal training from 5 AM–7:30 PM. Beginner-friendly, near Texas A&M. Free trial week, no contract.`,
     keywords: [
           // Brand + location
@@ -418,7 +418,7 @@ export const metadata: Metadata = {
           canonical: '/',
     },
     openGraph: {
-          title: `${site.name} | #1 CrossFit Gym & Fitness Classes in College Station, TX`,
+          title: `${site.name} | ${site.awardsCount}x Best of the Brazos | CrossFit Gym in College Station, TX`,
           description: `${site.awardsCount}x ${site.awardName} winner. CrossFit, HIIT, strength training & group fitness classes from 5 AM–7:30 PM. Free trial week, no contract. Near Texas A&M.`,
           url: siteUrl,
           siteName: site.name,
@@ -437,7 +437,7 @@ export const metadata: Metadata = {
           card: 'summary_large_image',
           site: '@CFAggieland',
           creator: '@CFAggieland',
-          title: `${site.name} | #1 CrossFit Gym & Fitness Classes in College Station, TX`,
+          title: `${site.name} | ${site.awardsCount}x Best of the Brazos | CrossFit Gym in College Station, TX`,
           description: `${site.awardsCount}x ${site.awardName} winner. CrossFit, HIIT, strength training & group fitness. Beginner-friendly, near Texas A&M. Free trial week.`,
           images: [`${siteUrl}/images/hero-group.jpg`],
     },
