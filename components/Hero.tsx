@@ -1,68 +1,68 @@
 'use client'
 
-import { useState, useEffect, useCallback } from 'react'
+import { useState, useEffect, useRef } from 'react'
 import { site } from '@/lib/data'
 import { coaches } from '@/lib/data'
 import FreeWeekDate from './FreeWeekDate'
 
 const googleReviewsUrl = 'https://www.google.com/maps/place/CrossFit+Aggieland/@30.5758699,-96.3209333,17z/data=!4m8!3m7!1s0x864684a0fb34e9c7:0x56cf6177a9bba493!8m2!3d30.5758699!4d-96.3209333!9m1!1b1!16s%2Fg%2F1hm2xb58p'
 
-function useVideoSrc() {
-  const [src, setSrc] = useState<string | null>(null)
+const DESKTOP_VIDEO = '/crossfit-aggieland-highlight.mp4'
+const PORTRAIT_VIDEO = '/crossfit-aggieland-highlight-portrait.mp4'
 
+export default function Hero() {
+  const videoRef = useRef<HTMLVideoElement>(null)
+  const [isPortrait, setIsPortrait] = useState(false)
+
+  // Swap source based on viewport — never unmount the <video> element
   useEffect(() => {
     const mql = window.matchMedia('(min-width: 768px)')
 
-    const pick = (e: { matches: boolean }) =>
-      setSrc(
-        e.matches
-          ? '/crossfit-aggieland-highlight.mp4'
-          : '/crossfit-aggieland-highlight-portrait.mp4'
-      )
+    const update = (e: { matches: boolean }) => {
+      setIsPortrait(!e.matches)
+      // When src changes, reload and play
+      const v = videoRef.current
+      if (v) {
+        v.load()
+        v.play().catch(() => {})
+      }
+    }
 
-    pick(mql)
-    mql.addEventListener('change', pick)
-    return () => mql.removeEventListener('change', pick)
+    // Set initial without triggering load (the JSX default handles first paint)
+    setIsPortrait(!mql.matches)
+
+    mql.addEventListener('change', update)
+    return () => mql.removeEventListener('change', update)
   }, [])
 
-  return src
-}
-
-export default function Hero() {
-  const videoSrc = useVideoSrc()
-
-  // Callback ref — fires the instant React attaches the <video> to the DOM
-  const videoRefCallback = useCallback((el: HTMLVideoElement | null) => {
-    if (!el) return
-    el.muted = true
-    el.play().catch(() => {})
-  }, [])
+  // Belt-and-suspenders: force play on mount + after any load
+  useEffect(() => {
+    const v = videoRef.current
+    if (!v) return
+    v.play().catch(() => {})
+  }, [isPortrait])
 
   return (
     <section
       id="hero"
       className="relative h-[100svh] text-center bg-charcoal overflow-hidden"
     >
-      {/* ── Background video — scaled up + shifted down to crop black bars off the top on desktop ── */}
-      {videoSrc && (
-        <video
-          ref={videoRefCallback}
-          key={videoSrc}
-          autoPlay
-          muted
-          loop
-          playsInline
-          preload="auto"
-          className="absolute inset-0 w-full h-full object-cover scale-[1.3] -translate-y-[5%] object-bottom"
-          onLoadedData={(e) => {
-            const v = e.currentTarget
-            v.muted = true
-            v.play().catch(() => {})
-          }}
-        >
-          <source src={videoSrc} type="video/mp4" />
-        </video>
-      )}
+      {/* ── Background video — always in DOM, src swapped via state ── */}
+      <video
+        ref={videoRef}
+        src={isPortrait ? PORTRAIT_VIDEO : DESKTOP_VIDEO}
+        autoPlay
+        muted
+        loop
+        playsInline
+        preload="auto"
+        className="absolute inset-0 w-full h-full object-cover scale-[1.3] -translate-y-[5%] object-bottom"
+        onLoadedData={(e) => {
+          const v = e.currentTarget
+          v.muted = true
+          v.play().catch(() => {})
+        }}
+      />
 
       {/* ── Cinematic overlay — very light at top, strong at bottom for text legibility ── */}
       <div className="absolute inset-0 z-[1]" style={{
