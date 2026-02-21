@@ -72,14 +72,9 @@ export default function Hero() {
         background: 'linear-gradient(to bottom, rgba(26,26,26,0.05) 0%, rgba(26,26,26,0.10) 25%, rgba(26,26,26,0.35) 55%, rgba(26,26,26,0.55) 80%, rgba(26,26,26,0.65) 100%)'
       }} />
 
-      {/* ── Mobile content vignette — soft radial dark zone behind text, no hard edges ── */}
-      <div className="absolute inset-0 z-[2] sm:hidden pointer-events-none" style={{
-        background: 'radial-gradient(ellipse 90% 70% at 50% 48%, rgba(0,0,0,0.45) 0%, rgba(0,0,0,0.20) 55%, transparent 100%)'
-      }} />
-
       {/* ── Content — absolute fill, flex centers between nav and stats bar ── */}
-      <div className="absolute inset-0 z-[3] flex items-center justify-center pt-[72px] pb-[110px] sm:pb-[125px] px-5 sm:px-8">
-        <div className="max-w-[860px] w-full flex flex-col items-center">
+      <div className="absolute inset-0 z-[2] flex items-center justify-center pt-[72px] pb-[110px] sm:pb-[125px] px-5 sm:px-8">
+        <div className="max-w-[860px] w-full flex flex-col items-center bg-black/25 backdrop-blur-[6px] rounded-[2rem] px-6 py-8 shadow-[0_0_60px_30px_rgba(0,0,0,0.25)] sm:bg-transparent sm:backdrop-blur-none sm:rounded-none sm:px-0 sm:py-0 sm:shadow-none">
 
           {/* H1 */}
           <h1 className="font-display text-[clamp(2.75rem,8vw,5.5rem)] leading-[0.9] uppercase text-white mb-3 sm:mb-4 tracking-wide drop-shadow-[0_2px_20px_rgba(0,0,0,0.5)]">
@@ -163,7 +158,7 @@ export default function Hero() {
       </div>
 
       {/* ── Stats bar — pinned to bottom, gradient fades into video above ── */}
-      <div className="absolute bottom-0 left-0 right-0 z-[4]">
+      <div className="absolute bottom-0 left-0 right-0 z-[3]">
         {/* Gradient bleed — extends upward to smooth the transition from video to stats */}
         <div className="h-16 sm:h-20" style={{
           background: 'linear-gradient(to bottom, rgba(26,26,26,0) 0%, rgba(26,26,26,0.80) 100%)'
