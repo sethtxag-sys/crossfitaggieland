@@ -15,20 +15,6 @@ const navLinks = [
 
 export default function Navigation() {
   const [menuOpen, setMenuOpen] = useState(false)
-  const [showNavCta, setShowNavCta] = useState(false)
-
-  // Show nav CTA only after scrolling past the hero section
-  useEffect(() => {
-    const hero = document.getElementById('hero')
-    if (!hero) return
-
-    const observer = new IntersectionObserver(
-      ([entry]) => setShowNavCta(!entry.isIntersecting),
-      { threshold: 0 }
-    )
-    observer.observe(hero)
-    return () => observer.disconnect()
-  }, [])
 
   // Lock body scroll when menu is open
   useEffect(() => {
@@ -107,14 +93,12 @@ export default function Navigation() {
             ))}
           </ul>
 
-          {/* CTA — hidden until user scrolls past hero */}
+          {/* CTA */}
           <a
             href={site.pikeUrl}
             target="_blank"
             rel="noopener noreferrer"
-            className={`hidden lg:inline-block font-display text-sm tracking-widest uppercase text-white border border-white/40 px-6 py-2.5 hover:bg-white hover:text-charcoal hover:border-white transition-all duration-300 ${
-              showNavCta ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-1 pointer-events-none'
-            }`}
+            className="hidden lg:inline-block font-display text-sm tracking-widest uppercase text-white border border-white/40 px-6 py-2.5 hover:bg-white hover:text-charcoal hover:border-white transition-all"
           >
             Start Your Free Week
           </a>
