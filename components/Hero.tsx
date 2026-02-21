@@ -64,9 +64,9 @@ export default function Hero() {
         }}
       />
 
-      {/* ── Cinematic overlay — heavier on mobile for text legibility over busy video ── */}
+      {/* ── Cinematic overlay — heavy on mobile, lighter on desktop ── */}
       <div className="absolute inset-0 z-[1] sm:hidden" style={{
-        background: 'linear-gradient(to bottom, rgba(26,26,26,0.20) 0%, rgba(26,26,26,0.30) 25%, rgba(26,26,26,0.50) 55%, rgba(26,26,26,0.65) 80%, rgba(26,26,26,0.75) 100%)'
+        background: 'linear-gradient(to bottom, rgba(26,26,26,0.40) 0%, rgba(26,26,26,0.55) 30%, rgba(26,26,26,0.65) 55%, rgba(26,26,26,0.75) 80%, rgba(26,26,26,0.82) 100%)'
       }} />
       <div className="absolute inset-0 z-[1] hidden sm:block" style={{
         background: 'linear-gradient(to bottom, rgba(26,26,26,0.05) 0%, rgba(26,26,26,0.10) 25%, rgba(26,26,26,0.35) 55%, rgba(26,26,26,0.55) 80%, rgba(26,26,26,0.65) 100%)'
@@ -74,7 +74,7 @@ export default function Hero() {
 
       {/* ── Content — absolute fill, flex centers between nav and stats bar ── */}
       <div className="absolute inset-0 z-[2] flex items-center justify-center pt-[72px] pb-[110px] sm:pb-[125px] px-5 sm:px-8">
-        <div className="max-w-[860px] w-full flex flex-col items-center bg-black/25 backdrop-blur-[6px] rounded-[2rem] px-6 py-8 shadow-[0_0_60px_30px_rgba(0,0,0,0.25)] sm:bg-transparent sm:backdrop-blur-none sm:rounded-none sm:px-0 sm:py-0 sm:shadow-none">
+        <div className="max-w-[860px] w-full flex flex-col items-center">
 
           {/* H1 */}
           <h1 className="font-display text-[clamp(2.75rem,8vw,5.5rem)] leading-[0.9] uppercase text-white mb-3 sm:mb-4 tracking-wide drop-shadow-[0_2px_20px_rgba(0,0,0,0.5)]">
@@ -82,18 +82,18 @@ export default function Hero() {
           </h1>
 
           {/* Tagline */}
-          <p className="font-display text-[clamp(0.8rem,2.2vw,1.3rem)] text-white/75 tracking-[3px] sm:tracking-[5px] uppercase mb-3 sm:mb-5" style={{ textShadow: '0 1px 6px rgba(0,0,0,0.5)' }}>
+          <p className="font-display text-[clamp(0.8rem,2.2vw,1.3rem)] text-white/80 tracking-[3px] sm:tracking-[5px] uppercase mb-3 sm:mb-5" style={{ textShadow: '0 1px 4px rgba(0,0,0,0.4)' }}>
             The Hour That Changes Everything.
           </p>
 
           {/* Value prop */}
-          <p className="text-[clamp(0.85rem,1.6vw,1.05rem)] text-white/90 max-w-[520px] mx-auto mb-3 sm:mb-6 leading-relaxed font-medium" style={{ textShadow: '0 1px 8px rgba(0,0,0,0.6), 0 2px 20px rgba(0,0,0,0.3)' }}>
+          <p className="text-[clamp(0.85rem,1.6vw,1.05rem)] text-white/90 max-w-[520px] mx-auto mb-3 sm:mb-6 leading-relaxed font-medium" style={{ textShadow: '0 1px 4px rgba(0,0,0,0.4)' }}>
             Voted Best of the Brazos {site.awardsCount} years running. Elite coaching, a real community,
             and your first week is free.
           </p>
 
           {/* Urgency */}
-          <div className="font-display text-[clamp(0.8rem,1.8vw,1.1rem)] text-white tracking-[3px] sm:tracking-[5px] uppercase mb-1.5 sm:mb-3" style={{ textShadow: '0 1px 6px rgba(0,0,0,0.5)' }}>
+          <div className="font-display text-[clamp(0.8rem,1.8vw,1.1rem)] text-white tracking-[3px] sm:tracking-[5px] uppercase mb-1.5 sm:mb-3" style={{ textShadow: '0 1px 4px rgba(0,0,0,0.4)' }}>
             7 Days. Unlimited Classes. Zero Cost.
           </div>
 
