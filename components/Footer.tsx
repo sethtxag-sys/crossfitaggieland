@@ -36,7 +36,7 @@ export default function Footer() {
                 { label: 'Coaches', href: '#coaches' },
                 { label: 'Contact', href: '#contact' },
                 { label: 'FAQ', href: '#faq' },
-                { label: 'Google Reviews', href: 'https://www.google.com/maps/place/CrossFit+Aggieland/@30.5758699,-96.3209333,17z/data=!4m8!3m7!1s0x864684a0fb34e9c7:0x56cf6177a9bba493!8m2!3d30.5758699!4d-96.3209333!9m1!1b1!16s%2Fg%2F1hm2xb58p' },
+                { label: 'Google Reviews', href: site.googleReviewsUrl },
               ].map((link) => (
                 <a
                   key={link.label}

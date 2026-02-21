@@ -24,6 +24,9 @@ export interface SiteData {
   tracking: string
   googleRating: number
   googleReviewCount: number
+  googlePlaceId: string
+  googleMapsUrl: string
+  googleReviewsUrl: string
 }
 
 export interface Coach {

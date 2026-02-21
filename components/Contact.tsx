@@ -27,7 +27,7 @@ export default function Contact() {
                   icon={<LocationIcon />}
                   label="Address"
                   value={`${site.address.street}, ${site.address.city}, ${site.address.state} ${site.address.zip}`}
-                  href="https://www.google.com/maps/place/CrossFit+Aggieland/@30.5758699,-96.3209333,17z"
+                  href={site.googleMapsUrl}
                   external
                 />
                 <ContactItem
