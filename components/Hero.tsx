@@ -72,9 +72,14 @@ export default function Hero() {
         background: 'linear-gradient(to bottom, rgba(26,26,26,0.05) 0%, rgba(26,26,26,0.10) 25%, rgba(26,26,26,0.35) 55%, rgba(26,26,26,0.55) 80%, rgba(26,26,26,0.65) 100%)'
       }} />
 
+      {/* ── Mobile content vignette — soft radial dark zone behind text, no hard edges ── */}
+      <div className="absolute inset-0 z-[2] sm:hidden pointer-events-none" style={{
+        background: 'radial-gradient(ellipse 90% 70% at 50% 48%, rgba(0,0,0,0.45) 0%, rgba(0,0,0,0.20) 55%, transparent 100%)'
+      }} />
+
       {/* ── Content — absolute fill, flex centers between nav and stats bar ── */}
-      <div className="absolute inset-0 z-[2] flex items-center justify-center pt-[72px] pb-[110px] sm:pb-[125px] px-5 sm:px-8">
-        <div className="max-w-[860px] w-full flex flex-col items-center bg-black/30 backdrop-blur-sm rounded-2xl px-5 py-6 sm:bg-transparent sm:backdrop-blur-none sm:rounded-none sm:px-0 sm:py-0">
+      <div className="absolute inset-0 z-[3] flex items-center justify-center pt-[72px] pb-[110px] sm:pb-[125px] px-5 sm:px-8">
+        <div className="max-w-[860px] w-full flex flex-col items-center">
 
           {/* H1 */}
           <h1 className="font-display text-[clamp(2.75rem,8vw,5.5rem)] leading-[0.9] uppercase text-white mb-3 sm:mb-4 tracking-wide drop-shadow-[0_2px_20px_rgba(0,0,0,0.5)]">
@@ -82,18 +87,18 @@ export default function Hero() {
           </h1>
 
           {/* Tagline */}
-          <p className="font-display text-[clamp(0.8rem,2.2vw,1.3rem)] text-white/75 tracking-[3px] sm:tracking-[5px] uppercase mb-3 sm:mb-5">
+          <p className="font-display text-[clamp(0.8rem,2.2vw,1.3rem)] text-white/75 tracking-[3px] sm:tracking-[5px] uppercase mb-3 sm:mb-5" style={{ textShadow: '0 1px 6px rgba(0,0,0,0.5)' }}>
             The Hour That Changes Everything.
           </p>
 
           {/* Value prop */}
-          <p className="text-[clamp(0.85rem,1.6vw,1.05rem)] text-white/90 max-w-[520px] mx-auto mb-3 sm:mb-6 leading-relaxed font-medium drop-shadow-md">
+          <p className="text-[clamp(0.85rem,1.6vw,1.05rem)] text-white/90 max-w-[520px] mx-auto mb-3 sm:mb-6 leading-relaxed font-medium" style={{ textShadow: '0 1px 8px rgba(0,0,0,0.6), 0 2px 20px rgba(0,0,0,0.3)' }}>
             Voted Best of the Brazos {site.awardsCount} years running. Elite coaching, a real community,
             and your first week is free.
           </p>
 
           {/* Urgency */}
-          <div className="font-display text-[clamp(0.8rem,1.8vw,1.1rem)] text-white tracking-[3px] sm:tracking-[5px] uppercase mb-1.5 sm:mb-3">
+          <div className="font-display text-[clamp(0.8rem,1.8vw,1.1rem)] text-white tracking-[3px] sm:tracking-[5px] uppercase mb-1.5 sm:mb-3" style={{ textShadow: '0 1px 6px rgba(0,0,0,0.5)' }}>
             7 Days. Unlimited Classes. Zero Cost.
           </div>
 
@@ -158,7 +163,7 @@ export default function Hero() {
       </div>
 
       {/* ── Stats bar — pinned to bottom, gradient fades into video above ── */}
-      <div className="absolute bottom-0 left-0 right-0 z-[3]">
+      <div className="absolute bottom-0 left-0 right-0 z-[4]">
         {/* Gradient bleed — extends upward to smooth the transition from video to stats */}
         <div className="h-16 sm:h-20" style={{
           background: 'linear-gradient(to bottom, rgba(26,26,26,0) 0%, rgba(26,26,26,0.80) 100%)'
