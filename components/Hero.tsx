@@ -75,7 +75,7 @@ export default function Hero() {
       {/* ── Content — positioned between nav (top) and stats bar (bottom) ── */}
       {/* Mobile: top-aligned with generous pt to clear nav, bottom pb clears stats */}
       {/* Desktop: centered with optical lift via negative margin */}
-      <div className="absolute inset-0 z-[2] flex flex-col items-center justify-center pt-[68px] pb-[70px] sm:pt-[72px] sm:pb-[105px] px-6 sm:px-8">
+      <div className="absolute inset-0 z-[2] flex flex-col items-center justify-center pt-[68px] pb-[70px] sm:pt-[72px] sm:pb-[85px] px-6 sm:px-8">
         <div className="max-w-[860px] w-full flex flex-col items-center sm:-mt-[3vh]">
 
           {/* ── Group 1: Identity ── */}
@@ -87,7 +87,7 @@ export default function Hero() {
           </p>
 
           {/* ── Group 2: Pitch ── */}
-          <p className="text-[clamp(0.84rem,1.5vw,1rem)] text-white/80 sm:text-white/90 max-w-[340px] sm:max-w-[530px] mx-auto mb-2 sm:mb-3 leading-relaxed font-medium" style={{ textShadow: '0 1px 4px rgba(0,0,0,0.4)' }}>
+          <p className="text-[clamp(0.84rem,1.5vw,1rem)] text-white/80 sm:text-white/90 max-w-[360px] sm:max-w-[530px] mx-auto mb-2 sm:mb-3 leading-relaxed font-medium" style={{ textShadow: '0 1px 4px rgba(0,0,0,0.4)' }}>
             Voted Best of the Brazos {site.awardsCount} years running. Elite coaching, a real community,
             and your first week is free.
           </p>
@@ -127,7 +127,7 @@ export default function Hero() {
               href={site.pikeUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="font-display text-[0.75rem] sm:text-sm tracking-[3px] uppercase bg-white text-charcoal px-8 sm:px-9 py-2.5 sm:py-3 hover:bg-white/90 transition-all text-center shadow-[0_4px_30px_rgba(0,0,0,0.3)]"
+              className="font-display text-[0.7rem] sm:text-xs tracking-[3px] uppercase bg-white text-charcoal px-6 sm:px-8 py-2.5 sm:py-2.5 hover:bg-white/90 transition-all text-center shadow-[0_4px_30px_rgba(0,0,0,0.3)]"
             >
               Start Your Free Week
             </a>
