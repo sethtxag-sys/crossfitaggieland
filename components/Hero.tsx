@@ -90,12 +90,9 @@ export default function Hero() {
         background: 'radial-gradient(ellipse 70% 60% at 50% 50%, transparent 0%, rgba(0,0,0,0.30) 100%)'
       }} />
 
-      {/* ── Zone A: top breathing space — flex:3 pushes content to optical center ── */}
-      <div className="hero-zone-top relative z-[2]" />
-
-      {/* ── Zone B: content block — natural height, no grow/shrink ── */}
-      <div className="hero-zone-content relative z-[2] flex flex-col items-center text-center px-6 sm:px-8">
-        <div className="max-w-[860px] w-full flex flex-col items-center">
+      {/* ── Main content area — flex-grows to fill space between nav and stats bar ── */}
+      <div className="relative z-[2] flex-1 flex flex-col items-center justify-center px-6 sm:px-8 pt-[60px] pb-[24px] sm:pt-[68px] sm:pb-[28px]">
+        <div className="max-w-[860px] w-full flex flex-col items-center mt-[1vh] sm:mt-[2vh]">
 
           {/* ── Eyebrow ── */}
           <h1 className="font-display text-[clamp(0.7rem,2vw,1.15rem)] text-white/90 tracking-[3px] sm:tracking-[4px] uppercase mb-2 sm:mb-3" style={{ textShadow: '0 1px 6px rgba(0,0,0,0.7), 0 2px 16px rgba(0,0,0,0.4)' }}>
@@ -130,9 +127,9 @@ export default function Hero() {
         </div>
       </div>
 
-      {/* ── Zone C: chevron zone — flex:1, chevron centered within ── */}
+      {/* ── Scroll indicator — sits between content and stats bar ── */}
       <div
-        className={`hero-zone-bottom relative z-[2] transition-opacity duration-300 ${
+        className={`relative z-[2] flex justify-center pb-5 sm:pb-6 transition-opacity duration-300 ${
           chevronVisible ? 'opacity-100' : 'opacity-0 pointer-events-none'
         }`}
       >

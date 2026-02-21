@@ -38,11 +38,6 @@ section[id] {
   background: #6b1515;
 }
 
-/* Hero three-zone vertical layout */
-.hero-zone-top { flex: 3 0 0%; }
-.hero-zone-content { flex: 0 0 auto; }
-.hero-zone-bottom { flex: 1 0 0%; display: flex; align-items: center; justify-content: center; }
-
 /* Hero scroll chevron bounce */
 @keyframes hero-bounce {
   0%, 100% { transform: translateY(0); }
