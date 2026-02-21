@@ -42,7 +42,7 @@ export default function Hero() {
   return (
     <section
       id="hero"
-      className="relative h-[100svh] text-center bg-charcoal overflow-hidden"
+      className="relative h-[100svh] sm:max-h-[90vh] text-center bg-charcoal overflow-hidden"
     >
       {/* ── Background video — always in DOM, src swapped via state ── */}
       <video
@@ -61,33 +61,31 @@ export default function Hero() {
         }}
       />
 
-      {/* ── Cinematic overlay — heavy on mobile, lighter on desktop ── */}
+      {/* ── Cinematic overlay — radial center-weighted for text readability ── */}
       <div className="absolute inset-0 z-[1] sm:hidden" style={{
-        background: 'linear-gradient(to bottom, rgba(26,26,26,0.40) 0%, rgba(26,26,26,0.55) 30%, rgba(26,26,26,0.65) 55%, rgba(26,26,26,0.75) 80%, rgba(26,26,26,0.82) 100%)'
+        background: 'radial-gradient(ellipse 80% 70% at 50% 50%, rgba(0,0,0,0.65) 0%, rgba(0,0,0,0.45) 60%, rgba(0,0,0,0.35) 100%)'
       }} />
       <div className="absolute inset-0 z-[1] hidden sm:block" style={{
-        background: 'linear-gradient(to bottom, rgba(26,26,26,0.05) 0%, rgba(26,26,26,0.10) 25%, rgba(26,26,26,0.35) 55%, rgba(26,26,26,0.55) 80%, rgba(26,26,26,0.65) 100%)'
+        background: 'radial-gradient(ellipse 70% 65% at 45% 50%, rgba(0,0,0,0.65) 0%, rgba(0,0,0,0.40) 55%, rgba(0,0,0,0.35) 100%)'
       }} />
 
       {/* ── Content — centered between nav and stats bar ── */}
       {/* pb must match stats bar total height (gradient + bar) so content centers in the live zone */}
-      <div className="absolute inset-0 z-[2] flex flex-col items-center justify-center pt-[48px] pb-[90px] sm:pt-[52px] sm:pb-[120px] px-6 sm:px-8">
+      <div className="absolute inset-0 z-[2] flex flex-col items-center justify-center pt-[48px] pb-[60px] sm:pt-[52px] sm:pb-[80px] px-5 sm:px-8">
         <div className="max-w-[860px] w-full flex flex-col items-center">
 
-          {/* ── Group 1: Identity ── */}
+          {/* ── Eyebrow ── */}
           <h1 className="font-display text-[clamp(0.7rem,2vw,1.15rem)] text-white/85 tracking-[3px] sm:tracking-[4px] uppercase mb-2 sm:mb-3" style={{ textShadow: '0 1px 4px rgba(0,0,0,0.4)' }}>
-            CrossFit in College Station.
+            CrossFit in College Station
           </h1>
-          <p className="font-display text-[clamp(2.65rem,8vw,5.25rem)] leading-[0.92] uppercase text-white mb-5 sm:mb-6 tracking-wide drop-shadow-[0_2px_20px_rgba(0,0,0,0.5)]">
+
+          {/* ── Headline ── */}
+          <p className="font-display text-[clamp(2.25rem,7vw,5.25rem)] leading-[0.92] uppercase text-white mb-4 sm:mb-5 tracking-wide drop-shadow-[0_2px_20px_rgba(0,0,0,0.5)]">
             The Hour That<br />Changes Everything.
           </p>
 
-          {/* ── Group 2: Pitch ── */}
-          <p className="text-[clamp(0.84rem,1.5vw,1rem)] text-white/85 sm:text-white/90 max-w-[360px] sm:max-w-[530px] mx-auto mb-2 sm:mb-3 leading-relaxed font-medium" style={{ textShadow: '0 1px 4px rgba(0,0,0,0.4)' }}>
-            Voted Best of the Brazos {site.awardsCount} years running. Elite coaching, a real community,
-            and your first week is free.
-          </p>
-          <div className="font-display text-[clamp(0.75rem,1.7vw,1.05rem)] text-white tracking-[2px] sm:tracking-[4px] uppercase mb-5 sm:mb-6" style={{ textShadow: '0 1px 4px rgba(0,0,0,0.4)' }}>
+          {/* ── Subhead ── */}
+          <div className="font-display text-[0.875rem] sm:text-base text-white tracking-[3px] sm:tracking-[5px] uppercase mb-5 sm:mb-6" style={{ textShadow: '0 1px 4px rgba(0,0,0,0.4)' }}>
             7 Days. Unlimited Classes. Zero Cost.
           </div>
 
@@ -96,7 +94,7 @@ export default function Hero() {
             href={site.pikeUrl}
             target="_blank"
             rel="noopener noreferrer"
-            className="font-display text-[0.7rem] sm:text-xs tracking-[3px] uppercase bg-white text-charcoal px-6 sm:px-8 py-2.5 sm:py-2.5 rounded-full hover:bg-white/90 transition-all text-center shadow-[0_4px_30px_rgba(0,0,0,0.3)]"
+            className="font-display text-[0.7rem] sm:text-xs tracking-[3px] uppercase bg-white text-charcoal w-[calc(100%-40px)] sm:w-auto sm:px-10 h-14 sm:h-auto sm:py-3 flex items-center justify-center sm:inline-flex rounded-[4px] hover:bg-white/90 transition-all text-center shadow-[0_4px_30px_rgba(0,0,0,0.3)]"
           >
             Start Your Free Week
           </a>
