@@ -75,11 +75,11 @@ export default function Hero() {
         <div className="max-w-[860px] w-full flex flex-col items-center">
 
           {/* ── Group 1: Identity ── */}
-          <h1 className="font-display text-[clamp(0.7rem,2vw,1.15rem)] text-white/85 tracking-[3px] sm:tracking-[4px] uppercase mb-2 sm:mb-3" style={{ textShadow: '0 1px 4px rgba(0,0,0,0.4)' }}>
+          <h1 className="font-display text-[clamp(0.7rem,2vw,1.15rem)] text-white/90 tracking-[3px] sm:tracking-[4px] uppercase mb-2 sm:mb-3" style={{ textShadow: '0 1px 6px rgba(0,0,0,0.7), 0 2px 16px rgba(0,0,0,0.4)' }}>
             CrossFit in College Station.
           </h1>
-          <p className="font-display text-[clamp(2.65rem,8vw,5.25rem)] leading-[0.92] uppercase text-white mb-5 sm:mb-6 tracking-wide drop-shadow-[0_2px_20px_rgba(0,0,0,0.5)]">
-            The Hour That<br />Changes Everything.
+          <p className="font-display text-[clamp(2.25rem,7vw,5.25rem)] leading-[0.92] uppercase text-white mb-5 sm:mb-6 tracking-wide max-w-[340px] sm:max-w-none drop-shadow-[0_2px_20px_rgba(0,0,0,0.5)]">
+            The Hour That Changes Everything.
           </p>
 
           {/* ── Group 2: Pitch ── */}
@@ -87,7 +87,7 @@ export default function Hero() {
             Voted Best of the Brazos {site.awardsCount} years running. Elite coaching, a real community,
             and your first week is free.
           </p>
-          <div className="font-display text-[clamp(0.75rem,1.7vw,1.05rem)] text-white tracking-[2px] sm:tracking-[4px] uppercase mb-5 sm:mb-6" style={{ textShadow: '0 1px 4px rgba(0,0,0,0.4)' }}>
+          <div className="font-display text-[clamp(0.85rem,1.9vw,1.2rem)] text-white font-bold tracking-[3px] sm:tracking-[5px] uppercase mt-2 sm:mt-3 mb-5 sm:mb-6" style={{ textShadow: '0 2px 8px rgba(0,0,0,0.5)' }}>
             7 Days. Unlimited Classes. Zero Cost.
           </div>
 
@@ -96,11 +96,18 @@ export default function Hero() {
             href={site.pikeUrl}
             target="_blank"
             rel="noopener noreferrer"
-            className="font-display text-[0.7rem] sm:text-xs tracking-[3px] uppercase bg-white text-charcoal px-6 sm:px-8 py-2.5 sm:py-2.5 rounded-full hover:bg-white/90 transition-all text-center shadow-[0_4px_30px_rgba(0,0,0,0.3)]"
+            className="font-display text-[0.7rem] sm:text-xs tracking-[3px] uppercase bg-maroon text-white px-6 sm:px-8 py-2.5 sm:py-2.5 rounded-full hover:bg-maroon-dark transition-all text-center shadow-[0_4px_30px_rgba(0,0,0,0.3)]"
           >
             Start Your Free Week
           </a>
         </div>
+      </div>
+
+      {/* ── Scroll indicator ── */}
+      <div className="absolute bottom-[70px] sm:bottom-[90px] left-1/2 -translate-x-1/2 z-[2] animate-bounce">
+        <svg className="w-5 h-5 sm:w-6 sm:h-6 text-white/60" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2} aria-hidden="true">
+          <path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7" />
+        </svg>
       </div>
 
       {/* ── Stats bar — pinned to bottom, gradient fades into video above ── */}
@@ -113,16 +120,15 @@ export default function Hero() {
         <div className="max-w-[1000px] mx-auto px-4 sm:px-8">
           <div className="flex justify-center gap-7 sm:gap-14">
             {[
-              { number: `${site.awardsCount}x`, label: site.awardName, mobileLabel: 'Awards' },
-              { number: String(site.established), label: 'Established', mobileLabel: 'Since' },
-              { number: String(coaches.length), label: 'Coaches', mobileLabel: 'Coaches' },
-              { number: '5 AM', label: 'First Class', mobileLabel: 'First Class' },
+              { number: `${site.awardsCount}x`, label: site.awardName },
+              { number: String(site.established), label: 'Established' },
+              { number: String(coaches.length), label: 'Coaches' },
+              { number: '5 AM', label: 'First Class' },
             ].map((stat) => (
               <div key={stat.label} className="text-center">
                 <div className="font-display text-[0.95rem] sm:text-[1.35rem] text-white tracking-wider">{stat.number}</div>
                 <div className="text-[0.45rem] sm:text-[0.6rem] text-white/35 tracking-[1px] sm:tracking-[2px] uppercase mt-0.5">
-                  <span className="sm:hidden">{stat.mobileLabel}</span>
-                  <span className="hidden sm:inline">{stat.label}</span>
+                  {stat.label}
                 </div>
               </div>
             ))}
