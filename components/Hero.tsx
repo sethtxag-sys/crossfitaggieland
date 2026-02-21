@@ -10,6 +10,7 @@ const PORTRAIT_VIDEO = '/crossfit-aggieland-highlight-portrait.mp4'
 export default function Hero() {
   const videoRef = useRef<HTMLVideoElement>(null)
   const [isPortrait, setIsPortrait] = useState(false)
+  const [chevronVisible, setChevronVisible] = useState(true)
 
   // Swap source based on viewport — never unmount the <video> element
   useEffect(() => {
@@ -39,6 +40,22 @@ export default function Hero() {
     v.play().catch(() => {})
   }, [isPortrait])
 
+  // Fade chevron out on scroll, back in at top
+  useEffect(() => {
+    let ticking = false
+    const onScroll = () => {
+      if (!ticking) {
+        requestAnimationFrame(() => {
+          setChevronVisible(window.scrollY <= 50)
+          ticking = false
+        })
+        ticking = true
+      }
+    }
+    window.addEventListener('scroll', onScroll, { passive: true })
+    return () => window.removeEventListener('scroll', onScroll)
+  }, [])
+
   return (
     <section
       id="hero"
@@ -61,18 +78,21 @@ export default function Hero() {
         }}
       />
 
-      {/* ── Cinematic overlay — 60-65% so white text is always crisp ── */}
+      {/* ── Cinematic overlay — darkened + vignette for edge control ── */}
       <div className="absolute inset-0 z-[1] sm:hidden" style={{
         background: 'linear-gradient(to bottom, rgba(0,0,0,0.55) 0%, rgba(0,0,0,0.60) 30%, rgba(0,0,0,0.65) 55%, rgba(0,0,0,0.75) 80%, rgba(0,0,0,0.85) 100%)'
       }} />
       <div className="absolute inset-0 z-[1] hidden sm:block" style={{
-        background: 'linear-gradient(to bottom, rgba(0,0,0,0.45) 0%, rgba(0,0,0,0.50) 25%, rgba(0,0,0,0.60) 50%, rgba(0,0,0,0.65) 75%, rgba(0,0,0,0.75) 100%)'
+        background: 'linear-gradient(to bottom, rgba(0,0,0,0.50) 0%, rgba(0,0,0,0.55) 25%, rgba(0,0,0,0.65) 50%, rgba(0,0,0,0.70) 75%, rgba(0,0,0,0.80) 100%)'
+      }} />
+      {/* Vignette — darkens edges/corners on desktop */}
+      <div className="absolute inset-0 z-[1] hidden sm:block" style={{
+        background: 'radial-gradient(ellipse 70% 60% at 50% 50%, transparent 0%, rgba(0,0,0,0.30) 100%)'
       }} />
 
-      {/* ── Content — centered between nav and stats bar ── */}
-      {/* pb must match stats bar total height (gradient + bar) so content centers in the live zone */}
-      <div className="absolute inset-0 z-[2] flex flex-col items-center justify-center pt-[48px] pb-[90px] sm:pt-[52px] sm:pb-[120px] px-6 sm:px-8">
-        <div className="max-w-[860px] w-full flex flex-col items-center">
+      {/* ── Content — optically centered at ~45% from top ── */}
+      <div className="absolute inset-0 z-[2] flex flex-col items-center pt-[48px] pb-[90px] sm:pt-[52px] sm:pb-[120px] px-6 sm:px-8">
+        <div className="max-w-[860px] w-full flex flex-col items-center" style={{ marginTop: '35%', transform: 'translateY(-50%)' }}>
 
           {/* ── Group 1: Identity ── */}
           <h1 className="font-display text-[clamp(0.7rem,2vw,1.15rem)] text-white/90 tracking-[3px] sm:tracking-[4px] uppercase mb-2 sm:mb-3" style={{ textShadow: '0 1px 6px rgba(0,0,0,0.7), 0 2px 16px rgba(0,0,0,0.4)' }}>
@@ -103,9 +123,13 @@ export default function Hero() {
         </div>
       </div>
 
-      {/* ── Scroll indicator ── */}
-      <div className="absolute bottom-[70px] sm:bottom-[90px] left-1/2 -translate-x-1/2 z-[2] animate-bounce">
-        <svg className="w-5 h-5 sm:w-6 sm:h-6 text-white/80" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2} aria-hidden="true">
+      {/* ── Scroll indicator — fades out on scroll, larger on desktop ── */}
+      <div
+        className={`absolute bottom-[100px] sm:bottom-[130px] left-1/2 -translate-x-1/2 z-[2] transition-opacity duration-300 ${
+          chevronVisible ? 'opacity-100' : 'opacity-0 pointer-events-none'
+        }`}
+      >
+        <svg className="w-5 h-5 sm:w-7 sm:h-7 text-white/80 sm:text-white/90 animate-[hero-bounce_2s_ease-in-out_infinite]" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2} aria-hidden="true">
           <path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7" />
         </svg>
       </div>
@@ -120,7 +144,7 @@ export default function Hero() {
         <div className="max-w-[1000px] mx-auto px-4 sm:px-8">
           <div className="flex justify-center gap-7 sm:gap-14">
             {[
-              { number: `${site.awardsCount}x`, label: site.awardName, mobileLabel: 'Best of Brazos' },
+              { number: `${site.awardsCount}x`, label: site.awardName, mobileLabel: 'Brazos Best' },
               { number: String(site.established), label: 'Established', mobileLabel: 'Established' },
               { number: String(coaches.length), label: 'Coaches', mobileLabel: 'Coaches' },
               { number: '5 AM', label: 'First Class', mobileLabel: 'First Class' },
