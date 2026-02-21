@@ -104,8 +104,8 @@ export default function Hero() {
           </p>
 
           {/* ── Body ── */}
-          <p className="text-[clamp(0.84rem,1.5vw,1rem)] text-white/85 sm:text-white/90 max-w-[360px] sm:max-w-[530px] lg:max-w-[520px] mx-auto mb-7 sm:mb-7 leading-relaxed font-medium" style={{ textShadow: '0 2px 8px rgba(0,0,0,0.6)' }}>
-            Elite coaching, capped classes, and a real community. Your first week is free.
+          <p className="text-[clamp(0.84rem,1.5vw,1rem)] text-white/85 sm:text-white/90 max-w-[360px] sm:max-w-[530px] lg:max-w-none mx-auto mb-7 sm:mb-7 leading-relaxed font-medium" style={{ textShadow: '0 2px 8px rgba(0,0,0,0.6)' }}>
+            Elite coaching, workouts scaled to you, and a real community. Your first week is free.
           </p>
 
           {/* ── CTA ── */}
