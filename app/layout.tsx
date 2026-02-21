@@ -91,7 +91,7 @@ const localBusinessSchema = {
       },
       {
         '@type': 'Offer',
-        itemOffered: { '@type': 'Service', name: 'Beginner Fitness Program', description: 'Beginner-friendly group fitness program in College Station. No experience required — every workout is scaled to your level.' },
+        itemOffered: { '@type': 'Service', name: 'Beginner Fitness Program', description: 'Beginner-friendly group fitness program in College Station. No experience required. Every workout is scaled to your level.' },
       },
       {
         '@type': 'Offer',
@@ -107,7 +107,7 @@ const localBusinessSchema = {
       },
       {
         '@type': 'Offer',
-        itemOffered: { '@type': 'Service', name: 'Free Trial Week', description: 'Free week of unlimited fitness classes — no credit card, no commitment. Try CrossFit Aggieland risk-free.' },
+        itemOffered: { '@type': 'Service', name: 'Free Trial Week', description: 'Free week of unlimited fitness classes. No credit card, no commitment. Try CrossFit Aggieland risk-free.' },
       },
       {
         '@type': 'Offer',
@@ -171,7 +171,7 @@ const faqSchema = {
     {
       '@type': 'Question',
       name: 'Where is CrossFit Aggieland located?',
-      acceptedAnswer: { '@type': 'Answer', text: 'CrossFit Aggieland is located at 3815 General Parkway, College Station, TX 77845 — just minutes from Texas A&M University.' },
+      acceptedAnswer: { '@type': 'Answer', text: 'CrossFit Aggieland is located at 3815 General Parkway, College Station, TX 77845, just minutes from Texas A&M University.' },
     },
     {
       '@type': 'Question',
@@ -196,7 +196,7 @@ const faqSchema = {
     {
       '@type': 'Question',
       name: 'Do you offer personal training in College Station?',
-      acceptedAnswer: { '@type': 'Answer', text: 'Yes. We offer one-on-one personal training with certified coaches. Plus, every group class includes hands-on coaching — so you get personal-trainer-level attention in every session.' },
+      acceptedAnswer: { '@type': 'Answer', text: 'Yes. We offer one-on-one personal training with certified coaches. Plus, every group class includes hands-on coaching, so you get personal-trainer-level attention in every session.' },
     },
   ],
 }
@@ -238,7 +238,7 @@ const eventScheduleSchema = {
   '@type': 'Event',
   '@id': `${siteUrl}/#crossfit-classes`,
   name: 'CrossFit Group Classes at CrossFit Aggieland',
-  description: 'Coach-led CrossFit group fitness classes with Mayhem programming. Strength, conditioning, and skill work — scaled to every fitness level. Drop in or join as a member.',
+  description: 'Coach-led CrossFit group fitness classes with Mayhem programming. Strength, conditioning, and skill work, scaled to every fitness level. Drop in or join as a member.',
   image: `${siteUrl}/images/hero-group.jpg`,
   url: `${siteUrl}/#schedule`,
   eventAttendanceMode: 'https://schema.org/OfflineEventAttendanceMode',
@@ -339,7 +339,7 @@ const eventScheduleSchema = {
     priceCurrency: 'USD',
     availability: 'https://schema.org/InStock',
     validFrom: '2013-01-01',
-    description: 'First week free — no credit card, no commitment.',
+    description: 'First week free. No credit card, no commitment.',
     url: `${siteUrl}/#free`,
   },
 }
@@ -352,7 +352,7 @@ const eventScheduleSchema = {
 export const metadata: Metadata = {
     metadataBase: new URL(siteUrl),
     title: `CrossFit Aggieland | CrossFit Gym & Fitness Classes in College Station, TX | ${site.awardsCount}x Best of the Brazos`,
-    description: `CrossFit Aggieland is College Station's top-rated CrossFit gym — ${site.awardsCount}x ${site.awardName} winner. Group fitness classes, HIIT, strength training & personal training from 5 AM–7:30 PM. Beginner-friendly, near Texas A&M. Free trial week, no contract.`,
+    description: `CrossFit Aggieland is College Station's top-rated gym, voted Best of the Brazos ${site.awardsCount} years running. Elite coaching, 40+ classes per week, and your first week is free. Near Texas A&M. No contract.`,
     keywords: [
           // Brand + location
           'CrossFit College Station',
@@ -429,7 +429,7 @@ export const metadata: Metadata = {
               url: `${siteUrl}/images/hero-group.jpg`,
               width: 1200,
               height: 630,
-              alt: `${site.name} — CrossFit gym community workout in College Station, TX`,
+              alt: `${site.name}, CrossFit gym community workout in College Station, TX`,
             },
           ],
     },

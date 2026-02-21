@@ -9,7 +9,7 @@ export default function Pricing() {
           <div className="text-center mb-12 lg:mb-16">
             <div className="font-display text-sm tracking-[4px] uppercase text-maroon mb-3">Membership Pricing</div>
             <h2 className="font-display text-[clamp(2.2rem,5vw,3.5rem)] leading-[1.05] uppercase tracking-wide mb-5">
-              CrossFit Membership Rates — No Hidden Fees
+              CrossFit Membership Rates. No Hidden Fees.
             </h2>
             <p className="text-text-gray max-w-[600px] mx-auto leading-relaxed">
               We believe great coaching should be accessible. Preferred rates for those who
@@ -115,7 +115,7 @@ export default function Pricing() {
 
           {/* Term clarification — eliminates contract confusion */}
           <p className="text-center text-text-gray text-sm mt-4 max-w-[600px] mx-auto leading-relaxed">
-            <strong className="text-charcoal">No long-term contracts.</strong> Term options lock in a discounted rate — month-to-month
+            <strong className="text-charcoal">No long-term contracts.</strong> Term options lock in a discounted rate. Month-to-month
             is always available. Cancel anytime with 30 days&rsquo; notice.
           </p>
 

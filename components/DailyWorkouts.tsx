@@ -26,7 +26,7 @@ export default function DailyWorkouts() {
               World-Class Programming, Coach-Led.
             </h2>
             <p className="text-text-gray leading-relaxed mb-8 max-w-prose">
-              We follow <strong className="text-charcoal">{site.programming} programming</strong> — the same system used by some of the world&rsquo;s top CrossFit athletes — then we scale and coach every workout to fit every athlete in the room, from day-one beginners to competitors.
+              We follow <strong className="text-charcoal">{site.programming} programming</strong>, the same system used by some of the world&rsquo;s top CrossFit athletes. We scale and coach every workout to fit every athlete in the room, from day-one beginners to competitors.
             </p>
 
             <div className="space-y-6">
@@ -41,7 +41,7 @@ export default function DailyWorkouts() {
                 },
                 {
                   title: 'Coach-Led, Every Class.',
-                  text: 'You won\'t be left guessing. Coaches learn your name, correct your form, and guide you through every workout.',
+                  text: 'Every class is coach-led. They learn your name, correct your form, and guide you through every workout.',
                 },
               ].map((feature) => (
                 <div key={feature.title} className="flex gap-4 items-start">

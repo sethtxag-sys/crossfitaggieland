@@ -12,7 +12,7 @@ export default function Testimonials() {
           <div className="text-center mb-12 lg:mb-16">
             <div className="font-display text-sm tracking-[4px] uppercase text-maroon mb-3">Member Reviews</div>
             <h2 className="font-display text-[clamp(2.2rem,5vw,3.5rem)] leading-[1.05] uppercase tracking-wide">
-              What Our Members Say
+              Real Results. Real People.
             </h2>
           </div>
 

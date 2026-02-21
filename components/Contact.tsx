@@ -13,7 +13,7 @@ export default function Contact() {
         <FadeIn>
           <div className="font-display text-sm tracking-[4px] uppercase text-maroon mb-3">Contact CrossFit Aggieland</div>
           <h2 className="font-display text-[clamp(2.2rem,5vw,3.5rem)] leading-[1.05] uppercase tracking-wide mb-10 sm:mb-12">
-            Get in Touch — College Station, TX
+            Get in Touch. College Station, TX.
           </h2>
         </FadeIn>
 

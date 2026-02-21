@@ -2,7 +2,6 @@
 
 import { useState, useEffect, useRef } from 'react'
 import { site } from '@/lib/data'
-import { coaches } from '@/lib/data'
 
 const DESKTOP_VIDEO = '/crossfit-aggieland-highlight.mp4'
 const PORTRAIT_VIDEO = '/crossfit-aggieland-highlight-portrait.mp4'
@@ -96,18 +95,17 @@ export default function Hero() {
 
           {/* ── Eyebrow ── */}
           <h1 className="font-display text-[clamp(0.7rem,2vw,1.15rem)] text-white/90 tracking-[3px] sm:tracking-[4px] uppercase mb-3 sm:mb-3" style={{ textShadow: '0 1px 6px rgba(0,0,0,0.7), 0 2px 16px rgba(0,0,0,0.4)' }}>
-            CrossFit in College Station
+            {site.awardsCount}x Best of the Brazos
           </h1>
 
           {/* ── Headline ── */}
           <p className="font-display text-[clamp(2.25rem,7vw,5.25rem)] leading-[0.92] uppercase text-white mb-6 sm:mb-5 tracking-wide max-w-[340px] sm:max-w-[520px] md:max-w-[680px] lg:max-w-none" style={{ textShadow: '0 2px 8px rgba(0,0,0,0.6), 0 4px 24px rgba(0,0,0,0.3)' }}>
-            The Hour That Changes Everything.
+            College Station&rsquo;s Top-Rated Gym. {site.awardsCount} Years Running.
           </p>
 
           {/* ── Body ── */}
           <p className="text-[clamp(0.84rem,1.5vw,1rem)] text-white/85 sm:text-white/90 max-w-[360px] sm:max-w-[530px] lg:max-w-[520px] mx-auto mb-7 sm:mb-7 leading-relaxed font-medium" style={{ textShadow: '0 2px 8px rgba(0,0,0,0.6)' }}>
-            Voted Best of the Brazos {site.awardsCount} years running. Elite coaching, a real community,
-            and your first week is free.
+            Elite coaching, capped classes, and a real community. Your first week is free.
           </p>
 
           {/* ── CTA ── */}
@@ -143,16 +141,15 @@ export default function Hero() {
         <div className="max-w-[1000px] mx-auto px-4 sm:px-8">
           <div className="flex justify-center gap-7 sm:gap-14">
             {[
-              { number: `${site.awardsCount}x`, label: site.awardName, mobileLabel: "Brazos' Best" },
-              { number: String(site.established), label: 'Established', mobileLabel: 'Established' },
-              { number: String(coaches.length), label: 'Coaches', mobileLabel: 'Coaches' },
-              { number: '5 AM', label: 'First Class', mobileLabel: 'First Class' },
+              { number: `${site.awardsCount}x`, label: 'Best of the Brazos' },
+              { number: '40+', label: 'Classes per Week' },
+              { number: 'FREE', label: 'First Week' },
+              { number: '5 AM', label: 'Earliest Class' },
             ].map((stat) => (
               <div key={stat.label} className="text-center">
                 <div className="font-display text-[0.95rem] sm:text-[1.35rem] text-white tracking-wider">{stat.number}</div>
                 <div className="text-[0.45rem] sm:text-[0.6rem] text-white/90 font-medium tracking-[1px] sm:tracking-[2px] uppercase mt-0.5 whitespace-nowrap">
-                  <span className="sm:hidden">{stat.mobileLabel}</span>
-                  <span className="hidden sm:inline">{stat.label}</span>
+                  {stat.label}
                 </div>
               </div>
             ))}

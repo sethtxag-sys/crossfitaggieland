@@ -14,7 +14,7 @@ const stakes = [
   },
   {
     number: '03',
-    title: 'You Deserve Better',
+    title: 'One Decision Away',
     text: "You already know something needs to change. The question isn't whether. It's when.",
   },
 ]

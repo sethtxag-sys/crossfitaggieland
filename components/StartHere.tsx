@@ -26,15 +26,15 @@ export default function StartHere() {
               <div className="bg-gray-50 border border-gray-100 rounded-lg p-5 mb-6 space-y-2.5">
                 <div className="flex items-center gap-3 text-sm text-text-gray">
                   <span className="w-1.5 h-1.5 rounded-full bg-maroon shrink-0" />
-                  <span><strong className="text-charcoal">Capped classes</strong> — so your coach sees you every session</span>
+                  <span><strong className="text-charcoal">Capped classes,</strong> so your coach sees you every session</span>
                 </div>
                 <div className="flex items-center gap-3 text-sm text-text-gray">
                   <span className="w-1.5 h-1.5 rounded-full bg-maroon shrink-0" />
-                  <span><strong className="text-charcoal">Every workout scaled</strong> — your coach adjusts weight, reps, and movements to your level</span>
+                  <span><strong className="text-charcoal">Every workout scaled to you.</strong> Your coach adjusts weight, reps, and movements to your level.</span>
                 </div>
                 <div className="flex items-center gap-3 text-sm text-text-gray">
                   <span className="w-1.5 h-1.5 rounded-full bg-maroon shrink-0" />
-                  <span><strong className="text-charcoal">After your free week</strong> — pick a membership that fits. No pressure, no auto-billing surprises</span>
+                  <span><strong className="text-charcoal">After your free week,</strong> pick a membership that fits. No pressure, no surprises.</span>
                 </div>
               </div>
 

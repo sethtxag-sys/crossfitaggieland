@@ -8,7 +8,7 @@ export default function FreeWeekCTA() {
       <div className="max-w-[800px] mx-auto px-6">
         <FadeIn>
           <h2 className="font-display text-[clamp(2.2rem,5vw,3.5rem)] leading-[1.05] uppercase tracking-wide mb-5">
-            Your Future Self Will Thank You.
+            See Why We&rsquo;re College Station&rsquo;s Best.
           </h2>
           <p className="text-white/70 leading-relaxed max-w-[550px] mx-auto mb-10 lg:mb-12">
             One week. Unlimited classes. Zero risk. Show up, see what happens, and decide for yourself why we&rsquo;ve been voted Best of the Brazos {site.awardsCount} years running.

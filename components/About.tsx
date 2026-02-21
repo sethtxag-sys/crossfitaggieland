@@ -8,7 +8,7 @@ const values = [
     text: 'We learn your name, correct your form, and scale your workouts so you are always progressing.',
   },
   {
-    title: 'Built for the Long Game',
+    title: 'Not a 30-Day Fix',
     text: "This isn't a 30-day challenge. It's the hour of your day that makes the rest of your day better.",
   },
   {

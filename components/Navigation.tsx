@@ -100,7 +100,7 @@ export default function Navigation() {
             rel="noopener noreferrer"
             className="hidden lg:inline-block font-display text-sm tracking-widest uppercase bg-white text-maroon font-bold px-6 py-2.5 hover:bg-maroon hover:text-white transition-all duration-200 ease-out"
           >
-            Start Your Free Week
+            Try Free
           </a>
 
           {/* Mobile toggle */}
