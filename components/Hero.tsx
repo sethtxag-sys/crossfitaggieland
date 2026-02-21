@@ -96,7 +96,7 @@ export default function Hero() {
 
           {/* ── Eyebrow ── */}
           <h1 className="font-display text-[clamp(0.7rem,2vw,1.15rem)] text-white/90 tracking-[3px] sm:tracking-[4px] uppercase mb-3 sm:mb-3" style={{ textShadow: '0 1px 6px rgba(0,0,0,0.7), 0 2px 16px rgba(0,0,0,0.4)' }}>
-            CrossFit in College Station.
+            CrossFit in College Station
           </h1>
 
           {/* ── Headline ── */}
@@ -143,7 +143,7 @@ export default function Hero() {
         <div className="max-w-[1000px] mx-auto px-4 sm:px-8">
           <div className="flex justify-center gap-7 sm:gap-14">
             {[
-              { number: `${site.awardsCount}x`, label: site.awardName, mobileLabel: 'Brazos Best' },
+              { number: `${site.awardsCount}x`, label: site.awardName, mobileLabel: "Brazos' Best" },
               { number: String(site.established), label: 'Established', mobileLabel: 'Established' },
               { number: String(coaches.length), label: 'Coaches', mobileLabel: 'Coaches' },
               { number: '5 AM', label: 'First Class', mobileLabel: 'First Class' },
