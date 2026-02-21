@@ -90,9 +90,9 @@ export default function Hero() {
         background: 'radial-gradient(ellipse 70% 60% at 50% 50%, transparent 0%, rgba(0,0,0,0.30) 100%)'
       }} />
 
-      {/* ── Content — optically centered at ~45% from top ── */}
-      <div className="absolute inset-0 z-[2] flex flex-col items-center pt-[48px] pb-[90px] sm:pt-[52px] sm:pb-[120px] px-6 sm:px-8">
-        <div className="max-w-[860px] w-full flex flex-col items-center" style={{ marginTop: '35%', transform: 'translateY(-50%)' }}>
+      {/* ── Content — centered between nav and stats bar, nudged slightly below true center ── */}
+      <div className="absolute inset-0 z-[2] flex flex-col items-center justify-center pt-[60px] pb-[90px] sm:pt-[68px] sm:pb-[120px] px-6 sm:px-8">
+        <div className="max-w-[860px] w-full flex flex-col items-center mt-[2vh] sm:mt-[3vh]">
 
           {/* ── Group 1: Identity ── */}
           <h1 className="font-display text-[clamp(0.7rem,2vw,1.15rem)] text-white/90 tracking-[3px] sm:tracking-[4px] uppercase mb-2 sm:mb-3" style={{ textShadow: '0 1px 6px rgba(0,0,0,0.7), 0 2px 16px rgba(0,0,0,0.4)' }}>
