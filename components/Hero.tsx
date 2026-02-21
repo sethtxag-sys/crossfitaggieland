@@ -74,7 +74,7 @@ export default function Hero() {
 
       {/* ── Content — absolute fill, flex centers between nav and stats bar ── */}
       <div className="absolute inset-0 z-[2] flex items-center justify-center pt-[72px] pb-[110px] sm:pb-[125px] px-5 sm:px-8">
-        <div className="max-w-[860px] w-full flex flex-col items-center">
+        <div className="max-w-[860px] w-full flex flex-col items-center bg-black/30 backdrop-blur-sm rounded-2xl px-5 py-6 sm:bg-transparent sm:backdrop-blur-none sm:rounded-none sm:px-0 sm:py-0">
 
           {/* H1 */}
           <h1 className="font-display text-[clamp(2.75rem,8vw,5.5rem)] leading-[0.9] uppercase text-white mb-3 sm:mb-4 tracking-wide drop-shadow-[0_2px_20px_rgba(0,0,0,0.5)]">
