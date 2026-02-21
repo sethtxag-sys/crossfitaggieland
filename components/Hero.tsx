@@ -100,7 +100,7 @@ export default function Hero() {
 
           {/* ── Headline ── */}
           <p className="font-display text-[clamp(2.25rem,7vw,5.25rem)] leading-[0.92] uppercase text-white mb-6 sm:mb-5 tracking-wide max-w-[340px] sm:max-w-[520px] md:max-w-[680px] lg:max-w-none" style={{ textShadow: '0 2px 8px rgba(0,0,0,0.6), 0 4px 24px rgba(0,0,0,0.3)' }}>
-            College Station&rsquo;s Top-Rated Gym. {site.awardsCount} Years Running.
+            College Station&rsquo;s <span className="whitespace-nowrap">Top-Rated</span> Gym. {site.awardsCount} Years Running.
           </p>
 
           {/* ── Body ── */}
@@ -139,16 +139,16 @@ export default function Hero() {
         }} />
         <div className="bg-charcoal/80 backdrop-blur-lg border-t border-white/[0.06] py-2.5 sm:py-4">
         <div className="max-w-[1000px] mx-auto px-4 sm:px-8">
-          <div className="flex justify-center gap-7 sm:gap-14">
+          <div className="flex justify-center gap-5 sm:gap-14">
             {[
               { number: `${site.awardsCount}x`, label: 'Best of the Brazos' },
               { number: '40+', label: 'Classes per Week' },
               { number: 'FREE', label: 'First Week' },
               { number: '5 AM', label: 'Earliest Class' },
             ].map((stat) => (
-              <div key={stat.label} className="text-center">
+              <div key={stat.label} className="text-center min-w-0">
                 <div className="font-display text-[0.95rem] sm:text-[1.35rem] text-white tracking-wider">{stat.number}</div>
-                <div className="text-[0.45rem] sm:text-[0.6rem] text-white/90 font-medium tracking-[1px] sm:tracking-[2px] uppercase mt-0.5 whitespace-nowrap">
+                <div className="text-[0.38rem] sm:text-[0.6rem] text-white/90 font-medium tracking-[0.5px] sm:tracking-[2px] uppercase mt-0.5 whitespace-nowrap">
                   {stat.label}
                 </div>
               </div>
