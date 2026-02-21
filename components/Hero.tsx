@@ -72,11 +72,9 @@ export default function Hero() {
         background: 'linear-gradient(to bottom, rgba(26,26,26,0.05) 0%, rgba(26,26,26,0.10) 25%, rgba(26,26,26,0.35) 55%, rgba(26,26,26,0.55) 80%, rgba(26,26,26,0.65) 100%)'
       }} />
 
-      {/* ── Content — positioned between nav (top) and stats bar (bottom) ── */}
-      {/* Mobile: top-aligned with generous pt to clear nav, bottom pb clears stats */}
-      {/* Desktop: centered with optical lift via negative margin */}
-      <div className="absolute inset-0 z-[2] flex flex-col items-center justify-center pt-[68px] pb-[70px] sm:pt-[72px] sm:pb-[85px] px-6 sm:px-8">
-        <div className="max-w-[860px] w-full flex flex-col items-center sm:-mt-[3vh]">
+      {/* ── Content — fills the space between nav and stats bar ── */}
+      <div className="absolute inset-0 z-[2] flex flex-col items-center justify-end pt-[56px] pb-[62px] sm:pb-[80px] px-6 sm:px-8">
+        <div className="max-w-[860px] w-full flex flex-col items-center">
 
           {/* ── Group 1: Identity ── */}
           <h1 className="font-display text-[clamp(2.65rem,8vw,5.25rem)] leading-[0.92] uppercase text-white mb-1 sm:mb-1.5 tracking-wide drop-shadow-[0_2px_20px_rgba(0,0,0,0.5)]">
@@ -87,7 +85,7 @@ export default function Hero() {
           </p>
 
           {/* ── Group 2: Pitch ── */}
-          <p className="text-[clamp(0.84rem,1.5vw,1rem)] text-white/80 sm:text-white/90 max-w-[360px] sm:max-w-[530px] mx-auto mb-2 sm:mb-3 leading-relaxed font-medium" style={{ textShadow: '0 1px 4px rgba(0,0,0,0.4)' }}>
+          <p className="text-[clamp(0.84rem,1.5vw,1rem)] text-white/85 sm:text-white/90 max-w-[360px] sm:max-w-[530px] mx-auto mb-2 sm:mb-3 leading-relaxed font-medium" style={{ textShadow: '0 1px 4px rgba(0,0,0,0.4)' }}>
             Voted Best of the Brazos {site.awardsCount} years running. Elite coaching, a real community,
             and your first week is free.
           </p>
@@ -127,7 +125,7 @@ export default function Hero() {
               href={site.pikeUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="font-display text-[0.7rem] sm:text-xs tracking-[3px] uppercase bg-white text-charcoal px-6 sm:px-8 py-2.5 sm:py-2.5 hover:bg-white/90 transition-all text-center shadow-[0_4px_30px_rgba(0,0,0,0.3)]"
+              className="font-display text-[0.7rem] sm:text-xs tracking-[3px] uppercase bg-white text-charcoal px-6 sm:px-8 py-2.5 sm:py-2.5 rounded-full hover:bg-white/90 transition-all text-center shadow-[0_4px_30px_rgba(0,0,0,0.3)]"
             >
               Start Your Free Week
             </a>
