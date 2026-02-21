@@ -73,26 +73,26 @@ export default function Hero() {
       }} />
 
       {/* ── Content — absolute fill, flex centers between nav and stats bar ── */}
-      <div className="absolute inset-0 z-[2] flex items-center justify-center pt-[72px] pb-[90px] sm:pb-[120px] px-6 sm:px-8">
-        <div className="max-w-[860px] w-full flex flex-col items-center -mt-8 sm:-mt-6">
+      <div className="absolute inset-0 z-[2] flex items-center justify-center pt-[60px] pb-[80px] sm:pt-[72px] sm:pb-[110px] px-6 sm:px-8">
+        <div className="max-w-[860px] w-full flex flex-col items-center -mt-[5vh] sm:-mt-[4vh]">
 
           {/* ── Group 1: Identity ── */}
-          <h1 className="font-display text-[clamp(3rem,9vw,5.5rem)] leading-[0.92] uppercase text-white mb-1.5 sm:mb-2 tracking-wide drop-shadow-[0_2px_20px_rgba(0,0,0,0.5)]">
+          <h1 className="font-display text-[clamp(2.8rem,8.5vw,5.25rem)] leading-[0.92] uppercase text-white mb-1 sm:mb-1.5 tracking-wide drop-shadow-[0_2px_20px_rgba(0,0,0,0.5)]">
             CrossFit in<br />College Station.
           </h1>
-          <p className="font-display text-[clamp(0.8rem,2.2vw,1.2rem)] text-white/90 tracking-[3px] sm:tracking-[4px] uppercase mb-5 sm:mb-5" style={{ textShadow: '0 1px 4px rgba(0,0,0,0.4)' }}>
+          <p className="font-display text-[clamp(0.75rem,2.2vw,1.15rem)] text-white/85 tracking-[3px] sm:tracking-[4px] uppercase mb-4 sm:mb-5" style={{ textShadow: '0 1px 4px rgba(0,0,0,0.4)' }}>
             The Hour That Changes Everything.
           </p>
 
           {/* ── Group 2: Pitch ── */}
-          <p className="text-[clamp(0.875rem,1.6vw,1.05rem)] text-white/75 sm:text-white/85 max-w-[420px] sm:max-w-[500px] mx-auto mb-3 sm:mb-4 leading-relaxed font-medium" style={{ textShadow: '0 1px 4px rgba(0,0,0,0.4)' }}>
+          <p className="text-[clamp(0.85rem,1.6vw,1rem)] text-white/80 max-w-[380px] sm:max-w-[530px] mx-auto mb-2.5 sm:mb-3.5 leading-relaxed font-medium" style={{ textShadow: '0 1px 4px rgba(0,0,0,0.4)' }}>
             Voted Best of the Brazos {site.awardsCount} years running. Elite coaching, a real community,
             and your first week is free.
           </p>
-          <div className="font-display text-[clamp(0.85rem,1.8vw,1.1rem)] text-white tracking-[3px] sm:tracking-[5px] uppercase mb-1.5 sm:mb-2" style={{ textShadow: '0 1px 4px rgba(0,0,0,0.4)' }}>
+          <div className="font-display text-[clamp(0.8rem,1.8vw,1.05rem)] text-white tracking-[3px] sm:tracking-[4px] uppercase mb-1 sm:mb-1.5" style={{ textShadow: '0 1px 4px rgba(0,0,0,0.4)' }}>
             7 Days. Unlimited Classes. Zero Cost.
           </div>
-          <div className="mb-6 sm:mb-7">
+          <div className="mb-5 sm:mb-6">
             <FreeWeekDate variant="hero" />
           </div>
 
@@ -102,7 +102,7 @@ export default function Hero() {
             target="_blank"
             rel="noopener noreferrer"
             aria-label={`Rated ${site.googleRating} out of 5 stars from ${site.googleReviewCount} Google reviews`}
-            className="inline-flex items-center gap-2 sm:gap-3 mb-4 sm:mb-4 px-5 sm:px-6 py-2 sm:py-2.5 bg-white/[0.06] backdrop-blur-sm border border-white/10 rounded-full hover:bg-white/15 transition-all group"
+            className="inline-flex items-center gap-2 sm:gap-3 mb-3.5 sm:mb-4 px-5 sm:px-6 py-2 sm:py-2.5 bg-white/[0.06] backdrop-blur-sm border border-white/10 rounded-full hover:bg-white/15 transition-all group"
           >
             <svg className="w-4 h-4 sm:w-5 sm:h-5 shrink-0" viewBox="0 0 24 24" aria-hidden="true">
               <path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92a5.06 5.06 0 01-2.2 3.32v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.1z" fill="#4285F4" />
@@ -110,32 +110,32 @@ export default function Hero() {
               <path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z" fill="#FBBC05" />
               <path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335" />
             </svg>
-            <span className="font-display text-sm sm:text-lg tracking-wider text-white font-bold">{site.googleRating}</span>
+            <span className="font-display text-sm sm:text-base tracking-wider text-white font-bold">{site.googleRating}</span>
             <div className="flex gap-0.5">
               {[...Array(5)].map((_, i) => (
-                <svg key={i} className="w-3 h-3 sm:w-4 sm:h-4 fill-yellow-400" viewBox="0 0 24 24" aria-hidden="true">
+                <svg key={i} className="w-3 h-3 sm:w-3.5 sm:h-3.5 fill-yellow-400" viewBox="0 0 24 24" aria-hidden="true">
                   <path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z" />
                 </svg>
               ))}
             </div>
-            <span className="text-[0.65rem] sm:text-sm text-white/40 group-hover:text-white/70 transition-colors">{site.googleReviewCount} reviews</span>
+            <span className="text-[0.65rem] sm:text-xs text-white/40 group-hover:text-white/70 transition-colors">{site.googleReviewCount} reviews</span>
           </a>
-          <div className="flex flex-col sm:flex-row gap-2 sm:gap-5 justify-center items-center">
+          <div className="flex flex-col sm:flex-row gap-2.5 sm:gap-5 justify-center items-center">
             <a
               href={site.pikeUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="font-display text-sm sm:text-base tracking-[3px] uppercase bg-white text-charcoal max-w-[320px] w-full sm:max-w-none sm:w-auto px-10 sm:px-12 py-3.5 sm:py-4 hover:bg-white/90 transition-all text-center shadow-[0_4px_30px_rgba(0,0,0,0.3)]"
+              className="font-display text-[0.8rem] sm:text-sm tracking-[3px] uppercase bg-white text-charcoal px-10 sm:px-10 py-3 sm:py-3.5 hover:bg-white/90 transition-all text-center shadow-[0_4px_30px_rgba(0,0,0,0.3)]"
             >
               Start Your Free Week
             </a>
             <a
               href="#start"
-              className="group/arrow inline-flex items-center gap-2 font-display text-[0.7rem] sm:text-sm tracking-[2px] uppercase text-white/60 hover:text-white transition-colors py-1.5 sm:py-2"
+              className="group/arrow inline-flex items-center gap-2 font-display text-[0.65rem] sm:text-xs tracking-[2px] uppercase text-white/50 hover:text-white transition-colors py-1"
             >
               See How We Start Beginners
               <svg
-                className="w-4 h-4 transition-transform group-hover/arrow:translate-x-1"
+                className="w-3.5 h-3.5 transition-transform group-hover/arrow:translate-x-1"
                 fill="none"
                 viewBox="0 0 24 24"
                 stroke="currentColor"
@@ -152,21 +152,21 @@ export default function Hero() {
       {/* ── Stats bar — pinned to bottom, gradient fades into video above ── */}
       <div className="absolute bottom-0 left-0 right-0 z-[3]">
         {/* Gradient bleed — extends upward to smooth the transition from video to stats */}
-        <div className="h-12 sm:h-16" style={{
+        <div className="h-10 sm:h-14" style={{
           background: 'linear-gradient(to bottom, rgba(26,26,26,0) 0%, rgba(26,26,26,0.80) 100%)'
         }} />
-        <div className="bg-charcoal/80 backdrop-blur-lg border-t border-white/[0.06] py-3 sm:py-5">
+        <div className="bg-charcoal/80 backdrop-blur-lg border-t border-white/[0.06] py-2.5 sm:py-4">
         <div className="max-w-[1000px] mx-auto px-4 sm:px-8">
-          <div className="flex justify-center gap-6 sm:gap-14">
+          <div className="flex justify-center gap-7 sm:gap-14">
             {[
               { number: `${site.awardsCount}x`, label: site.awardName, mobileLabel: 'Awards' },
-              { number: String(site.established), label: 'Established', mobileLabel: 'Est.' },
+              { number: String(site.established), label: 'Established', mobileLabel: 'Since' },
               { number: String(coaches.length), label: 'Coaches', mobileLabel: 'Coaches' },
-              { number: '5 AM', label: 'First Class', mobileLabel: '1st Class' },
+              { number: '5 AM', label: 'First Class', mobileLabel: 'First Class' },
             ].map((stat) => (
               <div key={stat.label} className="text-center">
-                <div className="font-display text-base sm:text-[1.5rem] text-white tracking-wider">{stat.number}</div>
-                <div className="text-[0.5rem] sm:text-[0.65rem] text-white/40 tracking-[1px] sm:tracking-[2px] uppercase mt-0.5 sm:mt-1">
+                <div className="font-display text-[0.95rem] sm:text-[1.35rem] text-white tracking-wider">{stat.number}</div>
+                <div className="text-[0.45rem] sm:text-[0.6rem] text-white/35 tracking-[1px] sm:tracking-[2px] uppercase mt-0.5">
                   <span className="sm:hidden">{stat.mobileLabel}</span>
                   <span className="hidden sm:inline">{stat.label}</span>
                 </div>
