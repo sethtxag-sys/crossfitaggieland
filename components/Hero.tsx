@@ -78,11 +78,11 @@ export default function Hero() {
         <div className="max-w-[860px] w-full flex flex-col items-center">
 
           {/* ── Group 1: Identity ── */}
-          <h1 className="font-display text-[clamp(2.65rem,8vw,5.25rem)] leading-[0.92] uppercase text-white mb-1 sm:mb-1.5 tracking-wide drop-shadow-[0_2px_20px_rgba(0,0,0,0.5)]">
-            CrossFit in<br />College Station.
+          <h1 className="font-display text-[clamp(0.7rem,2vw,1.15rem)] text-white/85 tracking-[3px] sm:tracking-[4px] uppercase mb-2 sm:mb-3" style={{ textShadow: '0 1px 4px rgba(0,0,0,0.4)' }}>
+            CrossFit in College Station.
           </h1>
-          <p className="font-display text-[clamp(0.7rem,2vw,1.15rem)] text-white/85 tracking-[3px] sm:tracking-[4px] uppercase mb-5 sm:mb-6" style={{ textShadow: '0 1px 4px rgba(0,0,0,0.4)' }}>
-            The Hour That Changes Everything.
+          <p className="font-display text-[clamp(2.65rem,8vw,5.25rem)] leading-[0.92] uppercase text-white mb-5 sm:mb-6 tracking-wide drop-shadow-[0_2px_20px_rgba(0,0,0,0.5)]">
+            The Hour That<br />Changes Everything.
           </p>
 
           {/* ── Group 2: Pitch ── */}
