@@ -72,15 +72,16 @@ export default function Hero() {
         background: 'linear-gradient(to bottom, rgba(26,26,26,0.05) 0%, rgba(26,26,26,0.10) 25%, rgba(26,26,26,0.35) 55%, rgba(26,26,26,0.55) 80%, rgba(26,26,26,0.65) 100%)'
       }} />
 
-      {/* ── Content — fills the space between nav and stats bar ── */}
-      <div className="absolute inset-0 z-[2] flex flex-col items-center justify-end pt-[56px] pb-[62px] sm:pb-[80px] px-6 sm:px-8">
+      {/* ── Content — centered between nav and stats bar ── */}
+      {/* pb must match stats bar total height (gradient + bar) so content centers in the live zone */}
+      <div className="absolute inset-0 z-[2] flex flex-col items-center justify-center pt-[48px] pb-[90px] sm:pt-[52px] sm:pb-[120px] px-6 sm:px-8">
         <div className="max-w-[860px] w-full flex flex-col items-center">
 
           {/* ── Group 1: Identity ── */}
           <h1 className="font-display text-[clamp(2.65rem,8vw,5.25rem)] leading-[0.92] uppercase text-white mb-1 sm:mb-1.5 tracking-wide drop-shadow-[0_2px_20px_rgba(0,0,0,0.5)]">
             CrossFit in<br />College Station.
           </h1>
-          <p className="font-display text-[clamp(0.7rem,2vw,1.15rem)] text-white/85 tracking-[3px] sm:tracking-[4px] uppercase mb-4 sm:mb-5" style={{ textShadow: '0 1px 4px rgba(0,0,0,0.4)' }}>
+          <p className="font-display text-[clamp(0.7rem,2vw,1.15rem)] text-white/85 tracking-[3px] sm:tracking-[4px] uppercase mb-5 sm:mb-6" style={{ textShadow: '0 1px 4px rgba(0,0,0,0.4)' }}>
             The Hour That Changes Everything.
           </p>
 
@@ -92,7 +93,7 @@ export default function Hero() {
           <div className="font-display text-[clamp(0.75rem,1.7vw,1.05rem)] text-white tracking-[2px] sm:tracking-[4px] uppercase mb-1 sm:mb-1.5" style={{ textShadow: '0 1px 4px rgba(0,0,0,0.4)' }}>
             7 Days. Unlimited Classes. Zero Cost.
           </div>
-          <div className="mb-4 sm:mb-5">
+          <div className="mb-5 sm:mb-6">
             <FreeWeekDate variant="hero" />
           </div>
 
@@ -102,7 +103,7 @@ export default function Hero() {
             target="_blank"
             rel="noopener noreferrer"
             aria-label={`Rated ${site.googleRating} out of 5 stars from ${site.googleReviewCount} Google reviews`}
-            className="inline-flex items-center gap-2 sm:gap-2.5 mb-3 sm:mb-3.5 px-4 sm:px-5 py-1.5 sm:py-2 bg-white/[0.06] backdrop-blur-sm border border-white/10 rounded-full hover:bg-white/15 transition-all group"
+            className="inline-flex items-center gap-2 sm:gap-2.5 mb-4 sm:mb-4 px-4 sm:px-5 py-1.5 sm:py-2 bg-white/[0.06] backdrop-blur-sm border border-white/10 rounded-full hover:bg-white/15 transition-all group"
           >
             <svg className="w-3.5 h-3.5 sm:w-4 sm:h-4 shrink-0" viewBox="0 0 24 24" aria-hidden="true">
               <path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92a5.06 5.06 0 01-2.2 3.32v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.1z" fill="#4285F4" />
