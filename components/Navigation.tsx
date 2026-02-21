@@ -79,7 +79,7 @@ export default function Navigation() {
           </a>
 
           {/* Desktop links */}
-          <ul className="hidden lg:flex items-center gap-8">
+          <ul className="hidden min-[850px]:flex items-center gap-8">
             {navLinks.map((link) => (
               <li key={link.href}>
                 <a
@@ -98,7 +98,7 @@ export default function Navigation() {
             href={site.pikeUrl}
             target="_blank"
             rel="noopener noreferrer"
-            className="hidden lg:inline-block font-display text-sm tracking-widest uppercase bg-maroon text-white px-6 py-2.5 hover:bg-maroon-dark transition-all"
+            className="hidden min-[850px]:inline-block font-display text-sm tracking-widest uppercase bg-maroon text-white px-6 py-2.5 hover:bg-maroon-dark transition-all"
           >
             Start Your Free Week
           </a>
@@ -106,7 +106,7 @@ export default function Navigation() {
           {/* Mobile toggle */}
           <button
             onClick={() => setMenuOpen(!menuOpen)}
-            className="lg:hidden flex flex-col gap-[5px] z-[1002] relative"
+            className="min-[850px]:hidden flex flex-col gap-[5px] z-[1002] relative"
             aria-label="Toggle menu"
           >
             <span className={`w-[26px] h-[2px] bg-white transition-all duration-300 ${menuOpen ? 'rotate-45 translate-y-[7px]' : ''}`} />
@@ -119,7 +119,7 @@ export default function Navigation() {
       {/* Mobile fullscreen menu — completely separate from nav, own stacking context */}
       {menuOpen && (
         <div
-          className="fixed inset-0 z-[1000] lg:hidden"
+          className="fixed inset-0 z-[1000] min-[850px]:hidden"
           style={{ background: 'linear-gradient(165deg, #0d0d0d 0%, #1a1a1a 40%, #500000 100%)' }}
         >
           {/* Subtle texture overlay */}
