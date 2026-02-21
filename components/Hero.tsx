@@ -59,7 +59,7 @@ export default function Hero() {
   return (
     <section
       id="hero"
-      className="relative h-[100svh] md:h-[85vh] lg:h-[88vh] xl:h-[90vh] text-center bg-charcoal overflow-hidden"
+      className="relative h-[100svh] text-center bg-charcoal overflow-hidden"
     >
       {/* ── Background video — always in DOM, src swapped via state ── */}
       <video
@@ -90,28 +90,24 @@ export default function Hero() {
         background: 'radial-gradient(ellipse 70% 60% at 50% 50%, transparent 0%, rgba(0,0,0,0.30) 100%)'
       }} />
 
-      {/* ── Content — centered between nav and stats bar ── */}
-      <div className="absolute inset-0 z-[2] flex flex-col items-center justify-center pt-[56px] pb-[80px] sm:pt-[60px] sm:pb-[90px] px-6 sm:px-8">
-        <div className="max-w-[860px] w-full flex flex-col items-center">
+      {/* ── Content — centered between nav and stats bar, nudged slightly below true center ── */}
+      <div className="absolute inset-0 z-[2] flex flex-col items-center justify-center pt-[60px] pb-[90px] sm:pt-[68px] sm:pb-[120px] px-6 sm:px-8">
+        <div className="max-w-[860px] w-full flex flex-col items-center mt-[2vh] sm:mt-[3vh]">
 
-          {/* ── Eyebrow ── */}
+          {/* ── Group 1: Identity ── */}
           <h1 className="font-display text-[clamp(0.7rem,2vw,1.15rem)] text-white/90 tracking-[3px] sm:tracking-[4px] uppercase mb-2 sm:mb-3" style={{ textShadow: '0 1px 6px rgba(0,0,0,0.7), 0 2px 16px rgba(0,0,0,0.4)' }}>
-            CrossFit in College Station.
+            CrossFit in College Station
           </h1>
-
-          {/* ── Headline ── */}
-          <p className="font-display text-[clamp(2.25rem,7vw,5.25rem)] leading-[0.92] uppercase text-white mb-4 sm:mb-5 tracking-wide max-w-[340px] sm:max-w-[520px] md:max-w-[680px] lg:max-w-none" style={{ textShadow: '0 2px 8px rgba(0,0,0,0.6), 0 4px 24px rgba(0,0,0,0.3)' }}>
+          <p className="font-display text-[clamp(2.25rem,7vw,5.25rem)] leading-[0.92] uppercase text-white mb-5 sm:mb-6 tracking-wide max-w-[340px] sm:max-w-[520px] md:max-w-[680px] lg:max-w-none" style={{ textShadow: '0 2px 8px rgba(0,0,0,0.6), 0 4px 24px rgba(0,0,0,0.3)' }}>
             The Hour That Changes Everything.
           </p>
 
-          {/* ── Body ── */}
-          <p className="text-[clamp(0.84rem,1.5vw,1rem)] text-white/85 sm:text-white/90 max-w-[360px] sm:max-w-[530px] mx-auto mb-3 sm:mb-4 leading-relaxed font-medium" style={{ textShadow: '0 2px 8px rgba(0,0,0,0.6)' }}>
+          {/* ── Group 2: Pitch ── */}
+          <p className="text-[clamp(0.84rem,1.5vw,1rem)] text-white/85 sm:text-white/90 max-w-[360px] sm:max-w-[530px] mx-auto mb-2 sm:mb-3 leading-relaxed font-medium" style={{ textShadow: '0 2px 8px rgba(0,0,0,0.6)' }}>
             Voted Best of the Brazos {site.awardsCount} years running. Elite coaching, a real community,
             and your first week is free.
           </p>
-
-          {/* ── Value prop ── */}
-          <div className="font-display text-[clamp(0.85rem,1.9vw,1.2rem)] text-white font-bold tracking-[3px] sm:tracking-[5px] uppercase mb-5 sm:mb-6" style={{ textShadow: '0 2px 8px rgba(0,0,0,0.6)' }}>
+          <div className="font-display text-[clamp(0.85rem,1.9vw,1.2rem)] text-white font-bold tracking-[3px] sm:tracking-[5px] uppercase mt-2 sm:mt-3 mb-5 sm:mb-6" style={{ textShadow: '0 2px 8px rgba(0,0,0,0.6)' }}>
             7 Days. Unlimited Classes. Zero Cost.
           </div>
 
@@ -127,9 +123,9 @@ export default function Hero() {
         </div>
       </div>
 
-      {/* ── Scroll indicator — anchored near bottom, fades on scroll ── */}
+      {/* ── Scroll indicator — fades out on scroll, larger on desktop ── */}
       <div
-        className={`absolute bottom-[75px] sm:bottom-[85px] left-1/2 -translate-x-1/2 z-[2] transition-opacity duration-300 ${
+        className={`absolute bottom-[100px] sm:bottom-[130px] left-1/2 -translate-x-1/2 z-[2] transition-opacity duration-300 ${
           chevronVisible ? 'opacity-100' : 'opacity-0 pointer-events-none'
         }`}
       >
