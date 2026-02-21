@@ -98,7 +98,7 @@ export default function Navigation() {
             href={site.pikeUrl}
             target="_blank"
             rel="noopener noreferrer"
-            className="hidden lg:inline-block font-display text-sm tracking-widest uppercase bg-maroon text-white px-6 py-2.5 hover:bg-maroon-dark transition-all"
+            className="hidden lg:inline-block font-display text-sm tracking-widest uppercase bg-white text-maroon font-bold px-6 py-2.5 hover:bg-maroon hover:text-white transition-all duration-200 ease-out"
           >
             Start Your Free Week
           </a>
