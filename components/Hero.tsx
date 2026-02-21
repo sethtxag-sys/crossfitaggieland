@@ -76,39 +76,33 @@ export default function Hero() {
       <div className="absolute inset-0 z-[2] flex items-center justify-center pt-[72px] pb-[110px] sm:pb-[125px] px-5 sm:px-8">
         <div className="max-w-[860px] w-full flex flex-col items-center">
 
-          {/* H1 */}
-          <h1 className="font-display text-[clamp(2.75rem,8vw,5.5rem)] leading-[0.9] uppercase text-white mb-3 sm:mb-4 tracking-wide drop-shadow-[0_2px_20px_rgba(0,0,0,0.5)]">
+          {/* ── Group 1: Identity ── */}
+          <h1 className="font-display text-[clamp(2.75rem,8vw,5.5rem)] leading-[0.9] uppercase text-white mb-1 sm:mb-2 tracking-wide drop-shadow-[0_2px_20px_rgba(0,0,0,0.5)]">
             CrossFit in<br />College Station.
           </h1>
-
-          {/* Tagline */}
-          <p className="font-display text-[clamp(0.8rem,2.2vw,1.3rem)] text-white/80 tracking-[3px] sm:tracking-[5px] uppercase mb-3 sm:mb-5" style={{ textShadow: '0 1px 4px rgba(0,0,0,0.4)' }}>
+          <p className="font-display text-[clamp(0.8rem,2.2vw,1.3rem)] text-white/80 tracking-[3px] sm:tracking-[5px] uppercase mb-5 sm:mb-6" style={{ textShadow: '0 1px 4px rgba(0,0,0,0.4)' }}>
             The Hour That Changes Everything.
           </p>
 
-          {/* Value prop */}
-          <p className="text-[clamp(0.85rem,1.6vw,1.05rem)] text-white/90 max-w-[520px] mx-auto mb-3 sm:mb-6 leading-relaxed font-medium" style={{ textShadow: '0 1px 4px rgba(0,0,0,0.4)' }}>
+          {/* ── Group 2: Pitch ── */}
+          <p className="text-[clamp(0.85rem,1.6vw,1.05rem)] text-white/90 max-w-[440px] sm:max-w-[520px] mx-auto mb-2.5 sm:mb-5 leading-relaxed font-medium" style={{ textShadow: '0 1px 4px rgba(0,0,0,0.4)' }}>
             Voted Best of the Brazos {site.awardsCount} years running. Elite coaching, a real community,
             and your first week is free.
           </p>
-
-          {/* Urgency */}
-          <div className="font-display text-[clamp(0.8rem,1.8vw,1.1rem)] text-white tracking-[3px] sm:tracking-[5px] uppercase mb-1.5 sm:mb-3" style={{ textShadow: '0 1px 4px rgba(0,0,0,0.4)' }}>
+          <div className="font-display text-[clamp(0.8rem,1.8vw,1.1rem)] text-white tracking-[3px] sm:tracking-[5px] uppercase mb-1 sm:mb-2" style={{ textShadow: '0 1px 4px rgba(0,0,0,0.4)' }}>
             7 Days. Unlimited Classes. Zero Cost.
           </div>
-
-          {/* Rolling start date */}
-          <div className="mb-3 sm:mb-6">
+          <div className="mb-5 sm:mb-7">
             <FreeWeekDate variant="hero" />
           </div>
 
-          {/* Google reviews */}
+          {/* ── Group 3: Social proof + Action ── */}
           <a
             href={googleReviewsUrl}
             target="_blank"
             rel="noopener noreferrer"
             aria-label={`Rated ${site.googleRating} out of 5 stars from ${site.googleReviewCount} Google reviews`}
-            className="inline-flex items-center gap-2 sm:gap-3 mb-3 sm:mb-7 px-5 sm:px-6 py-2 sm:py-2.5 bg-white/[0.06] backdrop-blur-sm border border-white/10 rounded-full hover:bg-white/15 transition-all group"
+            className="inline-flex items-center gap-2 sm:gap-3 mb-4 sm:mb-6 px-5 sm:px-6 py-2 sm:py-2.5 bg-white/[0.06] backdrop-blur-sm border border-white/10 rounded-full hover:bg-white/15 transition-all group"
           >
             <svg className="w-4 h-4 sm:w-5 sm:h-5 shrink-0" viewBox="0 0 24 24" aria-hidden="true">
               <path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92a5.06 5.06 0 01-2.2 3.32v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.1z" fill="#4285F4" />
@@ -126,8 +120,6 @@ export default function Hero() {
             </div>
             <span className="text-[0.65rem] sm:text-sm text-white/40 group-hover:text-white/70 transition-colors">{site.googleReviewCount} reviews</span>
           </a>
-
-          {/* CTAs */}
           <div className="flex flex-col sm:flex-row gap-3 sm:gap-5 justify-center items-center">
             <a
               href={site.pikeUrl}
