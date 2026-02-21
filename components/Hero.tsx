@@ -64,8 +64,11 @@ export default function Hero() {
         }}
       />
 
-      {/* ── Cinematic overlay — very light at top, strong at bottom for text legibility ── */}
-      <div className="absolute inset-0 z-[1]" style={{
+      {/* ── Cinematic overlay — heavier on mobile for text legibility over busy video ── */}
+      <div className="absolute inset-0 z-[1] sm:hidden" style={{
+        background: 'linear-gradient(to bottom, rgba(26,26,26,0.20) 0%, rgba(26,26,26,0.30) 25%, rgba(26,26,26,0.50) 55%, rgba(26,26,26,0.65) 80%, rgba(26,26,26,0.75) 100%)'
+      }} />
+      <div className="absolute inset-0 z-[1] hidden sm:block" style={{
         background: 'linear-gradient(to bottom, rgba(26,26,26,0.05) 0%, rgba(26,26,26,0.10) 25%, rgba(26,26,26,0.35) 55%, rgba(26,26,26,0.55) 80%, rgba(26,26,26,0.65) 100%)'
       }} />
 
@@ -79,23 +82,23 @@ export default function Hero() {
           </h1>
 
           {/* Tagline */}
-          <p className="font-display text-[clamp(0.8rem,2.2vw,1.3rem)] text-white/75 tracking-[3px] sm:tracking-[5px] uppercase mb-4 sm:mb-5">
+          <p className="font-display text-[clamp(0.8rem,2.2vw,1.3rem)] text-white/75 tracking-[3px] sm:tracking-[5px] uppercase mb-3 sm:mb-5">
             The Hour That Changes Everything.
           </p>
 
           {/* Value prop */}
-          <p className="text-[clamp(0.85rem,1.6vw,1.05rem)] text-white/90 max-w-[520px] mx-auto mb-5 sm:mb-6 leading-relaxed font-medium drop-shadow-md">
+          <p className="text-[clamp(0.85rem,1.6vw,1.05rem)] text-white/90 max-w-[520px] mx-auto mb-3 sm:mb-6 leading-relaxed font-medium drop-shadow-md">
             Voted Best of the Brazos {site.awardsCount} years running. Elite coaching, a real community,
             and your first week is free.
           </p>
 
           {/* Urgency */}
-          <div className="font-display text-[clamp(0.8rem,1.8vw,1.1rem)] text-white tracking-[3px] sm:tracking-[5px] uppercase mb-2 sm:mb-3">
+          <div className="font-display text-[clamp(0.8rem,1.8vw,1.1rem)] text-white tracking-[3px] sm:tracking-[5px] uppercase mb-1.5 sm:mb-3">
             7 Days. Unlimited Classes. Zero Cost.
           </div>
 
           {/* Rolling start date */}
-          <div className="mb-5 sm:mb-6">
+          <div className="mb-3 sm:mb-6">
             <FreeWeekDate variant="hero" />
           </div>
 
@@ -105,7 +108,7 @@ export default function Hero() {
             target="_blank"
             rel="noopener noreferrer"
             aria-label={`Rated ${site.googleRating} out of 5 stars from ${site.googleReviewCount} Google reviews`}
-            className="inline-flex items-center gap-2 sm:gap-3 mb-5 sm:mb-7 px-5 sm:px-6 py-2 sm:py-2.5 bg-white/[0.06] backdrop-blur-sm border border-white/10 rounded-full hover:bg-white/15 transition-all group"
+            className="inline-flex items-center gap-2 sm:gap-3 mb-3 sm:mb-7 px-5 sm:px-6 py-2 sm:py-2.5 bg-white/[0.06] backdrop-blur-sm border border-white/10 rounded-full hover:bg-white/15 transition-all group"
           >
             <svg className="w-4 h-4 sm:w-5 sm:h-5 shrink-0" viewBox="0 0 24 24" aria-hidden="true">
               <path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92a5.06 5.06 0 01-2.2 3.32v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.1z" fill="#4285F4" />
@@ -160,18 +163,21 @@ export default function Hero() {
         <div className="h-16 sm:h-20" style={{
           background: 'linear-gradient(to bottom, rgba(26,26,26,0) 0%, rgba(26,26,26,0.80) 100%)'
         }} />
-        <div className="bg-charcoal/80 backdrop-blur-lg border-t border-white/[0.06] py-5 sm:py-6">
-        <div className="max-w-[1000px] mx-auto px-6 sm:px-8">
-          <div className="flex justify-center gap-5 sm:gap-16">
+        <div className="bg-charcoal/80 backdrop-blur-lg border-t border-white/[0.06] py-4 sm:py-6">
+        <div className="max-w-[1000px] mx-auto px-4 sm:px-8">
+          <div className="flex justify-center gap-6 sm:gap-16">
             {[
-              { number: `${site.awardsCount}x`, label: site.awardName },
-              { number: String(site.established), label: 'Established' },
-              { number: String(coaches.length), label: 'Coaches' },
-              { number: '5 AM', label: 'First Class' },
+              { number: `${site.awardsCount}x`, label: site.awardName, mobileLabel: 'Awards' },
+              { number: String(site.established), label: 'Established', mobileLabel: 'Est.' },
+              { number: String(coaches.length), label: 'Coaches', mobileLabel: 'Coaches' },
+              { number: '5 AM', label: 'First Class', mobileLabel: '1st Class' },
             ].map((stat) => (
-              <div key={stat.label} className="text-center min-w-0">
-                <div className="font-display text-xl sm:text-3xl text-white tracking-wider">{stat.number}</div>
-                <div className="text-[0.5rem] sm:text-[0.7rem] text-white/50 tracking-[1px] sm:tracking-[2px] uppercase mt-1 truncate">{stat.label}</div>
+              <div key={stat.label} className="text-center">
+                <div className="font-display text-lg sm:text-3xl text-white tracking-wider">{stat.number}</div>
+                <div className="text-[0.5rem] sm:text-[0.7rem] text-white/50 tracking-[1px] sm:tracking-[2px] uppercase mt-0.5 sm:mt-1">
+                  <span className="sm:hidden">{stat.mobileLabel}</span>
+                  <span className="hidden sm:inline">{stat.label}</span>
+                </div>
               </div>
             ))}
           </div>
