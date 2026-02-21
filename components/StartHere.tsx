@@ -26,7 +26,7 @@ export default function StartHere() {
               <div className="bg-gray-50 border border-gray-100 rounded-lg p-5 mb-6 space-y-2.5">
                 <div className="flex items-center gap-3 text-sm text-text-gray">
                   <span className="w-1.5 h-1.5 rounded-full bg-maroon shrink-0" />
-                  <span><strong className="text-charcoal">Capped classes,</strong> so your coach sees you every session</span>
+                  <span><strong className="text-charcoal">A coach in every class,</strong> watching your form and learning your name</span>
                 </div>
                 <div className="flex items-center gap-3 text-sm text-text-gray">
                   <span className="w-1.5 h-1.5 rounded-full bg-maroon shrink-0" />
