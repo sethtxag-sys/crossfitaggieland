@@ -45,7 +45,7 @@ export default function FreeWeekDate({ variant = 'hero' }: FreeWeekDateProps) {
 
   if (variant === 'hero') {
     return (
-      <div className="text-[clamp(0.7rem,1.4vw,0.875rem)] text-white/50 tracking-wider">
+      <div className="text-[clamp(0.7rem,1.4vw,0.875rem)] text-white/55 tracking-wider">
         {text}
       </div>
     )
