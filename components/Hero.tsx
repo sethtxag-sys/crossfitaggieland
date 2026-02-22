@@ -94,14 +94,14 @@ export default function Hero() {
         <div className="max-w-[860px] w-full flex flex-col items-center mt-[1vh] sm:mt-[2vh]">
 
           {/* ── Eyebrow ── */}
-          <h1 className="font-display text-[clamp(0.7rem,2vw,1.15rem)] text-white/90 tracking-[3px] sm:tracking-[4px] uppercase mb-3 sm:mb-3" style={{ textShadow: '0 1px 6px rgba(0,0,0,0.7), 0 2px 16px rgba(0,0,0,0.4)' }}>
+          <p className="font-display text-[clamp(0.7rem,2vw,1.15rem)] text-white/90 tracking-[3px] sm:tracking-[4px] uppercase mb-3 sm:mb-3" style={{ textShadow: '0 1px 6px rgba(0,0,0,0.7), 0 2px 16px rgba(0,0,0,0.4)' }}>
             {site.awardsCount}x Best of the Brazos
-          </h1>
+          </p>
 
           {/* ── Headline ── */}
-          <p className="font-display text-[clamp(2.25rem,7vw,5.25rem)] leading-[0.92] uppercase text-white mb-6 sm:mb-5 tracking-wide max-w-[340px] sm:max-w-[520px] md:max-w-[680px] lg:max-w-none" style={{ textShadow: '0 2px 8px rgba(0,0,0,0.6), 0 4px 24px rgba(0,0,0,0.3)' }}>
+          <h1 className="font-display text-[clamp(2.25rem,7vw,5.25rem)] leading-[0.92] uppercase text-white mb-6 sm:mb-5 tracking-wide max-w-[340px] sm:max-w-[520px] md:max-w-[680px] lg:max-w-none" style={{ textShadow: '0 2px 8px rgba(0,0,0,0.6), 0 4px 24px rgba(0,0,0,0.3)' }}>
             College Station&rsquo;s <span className="whitespace-nowrap">Top-Rated</span> Gym. {site.awardsCount} Years Running.
-          </p>
+          </h1>
 
           {/* ── Body ── */}
           <p className="text-[clamp(0.84rem,1.5vw,1rem)] text-white/85 sm:text-white/90 max-w-[360px] sm:max-w-[530px] lg:max-w-none mx-auto mb-7 sm:mb-7 leading-relaxed font-medium" style={{ textShadow: '0 2px 8px rgba(0,0,0,0.6)' }}>

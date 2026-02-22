@@ -1,64 +1,23 @@
 import type { MetadataRoute } from 'next'
+import { getAllSlugs } from '@/lib/blog'
 
-const siteUrl = 'https://www.crossfitaggieland.com'
+const BASE = 'https://www.crossfitaggieland.com'
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  return [
-    {
-      url: siteUrl,
-      lastModified: new Date(),
-      changeFrequency: 'weekly',
-      priority: 1,
-    },
-    /* Section deep-links — Google treats hash-based anchors as same-page,
-       but explicit listing helps crawl discovery and signals page depth */
-    {
-      url: `${siteUrl}/#start`,
-      lastModified: new Date(),
-      changeFrequency: 'monthly',
-      priority: 0.8,
-    },
-    {
-      url: `${siteUrl}/#about`,
-      lastModified: new Date(),
-      changeFrequency: 'monthly',
-      priority: 0.8,
-    },
-    {
-      url: `${siteUrl}/#coaches`,
-      lastModified: new Date(),
-      changeFrequency: 'monthly',
-      priority: 0.7,
-    },
-    {
-      url: `${siteUrl}/#schedule`,
-      lastModified: new Date(),
-      changeFrequency: 'weekly',
-      priority: 0.9,
-    },
-    {
-      url: `${siteUrl}/#pricing`,
-      lastModified: new Date(),
-      changeFrequency: 'monthly',
-      priority: 0.9,
-    },
-    {
-      url: `${siteUrl}/#faq`,
-      lastModified: new Date(),
-      changeFrequency: 'monthly',
-      priority: 0.7,
-    },
-    {
-      url: `${siteUrl}/#contact`,
-      lastModified: new Date(),
-      changeFrequency: 'yearly',
-      priority: 0.6,
-    },
-    {
-      url: `${siteUrl}/#free`,
-      lastModified: new Date(),
-      changeFrequency: 'monthly',
-      priority: 0.8,
-    },
+  const blogSlugs = getAllSlugs()
+
+  const staticPages: MetadataRoute.Sitemap = [
+    { url: BASE, lastModified: new Date(), changeFrequency: 'weekly', priority: 1.0 },
+    { url: `${BASE}/blog`, lastModified: new Date(), changeFrequency: 'weekly', priority: 0.8 },
+    { url: `${BASE}/crossfit-college-station`, lastModified: new Date(), changeFrequency: 'monthly', priority: 0.8 },
   ]
+
+  const blogPages: MetadataRoute.Sitemap = blogSlugs.map((slug) => ({
+    url: `${BASE}/blog/${slug}`,
+    lastModified: new Date(),
+    changeFrequency: 'monthly' as const,
+    priority: 0.6,
+  }))
+
+  return [...staticPages, ...blogPages]
 }
