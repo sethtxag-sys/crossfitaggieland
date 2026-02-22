@@ -1,7 +1,7 @@
 ---
 title: "Best CrossFit Gym in College Station, TX - Why Aggieland Stands Out"
 description: "Looking for the best CrossFit gym in College Station? Learn why CrossFit Aggieland is the top choice for College Station and Bryan, Texas."
-date: "2026-02-21"
+date: "2025-09-05"
 author: "CrossFit Aggieland"
 keywords: ["best crossfit gym college station", "crossfit college station tx", "crossfit near texas a&m", "crossfit gym college station"]
 slug: "best-crossfit-gym-college-station"

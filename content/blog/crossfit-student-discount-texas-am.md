@@ -1,7 +1,7 @@
 ---
 title: "CrossFit Near Texas A&M: Student Discounts at College Station"
 description: "Looking for affordable CrossFit near Texas A&M? Aggieland offers student discounts, flexible class times, and a community built for college athletes."
-date: "2026-02-21"
+date: "2026-01-29"
 author: "CrossFit Aggieland"
 keywords: ["crossfit student discount college station", "gym near texas a&m", "affordable crossfit college station", "crossfit a&m"]
 slug: "crossfit-student-discount-texas-am"

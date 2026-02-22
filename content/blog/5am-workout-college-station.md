@@ -1,7 +1,7 @@
 ---
 title: "5AM Workouts in College Station - Rise & Grind"
 description: "Early morning gym in College Station. Discover what the 5AM crew is really like at CrossFit Aggieland and why you should join them."
-date: "2026-02-21"
+date: "2026-02-10"
 author: "CrossFit Aggieland"
 keywords: ["5am workout college station", "early morning gym college station", "morning crossfit class", "early riser fitness"]
 slug: "5am-workout-college-station"

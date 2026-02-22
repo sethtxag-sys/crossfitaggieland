@@ -1,7 +1,7 @@
 ---
 title: "CrossFit for Beginners: What to Expect Your First Week"
 description: "Starting CrossFit as a beginner? Learn exactly what to expect day by day during your first week of training."
-date: "2026-02-21"
+date: "2025-06-03"
 author: "CrossFit Aggieland"
 keywords: ["crossfit for beginners", "what to expect first crossfit class", "first week crossfit", "starting crossfit beginner"]
 slug: "crossfit-for-beginners-first-week"

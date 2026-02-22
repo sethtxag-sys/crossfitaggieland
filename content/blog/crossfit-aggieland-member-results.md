@@ -1,7 +1,7 @@
 ---
 title: "CrossFit Aggieland Member Results - Real Transformations"
 description: "See actual results from CrossFit Aggieland members. What happens when you show up consistently for 3, 6, and 12 months."
-date: "2026-02-21"
+date: "2026-02-20"
 author: "CrossFit Aggieland"
 keywords: ["crossfit results", "crossfit transformation", "crossfit before and after", "fitness results college station"]
 slug: "crossfit-aggieland-member-results"

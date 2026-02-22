@@ -1,7 +1,7 @@
 ---
 title: "Mayhem Programming for CrossFit - What You Need to Know"
 description: "Understand Mayhem programming, why it works, and how CrossFit Aggieland uses it to get real results for members."
-date: "2026-02-21"
+date: "2025-12-08"
 author: "CrossFit Aggieland"
 keywords: ["mayhem programming crossfit", "rich froning mayhem", "crossfit programming", "structured crossfit training"]
 slug: "mayhem-programming-explained"

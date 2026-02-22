@@ -1,7 +1,7 @@
 ---
 title: "CrossFit for Moms in College Station - Find Time to Train"
 description: "How busy moms balance fitness with family. Flexible class schedules, community support, and real results at CrossFit Aggieland."
-date: "2026-02-21"
+date: "2026-01-14"
 author: "CrossFit Aggieland"
 keywords: ["crossfit for moms", "mom fitness college station", "stay-at-home mom workouts", "busy mom fitness"]
 slug: "crossfit-for-moms"

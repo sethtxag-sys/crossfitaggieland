@@ -1,7 +1,7 @@
 ---
 title: "CrossFit Pricing in College Station - What Does It Cost?"
 description: "Transparent pricing for CrossFit Aggieland. Understand costs, compare value, see ROI of coaching-based fitness."
-date: "2026-02-21"
+date: "2025-10-22"
 author: "CrossFit Aggieland"
 keywords: ["how much does crossfit cost", "crossfit pricing", "crossfit cost college station", "gym membership price"]
 slug: "crossfit-cost-college-station"

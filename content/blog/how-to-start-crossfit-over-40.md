@@ -1,7 +1,7 @@
 ---
 title: "How to Start CrossFit Over 40: No Fear Required"
 description: "Start CrossFit after 40. Learn how scaling works, why injury fear is overblown, and why age isn't a barrier."
-date: "2026-02-21"
+date: "2025-07-18"
 author: "CrossFit Aggieland"
 keywords: ["start crossfit over 40", "crossfit at 40", "crossfit for older adults", "is crossfit safe for 40"]
 slug: "how-to-start-crossfit-over-40"
