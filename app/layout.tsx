@@ -3,6 +3,8 @@ import Script from 'next/script'
 import { Analytics } from '@vercel/analytics/react'
 import { Bebas_Neue, Montserrat } from 'next/font/google'
 import { site } from '@/lib/data'
+import Navigation from '@/components/Navigation'
+import Footer from '@/components/Footer'
 import './globals.css'
 
 const bebasNeue = Bebas_Neue({
@@ -351,7 +353,7 @@ const eventScheduleSchema = {
 
 export const metadata: Metadata = {
     metadataBase: new URL(siteUrl),
-    title: `CrossFit Aggieland | CrossFit Gym & Fitness Classes in College Station, TX | ${site.awardsCount}x Best of the Brazos`,
+    title: `CrossFit Aggieland | College Station TX Gym | ${site.awardsCount}x Best of the Brazos`,
     description: `CrossFit Aggieland is College Station's top-rated gym, voted Best of the Brazos ${site.awardsCount} years running. Elite coaching, 40+ classes per week, and your first week is free. Near Texas A&M. No contract.`,
     keywords: [
           // Brand + location
@@ -493,7 +495,9 @@ export default function RootLayout({
                     type="application/ld+json"
                     dangerouslySetInnerHTML={{ __html: JSON.stringify(eventScheduleSchema) }}
                   />
+                  <Navigation />
                   {children}
+                  <Footer />
                   <Analytics />
                 </body>
           </html>

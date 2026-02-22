@@ -1,20 +1,24 @@
 'use client'
 
 import { useState, useEffect } from 'react'
+import { usePathname } from 'next/navigation'
 import { site } from '@/lib/data'
 import Image from 'next/image'
 
 const navLinks = [
-  { label: 'Start Here', href: '#start' },
-  { label: 'About Us', href: '#about' },
-  { label: 'Coaches', href: '#coaches' },
-  { label: 'Schedule', href: '#schedule' },
-  { label: 'Pricing', href: '#pricing' },
-  { label: 'Contact', href: '#contact' },
+  { label: 'Start Here', href: '/#start' },
+  { label: 'About Us', href: '/#about' },
+  { label: 'Coaches', href: '/#coaches' },
+  { label: 'Schedule', href: '/#schedule' },
+  { label: 'Pricing', href: '/#pricing' },
+  { label: 'Blog', href: '/blog' },
+  { label: 'Contact', href: '/#contact' },
 ]
 
 export default function Navigation() {
   const [menuOpen, setMenuOpen] = useState(false)
+  const pathname = usePathname()
+  const isHome = pathname === '/'
 
   // Lock body scroll when menu is open
   useEffect(() => {
@@ -41,15 +45,24 @@ export default function Navigation() {
   }, [])
 
   const handleClick = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
-    e.preventDefault()
-    setMenuOpen(false)
-    // Delay scroll until menu is closed and body overflow is restored
-    requestAnimationFrame(() => {
-      const el = document.querySelector(href)
-      if (el) {
-        el.scrollIntoView({ behavior: 'smooth', block: 'start' })
-      }
-    })
+    // For non-hash links (like /blog), allow normal navigation
+    if (!href.includes('#')) return
+
+    // On the homepage, smooth scroll to the section
+    if (isHome) {
+      e.preventDefault()
+      setMenuOpen(false)
+      const hash = href.replace('/', '')
+      requestAnimationFrame(() => {
+        const el = document.querySelector(hash)
+        if (el) {
+          el.scrollIntoView({ behavior: 'smooth', block: 'start' })
+        }
+      })
+    } else {
+      // On sub-pages, let the browser navigate to /#section
+      setMenuOpen(false)
+    }
   }
 
   return (
@@ -63,7 +76,7 @@ export default function Navigation() {
       >
         <div className="max-w-[1200px] mx-auto px-6 flex items-center justify-between">
           {/* Logo */}
-          <a href="#" className="flex items-center gap-3 relative z-[1002]" onClick={(e) => handleClick(e, '#hero')}>
+          <a href="/" className="flex items-center gap-3 relative z-[1002]" onClick={(e) => handleClick(e, '/#hero')}>
             <Image
               src="/images/logo.png"
               alt="CrossFit Aggieland"

@@ -1,4 +1,3 @@
-import Navigation from '@/components/Navigation'
 import Hero from '@/components/Hero'
 import StartHere from '@/components/StartHere'
 import Stakes from '@/components/Stakes'
@@ -14,7 +13,6 @@ import FAQ from '@/components/FAQ'
 import FirstDay from '@/components/FirstDay'
 import FreeWeekCTA from '@/components/FreeWeekCTA'
 import Contact from '@/components/Contact'
-import Footer from '@/components/Footer'
 
 /**
  * StoryBrand page flow:
@@ -33,12 +31,12 @@ import Footer from '@/components/Footer'
  * 12. FirstDay — Remove fear of the unknown
  * 13. FreeWeekCTA — Direct CTA (plan + call to action)
  * 14. Contact — Contact form (email protected)
- * 15. Footer — Quick links, social, member login
+ *
+ * Navigation & Footer live in layout.tsx (shared across all routes)
  */
 export default function Home() {
   return (
     <main>
-      <Navigation />
       <Hero />
       <StartHere />
       <Stakes />
@@ -54,7 +52,6 @@ export default function Home() {
       <FirstDay />
       <FreeWeekCTA />
       <Contact />
-      <Footer />
     </main>
   )
 }
