@@ -245,6 +245,13 @@ const eventScheduleSchema = {
   url: `${siteUrl}/#schedule`,
   eventAttendanceMode: 'https://schema.org/OfflineEventAttendanceMode',
   eventStatus: 'https://schema.org/EventScheduled',
+  startDate: '2026-02-23T05:00:00-06:00',
+  endDate: '2026-02-23T19:30:00-06:00',
+  performer: {
+    '@type': 'Organization',
+    name: 'CrossFit Aggieland',
+    url: 'https://www.crossfitaggieland.com',
+  },
   organizer: { '@id': `${siteUrl}/#org` },
   location: {
     '@type': 'Place',
