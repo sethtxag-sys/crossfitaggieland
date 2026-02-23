@@ -235,6 +235,13 @@ const webSiteSchema = {
   publisher: { '@id': `${siteUrl}/#org` },
 }
 
+/* Dynamic dates for Event schema — computed at build time so they never expire */
+const now = new Date()
+const currentYear = now.getFullYear()
+const todayISO = now.toISOString().slice(0, 10) // YYYY-MM-DD
+const eventStartDate = `${todayISO}T05:00:00-06:00`
+const eventEndDate = `${todayISO}T19:30:00-06:00`
+
 const eventScheduleSchema = {
   '@context': 'https://schema.org',
   '@type': 'Event',
@@ -245,8 +252,8 @@ const eventScheduleSchema = {
   url: `${siteUrl}/#schedule`,
   eventAttendanceMode: 'https://schema.org/OfflineEventAttendanceMode',
   eventStatus: 'https://schema.org/EventScheduled',
-  startDate: '2026-02-23T05:00:00-06:00',
-  endDate: '2026-02-23T19:30:00-06:00',
+  startDate: eventStartDate,
+  endDate: eventEndDate,
   performer: {
     '@type': 'Organization',
     name: 'CrossFit Aggieland',
@@ -274,6 +281,8 @@ const eventScheduleSchema = {
       endTime: '06:00',
       scheduleTimezone: 'America/Chicago',
       repeatFrequency: 'P1W',
+      startDate: `${currentYear}-01-01`,
+      endDate: `${currentYear}-12-31`,
     },
     {
       '@type': 'Schedule',
@@ -282,6 +291,8 @@ const eventScheduleSchema = {
       endTime: '07:00',
       scheduleTimezone: 'America/Chicago',
       repeatFrequency: 'P1W',
+      startDate: `${currentYear}-01-01`,
+      endDate: `${currentYear}-12-31`,
     },
     {
       '@type': 'Schedule',
@@ -290,6 +301,8 @@ const eventScheduleSchema = {
       endTime: '09:30',
       scheduleTimezone: 'America/Chicago',
       repeatFrequency: 'P1W',
+      startDate: `${currentYear}-01-01`,
+      endDate: `${currentYear}-12-31`,
     },
     {
       '@type': 'Schedule',
@@ -298,6 +311,8 @@ const eventScheduleSchema = {
       endTime: '13:00',
       scheduleTimezone: 'America/Chicago',
       repeatFrequency: 'P1W',
+      startDate: `${currentYear}-01-01`,
+      endDate: `${currentYear}-12-31`,
     },
     {
       '@type': 'Schedule',
@@ -306,6 +321,8 @@ const eventScheduleSchema = {
       endTime: '16:30',
       scheduleTimezone: 'America/Chicago',
       repeatFrequency: 'P1W',
+      startDate: `${currentYear}-01-01`,
+      endDate: `${currentYear}-12-31`,
     },
     {
       '@type': 'Schedule',
@@ -314,6 +331,8 @@ const eventScheduleSchema = {
       endTime: '17:30',
       scheduleTimezone: 'America/Chicago',
       repeatFrequency: 'P1W',
+      startDate: `${currentYear}-01-01`,
+      endDate: `${currentYear}-12-31`,
     },
     {
       '@type': 'Schedule',
@@ -322,6 +341,8 @@ const eventScheduleSchema = {
       endTime: '18:30',
       scheduleTimezone: 'America/Chicago',
       repeatFrequency: 'P1W',
+      startDate: `${currentYear}-01-01`,
+      endDate: `${currentYear}-12-31`,
     },
     // Mon–Thu only: 6:30 PM (Friday closes at 6:30 PM, no 6:30 class)
     {
@@ -331,6 +352,8 @@ const eventScheduleSchema = {
       endTime: '19:30',
       scheduleTimezone: 'America/Chicago',
       repeatFrequency: 'P1W',
+      startDate: `${currentYear}-01-01`,
+      endDate: `${currentYear}-12-31`,
     },
     // Saturday: 9:00 AM
     {
@@ -340,6 +363,8 @@ const eventScheduleSchema = {
       endTime: '10:00',
       scheduleTimezone: 'America/Chicago',
       repeatFrequency: 'P1W',
+      startDate: `${currentYear}-01-01`,
+      endDate: `${currentYear}-12-31`,
     },
   ],
   offers: {
