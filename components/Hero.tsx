@@ -68,7 +68,8 @@ export default function Hero() {
         muted
         loop
         playsInline
-        preload="auto"
+        preload="metadata"
+        poster="/images/hero-group.jpg"
         className="absolute inset-0 w-full h-full object-cover scale-[1.3] -translate-y-[5%] object-bottom"
         onLoadedData={(e) => {
           const v = e.currentTarget
