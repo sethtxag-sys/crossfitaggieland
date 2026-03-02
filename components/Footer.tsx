@@ -38,6 +38,7 @@ export default function Footer() {
                 { label: 'FAQ', href: '/#faq' },
                 { label: 'Google Reviews', href: site.googleReviewsUrl },
                 { label: 'Blog', href: '/blog' },
+                { label: 'Hyrox Training', href: '/hyrox-college-station' },
                 { label: 'College Station', href: '/crossfit-college-station' },
               ].map((link) => (
                 <a

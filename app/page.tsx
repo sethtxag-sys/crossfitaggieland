@@ -12,6 +12,7 @@ import Pricing from '@/components/Pricing'
 import FAQ from '@/components/FAQ'
 import FirstDay from '@/components/FirstDay'
 import FreeWeekCTA from '@/components/FreeWeekCTA'
+import Hyrox from '@/components/Hyrox'
 import Contact from '@/components/Contact'
 
 /**
@@ -23,6 +24,7 @@ import Contact from '@/components/Contact'
  * 4. About — The guide (empathy + authority)
  * 5. Coaches — Guide credentials
  * 6. DailyWorkouts — What you will do (programming + scaling)
+ * 6b. Hyrox — Hyrox race prep (all 8 stations trained here)
  * 7. Schedule — When you can do it (clickable time slots)
  * 8. Testimonials — Social proof
  * 9. Transformation — Success (the "after" picture)
@@ -43,6 +45,7 @@ export default function Home() {
       <About />
       <Coaches />
       <DailyWorkouts />
+      <Hyrox />
       <Schedule />
       <Testimonials />
       <InstagramGrid />

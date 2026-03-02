@@ -11,6 +11,7 @@ const navLinks = [
   { label: 'Coaches', href: '/#coaches' },
   { label: 'Schedule', href: '/#schedule' },
   { label: 'Pricing', href: '/#pricing' },
+  { label: 'Hyrox', href: '/#hyrox' },
   { label: 'Blog', href: '/blog' },
   { label: 'Contact', href: '/#contact' },
 ]
