@@ -5,14 +5,14 @@ import { site } from '@/lib/data'
 import FadeIn from './FadeIn'
 
 const stations = [
-  { name: 'SkiErg', detail: '1,000 m', icon: '🎿', match: 'We have SkiErgs and train pulling power daily.' },
-  { name: 'Sled Push', detail: '50 m', icon: '🛷', match: 'Heavy sled pushes are programmed weekly.' },
-  { name: 'Sled Pull', detail: '50 m', icon: '⛓️', match: 'Rope pulls and sled drags build the grip and back strength you need.' },
-  { name: 'Burpee Broad Jumps', detail: '80 m', icon: '💥', match: 'Burpees are a CrossFit staple. You will be ready.' },
-  { name: 'Rowing', detail: '1,000 m', icon: '🚣', match: 'Concept2 rowers in every class. Pacing is coached.' },
-  { name: 'Farmers Carry', detail: '200 m', icon: '🏋️', match: 'Heavy carries are built into our programming.' },
-  { name: 'Sandbag Lunges', detail: '100 m', icon: '🎒', match: 'Weighted lunges show up constantly. Your legs will be ready.' },
-  { name: 'Wall Balls', detail: '75–100 reps', icon: '🎯', match: 'Wall balls are a CrossFit classic. You will crush this station.' },
+  { name: 'SkiErg', detail: '1,000 m', station: 1, match: 'We have SkiErgs and train pulling power daily.' },
+  { name: 'Sled Push', detail: '50 m', station: 2, match: 'Sled pushes build the raw push strength CrossFit is known for.' },
+  { name: 'Sled Pull', detail: '50 m', station: 3, match: 'Rope pulls and sled drags build the grip and back strength you need.' },
+  { name: 'Burpee Broad Jumps', detail: '80 m', station: 4, match: 'Burpees are a CrossFit staple. You will be ready.' },
+  { name: 'Rowing', detail: '1,000 m', station: 5, match: 'Concept2 rowers in every class. Pacing is coached.' },
+  { name: 'Farmers Carry', detail: '200 m', station: 6, match: 'Heavy carries are built into our programming.' },
+  { name: 'Sandbag Lunges', detail: '100 m', station: 7, match: 'Weighted lunges show up constantly. Your legs will be ready.' },
+  { name: 'Wall Balls', detail: '75–100 reps', station: 8, match: 'Wall balls are a CrossFit classic. You will crush this station.' },
 ]
 
 export default function Hyrox() {
@@ -66,7 +66,7 @@ export default function Hyrox() {
               </p>
 
               <div className="flex flex-wrap gap-3">
-                {['SkiErgs', 'Sleds', 'Concept2 Rowers', 'Wall Balls', 'Sandbags', 'Farmers Handles'].map((item) => (
+                {['SkiErgs', 'Sleds', 'Rowers', 'Wall Balls', 'Sandbags + Handles'].map((item) => (
                   <span
                     key={item}
                     className="text-xs font-display tracking-[2px] uppercase text-white/70 border border-white/15 px-3 py-1.5 rounded-full"
@@ -92,7 +92,7 @@ export default function Hyrox() {
           {stations.map((s, i) => (
             <FadeIn key={s.name} delay={i * 60}>
               <div className="bg-white/[0.04] border border-white/[0.08] rounded-xl p-6 hover:bg-white/[0.07] transition-colors h-full">
-                <div className="text-2xl mb-3" aria-hidden="true">{s.icon}</div>
+                <div className="font-display text-xs tracking-[3px] uppercase text-maroon-accent mb-3">Station {s.station}</div>
                 <div className="font-display text-base tracking-wider uppercase text-white mb-1">{s.name}</div>
                 <div className="text-xs text-maroon-accent font-medium mb-2">{s.detail}</div>
                 <p className="text-white/50 text-sm leading-relaxed">{s.match}</p>
