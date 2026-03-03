@@ -94,32 +94,22 @@ const hyroxServiceSchema = {
   ],
   aggregateRating: {
     '@type': 'AggregateRating',
-    ratingValue: String(site.googleRating),
-    reviewCount: String(site.googleReviewCount),
-    bestRating: '5',
+    ratingValue: site.googleRating,
+    reviewCount: site.googleReviewCount,
+    bestRating: 5,
   },
-  hasOfferCatalog: {
-    '@type': 'OfferCatalog',
-    name: 'Hyrox Training Programs',
-    itemListElement: [
-      {
-        '@type': 'Offer',
-        itemOffered: {
-          '@type': 'Service',
-          name: 'Hyrox Race Preparation Training',
-          description: 'Functional fitness training covering all 8 Hyrox race stations: SkiErg, sled push, sled pull, burpee broad jumps, rowing, farmers carry, sandbag lunges, and wall balls. Coach-led classes scaled to all fitness levels.',
-        },
-      },
-      {
-        '@type': 'Offer',
-        itemOffered: {
-          '@type': 'Service',
-          name: 'Free Trial Week',
-          description: 'Free week of unlimited fitness classes including Hyrox-applicable training. No credit card, no commitment.',
-        },
-      },
-    ],
-  },
+  makesOffer: [
+    {
+      '@type': 'Offer',
+      name: 'Hyrox Race Preparation Training',
+      description: 'Functional fitness training covering all 8 Hyrox race stations. Coach-led classes scaled to all fitness levels.',
+      price: '0',
+      priceCurrency: 'USD',
+      availability: 'https://schema.org/InStock',
+      validFrom: '2025-01-01',
+      url: `${siteUrl}/hyrox-college-station`,
+    },
+  ],
 }
 
 const hyroxFaqSchema = {

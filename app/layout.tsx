@@ -67,60 +67,25 @@ const localBusinessSchema = {
   paymentAccepted: 'Cash, Credit Card',
   aggregateRating: {
     '@type': 'AggregateRating',
-    ratingValue: String(site.googleRating),
-    reviewCount: String(site.googleReviewCount),
-    bestRating: '5',
+    ratingValue: site.googleRating,
+    reviewCount: site.googleReviewCount,
+    bestRating: 5,
   },
-  hasOfferCatalog: {
-    '@type': 'OfferCatalog',
-    name: 'CrossFit Aggieland Memberships & Programs',
-    itemListElement: [
-      {
-        '@type': 'Offer',
-        itemOffered: { '@type': 'Service', name: 'CrossFit Group Classes', description: 'Coach-led CrossFit classes with Mayhem programming. Every workout scaled to your fitness level.' },
-      },
-      {
-        '@type': 'Offer',
-        itemOffered: { '@type': 'Service', name: 'HIIT & Functional Fitness Classes', description: 'High-intensity interval training and functional fitness classes in College Station, TX. All levels welcome.' },
-      },
-      {
-        '@type': 'Offer',
-        itemOffered: { '@type': 'Service', name: 'Strength Training Program', description: 'Structured strength training and weightlifting programming coached every session. Barbells, dumbbells, and bodyweight.' },
-      },
-      {
-        '@type': 'Offer',
-        itemOffered: { '@type': 'Service', name: 'Personal Training', description: 'One-on-one personal training sessions with certified coaches in College Station and Bryan, TX.' },
-      },
-      {
-        '@type': 'Offer',
-        itemOffered: { '@type': 'Service', name: 'Beginner Fitness Program', description: 'Beginner-friendly group fitness program in College Station. No experience required. Every workout is scaled to your level.' },
-      },
-      {
-        '@type': 'Offer',
-        itemOffered: { '@type': 'Service', name: 'CrossFit Kids & Teens', description: 'Age-appropriate CrossFit and fitness classes for kids and teenagers in College Station.' },
-      },
-      {
-        '@type': 'Offer',
-        itemOffered: { '@type': 'Service', name: 'Ladies-Only Fitness Classes', description: 'Women-only group fitness classes in a supportive, coach-led environment.' },
-      },
-      {
-        '@type': 'Offer',
-        itemOffered: { '@type': 'Service', name: 'Yoga for Athletes', description: 'Yoga classes designed for athletes to improve mobility and recovery.' },
-      },
-      {
-        '@type': 'Offer',
-        itemOffered: { '@type': 'Service', name: 'Free Trial Week', description: 'Free week of unlimited fitness classes. No credit card, no commitment. Try CrossFit Aggieland risk-free.' },
-      },
-      {
-        '@type': 'Offer',
-        itemOffered: { '@type': 'Service', name: 'Free Saturday Community Workout', description: 'Free open workout every Saturday morning. No membership required.' },
-      },
-      {
-        '@type': 'Offer',
-        itemOffered: { '@type': 'Service', name: 'Hyrox Race Training', description: 'Hyrox race preparation training in College Station, TX. All 8 Hyrox stations covered: SkiErg, sled push, sled pull, rowing, wall balls, farmers carry, sandbag lunges, and burpee broad jumps. Coach-led classes with all equipment included.' },
-      },
-    ],
-  },
+  knowsAbout: [
+    'CrossFit', 'HIIT', 'Functional Fitness', 'Strength Training', 'Personal Training',
+    'Hyrox Race Training', 'Yoga for Athletes', 'Kids Fitness', 'Group Fitness',
+  ],
+  makesOffer: [
+    {
+      '@type': 'Offer',
+      name: 'Free Trial Week',
+      description: 'Free week of unlimited fitness classes. No credit card, no commitment.',
+      price: '0',
+      priceCurrency: 'USD',
+      availability: 'https://schema.org/InStock',
+      url: site.pikeUrl,
+    },
+  ],
   sameAs: [
     site.social.facebook,
     site.social.instagram,
