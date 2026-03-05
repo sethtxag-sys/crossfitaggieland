@@ -40,12 +40,12 @@ export default function Coaches() {
           </div>
         </FadeIn>
 
-        <div className="grid grid-cols-1 min-[420px]:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 lg:gap-6">
+        <div className="flex flex-wrap justify-center gap-4 lg:gap-6">
           {coaches.map((coach, i) => (
             <FadeIn key={coach.name} delay={i * 80}>
             <div
               onClick={() => setSelected(coach)}
-              className={`group relative rounded-xl overflow-hidden text-center p-6 sm:p-8 transition-all hover:-translate-y-1 hover:shadow-xl cursor-pointer h-full bg-gray-100 hover:bg-gray-50 border border-gray-200 ${coach.isOwner ? 'min-[420px]:col-span-2 lg:col-span-2' : ''}`}
+              className="group relative rounded-xl overflow-hidden text-center p-6 sm:p-8 transition-all hover:-translate-y-1 hover:shadow-xl cursor-pointer bg-gray-100 hover:bg-gray-50 border border-gray-200 w-full min-[420px]:w-[calc(50%-0.5rem)] md:w-[calc(33.333%-1rem)] lg:w-[calc(25%-1.125rem)]"
             >
               {coach.image ? (
                 <div className="w-20 h-20 rounded-full mx-auto mb-4 overflow-hidden ring-2 ring-offset-2 ring-maroon/20 ring-offset-gray-100 group-hover:ring-offset-gray-50">
