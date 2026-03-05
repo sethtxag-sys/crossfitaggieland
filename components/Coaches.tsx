@@ -25,6 +25,43 @@ export default function Coaches() {
     }
   }, [selected])
 
+  /* Split coaches into full rows of 4 and a centered remainder */
+  const cols = 4
+  const fullRowCount = Math.floor(coaches.length / cols) * cols
+  const fullRows = coaches.slice(0, fullRowCount)
+  const remainder = coaches.slice(fullRowCount)
+
+  const renderCard = (coach: Coach, i: number) => (
+    <FadeIn key={coach.name} delay={i * 80}>
+      <div
+        onClick={() => setSelected(coach)}
+        className="group relative rounded-xl overflow-hidden text-center p-6 sm:p-8 transition-all hover:-translate-y-1 hover:shadow-xl cursor-pointer h-full bg-gray-100 hover:bg-gray-50 border border-gray-200"
+      >
+        {coach.image ? (
+          <div className="w-20 h-20 rounded-full mx-auto mb-4 overflow-hidden ring-2 ring-offset-2 ring-maroon/20 ring-offset-gray-100 group-hover:ring-offset-gray-50">
+            <Image
+              src={coach.image}
+              alt={coach.name}
+              width={300}
+              height={300}
+              className="w-full h-full object-cover"
+            />
+          </div>
+        ) : (
+          <div className="w-20 h-20 rounded-full mx-auto mb-4 flex items-center justify-center text-xl font-display tracking-wider bg-maroon/10 text-maroon">
+            {coach.initials}
+          </div>
+        )}
+        <h3 className="font-display text-lg tracking-wider uppercase text-charcoal">
+          {coach.name}
+        </h3>
+        <div className="text-xs tracking-[2px] uppercase mt-1 text-mid-gray">
+          {coach.role}
+        </div>
+      </div>
+    </FadeIn>
+  )
+
   return (
     <section id="coaches" className="py-20 lg:py-28 section-divider">
       <div className="max-w-[1200px] mx-auto px-6">
@@ -40,38 +77,23 @@ export default function Coaches() {
           </div>
         </FadeIn>
 
-        <div className="flex flex-wrap justify-center gap-4 lg:gap-6">
-          {coaches.map((coach, i) => (
-            <FadeIn key={coach.name} delay={i * 80}>
-            <div
-              onClick={() => setSelected(coach)}
-              className="group relative rounded-xl overflow-hidden text-center p-6 sm:p-8 transition-all hover:-translate-y-1 hover:shadow-xl cursor-pointer bg-gray-100 hover:bg-gray-50 border border-gray-200 w-full min-[420px]:w-[calc(50%-0.5rem)] md:w-[calc(33.333%-1rem)] lg:w-[calc(25%-1.125rem)]"
-            >
-              {coach.image ? (
-                <div className="w-20 h-20 rounded-full mx-auto mb-4 overflow-hidden ring-2 ring-offset-2 ring-maroon/20 ring-offset-gray-100 group-hover:ring-offset-gray-50">
-                  <Image
-                    src={coach.image}
-                    alt={coach.name}
-                    width={300}
-                    height={300}
-                    className="w-full h-full object-cover"
-                  />
-                </div>
-              ) : (
-                <div className="w-20 h-20 rounded-full mx-auto mb-4 flex items-center justify-center text-xl font-display tracking-wider bg-maroon/10 text-maroon">
-                  {coach.initials}
-                </div>
-              )}
-              <h3 className="font-display text-lg tracking-wider uppercase text-charcoal">
-                {coach.name}
-              </h3>
-              <div className="text-xs tracking-[2px] uppercase mt-1 text-mid-gray">
-                {coach.role}
+        {/* Full rows */}
+        {fullRows.length > 0 && (
+          <div className="grid grid-cols-1 min-[420px]:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 lg:gap-6">
+            {fullRows.map((coach, i) => renderCard(coach, i))}
+          </div>
+        )}
+
+        {/* Remainder row — centered */}
+        {remainder.length > 0 && (
+          <div className={`flex flex-wrap justify-center gap-4 lg:gap-6 ${fullRows.length > 0 ? 'mt-4 lg:mt-6' : ''}`}>
+            {remainder.map((coach, i) => (
+              <div key={coach.name} className="w-full min-[420px]:w-[calc(50%-0.5rem)] md:w-[calc(33.333%-0.75rem)] lg:w-[calc(25%-1.125rem)]">
+                {renderCard(coach, fullRowCount + i)}
               </div>
-            </div>
-            </FadeIn>
-          ))}
-        </div>
+            ))}
+          </div>
+        )}
       </div>
 
       {selected && (
