@@ -112,61 +112,6 @@ const hyroxServiceSchema = {
   ],
 }
 
-const hyroxFaqSchema = {
-  '@context': 'https://schema.org',
-  '@type': 'FAQPage',
-  mainEntity: [
-    {
-      '@type': 'Question',
-      name: 'Can I train for Hyrox at CrossFit Aggieland?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'Yes. Every CrossFit class at CrossFit Aggieland trains the movements used in all 8 Hyrox stations: SkiErg, sled push, sled pull, burpee broad jumps, rowing, farmers carry, sandbag lunges, and wall balls. Our programming builds the endurance, strength, and work capacity that Hyrox demands.',
-      },
-    },
-    {
-      '@type': 'Question',
-      name: 'Do I need to be in shape to start Hyrox training?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'No. Every workout at CrossFit Aggieland is scaled to your fitness level. Whether you are training for your first Hyrox race or your fifth, our coaches will meet you where you are and build you up.',
-      },
-    },
-    {
-      '@type': 'Question',
-      name: 'What Hyrox equipment does CrossFit Aggieland have?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'CrossFit Aggieland has SkiErgs, Concept2 rowers, heavy sleds, wall balls, sandbags, farmers carry handles, and all the functional fitness equipment needed to train every Hyrox station.',
-      },
-    },
-    {
-      '@type': 'Question',
-      name: 'Where is the nearest Hyrox race to College Station, TX?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'Hyrox races are held in major cities across the US, including Houston, Dallas, and Austin, all within driving distance of College Station. Check hyrox.com for the latest race schedule.',
-      },
-    },
-    {
-      '@type': 'Question',
-      name: 'How long does it take to train for Hyrox?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'Most athletes can be race-ready in 8 to 12 weeks of consistent training. If you are already doing CrossFit, you are likely closer to ready than you think. The average Hyrox finish time is about 90 minutes.',
-      },
-    },
-    {
-      '@type': 'Question',
-      name: 'Is CrossFit good training for Hyrox?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'CrossFit is one of the best training methods for Hyrox. CrossFit builds functional fitness across all energy systems: strength, endurance, and work capacity under fatigue, which is exactly what Hyrox tests. The movements overlap significantly: rowing, sled work, wall balls, carries, lunges, and burpees are all CrossFit staples.',
-      },
-    },
-  ],
-}
-
 const stations = [
   { name: 'SkiErg', detail: '1,000 m', description: 'Full-body pulling power. Our SkiErgs are used in classes weekly.' },
   { name: 'Sled Push', detail: '50 m', description: 'Heavy leg drive and mental grit. Sled pushes are programmed regularly.' },
@@ -188,10 +133,6 @@ export default function HyroxCollegeStationPage() {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(hyroxServiceSchema) }}
-      />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(hyroxFaqSchema) }}
       />
 
       <main className="bg-white min-h-screen pt-24 pb-16">
