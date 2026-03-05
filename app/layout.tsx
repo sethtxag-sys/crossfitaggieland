@@ -177,7 +177,7 @@ const faqSchema = {
     {
       '@type': 'Question',
       name: 'Is CrossFit good training for HYROX?',
-      acceptedAnswer: { '@type': 'Answer', text: 'CrossFit is one of the best training methods for HYROX. The movements overlap significantly: rowing, sled work, wall balls, carries, lunges, and burpees are all CrossFit staples. CrossFit also builds the metabolic conditioning and work capacity under fatigue that HYROX demands.' },
+      acceptedAnswer: { '@type': 'Answer', text: 'The overlap between CrossFit and HYROX is significant. Rowing, sled work, wall balls, carries, lunges, and burpees are all part of our regular programming. Our classes also build the metabolic conditioning and work capacity under fatigue that HYROX demands.' },
     },
   ],
 }

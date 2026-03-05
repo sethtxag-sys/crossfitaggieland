@@ -6,13 +6,13 @@ import FadeIn from './FadeIn'
 
 const stations = [
   { name: 'SkiErg', detail: '1,000 m', station: 1, match: 'We have SkiErgs and train pulling power daily.' },
-  { name: 'Sled Push', detail: '50 m', station: 2, match: 'Sled pushes build the raw push strength CrossFit is known for.' },
+  { name: 'Sled Push', detail: '50 m', station: 2, match: 'Sled pushes build raw push strength. We program them regularly.' },
   { name: 'Sled Pull', detail: '50 m', station: 3, match: 'Rope pulls and sled drags build the grip and back strength you need.' },
-  { name: 'Burpee Broad Jumps', detail: '80 m', station: 4, match: 'Burpees are a CrossFit staple. You will be ready.' },
+  { name: 'Burpee Broad Jumps', detail: '80 m', station: 4, match: 'Explosive power under fatigue. Burpees show up in our classes constantly.' },
   { name: 'Rowing', detail: '1,000 m', station: 5, match: 'Concept2 rowers in every class. Pacing is coached.' },
   { name: 'Farmers Carry', detail: '200 m', station: 6, match: 'Heavy carries are built into our programming.' },
   { name: 'Sandbag Lunges', detail: '100 m', station: 7, match: 'Weighted lunges show up constantly. Your legs will be ready.' },
-  { name: 'Wall Balls', detail: '75–100 reps', station: 8, match: 'Wall balls are a CrossFit classic. You will crush this station.' },
+  { name: 'Wall Balls', detail: '75–100 reps', station: 8, match: 'The classic finisher. We train wall balls weekly. You will be ready.' },
 ]
 
 export default function HYROX() {
@@ -53,16 +53,16 @@ export default function HYROX() {
 
             <div>
               <h3 className="font-display text-2xl sm:text-3xl uppercase tracking-wide mb-5 leading-tight">
-                CrossFit Builds HYROX Athletes
+                Your HYROX Training Ground
               </h3>
               <p className="text-white/60 leading-relaxed mb-4">
-                Every HYROX station tests functional fitness. Rowing, sled pushes, wall balls, carries, lunges. These are not new movements for our athletes. They are Tuesday.
+                Every HYROX station tests functional fitness. Rowing, sled pushes, wall balls, carries, lunges. These movements are the foundation of what we train every day.
               </p>
               <p className="text-white/60 leading-relaxed mb-4">
-                Our coaches program for strength, endurance, and work capacity. That is exactly what HYROX demands. You will not need a separate HYROX gym. You need a gym that trains you for everything.
+                Our coaches program for strength, endurance, and work capacity under fatigue. That is exactly what HYROX demands. One gym. All 8 stations. Race-day ready.
               </p>
               <p className="text-white/60 leading-relaxed mb-6">
-                College Station does not have many options for HYROX-specific prep. We have the equipment, the coaching, and the programming to get you race-ready.
+                College Station does not have many options for HYROX-specific prep. We have the equipment, the coaching, and the programming to get you to the finish line.
               </p>
 
               <div className="flex flex-wrap gap-3">

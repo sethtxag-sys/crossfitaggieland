@@ -30,7 +30,7 @@ export const metadata: Metadata = {
   alternates: { canonical: '/hyrox-college-station' },
   openGraph: {
     title: 'HYROX Training in College Station, TX | CrossFit Aggieland',
-    description: `All 8 HYROX stations trained in every class. SkiErg, sleds, rowers, wall balls, carries. Free trial week at CrossFit Aggieland.`,
+    description: `Train for all 8 HYROX stations in College Station, TX. SkiErg, sleds, rowers, wall balls, carries. Free trial week.`,
     url: `${siteUrl}/hyrox-college-station`,
     siteName: site.name,
     type: 'website',
@@ -116,7 +116,7 @@ const stations = [
   { name: 'SkiErg', detail: '1,000 m', description: 'Full-body pulling power. Our SkiErgs are used in classes weekly.' },
   { name: 'Sled Push', detail: '50 m', description: 'Heavy leg drive and mental grit. Sled pushes are programmed regularly.' },
   { name: 'Sled Pull', detail: '50 m', description: 'Grip strength and posterior chain. Rope pulls and sled drags are in our rotation.' },
-  { name: 'Burpee Broad Jumps', detail: '80 m', description: 'Explosive power under fatigue. Burpees are a CrossFit staple.' },
+  { name: 'Burpee Broad Jumps', detail: '80 m', description: 'Explosive power under fatigue. Burpees show up in our classes constantly.' },
   { name: 'Rowing', detail: '1,000 m', description: 'Pacing and endurance. Concept2 rowers in every class, coached for efficiency.' },
   { name: 'Farmers Carry', detail: '200 m', description: 'Grip, core, and mental toughness. Heavy carries are built into our programming.' },
   { name: 'Sandbag Lunges', detail: '100 m', description: 'Leg endurance under load. Weighted lunges are a constant in our workouts.' },
@@ -150,11 +150,11 @@ export default function HyroxCollegeStationPage() {
 
           <div className="prose prose-lg max-w-none prose-headings:font-display prose-headings:uppercase prose-headings:tracking-wide prose-headings:text-charcoal prose-a:text-maroon prose-a:no-underline hover:prose-a:underline prose-strong:text-charcoal">
             <p>
-              <strong>HYROX</strong> is the fastest-growing fitness race in the world. Eight 1 km runs, each followed by a functional workout station. It tests endurance, strength, and work capacity in a single race. And every movement in HYROX is something we train at <strong>CrossFit Aggieland</strong> every week.
+              <strong>HYROX</strong> is the fastest-growing fitness race in the world. Eight 1 km runs, each followed by a functional workout station. It tests endurance, strength, and work capacity in a single race. Whether you are a first-timer or chasing a PR, you need a gym that trains all 8 stations.
             </p>
 
             <p>
-              If you are looking for HYROX training in College Station, TX, you are in the right place. Our gym has every piece of equipment needed for all 8 HYROX stations, and our coach-led classes build exactly the fitness HYROX demands.
+              If you are looking for HYROX training in College Station, TX, you are in the right place. CrossFit Aggieland has every piece of equipment for all 8 stations, coach-led classes that build race-day fitness, and a community that will push you to the finish line.
             </p>
 
             {/* Hero image */}
@@ -168,15 +168,15 @@ export default function HyroxCollegeStationPage() {
               />
             </div>
 
-            <h2>Why CrossFit is the Best HYROX Training</h2>
+            <h2>What HYROX Demands and How We Train It</h2>
             <p>
-              CrossFit trains functional fitness across all energy systems: aerobic endurance, anaerobic power, strength, and work capacity under fatigue. That is exactly what HYROX tests.
+              HYROX tests three things at once: aerobic endurance, functional strength, and your ability to keep working when you are already tired. Most gyms train one of those. Our classes train all three, every session.
             </p>
             <p>
-              The 8 HYROX stations are not exotic movements. They are rowing, sled pushes, wall balls, carries, lunges, and burpees. If you have been doing CrossFit for even a few months, you have already trained most of them.
+              The 8 HYROX stations are rowing, sled pushes, sled pulls, wall balls, carries, lunges, burpees, and SkiErg. These are not exotic movements. They are the foundation of functional fitness, and they show up in our programming constantly.
             </p>
             <p>
-              The difference between finishing strong and grinding through the last two stations comes down to one thing: your ability to sustain output when you are tired. That is what we build every single class.
+              The difference between finishing strong and grinding through the last two stations comes down to one thing: sustaining output when you are already tired. That is exactly what our coach-led classes are designed to build.
             </p>
 
             <h2>All 8 HYROX Stations, Trained at CrossFit Aggieland</h2>
@@ -256,7 +256,7 @@ export default function HyroxCollegeStationPage() {
 
             <h3>Is CrossFit good training for HYROX?</h3>
             <p>
-              CrossFit is one of the best training methods for HYROX. The movements overlap significantly: rowing, sled work, wall balls, carries, lunges, and burpees are all CrossFit staples. CrossFit also builds the metabolic conditioning and work capacity under fatigue that separates strong HYROX finishes from suffering through the last stations.
+              The overlap is significant. Rowing, sled work, wall balls, carries, lunges, and burpees are all part of CrossFit programming. But the real advantage is metabolic conditioning. CrossFit builds the work capacity under fatigue that separates strong HYROX finishes from grinding through the last stations.
             </p>
 
             <h2>Start Training for HYROX Today</h2>
