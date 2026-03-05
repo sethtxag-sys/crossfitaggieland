@@ -73,7 +73,7 @@ const localBusinessSchema = {
   },
   knowsAbout: [
     'CrossFit', 'HIIT', 'Functional Fitness', 'Strength Training', 'Personal Training',
-    'Hyrox Race Training', 'Yoga for Athletes', 'Kids Fitness', 'Group Fitness',
+    'HYROX Race Training', 'Yoga for Athletes', 'Kids Fitness', 'Group Fitness',
   ],
   makesOffer: [
     {
@@ -171,13 +171,13 @@ const faqSchema = {
     },
     {
       '@type': 'Question',
-      name: 'Can I train for Hyrox at CrossFit Aggieland?',
-      acceptedAnswer: { '@type': 'Answer', text: 'Yes. Every CrossFit class at CrossFit Aggieland trains the movements used in all 8 Hyrox stations: SkiErg, sled push, sled pull, burpee broad jumps, rowing, farmers carry, sandbag lunges, and wall balls. We have all the equipment and our programming builds the endurance, strength, and work capacity that Hyrox demands.' },
+      name: 'Can I train for HYROX at CrossFit Aggieland?',
+      acceptedAnswer: { '@type': 'Answer', text: 'Yes. Every CrossFit class at CrossFit Aggieland trains the movements used in all 8 HYROX stations: SkiErg, sled push, sled pull, burpee broad jumps, rowing, farmers carry, sandbag lunges, and wall balls. We have all the equipment and our programming builds the endurance, strength, and work capacity that HYROX demands.' },
     },
     {
       '@type': 'Question',
-      name: 'Is CrossFit good training for Hyrox?',
-      acceptedAnswer: { '@type': 'Answer', text: 'CrossFit is one of the best training methods for Hyrox. The movements overlap significantly: rowing, sled work, wall balls, carries, lunges, and burpees are all CrossFit staples. CrossFit also builds the metabolic conditioning and work capacity under fatigue that Hyrox demands.' },
+      name: 'Is CrossFit good training for HYROX?',
+      acceptedAnswer: { '@type': 'Answer', text: 'CrossFit is one of the best training methods for HYROX. The movements overlap significantly: rowing, sled work, wall balls, carries, lunges, and burpees are all CrossFit staples. CrossFit also builds the metabolic conditioning and work capacity under fatigue that HYROX demands.' },
     },
   ],
 }
@@ -365,7 +365,7 @@ const eventScheduleSchema = {
 export const metadata: Metadata = {
     metadataBase: new URL(siteUrl),
     title: `CrossFit Aggieland | College Station TX Gym | ${site.awardsCount}x Best of the Brazos`,
-    description: `College Station's top-rated gym. ${site.awardsCount}x Best of the Brazos. CrossFit, Hyrox training, HIIT, and strength. 40+ classes/week, free trial. Near Texas A&M.`,
+    description: `College Station's top-rated gym. ${site.awardsCount}x Best of the Brazos. CrossFit, HYROX training, HIIT, and strength. 40+ classes/week, free trial. Near Texas A&M.`,
     keywords: [
           // Brand + location
           'CrossFit College Station',
@@ -401,13 +401,13 @@ export const metadata: Metadata = {
           'free trial gym College Station',
           'gym membership College Station',
           'weight loss gym College Station',
-          // Hyrox training
-          'Hyrox training College Station',
-          'Hyrox gym College Station TX',
-          'Hyrox near me College Station',
-          'Hyrox training near Texas A&M',
-          'train for Hyrox College Station',
-          'Hyrox race prep College Station TX',
+          // HYROX training
+          'HYROX training College Station',
+          'HYROX gym College Station TX',
+          'HYROX near me College Station',
+          'HYROX training near Texas A&M',
+          'train for HYROX College Station',
+          'HYROX race prep College Station TX',
           'functional fitness race training College Station',
           // Niche / long-tail
           'CrossFit gym Bryan TX',

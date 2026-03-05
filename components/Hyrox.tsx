@@ -15,20 +15,20 @@ const stations = [
   { name: 'Wall Balls', detail: '75–100 reps', station: 8, match: 'Wall balls are a CrossFit classic. You will crush this station.' },
 ]
 
-export default function Hyrox() {
+export default function HYROX() {
   return (
     <section id="hyrox" className="py-20 lg:py-28 bg-charcoal text-white overflow-hidden">
       <div className="max-w-[1200px] mx-auto px-6">
         <FadeIn>
           <div className="text-center mb-14 lg:mb-18">
             <div className="font-display text-sm tracking-[4px] uppercase text-maroon-accent mb-3">
-              Hyrox Training
+              HYROX Training
             </div>
             <h2 className="font-display text-[clamp(2.2rem,5vw,3.5rem)] leading-[1.05] uppercase tracking-wide mb-5">
-              Train for Hyrox at CrossFit Aggieland
+              Train for HYROX at CrossFit Aggieland
             </h2>
             <p className="text-white/60 max-w-[620px] mx-auto leading-relaxed">
-              Hyrox is the fastest-growing fitness race in the world. Eight 1 km runs. Eight workout stations. One finish line. Our training covers every station, every class.
+              HYROX is the fastest-growing fitness race in the world. Eight 1 km runs. Eight workout stations. One finish line. Our training covers every station, every class.
             </p>
           </div>
         </FadeIn>
@@ -39,30 +39,30 @@ export default function Hyrox() {
             <div className="relative rounded-xl overflow-hidden h-[300px] sm:h-[350px] lg:h-[420px]">
               <Image
                 src="/images/rower-group.jpg"
-                alt="Athletes rowing at CrossFit Aggieland, training for Hyrox race preparation"
+                alt="Athletes rowing at CrossFit Aggieland, training for HYROX race preparation"
                 fill
                 className="object-cover"
                 sizes="(max-width: 1024px) 100vw, 50vw"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-charcoal/70 via-transparent to-transparent" />
               <div className="absolute bottom-0 left-0 right-0 p-6">
-                <div className="font-display text-white text-lg tracking-wider">Hyrox Ready</div>
+                <div className="font-display text-white text-lg tracking-wider">HYROX Ready</div>
                 <div className="text-white/60 text-sm">Every station. Every class.</div>
               </div>
             </div>
 
             <div>
               <h3 className="font-display text-2xl sm:text-3xl uppercase tracking-wide mb-5 leading-tight">
-                CrossFit Builds Hyrox Athletes
+                CrossFit Builds HYROX Athletes
               </h3>
               <p className="text-white/60 leading-relaxed mb-4">
-                Every Hyrox station tests functional fitness. Rowing, sled pushes, wall balls, carries, lunges. These are not new movements for our athletes. They are Tuesday.
+                Every HYROX station tests functional fitness. Rowing, sled pushes, wall balls, carries, lunges. These are not new movements for our athletes. They are Tuesday.
               </p>
               <p className="text-white/60 leading-relaxed mb-4">
-                Our coaches program for strength, endurance, and work capacity. That is exactly what Hyrox demands. You will not need a separate Hyrox gym. You need a gym that trains you for everything.
+                Our coaches program for strength, endurance, and work capacity. That is exactly what HYROX demands. You will not need a separate HYROX gym. You need a gym that trains you for everything.
               </p>
               <p className="text-white/60 leading-relaxed mb-6">
-                College Station does not have many options for Hyrox-specific prep. We have the equipment, the coaching, and the programming to get you race-ready.
+                College Station does not have many options for HYROX-specific prep. We have the equipment, the coaching, and the programming to get you race-ready.
               </p>
 
               <div className="flex flex-wrap gap-3">
@@ -83,7 +83,7 @@ export default function Hyrox() {
         <FadeIn>
           <div className="text-center mb-10">
             <h3 className="font-display text-xl sm:text-2xl uppercase tracking-wide">
-              All 8 Hyrox Stations. Trained Here.
+              All 8 HYROX Stations. Trained Here.
             </h3>
           </div>
         </FadeIn>
@@ -105,7 +105,7 @@ export default function Hyrox() {
         <FadeIn>
           <div className="text-center">
             <p className="text-white/50 mb-6 max-w-[500px] mx-auto leading-relaxed">
-              Whether your Hyrox race is 12 weeks out or 12 months away, the best time to start training is now.
+              Whether your HYROX race is 12 weeks out or 12 months away, the best time to start training is now.
             </p>
             <a
               href={site.pikeUrl}

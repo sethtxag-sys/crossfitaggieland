@@ -5,8 +5,8 @@ import { site } from '@/lib/data'
 const siteUrl = 'https://www.crossfitaggieland.com'
 
 export const metadata: Metadata = {
-  title: 'Hyrox Training College Station TX | CrossFit Aggieland',
-  description: `Train for Hyrox at CrossFit Aggieland in College Station, TX. All 8 stations: SkiErg, sleds, rowing, wall balls, carries. Free trial week. Near Texas A&M.`,
+  title: 'HYROX Training College Station TX | CrossFit Aggieland',
+  description: `Train for HYROX at CrossFit Aggieland in College Station, TX. All 8 stations: SkiErg, sleds, rowing, wall balls, carries. Free trial week. Near Texas A&M.`,
   keywords: [
     'Hyrox training College Station',
     'Hyrox gym College Station TX',
@@ -29,8 +29,8 @@ export const metadata: Metadata = {
   ],
   alternates: { canonical: '/hyrox-college-station' },
   openGraph: {
-    title: 'Hyrox Training in College Station, TX | CrossFit Aggieland',
-    description: `All 8 Hyrox stations trained in every class. SkiErg, sleds, rowers, wall balls, carries. Free trial week at CrossFit Aggieland.`,
+    title: 'HYROX Training in College Station, TX | CrossFit Aggieland',
+    description: `All 8 HYROX stations trained in every class. SkiErg, sleds, rowers, wall balls, carries. Free trial week at CrossFit Aggieland.`,
     url: `${siteUrl}/hyrox-college-station`,
     siteName: site.name,
     type: 'website',
@@ -39,7 +39,7 @@ export const metadata: Metadata = {
         url: `${siteUrl}/images/rower-group.jpg`,
         width: 1200,
         height: 630,
-        alt: 'Athletes training for Hyrox at CrossFit Aggieland in College Station, TX',
+        alt: 'Athletes training for HYROX at CrossFit Aggieland in College Station, TX',
       },
     ],
   },
@@ -47,8 +47,8 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     site: '@CFAggieland',
     creator: '@CFAggieland',
-    title: 'Hyrox Training College Station TX | CrossFit Aggieland',
-    description: `Train for Hyrox at College Station's top-rated gym. All 8 stations. Free trial week.`,
+    title: 'HYROX Training College Station TX | CrossFit Aggieland',
+    description: `Train for HYROX at College Station's top-rated gym. All 8 stations. Free trial week.`,
     images: [`${siteUrl}/images/rower-group.jpg`],
   },
 }
@@ -61,7 +61,7 @@ const breadcrumbSchema = {
     {
       '@type': 'ListItem',
       position: 2,
-      name: 'Hyrox Training College Station',
+      name: 'HYROX Training College Station',
       item: `${siteUrl}/hyrox-college-station`,
     },
   ],
@@ -71,7 +71,7 @@ const hyroxServiceSchema = {
   '@context': 'https://schema.org',
   '@type': 'ExerciseGym',
   name: site.name,
-  description: `Hyrox training gym in College Station, TX. All 8 Hyrox race stations trained in coach-led classes. SkiErg, sled push, sled pull, rowing, farmers carry, sandbag lunges, burpee broad jumps, and wall balls.`,
+  description: `HYROX training gym in College Station, TX. All 8 HYROX race stations trained in coach-led classes. SkiErg, sled push, sled pull, rowing, farmers carry, sandbag lunges, burpee broad jumps, and wall balls.`,
   url: `${siteUrl}/hyrox-college-station`,
   telephone: site.phone,
   email: site.email,
@@ -101,8 +101,8 @@ const hyroxServiceSchema = {
   makesOffer: [
     {
       '@type': 'Offer',
-      name: 'Hyrox Race Preparation Training',
-      description: 'Functional fitness training covering all 8 Hyrox race stations. Coach-led classes scaled to all fitness levels.',
+      name: 'HYROX Race Preparation Training',
+      description: 'Functional fitness training covering all 8 HYROX race stations. Coach-led classes scaled to all fitness levels.',
       price: '0',
       priceCurrency: 'USD',
       availability: 'https://schema.org/InStock',
@@ -141,45 +141,45 @@ export default function HyroxCollegeStationPage() {
           <nav className="text-sm text-mid-gray mb-8" aria-label="Breadcrumb">
             <a href="/" className="hover:text-maroon transition-colors">Home</a>
             <span className="mx-2">/</span>
-            <span className="text-text-gray">Hyrox Training College Station</span>
+            <span className="text-text-gray">HYROX Training College Station</span>
           </nav>
 
           <h1 className="font-display text-3xl sm:text-4xl lg:text-5xl uppercase text-charcoal tracking-wide mb-6 leading-tight">
-            Hyrox Training in College Station, TX
+            HYROX Training in College Station, TX
           </h1>
 
           <div className="prose prose-lg max-w-none prose-headings:font-display prose-headings:uppercase prose-headings:tracking-wide prose-headings:text-charcoal prose-a:text-maroon prose-a:no-underline hover:prose-a:underline prose-strong:text-charcoal">
             <p>
-              <strong>Hyrox</strong> is the fastest-growing fitness race in the world. Eight 1 km runs, each followed by a functional workout station. It tests endurance, strength, and work capacity in a single race. And every movement in Hyrox is something we train at <strong>CrossFit Aggieland</strong> every week.
+              <strong>HYROX</strong> is the fastest-growing fitness race in the world. Eight 1 km runs, each followed by a functional workout station. It tests endurance, strength, and work capacity in a single race. And every movement in HYROX is something we train at <strong>CrossFit Aggieland</strong> every week.
             </p>
 
             <p>
-              If you are looking for Hyrox training in College Station, TX, you are in the right place. Our gym has every piece of equipment needed for all 8 Hyrox stations, and our coach-led classes build exactly the fitness Hyrox demands.
+              If you are looking for HYROX training in College Station, TX, you are in the right place. Our gym has every piece of equipment needed for all 8 HYROX stations, and our coach-led classes build exactly the fitness HYROX demands.
             </p>
 
             {/* Hero image */}
             <div className="not-prose my-8 rounded-xl overflow-hidden">
               <Image
                 src="/images/rower-group.jpg"
-                alt="Athletes rowing at CrossFit Aggieland, training movements used in Hyrox races"
+                alt="Athletes rowing at CrossFit Aggieland, training movements used in HYROX races"
                 width={800}
                 height={450}
                 className="w-full h-auto"
               />
             </div>
 
-            <h2>Why CrossFit is the Best Hyrox Training</h2>
+            <h2>Why CrossFit is the Best HYROX Training</h2>
             <p>
-              CrossFit trains functional fitness across all energy systems: aerobic endurance, anaerobic power, strength, and work capacity under fatigue. That is exactly what Hyrox tests.
+              CrossFit trains functional fitness across all energy systems: aerobic endurance, anaerobic power, strength, and work capacity under fatigue. That is exactly what HYROX tests.
             </p>
             <p>
-              The 8 Hyrox stations are not exotic movements. They are rowing, sled pushes, wall balls, carries, lunges, and burpees. If you have been doing CrossFit for even a few months, you have already trained most of them.
+              The 8 HYROX stations are not exotic movements. They are rowing, sled pushes, wall balls, carries, lunges, and burpees. If you have been doing CrossFit for even a few months, you have already trained most of them.
             </p>
             <p>
               The difference between finishing strong and grinding through the last two stations comes down to one thing: your ability to sustain output when you are tired. That is what we build every single class.
             </p>
 
-            <h2>All 8 Hyrox Stations, Trained at CrossFit Aggieland</h2>
+            <h2>All 8 HYROX Stations, Trained at CrossFit Aggieland</h2>
           </div>
 
           {/* Stations grid */}
@@ -197,9 +197,9 @@ export default function HyroxCollegeStationPage() {
           </div>
 
           <div className="prose prose-lg max-w-none prose-headings:font-display prose-headings:uppercase prose-headings:tracking-wide prose-headings:text-charcoal prose-a:text-maroon prose-a:no-underline hover:prose-a:underline prose-strong:text-charcoal">
-            <h2>Equipment for Hyrox Training</h2>
+            <h2>Equipment for HYROX Training</h2>
             <p>
-              CrossFit Aggieland has every piece of equipment you need to prepare for a Hyrox race:
+              CrossFit Aggieland has every piece of equipment you need to prepare for a HYROX race:
             </p>
             <ul>
               <li><strong>SkiErgs</strong> for station 1 pulling power</li>
@@ -211,55 +211,55 @@ export default function HyroxCollegeStationPage() {
               <li><strong>Open floor space</strong> for burpee broad jumps and running drills</li>
             </ul>
 
-            <h2>Hyrox Race Prep Timeline</h2>
+            <h2>HYROX Race Prep Timeline</h2>
             <p>
-              Most athletes can be race-ready in <strong>8 to 12 weeks</strong> of consistent training. If you are already doing CrossFit, you are closer than you think. The average Hyrox finish time is about 90 minutes, comparable to a fast half marathon or sprint triathlon.
+              Most athletes can be race-ready in <strong>8 to 12 weeks</strong> of consistent training. If you are already doing CrossFit, you are closer than you think. The average HYROX finish time is about 90 minutes, comparable to a fast half marathon or sprint triathlon.
             </p>
             <p>
-              Hyrox races are held in major cities across Texas and the US. Houston, Dallas, and Austin are all within driving distance of College Station. Check <a href="https://hyrox.com/find-my-race/" target="_blank" rel="noopener noreferrer">hyrox.com</a> for upcoming race dates.
-            </p>
-
-            <h2>Who Is Hyrox For?</h2>
-            <p>
-              Everyone. Hyrox offers divisions for all levels: Open (standard), Pro (heavier weights), Doubles (with a partner), and Relay (team of 4). You do not need to be an elite athlete. You need to be willing to train.
-            </p>
-            <p>
-              Whether you are a Texas A&amp;M student looking for your first race, a parent who wants a fitness goal beyond the gym, or a seasoned CrossFitter who wants a new challenge, Hyrox is built for you.
+              HYROX races are held in major cities across Texas and the US. Houston, Dallas, and Austin are all within driving distance of College Station. Check <a href="https://hyrox.com/find-my-race/" target="_blank" rel="noopener noreferrer">hyrox.com</a> for upcoming race dates.
             </p>
 
-            <h2>Frequently Asked Questions About Hyrox Training</h2>
-
-            <h3>Can I train for Hyrox at CrossFit Aggieland?</h3>
+            <h2>Who Is HYROX For?</h2>
             <p>
-              Yes. Every CrossFit class trains the movements used in all 8 Hyrox stations. Our programming builds the endurance, strength, and work capacity that Hyrox demands.
+              Everyone. HYROX offers divisions for all levels: Open (standard), Pro (heavier weights), Doubles (with a partner), and Relay (team of 4). You do not need to be an elite athlete. You need to be willing to train.
+            </p>
+            <p>
+              Whether you are a Texas A&amp;M student looking for your first race, a parent who wants a fitness goal beyond the gym, or a seasoned CrossFitter who wants a new challenge, HYROX is built for you.
+            </p>
+
+            <h2>Frequently Asked Questions About HYROX Training</h2>
+
+            <h3>Can I train for HYROX at CrossFit Aggieland?</h3>
+            <p>
+              Yes. Every CrossFit class trains the movements used in all 8 HYROX stations. Our programming builds the endurance, strength, and work capacity that HYROX demands.
             </p>
 
             <h3>Do I need to be in shape to start?</h3>
             <p>
-              No. Every workout is scaled to your fitness level. Whether you are training for your first Hyrox race or your fifth, our coaches meet you where you are.
+              No. Every workout is scaled to your fitness level. Whether you are training for your first HYROX race or your fifth, our coaches meet you where you are.
             </p>
 
-            <h3>What equipment does CrossFit Aggieland have for Hyrox?</h3>
+            <h3>What equipment does CrossFit Aggieland have for HYROX?</h3>
             <p>
-              SkiErgs, Concept2 rowers, heavy sleds, wall balls, sandbags, farmers carry handles, and all the functional fitness equipment needed to train every Hyrox station.
+              SkiErgs, Concept2 rowers, heavy sleds, wall balls, sandbags, farmers carry handles, and all the functional fitness equipment needed to train every HYROX station.
             </p>
 
-            <h3>Where is the nearest Hyrox race to College Station?</h3>
+            <h3>Where is the nearest HYROX race to College Station?</h3>
             <p>
-              Hyrox races are held in Houston, Dallas, Austin, and other major US cities. All are within driving distance of College Station. Visit <a href="https://hyrox.com/find-my-race/" target="_blank" rel="noopener noreferrer">hyrox.com</a> for the current schedule.
+              HYROX races are held in Houston, Dallas, Austin, and other major US cities. All are within driving distance of College Station. Visit <a href="https://hyrox.com/find-my-race/" target="_blank" rel="noopener noreferrer">hyrox.com</a> for the current schedule.
             </p>
 
-            <h3>How long does it take to train for Hyrox?</h3>
+            <h3>How long does it take to train for HYROX?</h3>
             <p>
               Most athletes are race-ready in 8 to 12 weeks. If you are already doing CrossFit, you likely need less time. The average finish time is about 90 minutes.
             </p>
 
-            <h3>Is CrossFit good training for Hyrox?</h3>
+            <h3>Is CrossFit good training for HYROX?</h3>
             <p>
-              CrossFit is one of the best training methods for Hyrox. The movements overlap significantly: rowing, sled work, wall balls, carries, lunges, and burpees are all CrossFit staples. CrossFit also builds the metabolic conditioning and work capacity under fatigue that separates strong Hyrox finishes from suffering through the last stations.
+              CrossFit is one of the best training methods for HYROX. The movements overlap significantly: rowing, sled work, wall balls, carries, lunges, and burpees are all CrossFit staples. CrossFit also builds the metabolic conditioning and work capacity under fatigue that separates strong HYROX finishes from suffering through the last stations.
             </p>
 
-            <h2>Start Training for Hyrox Today</h2>
+            <h2>Start Training for HYROX Today</h2>
             <p>
               Your first week at CrossFit Aggieland is free. No credit card. No contract. Come in, try a class, and see why our members trust us with their fitness goals.
             </p>
@@ -283,7 +283,7 @@ export default function HyroxCollegeStationPage() {
               Learn More
             </h2>
             <div className="grid sm:grid-cols-2 gap-4">
-              <a href="/#hyrox" className="text-maroon hover:underline">Hyrox Training Overview</a>
+              <a href="/#hyrox" className="text-maroon hover:underline">HYROX Training Overview</a>
               <a href="/#coaches" className="text-maroon hover:underline">Meet Our Coaches</a>
               <a href="/#schedule" className="text-maroon hover:underline">Class Schedule</a>
               <a href="/#pricing" className="text-maroon hover:underline">Pricing &amp; Membership</a>

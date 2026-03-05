@@ -210,7 +210,7 @@ export default function CollegeStationPage() {
               <a href="/#pricing" className="text-maroon hover:underline">Pricing &amp; Membership</a>
               <a href="/#faq" className="text-maroon hover:underline">Frequently Asked Questions</a>
               <a href="/#contact" className="text-maroon hover:underline">Contact Us</a>
-              <a href="/hyrox-college-station" className="text-maroon hover:underline">Hyrox Training</a>
+              <a href="/hyrox-college-station" className="text-maroon hover:underline">HYROX Training</a>
               <a href="/blog" className="text-maroon hover:underline">Read Our Blog</a>
               <a
                 href={site.googleReviewsUrl}

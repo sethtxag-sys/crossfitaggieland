@@ -24,7 +24,7 @@ import Contact from '@/components/Contact'
  * 4. About — The guide (empathy + authority)
  * 5. Coaches — Guide credentials
  * 6. DailyWorkouts — What you will do (programming + scaling)
- * 6b. Hyrox — Hyrox race prep (all 8 stations trained here)
+ * 6b. HYROX — HYROX race prep (all 8 stations trained here)
  * 7. Schedule — When you can do it (clickable time slots)
  * 8. Testimonials — Social proof
  * 9. Transformation — Success (the "after" picture)
