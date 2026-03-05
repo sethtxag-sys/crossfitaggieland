@@ -45,7 +45,7 @@ export default function Coaches() {
             <FadeIn key={coach.name} delay={i * 80}>
             <div
               onClick={() => setSelected(coach)}
-              className="group relative rounded-xl overflow-hidden text-center p-6 sm:p-8 transition-all hover:-translate-y-1 hover:shadow-xl cursor-pointer h-full bg-gray-100 hover:bg-gray-50 border border-gray-200"
+              className={`group relative rounded-xl overflow-hidden text-center p-6 sm:p-8 transition-all hover:-translate-y-1 hover:shadow-xl cursor-pointer h-full bg-gray-100 hover:bg-gray-50 border border-gray-200 ${coach.isOwner ? 'min-[420px]:col-span-2 lg:col-span-2' : ''}`}
             >
               {coach.image ? (
                 <div className="w-20 h-20 rounded-full mx-auto mb-4 overflow-hidden ring-2 ring-offset-2 ring-maroon/20 ring-offset-gray-100 group-hover:ring-offset-gray-50">
