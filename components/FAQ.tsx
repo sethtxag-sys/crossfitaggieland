@@ -118,7 +118,7 @@ export default function FAQ() {
             <p className="text-text-gray text-sm mb-4">Still have questions?</p>
             <a
               href="#contact"
-              className="inline-block font-display text-sm tracking-widest uppercase text-maroon border-2 border-maroon px-8 py-3 hover:bg-maroon hover:text-white transition-all"
+              className="inline-block font-display text-sm tracking-widest uppercase bg-maroon text-white border-2 border-maroon px-8 py-3 hover:bg-maroon-dark hover:border-maroon-dark transition-all"
             >
               Contact Us
             </a>

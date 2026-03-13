@@ -10,7 +10,17 @@ interface FadeInProps {
 
 export default function FadeIn({ children, className = '', delay = 0 }: FadeInProps) {
   const ref = useRef<HTMLDivElement>(null)
+  const [prefersReducedMotion, setPrefersReducedMotion] = useState(false)
   const [isVisible, setIsVisible] = useState(false)
+
+  useEffect(() => {
+    const mq = window.matchMedia('(prefers-reduced-motion: reduce)')
+    if (mq.matches) {
+      setPrefersReducedMotion(true)
+      setIsVisible(true)
+      return
+    }
+  }, [])
 
   useEffect(() => {
     if (isVisible) return
