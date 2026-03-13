@@ -41,7 +41,7 @@ export default function StartHere() {
               <div className="font-display text-xl tracking-[2px] uppercase text-charcoal border-l-4 border-maroon pl-4 mb-8">
                 You bring the effort. We coach the plan.
               </div>
-              <div className="flex flex-col items-start gap-4">
+              <div className="flex flex-col items-center text-center gap-3">
                 <a
                   href={site.pikeUrl}
                   target="_blank"
