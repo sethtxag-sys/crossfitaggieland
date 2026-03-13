@@ -22,6 +22,10 @@ export default function StartHere() {
                 For <strong>{site.awardsCount} straight years</strong>, we&rsquo;ve taken people who were nervous, out of shape, or completely new and coached them into athletes who don&rsquo;t want to miss a day.
               </p>
 
+              <div className="font-display text-xl tracking-[2px] uppercase text-charcoal border-l-4 border-maroon pl-4 mb-8">
+                You bring the effort. We coach the plan.
+              </div>
+
               {/* Specificity details — reduces "what will it be like?" anxiety */}
               <div className="bg-gray-50 border border-gray-100 rounded-lg p-5 mb-6 space-y-2.5">
                 <div className="flex items-center gap-3 text-sm text-text-gray">
