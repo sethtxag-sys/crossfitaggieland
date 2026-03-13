@@ -38,22 +38,18 @@ export default function StartHere() {
                 </div>
               </div>
 
-              <div className="font-display text-xl tracking-[2px] uppercase text-charcoal border-l-4 border-maroon pl-4 mb-8">
-                You bring the effort. We coach the plan.
-              </div>
-              <div className="flex flex-col items-center text-center gap-3">
-                <a
-                  href={site.pikeUrl}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-block font-display text-lg tracking-widest uppercase bg-maroon text-white border-2 border-maroon px-10 py-4 hover:bg-maroon-dark hover:border-maroon-dark hover:-translate-y-0.5 transition-all shadow-md hover:shadow-lg"
-                >
-                  Start Your Free Week
-                </a>
-                <span className="text-xs tracking-[2px] uppercase text-mid-gray">
-                  New to CrossFit? Perfect.&nbsp;We&nbsp;scale&nbsp;everything.
-                </span>
-              </div>
+              <a
+                href={site.pikeUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="group inline-flex items-center gap-4 bg-maroon text-white pl-8 pr-6 py-4 hover:bg-maroon-dark transition-all shadow-md hover:shadow-lg hover:-translate-y-0.5"
+              >
+                <span className="font-display text-lg tracking-widest uppercase">Start Your Free Week</span>
+                <svg className="w-5 h-5 transition-transform group-hover:translate-x-1" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}><path strokeLinecap="round" strokeLinejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3" /></svg>
+              </a>
+              <p className="text-xs tracking-[2px] uppercase text-mid-gray mt-3">
+                New to CrossFit? Perfect. We scale everything.
+              </p>
             </div>
           </div>
 
