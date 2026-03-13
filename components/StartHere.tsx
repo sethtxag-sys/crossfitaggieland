@@ -41,7 +41,7 @@ export default function StartHere() {
               <div className="font-display text-xl tracking-[2px] uppercase text-charcoal border-l-4 border-maroon pl-4 mb-8">
                 You bring the effort. We coach the plan.
               </div>
-              <div className="flex flex-col sm:flex-row items-start gap-4">
+              <div className="flex flex-col items-start gap-4">
                 <a
                   href={site.pikeUrl}
                   target="_blank"
@@ -50,8 +50,8 @@ export default function StartHere() {
                 >
                   Start Your Free Week
                 </a>
-                <span className="text-xs tracking-[2px] uppercase text-mid-gray py-2 sm:py-4">
-                  New to CrossFit? Perfect. We scale everything.
+                <span className="text-xs tracking-[2px] uppercase text-mid-gray">
+                  New to CrossFit? Perfect.&nbsp;We&nbsp;scale&nbsp;everything.
                 </span>
               </div>
             </div>
