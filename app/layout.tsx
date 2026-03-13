@@ -479,6 +479,11 @@ export default function RootLayout({
     return (
           <html lang="en">
                 <head>
+                  {/* Preconnect to external domains for faster CTA clicks & ad tracking */}
+                  <link rel="preconnect" href="https://sms.pike13.com" />
+                  <link rel="dns-prefetch" href="https://sms.pike13.com" />
+                  <link rel="preconnect" href="https://www.googletagmanager.com" />
+                  <link rel="dns-prefetch" href="https://www.googletagmanager.com" />
                   <Script
                     src="https://www.googletagmanager.com/gtag/js?id=AW-988809947"
                     strategy="afterInteractive"
@@ -493,6 +498,13 @@ export default function RootLayout({
                   </Script>
                 </head>
                 <body className={`${bebasNeue.variable} ${montserrat.variable} antialiased`}>
+                  {/* Skip-to-content link for keyboard/screen reader users */}
+                  <a
+                    href="#main"
+                    className="sr-only focus:not-sr-only focus:fixed focus:top-2 focus:left-2 focus:z-[9999] focus:bg-maroon focus:text-white focus:px-4 focus:py-2 focus:rounded focus:text-sm focus:font-medium focus:outline-none"
+                  >
+                    Skip to content
+                  </a>
                   {/* JSON-LD — rendered inline so Googlebot sees it on first crawl */}
                   <script
                     type="application/ld+json"
