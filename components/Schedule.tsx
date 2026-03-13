@@ -84,7 +84,7 @@ export default function Schedule() {
                 <button
                   key={btn.key}
                   onClick={() => setFilter(btn.key)}
-                  className={`inline-flex items-center gap-2 font-display text-[0.7rem] tracking-[2px] uppercase px-4 py-2.5 rounded-lg transition-all ${
+                  className={`inline-flex items-center gap-2 font-display text-[0.7rem] tracking-[2px] uppercase px-4 py-3 rounded-lg transition-all ${
                     filter === btn.key
                       ? 'bg-maroon text-white border border-maroon'
                       : 'bg-white/[0.05] text-white/60 border border-white/[0.08] hover:bg-white/[0.1] hover:text-white/80'

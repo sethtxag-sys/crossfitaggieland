@@ -120,7 +120,7 @@ export default function Navigation() {
           {/* Mobile toggle */}
           <button
             onClick={() => setMenuOpen(!menuOpen)}
-            className="lg:hidden flex flex-col gap-[5px] z-[1002] relative"
+            className="lg:hidden flex flex-col gap-[5px] z-[1002] relative p-2 -mr-2"
             aria-label="Toggle menu"
           >
             <span className={`w-[26px] h-[2px] bg-white transition-all duration-300 ${menuOpen ? 'rotate-45 translate-y-[7px]' : ''}`} />
