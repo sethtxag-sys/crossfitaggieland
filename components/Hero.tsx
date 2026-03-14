@@ -143,15 +143,16 @@ export default function Hero() {
         <div className="max-w-[1000px] mx-auto px-4 sm:px-8">
           <div className="flex justify-center gap-5 sm:gap-14">
             {[
-              { number: `${site.awardsCount}x`, label: 'Best of the Brazos' },
-              { number: '40+', label: 'Classes per Week' },
-              { number: 'FREE', label: 'First Week' },
-              { number: '5 AM', label: 'Earliest Class' },
+              { number: `${site.awardsCount}x`, label: 'Best of the Brazos', shortLabel: 'Best of Brazos' },
+              { number: '40+', label: 'Classes per Week', shortLabel: 'Classes/Wk' },
+              { number: 'FREE', label: 'First Week', shortLabel: 'First Week' },
+              { number: '5 AM', label: 'Earliest Class', shortLabel: 'First Class' },
             ].map((stat) => (
               <div key={stat.label} className="text-center min-w-0">
                 <div className="font-display text-[0.95rem] sm:text-[1.35rem] text-white tracking-wider">{stat.number}</div>
                 <div className="text-[0.55rem] sm:text-[0.6rem] text-white/90 font-medium tracking-[0.5px] sm:tracking-[2px] uppercase mt-0.5 whitespace-nowrap">
-                  {stat.label}
+                  <span className="sm:hidden">{stat.shortLabel}</span>
+                  <span className="hidden sm:inline">{stat.label}</span>
                 </div>
               </div>
             ))}
