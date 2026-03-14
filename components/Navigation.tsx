@@ -99,7 +99,7 @@ export default function Navigation() {
                 <a
                   href={link.href}
                   onClick={(e) => handleClick(e, link.href)}
-                  className="font-body text-[0.78rem] font-medium tracking-wider uppercase text-white/60 hover:text-white transition-colors"
+                  className="font-body text-[0.78rem] font-medium tracking-wider uppercase text-white/70 hover:text-white transition-colors"
                 >
                   {link.label}
                 </a>
@@ -130,44 +130,49 @@ export default function Navigation() {
         </div>
       </nav>
 
-      {/* Mobile fullscreen menu — completely separate from nav, own stacking context */}
-      {menuOpen && (
-        <div
-          className="fixed inset-0 z-[1000] lg:hidden"
-          style={{ background: 'linear-gradient(165deg, #0d0d0d 0%, #1a1a1a 40%, #500000 100%)' }}
-        >
-          {/* Subtle texture overlay */}
-          <div className="absolute inset-0 opacity-[0.03]" style={{ backgroundImage: 'url("data:image/svg+xml,%3Csvg width=\'6\' height=\'6\' viewBox=\'0 0 6 6\' xmlns=\'http://www.w3.org/2000/svg\'%3E%3Cg fill=\'%23ffffff\' fill-opacity=\'1\'%3E%3Cpath d=\'M5 0h1L0 5V4zM6 5v1H5z\'/%3E%3C/g%3E%3C/svg%3E")' }} />
+      {/* Mobile fullscreen menu — always in DOM for screen readers, CSS-toggled visibility */}
+      <div
+        className={`fixed inset-0 z-[1000] lg:hidden transition-all duration-300 ${
+          menuOpen
+            ? 'opacity-100 visible'
+            : 'opacity-0 invisible pointer-events-none'
+        }`}
+        style={{ background: 'linear-gradient(165deg, #0d0d0d 0%, #1a1a1a 40%, #500000 100%)' }}
+        aria-hidden={!menuOpen}
+      >
+        {/* Subtle texture overlay */}
+        <div className="absolute inset-0 opacity-[0.03]" style={{ backgroundImage: 'url("data:image/svg+xml,%3Csvg width=\'6\' height=\'6\' viewBox=\'0 0 6 6\' xmlns=\'http://www.w3.org/2000/svg\'%3E%3Cg fill=\'%23ffffff\' fill-opacity=\'1\'%3E%3Cpath d=\'M5 0h1L0 5V4zM6 5v1H5z\'/%3E%3C/g%3E%3C/svg%3E")' }} />
 
-          <div className="relative h-full flex flex-col items-center justify-center gap-7 px-8">
-            {/* Maroon accent line */}
-            <div className="w-10 h-[2px] bg-white/20 mb-2" />
+        <div className="relative h-full flex flex-col items-center justify-center gap-7 px-8">
+          {/* Maroon accent line */}
+          <div className="w-10 h-[2px] bg-white/20 mb-2" />
 
-            {navLinks.map((link) => (
-              <a
-                key={link.href}
-                href={link.href}
-                onClick={(e) => handleClick(e, link.href)}
-                className="font-display text-[1.75rem] text-white tracking-[4px] uppercase hover:text-white/80 transition-colors"
-              >
-                {link.label}
-              </a>
-            ))}
-
-            {/* Divider */}
-            <div className="w-10 h-[2px] bg-white/20 mt-2" />
-
+          {navLinks.map((link) => (
             <a
-              href={site.pikeUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="font-display text-base tracking-[3px] uppercase text-charcoal bg-white px-10 py-4 mt-2 hover:bg-white/90 transition-all"
+              key={link.href}
+              href={link.href}
+              onClick={(e) => handleClick(e, link.href)}
+              tabIndex={menuOpen ? 0 : -1}
+              className="font-display text-[1.75rem] text-white tracking-[4px] uppercase hover:text-white/80 transition-colors"
             >
-              Start Your Free Week
+              {link.label}
             </a>
-          </div>
+          ))}
+
+          {/* Divider */}
+          <div className="w-10 h-[2px] bg-white/20 mt-2" />
+
+          <a
+            href={site.pikeUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            tabIndex={menuOpen ? 0 : -1}
+            className="font-display text-base tracking-[3px] uppercase text-charcoal bg-white px-10 py-4 mt-2 hover:bg-white/90 transition-all"
+          >
+            Start Your Free Week
+          </a>
         </div>
-      )}
+      </div>
     </>
   )
 }

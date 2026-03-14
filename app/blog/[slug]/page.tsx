@@ -70,17 +70,32 @@ export default async function BlogPostPage({
 
   const articleSchema = {
     '@context': 'https://schema.org',
-    '@type': 'Article',
+    '@type': 'BlogPosting',
     headline: post.title,
     description: post.description,
     datePublished: post.date,
-    author: { '@type': 'Organization', name: post.author },
+    dateModified: post.date,
+    author: { '@type': 'Organization', name: post.author, url: siteUrl },
     publisher: {
       '@type': 'Organization',
       name: site.name,
+      url: siteUrl,
       logo: { '@type': 'ImageObject', url: `${siteUrl}/images/logo.png` },
     },
-    mainEntityOfPage: `${siteUrl}/blog/${post.slug}`,
+    mainEntityOfPage: {
+      '@type': 'WebPage',
+      '@id': `${siteUrl}/blog/${post.slug}`,
+    },
+    image: `${siteUrl}/images/hero-group.jpg`,
+    url: `${siteUrl}/blog/${post.slug}`,
+    keywords: post.keywords?.join(', '),
+    wordCount: post.content.split(/\s+/).length,
+    inLanguage: 'en-US',
+    isPartOf: {
+      '@type': 'Blog',
+      name: `${site.name} Blog`,
+      url: `${siteUrl}/blog`,
+    },
   }
 
   return (
