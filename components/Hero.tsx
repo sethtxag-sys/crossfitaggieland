@@ -149,8 +149,8 @@ export default function Hero() {
               { number: '5 AM', label: 'Earliest Class', shortLabel: 'First Class' },
             ].map((stat) => (
               <div key={stat.label} className="text-center min-w-0">
-                <div className="font-display text-[0.95rem] sm:text-[1.35rem] text-white tracking-wider">{stat.number}</div>
-                <div className="text-[0.55rem] sm:text-[0.6rem] text-white/90 font-medium tracking-[0.5px] sm:tracking-[2px] uppercase mt-0.5 whitespace-nowrap">
+                <div className="font-display text-[1.25rem] sm:text-[1.75rem] text-white tracking-wider leading-none">{stat.number}</div>
+                <div className="text-[0.55rem] sm:text-[0.6rem] text-white/50 font-medium tracking-[0.5px] sm:tracking-[2px] uppercase mt-1.5 whitespace-nowrap">
                   <span className="sm:hidden">{stat.shortLabel}</span>
                   <span className="hidden sm:inline">{stat.label}</span>
                 </div>

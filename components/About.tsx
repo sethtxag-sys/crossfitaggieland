@@ -40,7 +40,7 @@ export default function About() {
 
           {/* Content */}
             <div className="max-w-prose">
-              <div className="font-display text-sm tracking-[4px] uppercase text-maroon mb-3">Your Guide</div>
+              <div className="font-display text-sm tracking-[4px] uppercase text-maroon mb-3 slash-accent">Your Guide</div>
               <h2 className="font-display text-[clamp(2.2rem,5vw,3.5rem)] leading-[1.05] uppercase tracking-wide mb-5">
                 We&rsquo;ve Been Where You Are.
               </h2>

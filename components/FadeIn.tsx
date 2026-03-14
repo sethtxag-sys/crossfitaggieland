@@ -6,12 +6,22 @@ interface FadeInProps {
   children: React.ReactNode
   className?: string
   delay?: number
+  direction?: 'up' | 'left' | 'right' | 'scale'
 }
 
-export default function FadeIn({ children, className = '', delay = 0 }: FadeInProps) {
+const directionStyles = {
+  up:    { hidden: 'opacity-0 translate-y-6',   visible: 'opacity-100 translate-y-0' },
+  left:  { hidden: 'opacity-0 -translate-x-8',  visible: 'opacity-100 translate-x-0' },
+  right: { hidden: 'opacity-0 translate-x-8',   visible: 'opacity-100 translate-x-0' },
+  scale: { hidden: 'opacity-0 scale-95',        visible: 'opacity-100 scale-100' },
+}
+
+export default function FadeIn({ children, className = '', delay = 0, direction = 'up' }: FadeInProps) {
   const ref = useRef<HTMLDivElement>(null)
   const [prefersReducedMotion, setPrefersReducedMotion] = useState(false)
   const [isVisible, setIsVisible] = useState(false)
+
+  const styles = directionStyles[direction]
 
   useEffect(() => {
     const mq = window.matchMedia('(prefers-reduced-motion: reduce)')
@@ -58,9 +68,7 @@ export default function FadeIn({ children, className = '', delay = 0 }: FadeInPr
     <div
       ref={ref}
       className={`transition-all duration-700 ease-out ${
-        isVisible
-          ? 'opacity-100 translate-y-0'
-          : 'opacity-0 translate-y-6'
+        isVisible ? styles.visible : styles.hidden
       } ${className}`}
       style={{ transitionDelay: `${delay}ms` }}
     >

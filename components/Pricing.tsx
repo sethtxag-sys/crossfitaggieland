@@ -7,7 +7,7 @@ export default function Pricing() {
       <div className="max-w-[1200px] mx-auto px-6">
         <FadeIn>
           <div className="text-center mb-12 lg:mb-16">
-            <div className="font-display text-sm tracking-[4px] uppercase text-maroon mb-3">Membership Pricing</div>
+            <div className="font-display text-sm tracking-[4px] uppercase text-maroon mb-3 slash-accent justify-center">Membership Pricing</div>
             <h2 className="font-display text-[clamp(2.2rem,5vw,3.5rem)] leading-[1.05] uppercase tracking-wide mb-5">
               CrossFit Membership Rates. No Hidden Fees.
             </h2>

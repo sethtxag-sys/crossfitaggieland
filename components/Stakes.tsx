@@ -21,29 +21,33 @@ const stakes = [
 
 export default function Stakes() {
   return (
-    <section className="py-20 lg:py-28 bg-charcoal text-white">
+    <section className="py-28 lg:py-36 bg-charcoal text-white relative diagonal-bottom">
       <div className="max-w-[1200px] mx-auto px-6">
-        <FadeIn>
-          <div className="text-center mb-12 lg:mb-16">
-            <div className="font-display text-sm tracking-[4px] uppercase text-maroon-accent mb-3">
+        {/* Pull-quote headline — owns the viewport */}
+        <FadeIn direction="scale">
+          <div className="text-center mb-20 lg:mb-28">
+            <div className="font-display text-sm tracking-[4px] uppercase text-maroon-accent mb-4 slash-accent justify-center">
               The Cost of Waiting
             </div>
-            <h2 className="font-display text-[clamp(2.2rem,5vw,3.5rem)] leading-[1.05] uppercase tracking-wide mb-5">
+            <h2 className="font-display text-[clamp(2.5rem,6vw,4.5rem)] leading-[0.95] uppercase tracking-wide max-w-[900px] mx-auto">
               You Already Know What Doing Nothing Looks Like.
             </h2>
-            <p className="text-white/50 max-w-[550px] mx-auto leading-relaxed">
-              You&rsquo;ve been living it. Another year of &ldquo;I&rsquo;ll start Monday.&rdquo;
+            <p className="text-white/40 max-w-[550px] mx-auto leading-relaxed mt-6 text-lg">
+              You&rsquo;ve been living it.
             </p>
           </div>
         </FadeIn>
 
-        <div className="grid md:grid-cols-3 gap-6 mb-12">
+        <div className="grid md:grid-cols-3 gap-6 mb-16">
           {stakes.map((s, i) => (
-            <FadeIn key={s.number} delay={i * 100}>
-              <div className="bg-white/[0.04] border border-white/[0.08] rounded-xl p-8 hover:bg-white/[0.07] transition-colors h-full">
-                <div className="font-display text-4xl text-white/15 mb-3" aria-hidden="true">{s.number}</div>
-                <h3 className="font-display text-xl tracking-wider uppercase text-white mb-3">{s.title}</h3>
-                <p className="text-white/60 text-sm leading-relaxed">{s.text}</p>
+            <FadeIn key={s.number} delay={i * 120} direction={i === 0 ? 'left' : i === 2 ? 'right' : 'up'}>
+              <div className="bg-white/[0.04] border border-white/[0.08] rounded-xl p-8 hover:bg-white/[0.07] transition-colors h-full relative overflow-hidden">
+                {/* Athletic diagonal number accent */}
+                <div className="font-display text-[5rem] leading-none text-white/[0.04] absolute -top-3 -right-2 select-none" style={{ transform: 'skewX(-8deg)' }} aria-hidden="true">{s.number}</div>
+                <div className="relative">
+                  <h3 className="font-display text-xl tracking-wider uppercase text-white mb-3">{s.title}</h3>
+                  <p className="text-white/60 text-sm leading-relaxed">{s.text}</p>
+                </div>
               </div>
             </FadeIn>
           ))}
