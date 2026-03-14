@@ -143,36 +143,28 @@ export default function Navigation() {
         {/* Subtle texture overlay */}
         <div className="absolute inset-0 opacity-[0.03]" style={{ backgroundImage: 'url("data:image/svg+xml,%3Csvg width=\'6\' height=\'6\' viewBox=\'0 0 6 6\' xmlns=\'http://www.w3.org/2000/svg\'%3E%3Cg fill=\'%23ffffff\' fill-opacity=\'1\'%3E%3Cpath d=\'M5 0h1L0 5V4zM6 5v1H5z\'/%3E%3C/g%3E%3C/svg%3E")' }} />
 
-        <div className="relative h-full overflow-y-auto px-8 pt-24 pb-8">
-          <div className="min-h-full flex flex-col items-center justify-center gap-5">
-            {/* Maroon accent line */}
-            <div className="w-10 h-[2px] bg-white/20 mb-1" />
-
-            {navLinks.map((link) => (
-              <a
-                key={link.href}
-                href={link.href}
-                onClick={(e) => handleClick(e, link.href)}
-                tabIndex={menuOpen ? 0 : -1}
-                className="font-display text-[1.75rem] text-white tracking-[4px] uppercase hover:text-white/80 transition-colors"
-              >
-                {link.label}
-              </a>
-            ))}
-
-            {/* Divider */}
-            <div className="w-10 h-[2px] bg-white/20 mt-2" />
-
+        <div className="relative h-full flex flex-col items-center justify-center gap-4 px-8 pt-20 pb-6">
+          {navLinks.map((link) => (
             <a
-              href={site.pikeUrl}
-              target="_blank"
-              rel="noopener noreferrer"
+              key={link.href}
+              href={link.href}
+              onClick={(e) => handleClick(e, link.href)}
               tabIndex={menuOpen ? 0 : -1}
-              className="font-display text-base tracking-[3px] uppercase text-charcoal bg-white px-10 py-4 mt-2 hover:bg-white/90 transition-all"
+              className="font-display text-2xl text-white tracking-[4px] uppercase hover:text-white/80 transition-colors"
             >
-              Start Your Free Week
+              {link.label}
             </a>
-          </div>
+          ))}
+
+          <a
+            href={site.pikeUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            tabIndex={menuOpen ? 0 : -1}
+            className="font-display text-sm tracking-[3px] uppercase text-charcoal bg-white px-8 py-3 mt-3 hover:bg-white/90 transition-all"
+          >
+            Start Your Free Week
+          </a>
         </div>
       </div>
     </>
