@@ -52,7 +52,7 @@ function ImageCell({ index }: { index: number }) {
 
 export default function InstagramGrid() {
   return (
-    <section className="py-20 lg:py-28 bg-charcoal text-white">
+    <section className="py-20 lg:py-28 bg-charcoal text-white section-grain">
       <div className="max-w-[1200px] mx-auto px-6">
         <FadeIn>
           <div className="text-center mb-12 lg:mb-16">

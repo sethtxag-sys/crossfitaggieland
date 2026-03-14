@@ -3,7 +3,7 @@ import FadeIn from './FadeIn'
 
 export default function FirstDay() {
   return (
-    <section className="py-20 lg:py-28 bg-charcoal text-white">
+    <section className="py-20 lg:py-28 bg-charcoal text-white section-grain">
       <div className="max-w-[900px] mx-auto px-6">
         <FadeIn>
           <div className="text-center mb-12 lg:mb-16">
@@ -62,7 +62,7 @@ export default function FirstDay() {
               href={site.pikeUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-block font-display text-lg tracking-widest uppercase text-white border-2 border-white/40 px-10 py-4 hover:bg-white hover:text-charcoal hover:border-white transition-all"
+              className="cta-ghost"
             >
               Start Your Free Week
             </a>

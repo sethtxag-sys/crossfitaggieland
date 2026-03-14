@@ -1,19 +1,24 @@
 import { site } from '@/lib/data'
 import Image from 'next/image'
 import FadeIn from './FadeIn'
+import PhotoFrame from './PhotoFrame'
+import { IconShieldCheck, IconClock, IconCommunity } from './Icons'
 
 const values = [
   {
     title: 'Coaching That Meets You Where You Are',
     text: 'We learn your name, correct your form, and scale your workouts so you are always progressing.',
+    Icon: IconShieldCheck,
   },
   {
     title: 'Not a 30-Day Fix',
     text: "This isn't a 30-day challenge. It's the hour of your day that makes the rest of your day better.",
+    Icon: IconClock,
   },
   {
     title: 'Your People Are Here',
     text: 'Students, parents, professionals, and grandparents. Everyone is welcome, and everyone is coached.',
+    Icon: IconCommunity,
   },
 ]
 
@@ -24,7 +29,7 @@ export default function About() {
         <FadeIn>
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
           {/* Community photo */}
-            <div className="relative rounded-xl overflow-hidden h-[400px] lg:h-[500px]">
+            <PhotoFrame className="h-[400px] lg:h-[500px]">
               <Image
                 src="/images/women-group.jpg"
                 alt="CrossFit Aggieland women's group at the gym"
@@ -36,7 +41,7 @@ export default function About() {
                 <div className="font-display text-white text-lg tracking-wider">Since {site.established}</div>
                 <div className="text-white/60 text-sm">{site.address.city}, {site.address.state}</div>
               </div>
-            </div>
+            </PhotoFrame>
 
           {/* Content */}
             <div className="max-w-prose">
@@ -57,7 +62,9 @@ export default function About() {
               <div className="space-y-5">
                 {values.map((v) => (
                   <div key={v.title} className="flex gap-4 items-start">
-                    <div className="w-2 h-2 rounded-full bg-maroon mt-2 shrink-0" />
+                    <div className="w-8 h-8 rounded-full bg-maroon/10 flex items-center justify-center shrink-0 mt-0.5">
+                      <v.Icon className="w-4 h-4 text-maroon" />
+                    </div>
                     <p className="text-text-gray leading-relaxed">
                       <strong className="text-charcoal">{v.title}:</strong> {v.text}
                     </p>

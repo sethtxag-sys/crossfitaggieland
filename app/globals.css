@@ -137,3 +137,66 @@ h1, h2 {
     opacity: 0.7;
   }
 }
+
+/* ── Bespoke Visual Identity System ── */
+
+/* Film-grain texture — subtle noise for dark sections */
+@layer utilities {
+  .section-grain {
+    position: relative;
+  }
+  .section-grain::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.7' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+    background-repeat: repeat;
+    background-size: 256px 256px;
+    opacity: 0.025;
+    pointer-events: none;
+  }
+}
+
+/* Chevron section transition — downward V at section boundary */
+@layer utilities {
+  .chevron-bottom {
+    position: relative;
+  }
+  .chevron-bottom::after {
+    content: '';
+    position: absolute;
+    bottom: -47px;
+    left: 0;
+    right: 0;
+    height: 48px;
+    background: inherit;
+    clip-path: polygon(0 0, 50% 100%, 100% 0);
+    z-index: 1;
+  }
+}
+
+/* CTA button system — standardized across the site */
+@layer components {
+  .cta-primary {
+    @apply inline-block font-display text-lg tracking-widest uppercase bg-maroon text-white border-2 border-maroon px-10 py-4 hover:bg-maroon-dark hover:border-maroon-dark hover:-translate-y-0.5 transition-all shadow-md hover:shadow-lg;
+  }
+  .cta-ghost {
+    @apply inline-block font-display text-lg tracking-widest uppercase text-white border-2 border-white/40 px-10 py-4 hover:bg-white hover:text-charcoal hover:border-white transition-all;
+  }
+  .cta-inverted {
+    @apply inline-block font-display text-lg tracking-widest uppercase bg-white text-charcoal border-2 border-white px-10 py-4 hover:bg-transparent hover:text-white transition-all;
+  }
+  .cta-sm {
+    @apply inline-block font-display text-xs tracking-[2px] uppercase bg-maroon text-white border border-maroon px-5 py-2.5 hover:bg-maroon-dark hover:border-maroon-dark transition-all;
+  }
+}
+
+/* Stat typography system — Hero stats bar pattern */
+@layer components {
+  .stat-number {
+    @apply font-display text-[1.25rem] sm:text-[1.75rem] text-white tracking-wider leading-none;
+  }
+  .stat-label {
+    @apply text-[0.55rem] sm:text-[0.6rem] text-white/50 font-medium tracking-[0.5px] sm:tracking-[2px] uppercase mt-1.5 whitespace-nowrap;
+  }
+}

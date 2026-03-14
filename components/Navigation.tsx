@@ -140,8 +140,8 @@ export default function Navigation() {
         style={{ background: 'linear-gradient(165deg, #0d0d0d 0%, #1a1a1a 40%, #500000 100%)' }}
         aria-hidden={!menuOpen}
       >
-        {/* Subtle texture overlay */}
-        <div className="absolute inset-0 opacity-[0.03]" style={{ backgroundImage: 'url("data:image/svg+xml,%3Csvg width=\'6\' height=\'6\' viewBox=\'0 0 6 6\' xmlns=\'http://www.w3.org/2000/svg\'%3E%3Cg fill=\'%23ffffff\' fill-opacity=\'1\'%3E%3Cpath d=\'M5 0h1L0 5V4zM6 5v1H5z\'/%3E%3C/g%3E%3C/svg%3E")' }} />
+        {/* Film-grain texture — matches section-grain across the site */}
+        <div className="absolute inset-0 opacity-[0.03]" style={{ backgroundImage: "url(\"data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.7' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E\")", backgroundSize: '256px 256px' }} />
 
         <div className="relative h-full flex flex-col items-center justify-center gap-4 px-8 pt-20 pb-6">
           {navLinks.map((link) => (

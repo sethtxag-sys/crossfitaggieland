@@ -59,7 +59,7 @@ export default function Pricing() {
                     <td className="p-4 text-center whitespace-nowrap">
                       <a
                         href={site.pikeUrl}
-                        className="inline-block font-display text-xs tracking-[2px] uppercase bg-maroon text-white border border-maroon px-5 py-2.5 hover:bg-maroon-dark hover:border-maroon-dark transition-all"
+                        className="cta-sm"
                       >
                         Start Free Week
                       </a>
@@ -94,7 +94,7 @@ export default function Pricing() {
                 <div className="px-5 py-4 border-t border-gray-100">
                   <a
                     href={site.pikeUrl}
-                    className="block text-center font-display text-xs tracking-[2px] uppercase bg-maroon text-white border border-maroon px-5 py-2.5 hover:bg-maroon-dark hover:border-maroon-dark transition-all"
+                    className="cta-sm block text-center"
                   >
                     Start Your Free Week
                   </a>
@@ -129,7 +129,7 @@ export default function Pricing() {
               href={site.pikeUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-block font-display text-lg tracking-widest uppercase bg-maroon text-white border-2 border-maroon px-10 py-4 hover:bg-maroon-dark hover:border-maroon-dark hover:-translate-y-0.5 transition-all shadow-md hover:shadow-lg"
+              className="cta-primary"
             >
               Start Your Free Week
             </a>

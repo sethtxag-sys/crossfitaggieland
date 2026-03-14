@@ -33,7 +33,7 @@ export default function FreeWeekCTA() {
           href={site.pikeUrl}
           target="_blank"
           rel="noopener noreferrer"
-          className="inline-block font-display text-lg tracking-widest uppercase bg-white text-charcoal border-2 border-white px-10 py-4 hover:bg-transparent hover:text-white transition-all"
+          className="cta-inverted"
         >
           Start Your Free Week
         </a>

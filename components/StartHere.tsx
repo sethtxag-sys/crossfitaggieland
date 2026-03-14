@@ -1,6 +1,7 @@
 import { site } from '@/lib/data'
 import Image from 'next/image'
 import FadeIn from './FadeIn'
+import PhotoFrame from './PhotoFrame'
 
 export default function StartHere() {
   return (
@@ -63,7 +64,7 @@ export default function StartHere() {
           {/* Gym photo */}
           <FadeIn delay={150}>
           <div>
-            <div className="relative rounded-xl overflow-hidden h-[400px] lg:h-[500px]">
+            <PhotoFrame className="h-[400px] lg:h-[500px]">
               <Image
                 src="/images/wallball-pair.jpg"
                 alt="Two athletes doing wall balls at CrossFit Aggieland"
@@ -71,7 +72,7 @@ export default function StartHere() {
                 className="object-cover"
                 sizes="(max-width: 1024px) 100vw, 50vw"
               />
-            </div>
+            </PhotoFrame>
           </div>
           </FadeIn>
         </div>

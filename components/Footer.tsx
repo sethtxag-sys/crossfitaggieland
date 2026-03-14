@@ -5,7 +5,7 @@ export default function Footer() {
   const year = new Date().getFullYear()
 
   return (
-    <footer className="bg-charcoal text-white py-12 pb-6">
+    <footer className="bg-charcoal text-white py-12 pb-6 section-grain">
       <div className="max-w-[1200px] mx-auto px-6">
         {/* Top row: Logo, quick links, social */}
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-10 pb-10 border-b border-white/[0.08] mb-6">

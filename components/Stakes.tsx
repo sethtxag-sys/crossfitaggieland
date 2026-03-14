@@ -21,7 +21,7 @@ const stakes = [
 
 export default function Stakes() {
   return (
-    <section className="py-28 lg:py-36 bg-charcoal text-white relative diagonal-bottom">
+    <section className="py-28 lg:py-36 bg-charcoal text-white relative diagonal-bottom section-grain">
       <div className="max-w-[1200px] mx-auto px-6">
         {/* Pull-quote headline — owns the viewport */}
         <FadeIn direction="scale">
@@ -60,7 +60,7 @@ export default function Stakes() {
               href={site.pikeUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-block font-display text-lg tracking-widest uppercase text-white border-2 border-white/40 px-10 py-4 hover:bg-white hover:text-charcoal transition-all"
+              className="cta-ghost"
             >
               Start Your Free Week
             </a>

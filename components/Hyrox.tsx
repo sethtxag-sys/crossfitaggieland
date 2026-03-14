@@ -3,6 +3,7 @@
 import Image from 'next/image'
 import { site } from '@/lib/data'
 import FadeIn from './FadeIn'
+import PhotoFrame from './PhotoFrame'
 
 const stations = [
   { name: 'SkiErg', detail: '1,000 m', station: 1, match: 'We have SkiErgs and train pulling power daily.' },
@@ -17,7 +18,7 @@ const stations = [
 
 export default function HYROX() {
   return (
-    <section id="hyrox" className="py-20 lg:py-28 bg-charcoal text-white overflow-hidden">
+    <section id="hyrox" className="py-20 lg:py-28 bg-charcoal text-white overflow-hidden section-grain chevron-bottom">
       <div className="max-w-[1200px] mx-auto px-6">
         <FadeIn>
           <div className="text-center mb-14 lg:mb-18">
@@ -36,7 +37,7 @@ export default function HYROX() {
         {/* Two-column: image + value prop */}
         <FadeIn>
           <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center mb-16">
-            <div className="relative rounded-xl overflow-hidden h-[300px] sm:h-[350px] lg:h-[420px]">
+            <PhotoFrame className="h-[300px] sm:h-[350px] lg:h-[420px]">
               <Image
                 src="/images/rower-group.jpg"
                 alt="Athletes rowing at CrossFit Aggieland, training for HYROX race preparation"
@@ -49,7 +50,7 @@ export default function HYROX() {
                 <div className="font-display text-white text-lg tracking-wider">HYROX Ready</div>
                 <div className="text-white/60 text-sm">Every station. Every class.</div>
               </div>
-            </div>
+            </PhotoFrame>
 
             <div>
               <h3 className="font-display text-2xl sm:text-3xl uppercase tracking-wide mb-5 leading-tight">
@@ -111,7 +112,7 @@ export default function HYROX() {
               href={site.pikeUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-block font-display text-lg tracking-widest uppercase text-white border-2 border-white/40 px-10 py-4 hover:bg-white hover:text-charcoal transition-all"
+              className="cta-ghost"
             >
               Start Your Free Week
             </a>

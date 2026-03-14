@@ -1,6 +1,7 @@
 import { site } from '@/lib/data'
 import Image from 'next/image'
 import FadeIn from './FadeIn'
+import PhotoFrame from './PhotoFrame'
 
 export default function DailyWorkouts() {
   return (
@@ -9,7 +10,7 @@ export default function DailyWorkouts() {
         <FadeIn>
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
           {/* Training photo */}
-          <div className="relative rounded-xl overflow-hidden h-[300px] sm:h-[350px] lg:h-[450px]">
+          <PhotoFrame className="h-[300px] sm:h-[350px] lg:h-[450px]">
             <Image
               src="/images/front-squat.jpg"
               alt="Athlete performing a front squat at CrossFit Aggieland"
@@ -17,7 +18,7 @@ export default function DailyWorkouts() {
               className="object-cover"
               sizes="(max-width: 1024px) 100vw, 50vw"
             />
-          </div>
+          </PhotoFrame>
 
           {/* Content */}
           <div>
