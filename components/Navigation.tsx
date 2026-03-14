@@ -143,9 +143,9 @@ export default function Navigation() {
         {/* Subtle texture overlay */}
         <div className="absolute inset-0 opacity-[0.03]" style={{ backgroundImage: 'url("data:image/svg+xml,%3Csvg width=\'6\' height=\'6\' viewBox=\'0 0 6 6\' xmlns=\'http://www.w3.org/2000/svg\'%3E%3Cg fill=\'%23ffffff\' fill-opacity=\'1\'%3E%3Cpath d=\'M5 0h1L0 5V4zM6 5v1H5z\'/%3E%3C/g%3E%3C/svg%3E")' }} />
 
-        <div className="relative h-full flex flex-col items-center justify-center gap-7 px-8">
+        <div className="relative h-full flex flex-col items-center justify-center gap-6 px-8 pt-20 pb-8">
           {/* Maroon accent line */}
-          <div className="w-10 h-[2px] bg-white/20 mb-2" />
+          <div className="w-10 h-[2px] bg-white/20 mb-1" />
 
           {navLinks.map((link) => (
             <a
