@@ -70,6 +70,7 @@ export default function Hero() {
         playsInline
         preload="metadata"
         poster="/images/hero-group.jpg"
+        aria-label="Highlight reel of CrossFit Aggieland members working out in College Station, TX"
         className="absolute inset-0 w-full h-full object-cover scale-[1.3] -translate-y-[5%] object-bottom"
         onLoadedData={(e) => {
           const v = e.currentTarget
@@ -149,7 +150,7 @@ export default function Hero() {
             ].map((stat) => (
               <div key={stat.label} className="text-center min-w-0">
                 <div className="font-display text-[0.95rem] sm:text-[1.35rem] text-white tracking-wider">{stat.number}</div>
-                <div className="text-[0.38rem] sm:text-[0.6rem] text-white/90 font-medium tracking-[0.5px] sm:tracking-[2px] uppercase mt-0.5 whitespace-nowrap">
+                <div className="text-[0.55rem] sm:text-[0.6rem] text-white/90 font-medium tracking-[0.5px] sm:tracking-[2px] uppercase mt-0.5 whitespace-nowrap">
                   {stat.label}
                 </div>
               </div>

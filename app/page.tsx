@@ -30,6 +30,7 @@ import Contact from '@/components/Contact'
  * 9. Transformation — Success (the "after" picture)
  * 10. Pricing — Investment (with price anchoring)
  * 11. FAQ — Handle objections before they leave
+ * 11b. InstagramGrid — Community proof (dark section breaks gray-50 run)
  * 12. FirstDay — Remove fear of the unknown
  * 13. FreeWeekCTA — Direct CTA (plan + call to action)
  * 14. Contact — Contact form (email protected)
@@ -48,10 +49,10 @@ export default function Home() {
       <Hyrox />
       <Schedule />
       <Testimonials />
-      <InstagramGrid />
       <Transformation />
       <Pricing />
       <FAQ />
+      <InstagramGrid />
       <FirstDay />
       <FreeWeekCTA />
       <Contact />

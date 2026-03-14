@@ -1,11 +1,13 @@
 import { site } from '@/lib/data'
 import Image from 'next/image'
+import FadeIn from './FadeIn'
 
 export default function StartHere() {
   return (
     <section id="start" className="py-20 lg:py-28">
       <div className="max-w-[1200px] mx-auto px-6">
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+          <FadeIn>
           <div>
             <div className="max-w-prose">
               <div className="font-display text-sm tracking-[4px] uppercase text-maroon mb-3">You Belong Here</div>
@@ -56,8 +58,10 @@ export default function StartHere() {
               </p>
             </div>
           </div>
+          </FadeIn>
 
           {/* Gym photo */}
+          <FadeIn delay={150}>
           <div>
             <div className="relative rounded-xl overflow-hidden h-[400px] lg:h-[500px]">
               <Image
@@ -69,6 +73,7 @@ export default function StartHere() {
               />
             </div>
           </div>
+          </FadeIn>
         </div>
       </div>
     </section>

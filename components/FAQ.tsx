@@ -55,6 +55,36 @@ const faqs = [
     answer:
       'Yes. We offer discounted student and veteran rates starting at $119/month on a 12-month plan. We also have discounts for active military, law enforcement, and teachers.',
   },
+  {
+    question: 'Do you offer HIIT or group fitness classes?',
+    answer:
+      'Yes. Every CrossFit class is a coach-led group fitness session that includes high-intensity interval training (HIIT), strength training, and functional movements. All fitness levels welcome.',
+  },
+  {
+    question: 'Can I use CrossFit Aggieland as a regular gym?',
+    answer:
+      'Yes. Every membership includes open gym access in addition to unlimited coached classes. You can come in and train on your own anytime during open hours.',
+  },
+  {
+    question: 'Is CrossFit Aggieland good for weight loss?',
+    answer:
+      'Absolutely. Our combination of HIIT, strength training, and coached nutrition guidance has helped hundreds of members lose weight and build muscle. Every workout burns serious calories while building lean muscle mass.',
+  },
+  {
+    question: 'Do you offer personal training in College Station?',
+    answer:
+      'Yes. We offer one-on-one personal training with certified coaches. Plus, every group class includes hands-on coaching, so you get personal-trainer-level attention in every session.',
+  },
+  {
+    question: 'Can I train for HYROX at CrossFit Aggieland?',
+    answer:
+      'Yes. Every CrossFit class at CrossFit Aggieland trains the movements used in all 8 HYROX stations: SkiErg, sled push, sled pull, burpee broad jumps, rowing, farmers carry, sandbag lunges, and wall balls. We have all the equipment and our programming builds the endurance, strength, and work capacity that HYROX demands.',
+  },
+  {
+    question: 'Is CrossFit good training for HYROX?',
+    answer:
+      'The overlap between CrossFit and HYROX is significant. Rowing, sled work, wall balls, carries, lunges, and burpees are all part of our regular programming. Our classes also build the metabolic conditioning and work capacity under fatigue that HYROX demands.',
+  },
 ]
 
 export default function FAQ() {

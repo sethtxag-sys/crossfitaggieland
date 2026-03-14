@@ -79,7 +79,7 @@ export default function InstagramGrid() {
               href={INSTAGRAM_URL}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-3 font-display text-sm tracking-[3px] uppercase text-white/60 border border-white/20 px-8 py-3.5 rounded-full hover:bg-white/10 hover:text-white hover:border-white/40 transition-all group"
+              className="inline-flex items-center gap-3 font-display text-sm tracking-[3px] uppercase text-white/60 border border-white/20 px-8 py-3.5 hover:bg-white/10 hover:text-white hover:border-white/40 transition-all group"
             >
               <InstagramIcon className="w-5 h-5 text-white/50 group-hover:text-white transition-colors" />
               Follow @crossfitaggieland

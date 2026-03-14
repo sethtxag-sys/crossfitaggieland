@@ -34,7 +34,7 @@ const outcomes = [
 
 export default function Transformation() {
   return (
-    <section className="py-20 lg:py-28 bg-gray-50 section-divider">
+    <section className="py-20 lg:py-28 section-divider">
       <div className="max-w-[1200px] mx-auto px-6">
         <FadeIn>
           <div className="text-center mb-12 lg:mb-16">

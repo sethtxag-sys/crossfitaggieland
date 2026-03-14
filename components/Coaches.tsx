@@ -1,6 +1,6 @@
 'use client'
 
-import { useState, useEffect } from 'react'
+import { useState, useEffect, useRef, useCallback } from 'react'
 import { coaches } from '@/lib/data'
 import type { Coach } from '@/lib/types'
 import Image from 'next/image'
@@ -8,22 +8,62 @@ import FadeIn from './FadeIn'
 
 export default function Coaches() {
   const [selected, setSelected] = useState<Coach | null>(null)
+  const modalRef = useRef<HTMLDivElement>(null)
+  const triggerRef = useRef<HTMLButtonElement | null>(null)
 
+  // Focus trap + body lock + Escape
   useEffect(() => {
     if (!selected) return
 
     document.body.style.overflow = 'hidden'
 
-    const handleEscape = (e: KeyboardEvent) => {
-      if (e.key === 'Escape') setSelected(null)
+    // Move focus into modal
+    const timer = setTimeout(() => {
+      const closeBtn = modalRef.current?.querySelector<HTMLElement>('button')
+      closeBtn?.focus()
+    }, 50)
+
+    const handleKeyDown = (e: KeyboardEvent) => {
+      if (e.key === 'Escape') {
+        setSelected(null)
+        return
+      }
+
+      // Focus trap
+      if (e.key === 'Tab' && modalRef.current) {
+        const focusable = modalRef.current.querySelectorAll<HTMLElement>(
+          'button, [href], [tabindex]:not([tabindex="-1"])'
+        )
+        if (focusable.length === 0) return
+
+        const first = focusable[0]
+        const last = focusable[focusable.length - 1]
+
+        if (e.shiftKey && document.activeElement === first) {
+          e.preventDefault()
+          last.focus()
+        } else if (!e.shiftKey && document.activeElement === last) {
+          e.preventDefault()
+          first.focus()
+        }
+      }
     }
-    document.addEventListener('keydown', handleEscape)
+
+    document.addEventListener('keydown', handleKeyDown)
 
     return () => {
+      clearTimeout(timer)
       document.body.style.overflow = ''
-      document.removeEventListener('keydown', handleEscape)
+      document.removeEventListener('keydown', handleKeyDown)
+      // Return focus to trigger
+      triggerRef.current?.focus()
     }
   }, [selected])
+
+  const openCoach = useCallback((coach: Coach, buttonEl: HTMLButtonElement) => {
+    triggerRef.current = buttonEl
+    setSelected(coach)
+  }, [])
 
   /* Split coaches into full rows of 4 and a centered remainder */
   const cols = 4
@@ -33,9 +73,10 @@ export default function Coaches() {
 
   const renderCard = (coach: Coach, i: number) => (
     <FadeIn key={coach.name} delay={i * 80}>
-      <div
-        onClick={() => setSelected(coach)}
-        className="group relative rounded-xl overflow-hidden text-center p-6 sm:p-8 transition-all hover:-translate-y-1 hover:shadow-xl cursor-pointer h-full bg-gray-100 hover:bg-gray-50 border border-gray-200"
+      <button
+        type="button"
+        onClick={(e) => openCoach(coach, e.currentTarget)}
+        className="group relative rounded-xl overflow-hidden text-center p-6 sm:p-8 transition-all hover:-translate-y-1 hover:shadow-xl cursor-pointer h-full bg-gray-100 hover:bg-gray-50 border border-gray-200 w-full"
       >
         {coach.image ? (
           <div className="w-20 h-20 rounded-full mx-auto mb-4 overflow-hidden ring-2 ring-offset-2 ring-maroon/20 ring-offset-gray-100 group-hover:ring-offset-gray-50">
@@ -58,7 +99,7 @@ export default function Coaches() {
         <div className="text-xs tracking-[2px] uppercase mt-1 text-mid-gray">
           {coach.role}
         </div>
-      </div>
+      </button>
     </FadeIn>
   )
 
@@ -99,10 +140,14 @@ export default function Coaches() {
       {selected && (
         <div
           className="fixed inset-0 z-50 flex items-center justify-center px-4"
+          role="dialog"
+          aria-modal="true"
+          aria-label={`${selected.name} bio`}
           onClick={() => setSelected(null)}
         >
           <div className="absolute inset-0 bg-black/70 backdrop-blur-sm" />
           <div
+            ref={modalRef}
             className="relative bg-white rounded-2xl max-w-md w-full shadow-2xl overflow-hidden animate-[fadeIn_0.2s_ease-out]"
             onClick={(e) => e.stopPropagation()}
           >
