@@ -18,7 +18,7 @@ const stations = [
 
 export default function HYROX() {
   return (
-    <section id="hyrox" className="py-20 lg:py-28 bg-charcoal text-white overflow-hidden section-grain chevron-bottom">
+    <section id="hyrox" className="py-20 lg:py-28 bg-charcoal text-white overflow-hidden section-grain">
       <div className="max-w-[1200px] mx-auto px-6">
         <FadeIn>
           <div className="text-center mb-14 lg:mb-18">
